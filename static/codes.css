@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/**
+ * codes.css
+ *
+ * @author 闲耘™ (hotoo.cn[AT]gmail.com)
+ * @version 2013/04/02
+ */
+pre{
+    margin:.5em; padding:5px;
+    /*word-wrap:break-word; word-break:break-all;*/
+    /*white-space:nowrap;*/
+    overflow:hidden;
+    background:#f8f8f8 none;
+    border-width:1px 0 1px 3px; border-style:solid; border-color:#eee;
+    /*-moz-box-shadow:2px 2px 8px #666; -webkit-box-shadow:2px 2px 8px #666; box-shadow:2px 2px 8px #666;*/
+    -moz-border-radius:3px; -khtml-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;
+    line-height:1.5em; font-family:"Courier New","\5B8B\4F53"; font-size:1em;
+}
+pre:hover{
+    overflow:auto;
+    padding-bottom:1em\9;
+}
+
+/* codes line start {{{ */
+div.codes{background:#eee; margin:1em 0; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;}
+div.codes:after{content:"\0020"; display:block; height:0; clear:both;}
+div.codes{zoom:1;}
+div.codes div{margin:0; padding:0; background:#eee;}
+div.codes pre{margin:0; padding:0; border:0 none;}
+div.codes div.code{float:left; width:100%;}
+div.codes div.code pre{margin-left:3em; padding-left:.5em; font-family:"Courier New"; border:0 none;}
+div.codes pre.line{text-align:right; float:left; width:4em; margin-left:-100%; background:#eee none; border-right:1px solid #ccc;
+-moz-border-radius:4px 0 0 4px;
+-khtml-border-radius:4px 0 0 4px;
+-webkit-border-top-left-radius:4px; -webkit-border-top-right-radius:0;
+-webkit-border-bottom-right-radius:0; -webkit-border-bottom-left-radius:4px;
+ border-radius:4px 0 0 4px;
+}
+	div.codes pre.line a{display:inline-block; padding:0 5px; color:#999;}
+
+code.keyword{font-weight:bold; color:blue;}
+code.string{color:green;}
+/* }}}codes line */

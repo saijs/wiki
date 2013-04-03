@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="nico 0.2.2">
+    <meta name="theme" content="one 0.1">
+    <title>JavaScript 异常档案</title>
+<script type="text/javascript">
+window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
+</script>
+<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
+    <link rel="stylesheet" href="./static/one.css" />
+    <link rel="stylesheet" href="./static/codes.css" />
+    <link rel="stylesheet" href="./static/syntax.css" />
+  </head>
+  <body>
+    <div class="navigation" role="navigation">
+      <div class="container">
+        <a class="home" href="./"></a>
+      </div>
+    </div>
+    <div class="document">
+<div class="hentry">
+  <h1 class="entry-title">JavaScript 异常档案</h1>
+  <div class="entry-content"><div style="width:300px;float:right;border:1px solid #eee;">
+  <img src="./images/exception.jpg" align="right" style="float:right;margin:0 0 -3px;" />
+</div>
+
+<p>这里是 JavaScript 异常的维基百科站，用于收集、组织、分享前端开发同学遇到的
+JavaScript 异常，沉淀 JavaScript 异常知识，供异常分析 &amp; 处理参考。</p>
+<h2 id="%E6%90%9C%E7%B4%A2">搜索</h2>
+<div class="search">
+  <input type="text" class="search" value="" name="key" style="width:600px;" />
+</div>
+
+<hr/>
+<h2 id="%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8">常见异常</h2>
+<ul>
+<li><a href="wiki/unexpected-quantifier">错误的数量词</a></li>
+<li><a href="wiki/regular-expression-syntax-error">正则表达式语法错误</a></li>
+<li><a href="wiki/expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
+</ul>
+<h2 id="%E6%9C%80%E6%96%B0%E6%9B%B4%E6%96%B0">最新更新</h2><h2 id="%E5%8F%82%E8%80%83">参考</h2>
+<ul>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/3a3syxc5(v=vs.90).aspx">错误</a> ,
+<a href="http://msdn.microsoft.com/zh-cn/library/7th8s2xk(v=vs.94).aspx">JavaScript 错误</a>
+<a href="http://msdn.microsoft.com/en-us/library/ie/7th8s2xk(v=vs.94).aspx">JavaScript Errors</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/cekc4228(v=vs.90).aspx">JScript 运行时错误</a> ,
+<a href="http://msdn.microsoft.com/zh-cn/library/1dk3k160(v=vs.94).aspx">JavaScript 运行时错误</a>
+<a href="http://msdn.microsoft.com/en-us/library/ie/1dk3k160(v=vs.94).aspx">JavaScript Run-time Errors</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/by0atdkw(v=vs.90).aspx">JScript 语法错误</a> ,
+<a href="http://msdn.microsoft.com/en-us/library/ie/6bby3x2e(v=vs.94).aspx">JavaScript Syntax Errors</a></li>
+<li><a href="wiki/windows-event-code-id-and-error-message">Windows事件代码ID及错误信息</a></li>
+</ul>
+<h2 id="%E5%88%86%E4%BA%AB">分享</h2>
+<ul>
+<li><a href="http://sixrevisions.com/javascript/javascript-debugging-techniques-in-ie-6/">JavaScript Debugging Techniques in IE 6</a></li>
+<li><a href="http://www.onjava.com/pub/a/onjava/2003/11/19/exceptions.html">Best Practices for Exception Handling</a>
+
+<ul>
+<li><a href="http://itindex.net/detail/37579-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">译：异常处理的最佳实践</a></li>
+<li><a href="http://blog.csdn.net/kesay/article/details/5393778">译：异常处理之最佳实践（Best Practices for Exception Handling ）</a></li>
+</ul></li>
+<li><a href="http://www.juvenxu.com/2011/03/30/exception-handling-best-practices/">异常处理最佳实践</a></li>
+<li><a href="http://sofish.de/2144">处理 JS 异常的一个想法 - sofish</a></li>
+<li><a href="https://gist.github.com/neekey/4371159">浏览器错误捕捉总结</a></li>
+<li><a href="http://developer.51cto.com/art/200611/34741.htm">.NET中异常处理最佳实践</a></li>
+</ul>
+</div>
+</div>
+</div>
+    <div class="footer">
+      <p class="copyright">JavaScript 异常档案</p>
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.2.2</p>-->
+    </div>
+    <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="./static/one.js"></script>
+    <script src="../static/codes.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39646187-1', 'hotoo.me');
+  ga('send', 'pageview');
+
+</script>
+
+  <div class="github"><a class="github-link" href="https://github.com/totorojs/javascript-exception-archives">Fork me on GitHub</a></div>
+
+  </body>
+</html>
