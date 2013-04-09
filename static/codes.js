@@ -75,3 +75,26 @@
     lines(pre[i], i+1);
   }
 })();
+
+(function(){
+  return;
+  var ths = document.getElementsByTagName("th");
+  for(var i=0,l=ths.length; i<l; i++){
+    switch(ths[i].innerHTML){
+    case 'Language':
+      ths[i].width = "100";
+      break;
+    case 'Browser':
+      ths[i].width = "80";
+      break;
+    case 'Number':
+      ths[i].width = "120";
+      break;
+    case '异常字段':
+      ths[i].width = "80";
+      break;
+    default:
+      break;
+    }
+  }
+})();

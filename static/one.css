@@ -255,7 +255,7 @@ hr {
 .entry-content h2 {
   /*border-top: 1px solid #eee;*/
 }
-.entry-content p code {
+.entry-content code {
   border: 1px solid #eee;
   border-radius: 3px;
   padding: 2px 4px;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>未知的运行时错误</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,70 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">未知的运行时错误</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
-<table><thead>
-<tr>
-<th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
+<td>未知的运行时错误</td>
 </tr>
 <tr>
-<td>Chrome</td>
 <td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
+<td>Unknown runtime error</td>
 </tr>
 <tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
+<td>日文</td>
+<td>未知の実行時エラーです。</td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+
+<p>一般是 IE 中由于 innerHTML 设置了不合适的值造成，比如 table, tr, li, p, form 之类的非法嵌套。</p>
+<h2 id="case">案例</h2>
+<p>今天遇到“未知的运行时错误”，调试代码都是正常的，效果展示也是正常的，调试了一下。</p>
+
+<p>原因：这个表单中有两个需要将金额转化成中文大写金额，每个都对应一个span标签，
+分别两个不同id，但是我js代码写了同一个ID，这样导致了这个错误。</p>
+
+<p>实例如下：</p>
+
+<p><img src="../images/unknown-runtime-error-1.jpg" alt=""/></p>
+
+<p>导致问题代码：</p>
+<div class="highlight"><pre><code class="javascript"><span class="comment">// 付款账户留存金额rmbconvert</span>
+E.on(<span class="string">"J_amountMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+    D.get(<span class="string">"J_startEndMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_amountMoney"</span>).value);
+});
+
+<span class="comment">//起结金额rmbconvert</span>
+E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+    D.get(<span class="string">"J_startEndMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_startEndMoney"</span>).value);
+});
+</code></pre></div>
+<p>正确的代码：</p>
+<div class="highlight"><pre><code class="javascript"><span class="comment">// 付款账户留存金额rmbconvert</span>
+E.on(<span class="string">"J_amountMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+    D.get(<span class="string">"J_amountMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_amountMoney"</span>).value);
+});
+
+<span class="comment">//起结金额rmbconvert</span>
+E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+    D.get(<span class="string">"J_startEndMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_startEndMoney"</span>).value);
+});
+</code></pre></div>
+<p>冒顿点评：</p>
+
+<p>这里提供的相关代码只是入口代码，修复后确实可以避免触发异常，但是实际抛出异常的
+代码应该是在 <code>AP.widget.RMBConvert</code> 中。</p>
+<h2 id="related">相关异常</h2><h2 id="see-also">延伸阅读</h2>
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li><a href="http://www.leakon.com/archives/41">设置 innerHTML 属性 导致 未知的运行时错误 IE bug</a></li>
+<li><a href="http://www.cnblogs.com/it563/articles/1178067.html">innerHTML 属性 导致 未知的运行时错误 IE bug</a></li>
+<li><a href="http://wenqingluomo.blog.163.com/blog/static/7917174020106531238488/">htmlfile: 未知的运行时错误</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/1dk3k160(v=vs.94).aspx">JavaScript 运行时错误</a></li>
 </ul>
 </div>
   <div class="comments">

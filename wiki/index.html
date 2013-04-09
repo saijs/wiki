@@ -23,11 +23,177 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">JavaScript 异常档案</h1>
-  <div class="entry-content"><ul>
+  <div class="entry-content"><h2 id="%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8">运行时异常</h2>
+<ul>
 <li><a href="unexpected-quantifier">错误的数量词</a></li>
 <li><a href="regular-expression-syntax-error">正则表达式语法错误</a></li>
 <li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
+<li><a href="unterminated-comment">注释未结束</a></li>
+<li><a href="array-length-must-be-a-finite-positive-integer">必须为数组长度赋予一个有限的正数</a></li>
+<li><a href="unable-to-set-value-of-the-property-xxx-object-is-null-or-undefined">无法设置属性“XXX”的值: 对象为 null 或未定义</a></li>
+<li><a href="xxx-is-not-a-function">缺少函数</a></li>
+<li><a href="xxx-is-null-or-not-an-object">&#39;XXX&#39; 为空或不是对象</a></li>
+<li><a href="xxx-is-undefined">&#39;XXX&#39; 未定义</a></li>
+<li><a href="expected-xxx">缺少 &#39;XXX&#39;</a></li>
+<li><a href="expected-identifier">缺少标识符</a></li>
+<li><a href="expected-identifier-string-or-number">缺少标识符、 字符串或数字</a></li>
+<li><a href="object-expected">缺少对象</a></li>
+<li><a href="dom-exception-invalid-character-err-5">DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
+<li><a href="dom-exception-syntax-err-12">DOM Exception: SYNTAX_ERR (12)</a></li>
+<li><a href="error-setting-property-on-xxx">Error setting property on XXX!</a></li>
+<li><a href="html-parsing-error-unable-to-modify-the-parent-container-element-before-the-child-element-is-closed-kb927917">HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917)</a></li>
+<li><a href="invalid-range-in-character-set">Invalid range in character set</a></li>
+<li><a href="location-tostring">Location.toString</a></li>
+<li><a href="non-native-scope-object">non-native scope object</a></li>
+<li><a href="openclipboard-failure">OpenClipboard 失败</a></li>
+<li><a href="quota-exceeded-err-dom-exception-22-an-attempt-was-made-to-add-something-to-storage-that-exceeded-the-quota">QUOTA_EXCEEDED_ERR: DOM Exception 22: An attempt was made to add something to storage that exceeded the quota.</a></li>
+<li><a href="script-error">Script error.</a></li>
+<li><a href="setting-a-property-that-has-only-a-getter">setting a property that has only a getter</a></li>
+<li><a href="xxx-has-no-properties">XXX has no properties</a></li>
+<li><a href="object-xxx-has-no-method-yyy">Object XXX has no method &#39;YYY&#39;</a></li>
+<li><a href="chrome-contextmenus-can-only-be-used-in-extension-processes">Uncaught Error: chrome.contextMenus can only be used in extension processes.</a></li>
+<li><a href="not-found-err-dom-exception-8">NOT_FOUND_ERR: DOM Exception 8</a></li>
+<li><a href="unexpected-end-of-input">Unexpected end of input</a></li>
+<li><a href="unknown-cannot-convert-to-string">unknown (can&#39;t convert to string)</a></li>
+<li><a href="the-uri-to-be-encoded-contains-an-invalid-character">被编码的 URI 中包含非法字符</a></li>
+<li><a href="cannot-to-execute-freed-script-code">不能执行已释放 Script 的代码</a></li>
+<li><a href="does-not-support-this-interface">不支持此接口</a></li>
+<li><a href="invalid-argument">参数无效。</a></li>
+<li><a href="the-operation-has-timed-out">操作已超时。</a></li>
+<li><a href="passed-to-a-system-call-data-area-is-too-small">传递给系统调用的数据区域太小。</a></li>
+<li><a href="calling-object-is-invalid">调用的对象无效</a></li>
+<li><a href="out-of-stack-space">堆栈溢出</a></li>
+<li><a href="object-doesnot-support-property-or-method-xxx">对象不支持“XXX”属性或方法</a></li>
+<li><a href="object-doesnot-support-this-property-or-method">对象不支持此属性或方法</a></li>
+<li><a href="illegal-assignment">非法赋值</a></li>
+<li><a href="illegal-assignment-xxx">非法赋值: &#39;XXX&#39;</a></li>
+<li><a href="the-server-unforeseen-circumstances">服务器出现意外情况。</a></li>
+<li><a href="library-not-registered">库没有注册。</a></li>
+<li><a href="class-doesnot-support-automation">类不能支持 Automation 操作</a></li>
+<li><a href="type-mismatch">类型不匹配</a></li>
+<li><a href="exception-thrown-and-not-caught">例外被抛出且未被接住</a></li>
+<li><a href="class-not-registered">没有注册类别</a></li>
+<li><a href="internal-error">内部错误</a></li>
+<li><a href="out-of-memory">内存不够</a></li>
+<li><a href="lack-of-hexadecimal-digits">缺少十六进制数字</a></li>
+<li><a href="not-implemented">尚未实现</a></li>
+<li><a href="the-value-of-the-attribute-xxx-is-null-undefined-or-not-a-function-object">属性“XXX”的值为 null、未定义或不是 Function 对象</a></li>
+<li><a href="conditional-compilation-has-been-closed">条件编译已关闭</a></li>
+<li><a href="unterminated-string-constant">未结束的字符串常量</a></li>
+<li><a href="unknown-name">未知名称。</a></li>
+<li><a href="unspecified-error">未指明的错误。</a></li>
+<li><a href="not-execute">未執行</a></li>
+<li><a href="could-not-get-the-xxx-property-unspecified-error">无法得到 XXX 属性。 未指明的错误。</a></li>
+<li><a href="unable-to-get-value-of-the-property-xxx-object-is-null-or-undefined">无法获取属性“XXX”的值：对象为 null 或未定义</a></li>
+<li><a href="more-threads-can-not-be-created-in-the-system">无法在系统中创建更多的线程。</a></li>
+<li><a href="invalid-character">无效字符</a></li>
+<li><a href="system-error-2146697211">系统错误: -2146697211。</a></li>
+<li><a href="system-not-found-the-specified-resource">系统未找到指定的资源。</a></li>
+<li><a href="insufficient-system-resources-to-complete-the-requested-service">系统资源不足，无法完成请求的服务。</a></li>
+<li><a href="accidentally-call-a-method-or-property-access">意外地调用了方法或属性访问。</a></li>
+<li><a href="due-the-error-xxx-a-result-of-this-operation-can-not-be-completed">由于出现错误 XXX 而导致此项操作无法完成。</a></li>
+<li><a href="the-control-is-not-visible-not-enabled-or-of-a-type-which-is-not-allowed-and-therefore-can-not-be-the-focus-toward-it">由于该控件目前不可见、未启用或其类型不允许，因此无法将焦点移向它。</a></li>
+<li><a href="syntax-error">语法错误</a></li>
+<li><a href="an-internal-error-occurred-in-the-extended-version-of-microsoft-internet">在 Microsoft Internet 扩展版本中发生内部错误</a></li>
+<li><a href="member-not-found">找不到成员。</a></li>
+<li><a href="element-not-found">找不到元素。</a></li>
+<li><a href="not-found-the-specified-program">找不到指定的程序。</a></li>
+<li><a href="operation-when-the-error-in-the-execution-page">执行页内操作时的错误。</a></li>
+<li><a href="specify-the-resource-download-failed">指定资源下载失败。</a></li>
+<li><a href="a-redirect-request-will-change-a-secure-to-a-non-secure-connection">重定向请求将安全连接更改为不安全连接</a></li>
+<li><a href="the-specified-module-could-not-be-found">找不到指定的模块。</a></li>
+<li><a href="the-client-does-not-have-the-required-privileges">客户端没有所需的特权。</a></li>
+<li><a href="disk-error-occurred-when-performing-a-read-operation">执行读取操作时发生磁盘错误。</a></li>
+<li><a href="the-dynamic-link-library-dll-initialization-routine-failed">动态链接库(DLL)初始化例程失败。</a></li>
+<li><a href="object-doesnot-support-this-action">对象不支持此操作</a></li>
 </ul>
+<h2 id="%E6%9D%83%E9%99%90">权限</h2>
+<ul>
+<li><a href="access-is-denied">拒绝访问。</a></li>
+<li><a href="permission-denied">没有权限</a></li>
+<li><a href="permission-denied-to-access-property-xxx">Permission denied to access property &#39;XXX&#39;</a></li>
+<li><a href="can-not-write">書き込みできません。</a></li>
+</ul>
+<h2 id="%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF">语法错误</h2>
+<ul>
+<li><a href="return-statement-outside-of-function">&#39;return&#39; 语句在函数之外</a></li>
+</ul>
+<h2 id="%E5%8A%A0%E8%BD%BD%E5%BC%82%E5%B8%B8">加载异常</h2>
+<ul>
+<li><a href="error-loading-script">Error loading script</a></li>
+<li><a href="the-remote-procedure-call-failed">远程过程调用失败。</a></li>
+</ul>
+<h2 id="%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%89%B9%E6%80%A7%E7%BC%BA%E5%A4%B1%E7%B1%BB%E5%BC%82%E5%B8%B8">客户端特性缺失类异常</h2>
+<ul>
+<li><a href="the-lack-of-storage-space-to-complete-this-operation">存储空间不足，无法完成此操作。</a></li>
+<li><a href="version-of-ole-on-the-client-and-server-do-not-match">客户端和服务器的OLE版本不匹配。</a></li>
+</ul>
+<h2 id="%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%BC%82%E5%B8%B8">客户端插件异常</h2>
+<ul>
+<li><a href="an-internal-error-occurred-in-the-microsoft-internet-extensions">An internal error occurred in the Microsoft Internet extensions</a></li>
+<li><a href="attempting-to-use-a-disconnected-port-object">Attempting to use a disconnected port object</a></li>
+</ul>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannel.responseStatus]</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/result/waitResult.htm">https://cashier.alipay.com/standard/result/waitResult.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td>chrome://icqtoolbar/content/tabcontext.js</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>75</td>
+</tr>
+</tbody></table>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>Uncaught Error: Error connecting to extension gclcmokkcfnjpghegbnebiokigholeli</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/gateway/confirm.htm">https://cashier.alipay.com/standard/gateway/confirm.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td>extension</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>187</td>
+</tr>
+</tbody></table>
+<h2 id="%E6%9C%AA%E7%9F%A5%E7%9A%84%E5%BC%82%E5%B8%B8">未知的异常</h2>
+<ul>
+<li><a href="unknown-runtime-error">未知的运行时错误</a></li>
+<li><a href="component-returned-failure-code-0x80570016">Component returned failure code: 0x80570016</a></li>
+<li><a href="const-xxx-has-already-been-declared">const &#39;XXX&#39; has already been declared</a></li>
+<li><a href="error-nnn">error -NNN</a></li>
+</ul>
+
+<!-- [Demos](demos) -->
+
+<!-- * [Template](template) -->
 </div>
 </div>
 </div>

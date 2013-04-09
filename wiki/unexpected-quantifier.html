@@ -25,7 +25,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
   <h1 class="entry-title">错误的数量词</h1>
   <div class="entry-content"><table><thead>
 <tr>
-<th>Language</th>
+<th width="100">Language</th>
 <th>Message</th>
 </tr>
 </thead><tbody>
@@ -57,14 +57,14 @@ str_reg 未作安全处理时抛出。
 <div class="highlight"><pre><code class="javascript">RegExp.escape = <span class="keyword">function</span>(source){
   <span class="keyword">return</span> String(source).replace(<span class="regexp">/([\!\\\/\.\$\*\^\(\)\[\]\{\}\?\+\-\|])/g</span>, <span class="string">"\\$1"</span>);
 };
-</code></pre></div><h2 id="%E6%A1%88%E4%BE%8B">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">"+"</span>);
+</code></pre></div><h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">"+"</span>);
 </code></pre></div>
 <table><thead>
 <tr>
-<th>Browser</th>
-<th>Language</th>
+<th width="100">Browser</th>
+<th width="100">Language</th>
 <th>Message</th>
-<th>Number</th>
+<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -103,7 +103,7 @@ str_reg 未作安全处理时抛出。
 
 <table><thead>
 <tr>
-<th>异常字段</th>
+<th width="100">异常字段</th>
 <th>值</th>
 </tr>
 </thead><tbody>
@@ -151,7 +151,7 @@ getScore : <span class="keyword">function</span>(opt_strPassword){
 },
 </code></pre></div>
 <p>这些正则表达式特殊字符，应该经过正确的转义处理。</p>
-<h2 id="%E7%9B%B8%E5%85%B3%E5%BC%82%E5%B8%B8">相关异常</h2>
+<h2 id="related">相关异常</h2>
 <ol>
 <li><a href="regular-expression-syntax-error">正则表达式语法错误</a></li>
 <li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
@@ -163,7 +163,7 @@ getScore : <span class="keyword">function</span>(opt_strPassword){
 try{new RegExp(")");}catch(ex){monitor.error(ex);}
 try{new RegExp("+");}catch(ex){monitor.error(ex);}
 </script>
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+<h2 id="see-also">参考</h2>
 <ul>
 <li><a href="http://msdn.microsoft.com/zh-tw/library/ie/k0e76ayf(v=vs.94).aspx">非預期的數量詞</a></li>
 <li><a href="http://msdn.microsoft.com/zh-cn/library/k0e76ayf(v=vs.94).aspx">意外的限定符</a></li>

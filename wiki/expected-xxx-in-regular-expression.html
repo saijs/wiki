@@ -25,7 +25,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
   <h1 class="entry-title">正则表达式中缺少 &#39;XXX&#39;</h1>
   <div class="entry-content"><table><thead>
 <tr>
-<th>Language</th>
+<th width="100">Language</th>
 <th>Message</th>
 </tr>
 </thead><tbody>
@@ -38,14 +38,14 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 <td>Expected &#39;XXX&#39; in regular expression</td>
 </tr>
 </tbody></table>
-<h2 id="%E6%A1%88%E4%BE%8B">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">"("</span>);
+<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">"("</span>);
 </code></pre></div>
 <table><thead>
 <tr>
-<th>Browser</th>
-<th>Language</th>
+<th width="100">Browser</th>
+<th width="100">Language</th>
 <th>Message</th>
-<th>Number</th>
+<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -85,10 +85,10 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 </code></pre></div>
 <table><thead>
 <tr>
-<th>Browser</th>
-<th>Language</th>
+<th width="100">Browser</th>
+<th width="100">Language</th>
 <th>Message</th>
-<th>Number</th>
+<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -125,7 +125,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 
 <table><thead>
 <tr>
-<th>异常字段</th>
+<th width="100">异常字段</th>
 <th>值</th>
 </tr>
 </thead><tbody>
@@ -139,7 +139,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 
 <table><thead>
 <tr>
-<th>异常字段</th>
+<th width="100">异常字段</th>
 <th>值</th>
 </tr>
 </thead><tbody>
@@ -153,7 +153,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 
 <table><thead>
 <tr>
-<th>异常字段</th>
+<th width="100">异常字段</th>
 <th>值</th>
 </tr>
 </thead><tbody>
@@ -162,7 +162,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 <td>Expected &#39;)&#39; in regular expression</td>
 </tr>
 </tbody></table>
-<h2 id="%E7%9B%B8%E5%85%B3%E5%BC%82%E5%B8%B8">相关异常</h2>
+<h2 id="related">相关异常</h2>
 <ul>
 <li><a href="unexpected-quantifier">错误的数量词</a></li>
 <li><a href="regular-expression-syntax-error">正则表达式语法错误</a></li>
@@ -174,7 +174,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 try{new RegExp('(');}catch(ex){monitor.error(ex);}
 try{new RegExp("[");}catch(ex){monitor.error(ex);}
 </script>
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+<h2 id="see-also">参考</h2>
 <ul>
 <li><a href="http://msdn.microsoft.com/zh-cn/library/5ay321c5(v=vs.94).aspx">正则表达式中应有“)”</a></li>
 <li><a href="http://msdn.microsoft.com/zh-cn/library/tad157ds(v=vs.94).aspx">正则表达式中应有“]”</a></li>

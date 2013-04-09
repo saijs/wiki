@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>Error loading script</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,37 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">Error loading script</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
-<table><thead>
-<tr>
 <th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
-</tr>
-<tr>
-<td>Chrome</td>
 <td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
-</tr>
-<tr>
+<td>Error loading script</td>
 <td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+
+<p>这个异常一般出现在 Firefox 浏览器中，在页面加载脚本失败的时候抛出。</p>
+
+<p>加载失败的原因有多种，比如：</p>
+
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li>防火墙阻挡了请求，常见于使用外部 CDN 资源造成，墙出没注意。</li>
+<li>发送 json/jsonp 请求的地址、参数不正确。</li>
+<li>服务器不稳定或出现异常，常见于异步装载脚本。</li>
+<li>用户行为导致浏览器误认为页面跳转而 abrot 请求。</li>
+</ul>
+<h2 id="case">案例</h2><h2 id="related">相关异常</h2><h2 id="see-also">延伸阅读</h2>
+<ul>
+<li><a href="http://stackoverflow.com/questions/1087518/firefox-error-loading-script">Firefox: “Error loading script”</a></li>
+<li><a href="http://stackoverflow.com/questions/192570/firefox-error-loading-script-loading-google-analytics-in-ff2">Firefox &#39;Error loading script&#39; loading Google Analytics in FF2</a></li>
+<li><a href="http://help.airbrake.io/discussions/suggestions/335-error-loading-script-errors-in-firefox">&quot;Error loading script&quot; errors in Firefox</a></li>
+<li><a href="http://groups.google.com/a/googleproductforums.com/forum/#!category-topic/analytics/discuss-tracking-and-implementation-issues/cDyJXTH4dLE">Firefox &#39;Error loading script &#39; issue when implementing GA scripts.</a></li>
 </ul>
 </div>
   <div class="comments">

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>找不到指定的模块。</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,71 +22,85 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">找不到指定的模块。</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
+<th>备注</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
+<td>中文</td>
+<td>找不到指定的模块。</td>
+<td></td>
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
+
+<p>一般有客户端缺失某些模块，或者某些模块被篡改，导致动态连接库调用失败。</p>
+
+<p>客户端原因，前端可以做的非常有限，建议忽略该类异常。</p>
+<h2 id="case">案例</h2>
+<p>我安装了逍遥Win7纯净+装机版+XP纯净版三合一 中的win7装机版，
+发现网页不能打印，点打印后提示当前页的脚本发生错误，</p>
+
 <table><thead>
 <tr>
-<th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
+<th width="100">异常字段</th>
+<th>值</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
+<td>URL</td>
+<td>res://ieframe.dll/preview.js</td>
 </tr>
 <tr>
-<td>Chrome</td>
-<td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
+<td>Message</td>
+<td>找不到指定模块。</td>
 </tr>
 <tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
+<td>Code</td>
+<td>0</td>
 </tr>
 <tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
+<td>Line</td>
+<td>2053</td>
 </tr>
 <tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
+<td>Char</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p>是否要在此页面上继续运行脚本？ 点是或否后都没反应。打印其它文档都正常的。就是不能打印网页。</p>
+
+<ul>
+<li><a href="http://www.xiaozhonghe.com/read.php?tid=9672">打印网页时提示脚本错误</a></li>
+<li><a href="http://hi.baidu.com/bdwy520/item/648cc3249839f58c9d63d1e6">RUNDLL 加载时出错 找不到指定的模块 解决方法</a></li>
+<li><a href="http://zhidao.baidu.com/question/24299200.html">ie 找不到指定模块？！</a></li>
+<li><a href="http://zhidao.baidu.com/question/27176300.html">IE不正常!提示找不到指定模块!有时候还网页上有错误!</a></li>
+</ul>
+
+<table><thead>
+<tr>
+<th></th>
+<th>Message</th>
+<th width="100">Number</th>
+<th>备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>URL</td>
+<td>res://ieframe.dll/preview.js</td>
+<td>0</td>
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
-<ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
-</ul>
-</div>
+
+<p><img src="../images/the-specified-module-could-not-be-found.jpg" alt="找不到指定的模块"/></p>
+<h2 id="related">相关异常</h2><h2 id="see-also">延伸阅读</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>

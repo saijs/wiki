@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>缺少函数</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,137 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">缺少函数</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
+<th width="100">Browser</th>
 <th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>简体中文</td>
-<td>正则表达式语法错误</td>
+<td>缺少函数</td>
+<td>IE</td>
+<td>-2146823286</td>
+</tr>
+<tr>
+<td>英文</td>
+<td>TypeError: &#39;XXX&#39; is not a function</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>XXX is not function</td>
+<td></td>
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
+<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> a = {b:<span class="number">1</span>};
+a.b();
 </code></pre></div>
 <table><thead>
 <tr>
 <th width="100">Browser</th>
-<th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
-</tr>
-<tr>
-<td>Chrome</td>
-<td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
+<td>缺少函数</td>
 </tr>
 <tr>
 <td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
+<td>a.b is not a function</td>
 </tr>
 <tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
+<td>Chrome</td>
+<td>Property &#39;b&#39; of object #<Object> is not a function</td>
 </tr>
 <tr>
 <td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
+<td>&#39;1&#39; is not a function</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>&#39;a.b&#39; is not a function</td>
+</tr>
+</tbody></table>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>TypeError: &#39;undefined&#39; is not a function</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="https://lab.alipay.com/user/reg/complete/single.htm">https://lab.alipay.com/user/reg/complete/single.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>0</td>
+</tr>
+<tr>
+<td>UA</td>
+<td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/534.48.3 (KHTML, like Gecko) Version/5.1 Safari/534.48.3</td>
+</tr>
+</tbody></table>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/gateway/ebankPay.htm">https://cashier.alipay.com/standard/gateway/ebankPay.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td><a href="https://a.alipayobjects.com/??static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/arale.aspect-1.0.js,static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/aralex.base-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/alipay.finance.AsyncHtml-1.0.js,static/ar/alipay.finance.Flexible-1.0.js,static/ar/alipay.finance.Apop-1.4.js,static/ar/aralex.utils.IframeShim-1.2.js,static/ar/arale.json2-1.0.js,static/ar/alipay.droplist-1.3.js,cashier/cashier.Icon-1.2.js,static/ar/alipay.finance.InstallmentsAndFavorable-1.5.js,cashier/cashier.module-2.19.js,cashier/cashier.Widget-1.0.js,cashier/cashier.Tip-1.1.js,cashier/cashier.Apop-1.5.js,static/ar/alipay.security.alieditcontrol-1.6.js">https://a.alipayobjects.com/??static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/arale.aspect-1.0.js,static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/aralex.base-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/alipay.finance.AsyncHtml-1.0.js,static/ar/alipay.finance.Flexible-1.0.js,static/ar/alipay.finance.Apop-1.4.js,static/ar/aralex.utils.IframeShim-1.2.js,static/ar/arale.json2-1.0.js,static/ar/alipay.droplist-1.3.js,cashier/cashier.Icon-1.2.js,static/ar/alipay.finance.InstallmentsAndFavorable-1.5.js,cashier/cashier.module-2.19.js,cashier/cashier.Widget-1.0.js,cashier/cashier.Tip-1.1.js,cashier/cashier.Apop-1.5.js,static/ar/alipay.security.alieditcontrol-1.6.js</a></td>
+</tr>
+<tr>
+<td>Line</td>
+<td>361</td>
+</tr>
+</tbody></table>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>window.attachEvent is not a function</td>
 </tr>
 </tbody></table>
 <h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
+<ul>
+<li><a href="object-doesnot-support-this-property-or-method">对象不支持此属性或方法</a></li>
+</ul>
 <h2 id="see-also">参考</h2>
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li><a href="object-doesnot-support-this-property-or-method">对象不支持此属性或方法</a></li>
 </ul>
 </div>
   <div class="comments">

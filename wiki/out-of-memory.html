@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="nico 0.2.2">
+    <meta name="theme" content="one 0.1">
+    <title>内存不够</title>
+<script type="text/javascript">
+window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
+</script>
+<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
+    <link rel="stylesheet" href="../static/one.css" />
+    <link rel="stylesheet" href="../static/codes.css" />
+    <link rel="stylesheet" href="../static/syntax.css" />
+  </head>
+  <body>
+    <div class="navigation" role="navigation">
+      <div class="container">
+        <a class="home" href="../"></a>
+      </div>
+    </div>
+    <div class="document">
+<div class="hentry">
+  <h1 class="entry-title">内存不够</h1>
+  <div class="entry-content"><table><thead>
+<tr>
+<th width="100">Language</th>
+<th>Message</th>
+<th width="100">Browser</th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>简体中文</td>
+<td>内存不够</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>繁体中文</td>
+<td>記憶體不足</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>英文</td>
+<td>out of memory</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Out of memory</td>
+<td>IE9,Safari 5</td>
+<td>Error</td>
+</tr>
+<tr>
+<td></td>
+<td>allocation size overflow</td>
+<td>Firefox 4</td>
+<td>InternalError</td>
+</tr>
+<tr>
+<td></td>
+<td>sad browser tab</td>
+<td>Chrome 10</td>
+<td>无法捕获，实测范例代码的结果是提示该脚本占用内存过多而不是出现 sad browser tab，然而在真正的脚本中死循环时，确实出现了 sad browser tab</td>
+</tr>
+<tr>
+<td></td>
+<td>my box ground to a crawl for several minutes;<br/> I ended up killing the process</td>
+<td>Opera 11</td>
+<td></td>
+</tr>
+<tr>
+<td>韩文</td>
+<td>메모리 부족</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p>一般是由于递归太深，或出现巨大、甚至是无限循环，造成堆、栈溢出。</p>
+
+<p>也有可能真的就是内存不够造成的。</p>
+<h2 id="case">案例</h2>
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>메모리 부족</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>内存不够</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/payment/cashier.htm">https://cashier.alipay.com/standard/payment/cashier.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td><a href="https://cashier.alipay.com/standard/payment/cashier.htm">https://cashier.alipay.com/standard/payment/cashier.htm</a></td>
+</tr>
+<tr>
+<td>Line</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>内存不够</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/gateway/confirm.htm">https://cashier.alipay.com/standard/gateway/confirm.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td><a href="https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.3.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.7.js,cashier/cashier.ProvinceSelect-1.0.js">https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.3.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.7.js,cashier/cashier.ProvinceSelect-1.0.js</a></td>
+</tr>
+<tr>
+<td>Line</td>
+<td>729</td>
+</tr>
+</tbody></table>
+
+<p>相关代码</p>
+
+<!-- start-line=727; -->
+<div class="highlight"><pre><code class="javascript">b=a.getOffsets(),d=c.getOffsets();<span class="keyword">return</span>{left:d.left-b.left,top:d.top-b.top}},staticTips:[],showStaticTip:<span class="keyword">function</span>(c,a,b){<span class="keyword">var</span> d=c.attr(<span class="string">"id"</span>),e=<span class="keyword">this</span>.staticTips[d]||c,b=b||{};<span class="keyword">if</span>(e){<span class="keyword">this</span>.staticTips[d]||(<span class="keyword">this</span>.staticTips[d]=e);<span class="keyword">this</span>.hideAllStaticTips();<span class="keyword">var</span> d=<span class="keyword">this</span>.getOffsets(a,b.parent),f=a.region(),g=f.bottom-f.top,f=f.right-f.left;<span class="string">"right"</span>===b.position?e.setStyle({left:d.left+f+(b.offsetLeft||<span class="number">0</span>)+<span class="string">"px"</span>,top:d.top+parseInt(g/<span class="number">2</span>,<span class="number">10</span>)+(b.offsetTop||<span class="number">0</span>)+<span class="string">"px"</span>}):<span class="string">"bottom"</span>===b.position?e.setStyle({left:d.left+parseInt(f/
+<span class="number">2</span>,<span class="number">10</span>)+(b.offsetLeft||<span class="number">0</span>)+<span class="string">"px"</span>,top:d.top+g+b.offsetTop+(b.offsetTop||<span class="number">0</span>)+<span class="string">"px"</span>}):e.setStyle({left:d.left+<span class="string">"px"</span>,top:d.top+<span class="string">"px"</span>});e.attr(<span class="string">"isbindevent"</span>)||(d=e.query(<span class="string">".j-apop-close"</span>),d.length&amp;&amp;(E.on(d[<span class="number">0</span>],<span class="string">"click"</span>,<span class="keyword">function</span>(a){a.stopEvent();e.addClass(<span class="string">"fn-hide"</span>)}),e.attr(<span class="string">"isbindevent"</span>,!<span class="number">0</span>)));e.removeClass(<span class="string">"fn-hide"</span>);<span class="keyword">this</span>.hasTipShow=!<span class="number">0</span>;E.publish(<span class="string">"cashier/common/showStaticTip"</span>,[c,a,b])}},hasTipShow:!<span class="number">1</span>,staticTips:{},hideAllStaticTips:<span class="keyword">function</span>(){<span class="keyword">for</span>(<span class="keyword">var</span> c <span class="keyword">in</span> <span class="keyword">this</span>.staticTips)<span class="keyword">this</span>.staticTips[c]&amp;&amp;(<span class="keyword">this</span>.staticTips[c].addClass(<span class="string">"fn-hide"</span>),
+E.publish(<span class="string">"cashier/common/hideStaticTip"</span>,[<span class="keyword">this</span>.staticTips[c]]));Cashier.Module.hasTipShow=!<span class="number">1</span>},clickHideTip:<span class="keyword">function</span>(c){E.subscribe(<span class="string">"common/click/body"</span>,window,<span class="keyword">function</span>(a){<span class="keyword">if</span>(Cashier.Module.hasTipShow){<span class="keyword">for</span>(<span class="keyword">var</span> b=$(a.target),d=d||<span class="number">20</span>,a=!<span class="number">1</span>;d--&amp;&amp;b;){<span class="keyword">for</span>(<span class="keyword">var</span> e=b.attr(<span class="string">"className"</span>),f=<span class="number">0</span>,g;g=c[f];f++)<span class="keyword">if</span>(~e.indexOf(g)){a=!<span class="number">0</span>;<span class="keyword">break</span>}<span class="keyword">if</span>(a)<span class="keyword">break</span>;b=b.parent()}a||(Cashier.Module.hideAllStaticTips(),$E.publish(<span class="string">"common/hideAllTip"</span>,[]))}})},init:<span class="keyword">function</span>()}}(window);
+Cashier.Module.Cookie={set:<span class="keyword">function</span>(c,a,b){c=<span class="keyword">this</span>._createCookieString(c,a,!<span class="number">0</span>,b);<span class="keyword">return</span> document.cookie=c},get:<span class="keyword">function</span>(c){<span class="keyword">var</span> a=<span class="keyword">this</span>._parseCookieString(document.cookie);<span class="keyword">try</span>{<span class="keyword">return</span> a[c]}<span class="keyword">catch</span>(b){<span class="keyword">return</span> <span class="literal">null</span>}},_parseCookieString:<span class="keyword">function</span>(c,a){<span class="keyword">var</span> b={};<span class="keyword">if</span>(arale.isString(c)&amp;&amp;<span class="number">0</span>&lt;c.length){<span class="keyword">var</span> d=!<span class="number">1</span>===a?<span class="keyword">function</span>(a){<span class="keyword">return</span> a}:decodeURIComponent;<span class="keyword">if</span>(<span class="regexp">/[^=]+=[^=;]?(?:; [^=]+=[^=]?)?/</span>.test(c))<span class="keyword">for</span>(<span class="keyword">var</span> e=c.split(<span class="regexp">/;\s/g</span>),f=<span class="literal">null</span>,g=<span class="literal">null</span>,h=<span class="literal">null</span>,i=<span class="number">0</span>,j=e.length;i&lt;j;i++){h=e[i].match(<span class="regexp">/([^=]+)=/i</span>);<span class="keyword">if</span>(h <span class="keyword">instanceof</span> Array)<span class="keyword">try</span>{f=
+decodeURIComponent(h[<span class="number">1</span>]),g=d(e[i].substring(h[<span class="number">1</span>].length+<span class="number">1</span>))}<span class="keyword">catch</span>(k){}<span class="keyword">else</span> g=f=decodeURIComponent(e[i]);b[f]=g}}<span class="keyword">return</span> b},_createCookieString:<span class="keyword">function</span>(c,a,b,d){c=encodeURIComponent(c)+<span class="string">"="</span>+(b?encodeURIComponent(a):a);arale.isObject(d)&amp;&amp;(d.expires <span class="keyword">instanceof</span> Date&amp;&amp;(c+=<span class="string">"; expires="</span>+d.expires.toGMTString()),arale.isString(d.path)&amp;&amp;<span class="string">""</span>!==d.path&amp;&amp;(c+=<span class="string">"; path="</span>+d.path),arale.isString(d.domain)&amp;&amp;<span class="string">""</span>!==d.domain&amp;&amp;(c+=<span class="string">"; domain="</span>+d.domain),!<span class="number">0</span>===d.secure&amp;&amp;(c+=<span class="string">"; secure"</span>));<span class="keyword">return</span> c}};
+</code></pre></div><h2 id="related">相关异常</h2>
+<ul>
+<li><a href="out-of-stack-space">堆栈溢出</a></li>
+</ul>
+<h2 id="see-also">延伸阅读</h2>
+<ul>
+<li><a href="http://www.javascriptkit.com/javatutors/closuresleak/index.shtml">JavaScript and memory leaks</a></li>
+<li><a href="http://stackoverflow.com/questions/3910044/ie6-7-8-out-of-memory">IE6/7/8 Out of Memory?</a></li>
+<li><a href="http://www.bokeyy.com/post/javascript-out-of-memery-and-stack.html">JavaScript 中的堆栈溢出和内存不足</a> ，
+<a href="http://cautionsingularityahead.blogspot.com/2011/03/stack-overflow-and-out-of-memory-in.html">英文原文</a></li>
+<li><a href="http://topic.csdn.net/t/20040825/15/3308385.html">这个小程序怎会报内存不足？</a> - 递归：setTimeout(func(), 4),
+正确的应该是 setTimeout(func, 4) 或但不建议的 setTimeout(&quot;func()&quot;, 4)</li>
+<li><a href="http://topic.csdn.net/t/20050514/18/4006964.html">javascript显10个图就出现&quot;内存不够“的错误？</a> - 递归，同上。</li>
+<li><a href="http://www.itlea.com/thread-156893-1-1.html">用ajax框架报内存不足错训</a> - 无限循环。</li>
+</ul>
+</div>
+  <div class="comments">
+    <h2 id="discuss">讨论
+      <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
+    </h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'jserr'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
+</div>
+    <div class="footer">
+      <p class="copyright">JavaScript 异常档案</p>
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.2.2</p>-->
+    </div>
+    <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
+    <script src="../static/codes.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39646187-1', 'hotoo.me');
+  ga('send', 'pageview');
+
+</script>
+
+  <div class="github"><a class="github-link" href="https://github.com/totorojs/javascript-exception-archives">Fork me on GitHub</a></div>
+
+  </body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>被编码的 URI 中包含非法字符</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,74 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">被编码的 URI 中包含非法字符</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>简体中文</td>
-<td>正则表达式语法错误</td>
+<td>被编码的 URI 中包含非法字符</td>
+</tr>
+<tr>
 <td></td>
+<td>被解码的 URI 不是合法的编码</td>
+</tr>
+<tr>
+<td>英文</td>
+<td>The URI to be encoded contains an invalid character</td>
 </tr>
 </tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
+
+<p>多出现于 IE 浏览器中。由于 JScript 5.5 新增的 encodeURI，decodeURI，
+encodeURIComponent，decodeURIComponent 4个转码函数将汉字视为 3 个字节，
+而我们程序中比较常用的GB2312, GBK, UTF-8处理中文都是2字节的。</p>
+
+<p>客户端解决方案：工具 -&gt; 选项 -&gt; 高级 -&gt; 设置 -&gt; 国际 -&gt; 发送 UTF-8 URL.</p>
+
+<p>服务端解决方案：</p>
+
+<ol>
+<li>后端变量的值是已经反转码好的。</li>
+<li>然后端传输过来的编码每个字是 3 个字节长度。</li>
+</ol>
+<h2 id="case">案例</h2>
 <table><thead>
 <tr>
-<th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
+<th width="100">异常字段</th>
+<th>值</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
+<td>Message</td>
+<td>被编码的 URI 中包含非法字符 <br /></td>
 </tr>
 <tr>
-<td>Chrome</td>
-<td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/fastpay/fastPayCashier.htm">https://cashier.alipay.com/standard/fastpay/fastPayCashier.htm</a></td>
 </tr>
 <tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
+<td>File</td>
+<td><a href="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.tracker-1.11.js,alipay.fmsmng.monitor-1.4.js">https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.tracker-1.11.js,alipay.fmsmng.monitor-1.4.js</a></td>
 </tr>
 <tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
+<td>Line</td>
+<td>68</td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+
+<!-- start-line=67; -->
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> stack=[];light.each(obj,<span class="keyword">function</span>(property,value){<span class="keyword">if</span>(!property||!obj.hasOwnProperty(property)){<span class="keyword">return</span>
+}stack.push(light.encode(property)+splitter+light.encode(value))});<span class="keyword">return</span> stack.join(connector||<span class="string">"&amp;"</span>)
+},unparam:<span class="keyword">function</span>(text,splitter,connector){<span class="keyword">var</span> obj={};<span class="keyword">if</span>(!text){<span class="keyword">return</span> obj}splitter=splitter||<span class="string">"="</span>;
+</code></pre></div><h2 id="related">相关异常</h2><h2 id="see-also">参考</h2>
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/061fh4cw(v=VS.90).aspx">JS5024：要编码的 URI 包含无效字符</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/3aztces0(v=vs.90).aspx">JS5025：要解码的 URI 不是有效编码</a></li>
+<li><a href="http://blog.csdn.net/cuixiping/archive/2007/08/03/1723741.aspx">“被解码的 URI 不是合法的编码” 的问题解决</a></li>
+<li><a href="http://www.cnblogs.com/walkingboy/archive/2007/01/26/encodeURIAndFormAction_Chinese.html">encodeURI之URL中文参数问题</a></li>
 </ul>
 </div>
   <div class="comments">

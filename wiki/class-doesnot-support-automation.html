@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="nico 0.2.2">
+    <meta name="theme" content="one 0.1">
+    <title>类不能支持 Automation 操作</title>
+<script type="text/javascript">
+window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
+</script>
+<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
+    <link rel="stylesheet" href="../static/one.css" />
+    <link rel="stylesheet" href="../static/codes.css" />
+    <link rel="stylesheet" href="../static/syntax.css" />
+  </head>
+  <body>
+    <div class="navigation" role="navigation">
+      <div class="container">
+        <a class="home" href="../"></a>
+      </div>
+    </div>
+    <div class="document">
+<div class="hentry">
+  <h1 class="entry-title">类不能支持 Automation 操作</h1>
+  <div class="entry-content"><table><thead>
+<tr>
+<th width="100">Language</th>
+<th>Message</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>简体中文</td>
+<td>类不能支持 Automation 操作</td>
+</tr>
+<tr>
+<td></td>
+<td>Automation 操作中文件名或类名未找到</td>
+</tr>
+<tr>
+<td></td>
+<td>Automation 服务器不能创建对象</td>
+</tr>
+<tr>
+<td>繁体中文</td>
+<td>該物件類別不支援 Automation</td>
+</tr>
+<tr>
+<td>英文</td>
+<td>Class doesn&#39;t support Automation</td>
+</tr>
+</tbody></table>
+
+<p>出没于 Windows IE 浏览器之中，客户端问题。客户端重新注册以下文件即可：Windows -&gt; Run:</p>
+
+<pre>regsvr32 msscript.ocx
+regsvr32 dispex.dll
+regsvr32 vbscript.dll
+regsvr32 scrrun.dll
+regsvr32 urlmon.dll
+</pre>
+
+<p>注册完后清理一下浏览器缓存</p>
+<h2 id="case">案例</h2>
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>該物件類別不支援 Automation</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="https://lab.alipay.com/user/i.htm">https://lab.alipay.com/user/i.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td><a href="https://a.alipayobjects.com/ar/??arale.tmpl-1.0.js,arale.aspect-1.0.js,arale.class-1.0.js,aralex.base-1.1.js,arale.fx-1.1.js,aralex.switchable-1.1.js,aralex.slider.ScrollSlider-1.4.js,aralex.xbox-1.6.js,arale.uri-1.0.js,arale.http-1.1.js,alipay.combo-1.0.js,aralex.tipdone-1.2.js,aralex.apop-1.1.js,aralex.confirmbox-1.2.js,alipay.swfobject-1.0.js">https://a.alipayobjects.com/ar/??arale.tmpl-1.0.js,arale.aspect-1.0.js,arale.class-1.0.js,aralex.base-1.1.js,arale.fx-1.1.js,aralex.switchable-1.1.js,aralex.slider.ScrollSlider-1.4.js,aralex.xbox-1.6.js,arale.uri-1.0.js,arale.http-1.1.js,alipay.combo-1.0.js,aralex.tipdone-1.2.js,aralex.apop-1.1.js,aralex.confirmbox-1.2.js,alipay.swfobject-1.0.js</a></td>
+</tr>
+<tr>
+<td>Line</td>
+<td>600</td>
+</tr>
+</tbody></table>
+
+<!-- start-line=599; -->
+<div class="highlight"><pre><code class="javascript">}<span class="keyword">else</span>{setTimeout(arguments.callee,<span class="number">10</span>)}})()}<span class="keyword">else</span>{X.parentNode.removeChild(X)}}}<span class="function"><span class="keyword">function</span> <span class="title">b</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> Y=c(Z);
+<span class="keyword">if</span>(Y){<span class="keyword">for</span>(<span class="keyword">var</span> X <span class="keyword">in</span> Y){<span class="keyword">if</span>(<span class="keyword">typeof</span> Y[X]==<span class="string">"function"</span>){Y[X]=<span class="literal">null</span>}}Y.parentNode.removeChild(Y)
+}}<span class="function"><span class="keyword">function</span> <span class="title">c</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> X=<span class="literal">null</span>;<span class="keyword">try</span>{X=j.getElementById(Z)}<span class="keyword">catch</span>(Y){}<span class="keyword">return</span> X}<span class="function"><span class="keyword">function</span> <span class="title">C</span><span class="params">(X)</span>{</span><span class="keyword">return</span> j.createElement(X)
+</code></pre></div>
+<p>创建 ActiveXObject 对象相关的问题，详细情况待分析。</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> ActiveXObject(); <span class="comment">//! Automation 服务器不能创建对象</span>
+</code></pre></div><h2 id="related">相关异常</h2><h2 id="see-also">延伸阅读</h2>
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/aa264512(v=vs.60).aspx">Class doesn&#39;t support Automation (Error 430)</a></li>
+<li><a href="http://w3help.org/zh-cn/causes/BT9021">BT9021: IE 中可以使用 ActiveXObject 创建 Automation 对象，同时该对象的方法及属性名称大小写不敏感</a></li>
+<li><a href="http://docwiki.cisco.com/wiki/Error_in_IE_(Class_doesn&#x27;t_support_Automation)">Error in IE (Class doesn&#39;t support Automation)</a></li>
+<li><a href="http://www.cnblogs.com/super119/archive/2011/03/20/1989362.html">IE7上出现Class doesn&#39;t support Automation的错误和解决办法</a></li>
+<li><a href="https://getsatisfaction.com/resqtech/topics/class_doesnt_support_automation">Class Doesn&#39;t Support Automation</a></li>
+<li><a href="http://blog.mundy.co/Internet-Explorer/class-doesnt-support-automation-error-in-internet-explorer">Class Doesn&#39;t Support Automation error in Internet Explorer</a></li>
+</ul>
+</div>
+  <div class="comments">
+    <h2 id="discuss">讨论
+      <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
+    </h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'jserr'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
+</div>
+    <div class="footer">
+      <p class="copyright">JavaScript 异常档案</p>
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.2.2</p>-->
+    </div>
+    <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
+    <script src="../static/codes.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39646187-1', 'hotoo.me');
+  ga('send', 'pageview');
+
+</script>
+
+  <div class="github"><a class="github-link" href="https://github.com/totorojs/javascript-exception-archives">Fork me on GitHub</a></div>
+
+  </body>
+</html>

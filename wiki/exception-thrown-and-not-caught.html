@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>例外被抛出且未被接住</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,114 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">例外被抛出且未被接住</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>简体中文</td>
-<td>正则表达式语法错误</td>
+<td>例外被抛出且未被接住</td>
+</tr>
+<tr>
 <td></td>
+<td>引发了异常但未捕获</td>
+</tr>
+<tr>
+<td></td>
+<td>JS5022：异常被引发且未被捕获</td>
+</tr>
+<tr>
+<td>英文</td>
+<td>Exception thrown and not caught</td>
 </tr>
 </tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
+
+<p>IE 浏览器中 throw 出非 Error 对象，异常消息均是这个。</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">throw</span> <span class="string">"err"</span>;
+<span class="keyword">throw</span> <span class="number">1</span>;
+<span class="keyword">throw</span> {};
+<span class="keyword">throw</span> <span class="keyword">new</span> TypeError(<span class="string">"type error"</span>);
+<span class="keyword">throw</span> <span class="keyword">new</span> ReferenceError(<span class="string">"ref err"</span>);
+<span class="keyword">throw</span> <span class="keyword">new</span> SyntaxError(<span class="string">"syntax error"</span>);
+
+<span class="comment">// ...</span>
 </code></pre></div>
+<p>抛出异常建议使用：</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"err message."</span>);
+</code></pre></div><h2 id="case">案例</h2>
 <table><thead>
 <tr>
-<th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
+<th width="100">异常字段</th>
+<th>值</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
+<td>Message</td>
+<td>Exception thrown and not caught</td>
 </tr>
 <tr>
-<td>Chrome</td>
-<td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/gateway/payFlow.htm">https://cashier.alipay.com/standard/gateway/payFlow.htm</a></td>
 </tr>
 <tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
+<td>File</td>
+<td><a href="https://cashier.alipay.com/standard/gateway/payFlow.htm">https://cashier.alipay.com/standard/gateway/payFlow.htm</a></td>
 </tr>
 <tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
+<td>Line</td>
+<td>590</td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>例外被抛出且未被接住</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>引发了异常但未捕获</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="https://cashier.alipay.com/standard/gateway/ebankPay.htm">https://cashier.alipay.com/standard/gateway/ebankPay.htm</a></td>
+</tr>
+<tr>
+<td>File</td>
+<td><a href="https://cashier.alipay.com/standard/gateway/ebankPay.htm">https://cashier.alipay.com/standard/gateway/ebankPay.htm</a></td>
+</tr>
+<tr>
+<td>Line</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h2 id="related">相关异常</h2><h2 id="see-also">延伸阅读</h2>
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li><a href="http://blog.hotoo.me/javascript-exceptions.html">JavaScript 异常</a></li>
+<li><p><a href="http://www.aspxhome.com/chm/JScript8/xk40eh20.htm">JS5022：异常被引发且未被捕获</a></p>
+
+<blockquote>
+<p>代码包含一个未包含在 try 块内的 throw 语句，或者代码不包含用于捕获错误的关联
+catch 块。使用 throw 语句从 try 块中引发的异常将在 try 块外由 catch 语句捕获。</p>
+
+<p>更正此错误</p>
+
+<ol>
+<li>将可以引发异常的代码放在 try 块中，并确保存在相应的 catch 块。</li>
+<li>确保 catch 语句接受格式正确的异常。</li>
+<li>如果重新引发异常，则确保存在另一个相应的 catch 语句。</li>
+</ol>
+</blockquote></li>
 </ul>
 </div>
   <div class="comments">

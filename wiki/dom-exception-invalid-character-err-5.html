@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>DOM Exception: INVALID_CHARACTER_ERR (5)</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,38 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">DOM Exception: INVALID_CHARACTER_ERR (5)</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
-<table><thead>
-<tr>
 <th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
-</tr>
-<tr>
-<td>Chrome</td>
 <td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
-</tr>
-<tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
+<td>DOM Exception: INVALID_CHARACTER_ERR (5)</td>
+<td>IE9</td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+<h2 id="%E5%88%86%E6%9E%90">分析</h2>
+<p>IE9 创建元素(createElement) 开始严格遵循标准实现，不支持传入完整的 HTML 代码方式。</p>
+<div class="highlight"><pre><code class="javascript">document.createElement(<span class="string">'&lt;input type="text" name="user" /&gt;'</span>);
+</code></pre></div>
+<p>应该使用标准方式：</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> input = document.createElement(<span class="string">"input"</span>);
+input.setAttribute(<span class="string">"name"</span>, <span class="string">"user"</span>);
+input.setAttribute(<span class="string">"type"</span>, <span class="string">"text"</span>);
+</code></pre></div><h2 id="case">案例</h2><h2 id="%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83">相关参考</h2><h2 id="see-also">参考</h2>
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li><a href="http://stackoverflow.com/questions/5990917/dom-exception-invalid-character-err-5">DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
+<li><a href="http://stackoverflow.com/questions/5344029/invalid-character-dom-exception-in-ie9">Invalid Character DOM Exception in IE9</a></li>
+<li><a href="http://stackoverflow.com/questions/6169901/javascript-dom-exception-invalid-character-err-5">Javascript: DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
+<li><a href="http://blog.csdn.net/a497785609/article/details/6317502">IE9 : DOM Exception: INVALID_CHARACTER_ERR (5)</a>
+<a href="http://www.cnblogs.com/zhangqs008/archive/2011/04/12/2341141.html">2</a></li>
+<li><a href="https://github.com/brandonaaron/bgiframe/issues/6">IE9 - DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/ie/gg592979(v=vs.85).aspx">DOM Exception Error Codes</a></li>
+<li><a href="http://www.ajaxbbs.net/post/IE9-DOMException-INVALID_CHARACTER_ERR.html">http://www.ajaxbbs.net/post/IE9-DOMException-INVALID_CHARACTER_ERR.html</a></li>
 </ul>
 </div>
   <div class="comments">

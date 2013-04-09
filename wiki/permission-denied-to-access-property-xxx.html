@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>Permission denied to access property &#39;XXX&#39;</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,80 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">Permission denied to access property &#39;XXX&#39;</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
+<td>英文</td>
+<td>Permission denied to access property &#39;XXX&#39;</td>
+</tr>
+<tr>
 <td></td>
+<td>Permission denied to call method XXX</td>
+</tr>
+<tr>
+<td></td>
+<td>Permission denied for <XXX.YYY.ZZZ> to call method XXX</td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;XXX.YYY.ZZZ&gt; *¾n document.domain à³CP &lt;XXX.YYY.ZZZ&gt; (ýp Location.toStringdocument.domain=&lt;XXX.YYY.ZZZ&gt;</td>
 </tr>
 </tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
+
+<p>跨域访问资源，常见的是访问不同域的框架页 (frame,iframe)。</p>
+
+<p>同主域的系统，可以通过设置为同一主域达到同源：document.domain = &quot;alipay.com&quot;;</p>
+<h2 id="case">案例</h2>
 <table><thead>
 <tr>
-<th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
+<th width="100">异常字段</th>
+<th>值</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
+<td>Message</td>
+<td>Permission denied to call method Location.toString</td>
 </tr>
 <tr>
-<td>Chrome</td>
-<td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
+<td>URL</td>
+<td><a href="https://authcenter.sit.alipay.net/login/option.htm">https://authcenter.sit.alipay.net/login/option.htm</a></td>
 </tr>
 <tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
+<td>File</td>
+<td>(空)</td>
 </tr>
 <tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
+<td>Line</td>
+<td>0</td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+
+<hr/>
+
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li>Permission denied to access property &#39;toString&#39;</li>
+<li>Permission denied to call method Location.toString</li>
+<li>Permission denied for &lt;<a href="https://authcenter.sit.alipay.net">https://authcenter.sit.alipay.net</a>&gt; to call method Location.toString</li>
+<li>&lt;<a href="http://authcenter.sit.alipay.net">http://authcenter.sit.alipay.net</a>&gt; *¾n document.domain à³CP &lt;<a href="http://accorderexprod.sit.alipay.net">http://accorderexprod.sit.alipay.net</a>&gt; (ýp Location.toStringdocument.domain=&lt;<a href="http://alipay.net">http://alipay.net</a>&gt;</li>
+</ul>
+<h2 id="related">相关异常</h2>
+<ul>
+<li><a href="access-is-denied">拒绝访问。</a></li>
+<li><a href="permission-denied">没有权限</a></li>
+</ul>
+<h2 id="see-also">延伸阅读</h2>
+<ul>
+<li><a href="http://bugs.adobe.com/jira/browse/FP-561">&quot;Location.toString&quot; uncaught (security) exception caused by improper Flash plugin behavior</a></li>
+<li><a href="http://code.google.com/p/swfobject/issues/detail?id=318">cross-domain? Firefox reports Permission denied to call method Location.toString</a></li>
+<li><a href="http://willperone.net/Code/as3error.php">Uncaught Exception: Permission denied to call method to Location.toString</a></li>
+<li><a href="http://www.west-wind.com/weblog/posts/2008/Jul/02/Permissions-Denied-to-get-Property-locationtoString-in-FireFox-3">Permissions Denied to get Property location.toString in FireFox 3</a></li>
+<li><a href="http://support.mozilla.com/zh-CN/questions/703527">Error: Permission denied for (document.domain has not been set) to call method Location.toString on (document.domain=).</a></li>
+<li><a href="http://stackoverflow.com/questions/902501/permission-denied-to-call-method-location-tostring">Permission denied to call method Location.toString</a></li>
 </ul>
 </div>
   <div class="comments">

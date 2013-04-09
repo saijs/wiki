@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="nico 0.2.2">
+    <meta name="theme" content="one 0.1">
+    <title>li 节点设置 value 属性</title>
+<script type="text/javascript">
+window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
+</script>
+<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
+    <link rel="stylesheet" href="../static/one.css" />
+    <link rel="stylesheet" href="../static/codes.css" />
+    <link rel="stylesheet" href="../static/syntax.css" />
+  </head>
+  <body>
+    <div class="navigation" role="navigation">
+      <div class="container">
+        <a class="home" href="../"></a>
+      </div>
+    </div>
+    <div class="document">
+<div class="hentry">
+  <h1 class="entry-title">li 节点设置 value 属性</h1>
+  <div class="entry-content"><p><button id="btn-test">点击开始测试</button></p>
+
+<p>已知 IE6, IE7 会导致浏览器崩溃。</p>
+
+<p>IE6:</p>
+
+<p><img src="../images/IE6-li-set-value-attribute.png" alt=""/></p>
+
+<p>IE7:</p>
+
+<p><img src="../images/IE7-li-set-value-attribute.png" alt=""/></p>
+
+<script type="text/javascript">
+  window.onload = function(){
+    document.getElementById("btn-test").onclick = function(){
+      var ul = document.createElement("ul");
+      var li = document.createElement("li");
+      //下面两行代码会触发异常
+      li.value = "11";
+      li.setAttribute("value","11");
+      ul.appendChild(li);
+      document.body.appendChild(ul);
+    };
+  };
+</script>
+</div>
+</div>
+</div>
+    <div class="footer">
+      <p class="copyright">JavaScript 异常档案</p>
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.2.2</p>-->
+    </div>
+    <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
+    <script src="../static/codes.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39646187-1', 'hotoo.me');
+  ga('send', 'pageview');
+
+</script>
+
+  <div class="github"><a class="github-link" href="https://github.com/totorojs/javascript-exception-archives">Fork me on GitHub</a></div>
+
+  </body>
+</html>

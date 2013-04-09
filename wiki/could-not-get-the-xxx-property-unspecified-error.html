@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>无法得到 XXX 属性。 未指明的错误。</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,69 +22,92 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">无法得到 XXX 属性。 未指明的错误。</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
-<th width="100">Number</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td></td>
+<td>无法得到 XXX 属性。 未指明的错误。</td>
+</tr>
+<tr>
+<td>繁体中文</td>
+<td>無法取得未定義或 Null 參考的屬性 &#39;XXX&#39;</td>
+</tr>
+<tr>
+<td>英文</td>
+<td>Could not get the XXX property. Unspecified error.</td>
 </tr>
 </tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
+<h2 id="case">案例</h2>
 <table><thead>
 <tr>
-<th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
+<th width="100">异常字段</th>
+<th>值</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
-</tr>
-<tr>
-<td>Chrome</td>
-<td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
-</tr>
-<tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
+<td>Message</td>
+<td>无法得到 outerHTML 属性。 未指明的错误。</td>
 </tr>
 </tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>無法取得未定義或 Null 參考的屬性 &#39;innerHTML&#39;</td>
+</tr>
+</tbody></table>
+
+<hr/>
+
+<table><thead>
+<tr>
+<th width="100">异常字段</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>Could not get the outerHTML property. Unspecified error.</td>
+</tr>
+</tbody></table>
+<h2 id="related">相关异常</h2><h2 id="see-also">延伸阅读</h2>
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li><a href="http://samueli.iteye.com/blog/237461">IE7:未指明的错误，解决办法</a> - 安装了Internet Explorer 增强的安全配置的原因，
+在添加或删除程序里的添加删除WINDOWS组件里把这个Internet Explorer 增强的安全配置删除掉</li>
+<li><a href="http://hi.baidu.com/jghc/blog/item/5e28c4d7faeb9f2106088b2c.html">无法设置selected属性。未指明的错误</a> - IE6 select.options[x].selected = true, +setTimeout()</li>
+<li><a href="http://www.cnblogs.com/wangxiang/articles/1653429.html">未知的运行时错误(ie6的未指明的错误)</a> - 对 table 这种元素使用 innerHTML。</li>
+<li><a href="http://topic.csdn.net/u/20091104/14/ad18500c-e037-4190-a4ce-8d600e7db305.html">IE6&lt;select&gt;问题: &quot;无法设置selected属性。未指明的错误。”</a> - IE6, 代码执行时机过早，使用 <code>setTimeout</code> 延迟执行解决。</li>
+<li><p><a href="http://www.luckb.com/read-1805.html">Internet Explorer 错误：30 未指明的错误</a> - IE6, 动态链接库异常，重新注册即可。</p>
+
+<pre>regsvr32 urlmon.dll
+regsvr32 actxprxy.dll
+regsvr32 shdocvw.dll
+regsvr32 mshtml.dll
+regsvr32 browseui.dll
+regsvr32 jscript.dll
+regsvr32 vbscript.dll
+regsvr32 oleaut32.dll
+</pre>
+
+<p>如何仍然未解决，需要注册核心 Internet Explorer DLL 文件：
+注：需要在系统安装了 Microsoft Windows XP Service Pack 2 (SP2)</p>
+
+<p>开始-运行：</p>
+
+<pre>&quot;%ProgramFiles%Internet Exploreriexplore.exe&quot; &#47;rereg
+</pre></li>
 </ul>
 </div>
   <div class="comments">

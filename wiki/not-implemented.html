@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.2.2">
     <meta name="theme" content="one 0.1">
-    <title>正则表达式语法错误</title>
+    <title>尚未实现</title>
 <script type="text/javascript">
 window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
@@ -22,7 +22,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">正则表达式语法错误</h1>
+  <h1 class="entry-title">尚未实现</h1>
   <div class="entry-content"><table><thead>
 <tr>
 <th width="100">Language</th>
@@ -32,59 +32,28 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 </thead><tbody>
 <tr>
 <td>简体中文</td>
-<td>正则表达式语法错误</td>
+<td>尚未实现</td>
+<td>-2147467263</td>
+</tr>
+<tr>
+<td>日文</td>
+<td>実装されていません</td>
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">")"</span>);  <span class="comment">// 正则表达式语法错误</span>
-</code></pre></div>
-<table><thead>
-<tr>
-<th width="100">Browser</th>
-<th width="100">Language</th>
-<th>Message</th>
-<th width="100">Number</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>IE</td>
-<td>简体中文</td>
-<td>正则表达式语法错误</td>
-<td>-2146823271</td>
-</tr>
-<tr>
-<td>Chrome</td>
-<td>英文</td>
-<td>Invalid regular expression: /)/: Unmatched &#39;)&#39;</td>
-<td></td>
-</tr>
-<tr>
-<td>Firefox</td>
-<td></td>
-<td>unmatched ) in regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Opera</td>
-<td></td>
-<td>RegExp constructor: invalid regular expression</td>
-<td></td>
-</tr>
-<tr>
-<td>Safari</td>
-<td></td>
-<td>Invalid regular expression: unmatched parentheses</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="related">相关异常</h2>
-<ol>
-<li><a href="unexpected-quantifier">错误的数量词</a></li>
-<li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
-</ol>
-<h2 id="see-also">参考</h2>
+<h2 id="%E5%88%86%E6%9E%90">分析</h2>
+<p>绑定事件时，事件处理函数带括号被立即执行，而这个处理函数本身又不是返回函数类型的，
+就会报这个错误。</p>
+<h2 id="case">案例</h2><div class="highlight"><pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">handler</span><span class="params">()</span>{</span>}
+
+<span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest(); <span class="comment">// IE8 支持 XMLHttpRequest 对象。</span>
+xhr.onreadystatechange = handler(); <span class="comment">// 但是回调函数类型不是函数时，抛出『尚未实现』的异常。</span>
+
+elem.onclick = handler(); <span class="comment">// 尚未实现</span>
+</code></pre></div><h2 id="see-also">参考</h2>
 <ul>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80).aspx">正则表达式中有语法错误</a></li>
+<li><a href="http://www.cnblogs.com/trance/archive/2011/07/29/2120681.html">JS报 “尚未实现”  错误</a></li>
+<li><a href="http://blog.csdn.net/xiaohutushen/article/details/1772980">javascript 尚未实现错误解决办法</a></li>
 </ul>
 </div>
   <div class="comments">
