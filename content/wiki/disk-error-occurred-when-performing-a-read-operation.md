@@ -1,0 +1,29 @@
+
+# 执行读取操作时发生磁盘错误。
+
+----
+
+| Language | Message                      |
+|----------|------------------------------|
+| 简体中文 | 执行读取操作时发生磁盘错误。 |
+
+## 案例
+
+| 异常字段 | 值                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Message  | 执行读取操作时发生磁盘错误。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| URL      | https://cashier.alipay.com/standard/payment/cashier.htm                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| File     | https://a.alipayobjects.com/??static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/arale.aspect-1.0.js,static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/aralex.base-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/alipay.finance.AsyncHtml-1.0.js,static/ar/alipay.finance.Flexible-1.0.js,static/ar/alipay.finance.Apop-1.4.js,static/ar/aralex.utils.IframeShim-1.2.js,static/ar/arale.json2-1.0.js,static/ar/alipay.droplist-1.3.js,cashier/cashier.Icon-1.2.js,static/ar/alipay.finance.InstallmentsAndFavorable-1.5.js,cashier/cashier.module-2.19.js,cashier/cashier.Widget-1.0.js,cashier/cashier.Tip-1.1.js,cashier/cashier.Apop-1.5.js,static/ar/alipay.security.alieditcontrol-1.6.js,cashier/cashier.AsyncHtml-1.4.js,cashier/cashier.Tab-1.7.js |
+| Line     | 605                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+
+<!-- start-line=604; -->
+```javascript
+});this._xhr.onreadystatechange=function(){};if(options.timeoutTimer){clearTimeout(options.timeoutTimer);
+options.timeoutTimer=null}this._response.status=this._xhr.status;if(this._xhr.status==200){this._response.text=this._xhr.responseText;
+this._response.xml=this._xhr.responseXML;if(this._options.dataType=="json"){try{this._response.json=parseJSON(this._xhr.responseText)
+```
+
+## 相关异常
+
+
+## 延伸阅读
