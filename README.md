@@ -3,8 +3,10 @@
 
 这个项目用于收集、沉淀、分享、交流 JavaScript 异常的相关经验。
 
-这里是原始档案，你可以[直接查看](content/index.md)，也可以查看生成好的站点
-[errors.totorojs.org](http://errors.totorojs.org/)
+这里是原始档案，你可以直接查看 [Home.md](content/index.md) 或
+[index.md](content/wiki/index.md) ，也可以查看生成好的站点页面
+[errors.totorojs.org](http://errors.totorojs.org/) 或索引页
+[errors.totorojs.org/wiki](http://errors.totorojs.org/wiki/)
 
 ## 目录结构
 
