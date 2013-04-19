@@ -1,4 +1,3 @@
-
 # HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917)
 
 ----
@@ -11,6 +10,18 @@
 
 ## 案例
 
+
+当用户访问带有应用侧边栏的页面时，就有几率报 Unable to modify the parent container element before the child element is closed 的错误，并导致页面渲染失败。
+
+---
+
+首先原有的侧边栏的代码一直是这样处理的，3月28日上线的新代码中为了尽早执行代码，没有把代码放在 domReady 之后运行。即代码的执行时机可能是页面正在渲染的时候。这是其一。
+
+第二，侧边栏代码执行时，如果页面元素的标签尚未正确闭合（即正在渲染的一个中间状态），此时如果对未闭合的元素的父元素进行了操作（插入，删除，移动），就会报上述的错误。
+
+经过排查，侧边栏的代码中，对我的应用的分页切换操作（switchable组件）中，有一个预期之外的操作，这个操作往 body 里插入了一个 div 元素，最终导致了报错。
+
+http://arale.alipay.im/alipay/appaside/examples/ie8-parse-error.html
 
 ## 相关异常
 
