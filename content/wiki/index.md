@@ -103,6 +103,7 @@
 
 * [Error loading script](error-loading-script.md)
 * [远程过程调用失败。](the-remote-procedure-call-failed.md)
+* [NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.](network_err-xmlhttprequest-exception-101--a-network-error-occured-in-synchronous-requests.md)
 
 ## 客户端特性缺失类异常
 
