@@ -1,3 +1,4 @@
+
 # HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917)
 
 ----
@@ -6,22 +7,43 @@
 |----------|-----------------------------------------------------------------------------------------------------------------|
 | 英文     | HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917) |
 
-常见于 IE 浏览器，不当的 DOM 操作，会导致这种异常。
+常见于 IE8 浏览器，不当的 DOM 操作，会导致这种异常。
+
+解决方法（以下之一）：
+
+* 将需要需要 DOM 操作的部分放到 dom ready 之后执行。
+* 确保被操作的 DOM 已经渲染完成。
+* 为浏览器安装 [KB2416400](http://www.microsoft.com/zh-cn/download/search.aspx?q=KB2416400&p=2&r=10&t=28&s=Relevancy~Descending) 补丁。
+
 
 ## 案例
 
+### 现象：
 
-当用户访问带有应用侧边栏的页面时，就有几率报 Unable to modify the parent container element before the child element is closed 的错误，并导致页面渲染失败。
+### 异常描述：
 
----
+当用户访问带有应用侧边栏的页面时，就有几率报 Unable to modify the parent
+container element before the child element is closed 的错误，并导致页面渲染失败。
 
-首先原有的侧边栏的代码一直是这样处理的，3月28日上线的新代码中为了尽早执行代码，没有把代码放在 domReady 之后运行。即代码的执行时机可能是页面正在渲染的时候。这是其一。
+### 原因分析：
 
-第二，侧边栏代码执行时，如果页面元素的标签尚未正确闭合（即正在渲染的一个中间状态），此时如果对未闭合的元素的父元素进行了操作（插入，删除，移动），就会报上述的错误。
+其一，3月28日上线的新代码中为了尽早执行侧边栏的相关代码，
+没有把代码放在 domReady 之后运行。即代码的执行时机可能是页面正在渲染的时候。
 
-经过排查，侧边栏的代码中，对我的应用的分页切换操作（switchable组件）中，有一个预期之外的操作，这个操作往 body 里插入了一个 div 元素，最终导致了报错。
+其二，侧边栏代码执行时，如果页面元素的标签尚未正确闭合（即正在渲染的一个中间状态），
+此时如果对未闭合的元素的父元素进行了操作（插入，删除，移动），就会报上述的错误。
 
-http://arale.alipay.im/alipay/appaside/examples/ie8-parse-error.html
+经过排查，侧边栏的代码中，对应用中分页切换操作（switchable组件）过程中，
+有一个预期之外的操作，这个操作往 body 里插入了一个 div 元素，最终导致了报错。
+
+[演示](http://arale.alipay.im/alipay/appaside/examples/ie8-parse-error.html)
+
+### 解决方法：
+
+指定 switchable 的 element 参数（已闭合），避免被默认插入到 body 中
+（body 未渲染完成的可能性比较大）。
+
+详细故障可以参考 [支付宝故障单](http://itil.alipay.net/bug/bug_manage.htm?bugNo=BUG20130418482103&incidentNo=INC20130415175808597&action=view)。
 
 ## 相关异常
 
