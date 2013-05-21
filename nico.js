@@ -1,14 +1,24 @@
 exports = module.exports = {
-    "source": "content",
-    "output": "/Users/hotoo/Sites/errors.hotoo.me",
-    "theme": "_theme",
-    "permalink": "{{directory}}/{{filename}}",
-    "writers": [
-        "nico.PageWriter",
-        "nico.PostWriter",
-        "nico.FileWriter",
-        "nico.StaticWriter"
-    ]
+  "source": "content",
+  "output": "/Users/hotoo/Sites/errors.hotoo.me",
+  "theme": "_theme",
+  "permalink": "{{directory}}/{{filename}}",
+  "navigation":[
+    {
+      "link":"/index.html",
+      "title":"首页"
+    },
+    {
+      "link":"/wiki",
+      "title":"异常列表"
+    }
+  ],
+  "writers": [
+    "nico.PageWriter",
+    "nico.PostWriter",
+    "nico.FileWriter",
+    "nico.StaticWriter"
+  ]
 }
 
 var INTERNAL_KEY_WORD = {
