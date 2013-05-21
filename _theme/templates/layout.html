@@ -7,9 +7,7 @@
     <meta name="theme" content="{{theme.name}} {{theme.version}}">
     <title>{% block title%}{% endblock %}</title>
 <script type="text/javascript">
-window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
-<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
     {%- if config.feedurl %}
     <link rel="alternate" type="application/rss+xml" href="{{config.feedurl}}" title="{{config.sitename}}" />
     {%- endif %}
@@ -21,12 +19,14 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
   <body>
     <div class="navigation" role="navigation">
       <div class="container">
-        <a class="home" href="{{content_url('index.html')}}">{{config.sitename}}</a>
+        <!--<a class="home" href="{{content_url('index.html')}}">{{config.sitename}}</a>-->
         {%- if config.navigation %}
         <div class="menu">
-          {%- for item in config.navigation %}
-          <a href="{{content_url(item.link)}}">{{item.title}}</a>
-          {%- endfor %}
+          <ul>
+            {%- for item in config.navigation %}
+            <li><a href="{{content_url(item.link)}}">{{item.title}}</a></li>
+            {%- endfor %}
+          </ul>
         </div>
         {%- endif %}
       </div>

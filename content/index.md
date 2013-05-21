@@ -1,8 +1,9 @@
-# JavaScript 异常档案
+# 如何贡献
 
 - template: index.html
 
 ----
+
 <div style="width:300px;float:right;border:1px solid #eee;">
   <img src="./images/exception.jpg" align="right" style="float:right;margin:0 0 -3px;" />
 </div>
