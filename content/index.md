@@ -13,7 +13,8 @@ JavaScript 异常，沉淀 JavaScript 异常知识，供异常分析 & 处理参
 ## 搜索
 
 <div class="search">
-  <input type="text" class="search" value="" name="key" style="width:600px;" />
+  <input type="text" class="search" placeholder="搜索 JavaScript 异常"
+    value="" id="key" name="key" style="width:600px;" />
 </div>
 
 ----
@@ -38,6 +39,9 @@ JavaScript 异常，沉淀 JavaScript 异常知识，供异常分析 & 处理参
     [JavaScript Run-time Errors](http://msdn.microsoft.com/en-us/library/ie/1dk3k160(v=vs.94\).aspx)
 * [JScript 语法错误](http://msdn.microsoft.com/zh-cn/library/by0atdkw(v=vs.90\).aspx) ,
     [JavaScript Syntax Errors](http://msdn.microsoft.com/en-us/library/ie/6bby3x2e(v=vs.94\).aspx)
+* [Handling and Avoiding Web Page Errors Part 1: The Basics](http://msdn.microsoft.com/en-us/library/ms976140.aspx)
+* [Handling and Avoiding Web Page Errors Part 2: Run-Time Errors](http://msdn.microsoft.com/en-us/library/ms976144.aspx)
+* [Handling and Avoiding Web Page Errors Part 3: An Ounce of Prevention](http://msdn.microsoft.com/en-us/library/ms976146.aspx)
 * [Windows事件代码ID及错误信息](wiki/windows-event-code-id-and-error-message.md)
 
 
