@@ -140,6 +140,11 @@
 * [const 'XXX' has already been declared](const-xxx-has-already-been-declared.md)
 * [error -NNN](error-nnn.md)
 
+## DOM 相关异常
+
+* [(一)为li节点设定自定义属性value时，发生未处理的 win32 异常(wx-1)](http://www.cnblogs.com/wangxiang/articles/1651577.html)
+* [(二)未知的运行时错误(ie6的未指明的错误)](http://www.cnblogs.com/wangxiang/articles/1653429.html)
+
 
 <!-- [Demos](demos) -->
 <!-- * [Template](template) -->

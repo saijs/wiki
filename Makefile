@@ -8,5 +8,5 @@ publish:
 	@rm -f ${tmpfile}
 build:
 	@nico build
-server:
+watch:
 	@nico server --watch

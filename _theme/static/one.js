@@ -1,5 +1,6 @@
 define(function(require, exports, module) {
   var $ = require('gallery/jquery/1.8.2/jquery');
+  var JS_ERROR = require("./jserr");
   //var codes = require("./codes");
 
   // permalink on headers.
@@ -13,5 +14,24 @@ define(function(require, exports, module) {
     $item.append(link);
   });
 
-  // code line number.
+  /**
+   * 将异常消息实体转换为通用的异常消息，去除实体特征。
+   * @param {String} key, 实体异常消息。
+   * @return {String} 通用异常消息。
+   */
+  function filterKey(key){
+    return key;
+  }
+
+  $("input.search").keydown(function(evt){
+    if(evt.which !== 13){return;}
+    var key = this.value;
+    key = filterKey(key);
+    if(JS_ERROR.hasOwnProperty(key)){
+      location.href = "/wiki/"+JS_ERROR[key]+".html";
+    }else{
+      location.href = "/search.html?key="+encodeURIComponent(key);
+    }
+    evt.preventDefault();
+  });
 });
