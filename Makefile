@@ -1,12 +1,10 @@
-html = _site
-tmpfile = tmp.tar.gz
-publish:
-	@rm -f ${tmpfile}
-	@nico build
-	@tar --exclude='.git/*' -czf ${tmpfile} ${html}
-	@curl -F name=awa -F file=@${tmpfile} http://site.alipay.im/repository/upload/site
-	@rm -f ${tmpfile}
+sitefolder = ~/Sites/errors.hotoo.me/
+
 build:
 	@nico build
 watch:
 	@nico server --watch
+publish: build
+	@cd ${sitefolder}; git add .
+	@cd ${sitefolder}; git ci -m "U: update javascript exceptions archives."
+	@cd ${sitefolder}; git push origin gh-pages
