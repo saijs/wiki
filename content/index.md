@@ -1,4 +1,4 @@
-# 如何贡献
+# JavaScript 异常档案
 
 - template: index.html
 
