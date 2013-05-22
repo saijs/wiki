@@ -11,10 +11,6 @@ body {
   background: #F4F4F4;
 }
 
-#wrapper{
-  width:960px;
-  margin:0 auto;
-}
 #container {
   position: relative;
   margin: 40px 120px;
@@ -36,12 +32,4 @@ body {
   -moz-transition-duration: 0.8s;
   -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
-}
-
-input.main-search{
-  font-size:32px;
-  width:400px; height:32px;
-  padding:8px; margin:8px auto;
-  text-align:center;
-  box-radius:16px; -webkit-box-radius:16px;
 }

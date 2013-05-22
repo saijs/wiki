@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.2.2">
-    <meta name="theme" content="one 0.1">
+    <meta name="generator" content="nico 0.3.1">
+    <meta name="theme" content="markwiki 0.1">
     <title>未知的运行时错误</title>
 <script type="text/javascript">
-window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
-<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
     <link rel="stylesheet" href="../static/one.css" />
     <link rel="stylesheet" href="../static/codes.css" />
     <link rel="stylesheet" href="../static/syntax.css" />
@@ -17,7 +15,13 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
   <body>
     <div class="navigation" role="navigation">
       <div class="container">
-        <a class="home" href="../"></a>
+        <!--<a class="home" href="../"></a>-->
+        <div class="menu">
+          <ul>
+            <li><a href="../../../../../">首页</a></li>
+            <li><a href="../../../../../wiki">异常列表</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="document">
@@ -44,7 +48,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 </tbody></table>
 
 <p>一般是 IE 中由于 innerHTML 设置了不合适的值造成，比如 table, tr, li, p, form 之类的非法嵌套。</p>
-<h2 id="case">案例</h2>
+<h2 id="案例">案例</h2>
 <p>今天遇到“未知的运行时错误”，调试代码都是正常的，效果展示也是正常的，调试了一下。</p>
 
 <p>原因：这个表单中有两个需要将金额转化成中文大写金额，每个都对应一个span标签，
@@ -80,7 +84,7 @@ E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"
 
 <p>这里提供的相关代码只是入口代码，修复后确实可以避免触发异常，但是实际抛出异常的
 代码应该是在 <code>AP.widget.RMBConvert</code> 中。</p>
-<h2 id="related">相关异常</h2><h2 id="see-also">延伸阅读</h2>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
 <ul>
 <li><a href="http://www.leakon.com/archives/41">设置 innerHTML 属性 导致 未知的运行时错误 IE bug</a></li>
 <li><a href="http://www.cnblogs.com/it563/articles/1178067.html">innerHTML 属性 导致 未知的运行时错误 IE bug</a></li>
@@ -111,7 +115,7 @@ E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.2.2</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.3.1</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

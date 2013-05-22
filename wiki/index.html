@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.2.2">
-    <meta name="theme" content="one 0.1">
+    <meta name="generator" content="nico 0.3.1">
+    <meta name="theme" content="markwiki 0.1">
     <title>JavaScript 异常档案</title>
 <script type="text/javascript">
-window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
-<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
     <link rel="stylesheet" href="../static/one.css" />
     <link rel="stylesheet" href="../static/codes.css" />
     <link rel="stylesheet" href="../static/syntax.css" />
@@ -17,13 +15,19 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
   <body>
     <div class="navigation" role="navigation">
       <div class="container">
-        <a class="home" href="../"></a>
+        <!--<a class="home" href="../"></a>-->
+        <div class="menu">
+          <ul>
+            <li><a href="../../../../../">首页</a></li>
+            <li><a href="../../../../../wiki">异常列表</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">JavaScript 异常档案</h1>
-  <div class="entry-content"><h2 id="%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8">运行时异常</h2>
+  <div class="entry-content"><h2 id="运行时异常">运行时异常</h2>
 <ul>
 <li><a href="unexpected-quantifier">错误的数量词</a></li>
 <li><a href="regular-expression-syntax-error">正则表达式语法错误</a></li>
@@ -107,28 +111,29 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 <li><a href="the-dynamic-link-library-dll-initialization-routine-failed">动态链接库(DLL)初始化例程失败。</a></li>
 <li><a href="object-doesnot-support-this-action">对象不支持此操作</a></li>
 </ul>
-<h2 id="%E6%9D%83%E9%99%90">权限</h2>
+<h2 id="权限">权限</h2>
 <ul>
 <li><a href="access-is-denied">拒绝访问。</a></li>
 <li><a href="permission-denied">没有权限</a></li>
 <li><a href="permission-denied-to-access-property-xxx">Permission denied to access property &#39;XXX&#39;</a></li>
 <li><a href="can-not-write">書き込みできません。</a></li>
 </ul>
-<h2 id="%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF">语法错误</h2>
+<h2 id="语法错误">语法错误</h2>
 <ul>
 <li><a href="return-statement-outside-of-function">&#39;return&#39; 语句在函数之外</a></li>
 </ul>
-<h2 id="%E5%8A%A0%E8%BD%BD%E5%BC%82%E5%B8%B8">加载异常</h2>
+<h2 id="加载异常">加载异常</h2>
 <ul>
 <li><a href="error-loading-script">Error loading script</a></li>
 <li><a href="the-remote-procedure-call-failed">远程过程调用失败。</a></li>
+<li><a href="network_err-xmlhttprequest-exception-101--a-network-error-occured-in-synchronous-requests">NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.</a></li>
 </ul>
-<h2 id="%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%89%B9%E6%80%A7%E7%BC%BA%E5%A4%B1%E7%B1%BB%E5%BC%82%E5%B8%B8">客户端特性缺失类异常</h2>
+<h2 id="客户端特性缺失类异常">客户端特性缺失类异常</h2>
 <ul>
 <li><a href="the-lack-of-storage-space-to-complete-this-operation">存储空间不足，无法完成此操作。</a></li>
 <li><a href="version-of-ole-on-the-client-and-server-do-not-match">客户端和服务器的OLE版本不匹配。</a></li>
 </ul>
-<h2 id="%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%BC%82%E5%B8%B8">客户端插件异常</h2>
+<h2 id="客户端插件异常">客户端插件异常</h2>
 <ul>
 <li><a href="an-internal-error-occurred-in-the-microsoft-internet-extensions">An internal error occurred in the Microsoft Internet extensions</a></li>
 <li><a href="attempting-to-use-a-disconnected-port-object">Attempting to use a disconnected port object</a></li>
@@ -183,12 +188,17 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 <td>187</td>
 </tr>
 </tbody></table>
-<h2 id="%E6%9C%AA%E7%9F%A5%E7%9A%84%E5%BC%82%E5%B8%B8">未知的异常</h2>
+<h2 id="未知的异常">未知的异常</h2>
 <ul>
 <li><a href="unknown-runtime-error">未知的运行时错误</a></li>
 <li><a href="component-returned-failure-code-0x80570016">Component returned failure code: 0x80570016</a></li>
 <li><a href="const-xxx-has-already-been-declared">const &#39;XXX&#39; has already been declared</a></li>
 <li><a href="error-nnn">error -NNN</a></li>
+</ul>
+<h2 id="dom-相关异常">DOM 相关异常</h2>
+<ul>
+<li><a href="http://www.cnblogs.com/wangxiang/articles/1651577.html">(一)为li节点设定自定义属性value时，发生未处理的 win32 异常(wx-1)</a></li>
+<li><a href="http://www.cnblogs.com/wangxiang/articles/1653429.html">(二)未知的运行时错误(ie6的未指明的错误)</a></li>
 </ul>
 
 <!-- [Demos](demos) -->
@@ -199,7 +209,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.2.2</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.3.1</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

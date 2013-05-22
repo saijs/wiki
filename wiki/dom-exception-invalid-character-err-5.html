@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.2.2">
-    <meta name="theme" content="one 0.1">
+    <meta name="generator" content="nico 0.3.1">
+    <meta name="theme" content="markwiki 0.1">
     <title>DOM Exception: INVALID_CHARACTER_ERR (5)</title>
 <script type="text/javascript">
-window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._now=function(){return ("function"==typeof Date.now)?Date.now():new Date().valueOf();};M._startTime=window.performance&&performance.timing?performance.timing.navigationStart:M._now();var _TIMER={};M.time=function(name){_TIMER[name]=M._now();};M.timeEnd=function(name){var s=_TIMER[name];if(!s){return NaN;}var e=M._now(),t=e-s;M._errors.push({"time":t});if("function"==typeof M.timedSend){M.timedSend();}return t;};M.log=function(g,p,c){M._errors.push({constom:{type:"log",productLine:g,product:p,errorCode:c,counts:1}});if("function"==typeof M.timedSend){M.timedSend();}};M.error=function(e){if(!(e instanceof Error)){return;}M._errors.push({constom:{msg:e.message,file:e.fileName||"",ln:e.lineNumber||e.line||0}});if("function"==typeof M.timedSend){M.timedSend();}};window.onerror=function(m,f,l){M._errors.push({jsError:{msg:m,file:f,ln:l}});if("function"==typeof M.timedSend){M.timedSend();}return false;}})();
 </script>
-<script charset="utf-8" src="https://a.alipayobjects.com/ar/??alipay.light.base-1.1.js,alipay.fmsmng.monitor-1.4.js"></script>
     <link rel="stylesheet" href="../static/one.css" />
     <link rel="stylesheet" href="../static/codes.css" />
     <link rel="stylesheet" href="../static/syntax.css" />
@@ -17,7 +15,13 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
   <body>
     <div class="navigation" role="navigation">
       <div class="container">
-        <a class="home" href="../"></a>
+        <!--<a class="home" href="../"></a>-->
+        <div class="menu">
+          <ul>
+            <li><a href="../../../../../">首页</a></li>
+            <li><a href="../../../../../wiki">异常列表</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="document">
@@ -36,7 +40,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 <td>IE9</td>
 </tr>
 </tbody></table>
-<h2 id="%E5%88%86%E6%9E%90">分析</h2>
+<h2 id="分析">分析</h2>
 <p>IE9 创建元素(createElement) 开始严格遵循标准实现，不支持传入完整的 HTML 代码方式。</p>
 <div class="highlight"><pre><code class="javascript">document.createElement(<span class="string">'&lt;input type="text" name="user" /&gt;'</span>);
 </code></pre></div>
@@ -44,7 +48,7 @@ window.monitor||(function(){var M=window.monitor={};M._rate=1;M._errors=[];M._no
 <div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> input = document.createElement(<span class="string">"input"</span>);
 input.setAttribute(<span class="string">"name"</span>, <span class="string">"user"</span>);
 input.setAttribute(<span class="string">"type"</span>, <span class="string">"text"</span>);
-</code></pre></div><h2 id="case">案例</h2><h2 id="%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83">相关参考</h2><h2 id="see-also">参考</h2>
+</code></pre></div><h2 id="案例">案例</h2><h2 id="相关参考">相关参考</h2><h2 id="参考">参考</h2>
 <ul>
 <li><a href="http://stackoverflow.com/questions/5990917/dom-exception-invalid-character-err-5">DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
 <li><a href="http://stackoverflow.com/questions/5344029/invalid-character-dom-exception-in-ie9">Invalid Character DOM Exception in IE9</a></li>
@@ -79,7 +83,7 @@ input.setAttribute(<span class="string">"type"</span>, <span class="string">"tex
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.2.2</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.3.1</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

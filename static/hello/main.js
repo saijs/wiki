@@ -1,4 +1,5 @@
 define(function(require) {
+  alert(0)
 
   var Spinning = require('./spinning');
 
@@ -6,4 +7,3 @@ define(function(require) {
   s.render();
 
 });
-
