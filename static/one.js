@@ -1,10 +1,10 @@
-define(function(require, exports, module) {
-  var $ = require('gallery/jquery/1.8.2/jquery');
+define(function(require) {
+  var $ = require("gallery/jquery/1.8.2/jquery");
   var JS_ERROR = require("./jserr");
   //var codes = require("./codes");
 
   // permalink on headers.
-  $('.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5').each(function(index, item) {
+  $(".entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5").each(function(index, item) {
     var $item = $(item);
     var link = [
       '<a class="title-permalink" title="Permalink to this title" href="#',
@@ -30,7 +30,7 @@ define(function(require, exports, module) {
     if(JS_ERROR.hasOwnProperty(key)){
       location.href = "/wiki/"+JS_ERROR[key]+".html";
     }else{
-      location.href = "/search.html?key="+encodeURIComponent(key);
+      location.href = "/search?key="+encodeURIComponent(key);
     }
     evt.preventDefault();
   });
