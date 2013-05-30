@@ -20,7 +20,7 @@
 var row = document.createElement("tr");
 document.getElementById("tbody").appendChild(row);
 ```
-由错误的标签嵌套引起，IE下会报此错误。
+由错误的标签嵌套引起，IE会报此错误。
 
 ----
 
@@ -29,7 +29,7 @@ var iframe = document.createElement("iframe");
 var form = document.createElement("form");
 iframe.appendChild(form);
 ```
-iframe还没有添加到document中时，向iframe中添加子节点报此错误。
+iframe还没有添加到document中时，向iframe中添加子节点，IE会报此错误。
 
 ----
 
