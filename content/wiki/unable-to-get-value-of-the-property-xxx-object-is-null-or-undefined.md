@@ -71,6 +71,7 @@ if(arale.isString(d)){b=b||window;if(!b[d])throw['arlea.hitch: scope["',d,'"] is
 
 ## 相关异常
 
+* [意外地调用了方法或属性访问。](accidentally-call-a-method-or-property-access.md)
 
 ## 延伸阅读
 
