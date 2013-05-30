@@ -29,7 +29,7 @@ var iframe = document.createElement("iframe");
 var form = document.createElement("form");
 iframe.appendChild(form);
 ```
-iframe还没有添加到document中时向iframe中添加子节点报此错误。
+iframe还没有添加到document中时，向iframe中添加子节点报此错误。
 
 ----
 
