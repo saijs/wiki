@@ -9,6 +9,29 @@
 
 ## 案例
 
+```html
+<table>
+</table>
+    <tbody id="tbody">
+    </tbody>
+<body>
+```
+```javascript
+var row = document.createElement("tr");
+document.getElementById("tbody").appendChild(row);
+```
+由错误的标签嵌套引起，IE下会报此错误。
+
+----
+
+```javascript
+var iframe = document.createElement("iframe");
+var form = document.createElement("form");
+iframe.appendChild(form);
+```
+iframe还没有添加到document中时向iframe中添加子节点报此错误。
+
+----
 
 ## 相关异常
 
