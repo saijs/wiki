@@ -14,7 +14,6 @@
 </table>
     <tbody id="tbody">
     </tbody>
-<body>
 ```
 ```javascript
 var row = document.createElement("tr");
