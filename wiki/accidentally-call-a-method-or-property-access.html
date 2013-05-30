@@ -38,7 +38,72 @@
 <td>意外地调用了方法或属性访问。</td>
 </tr>
 </tbody></table>
-<h2 id="案例">案例</h2><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
+<h2 id="案例">案例</h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span> <span class="attribute">id</span>=<span class="value">"tbody"</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> row = document.createElement(<span class="string">"tr"</span>);
+document.getElementById(<span class="string">"tbody"</span>).appendChild(row);
+</code></pre></div>
+<p>由错误的标签嵌套引起，IE会报此错误。</p>
+
+<table><thead>
+<tr>
+<th width="100">Browser</th>
+<th>Message</th>
+<th width="100">Number</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>IE 6,7,8</td>
+<td>意外地调用了方法或属性访问。</td>
+<td>0</td>
+</tr>
+<tr>
+<td>IE 9</td>
+<td>无法获取属性“appendChild”的值: 对象为 null 或未定义</td>
+<td>0</td>
+</tr>
+<tr>
+<td>IE 10</td>
+<td>无法获取未定义或 null 引用的属性“appendChild”</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Chrome 17</td>
+<td>Uncaught TypeError: Cannot call method &#39;appendChild&#39; of null</td>
+<td></td>
+</tr>
+<tr>
+<td>Safari 6</td>
+<td>TypeError: &#39;null&#39; is not an object (evaluating &#39;document.getElementById(&quot;tbody&quot;).appendChild&#39;)</td>
+<td></td>
+</tr>
+<tr>
+<td>Firefox 21</td>
+<td>TypeError: document.getElementById(...) is null</td>
+<td></td>
+</tr>
+<tr>
+<td>Opera 12</td>
+<td>Uncaught exception: TypeError: Cannot convert &#39;document.getElementById(&quot;tbody&quot;)&#39; to object</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<hr/>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> iframe = document.createElement(<span class="string">"iframe"</span>);
+<span class="keyword">var</span> form = document.createElement(<span class="string">"form"</span>);
+iframe.appendChild(form);
+</code></pre></div>
+<p>iframe还没有添加到document中时，向iframe中添加子节点，IE会报此错误。</p>
+
+<hr/>
+<h2 id="相关异常">相关异常</h2>
+<ul>
+<li><a href="unable-to-get-value-of-the-property-xxx-object-is-null-or-undefined">无法获取属性“XXX”的值：对象为 null 或未定义</a></li>
+</ul>
+<h2 id="延伸阅读">延伸阅读</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
