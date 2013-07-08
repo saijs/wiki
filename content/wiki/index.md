@@ -140,6 +140,21 @@
 * [const 'XXX' has already been declared](const-xxx-has-already-been-declared.md)
 * [error -NNN](error-nnn.md)
 * [object Event](object-event.md)
+* 无法创建 ActiveX 对象
+* The data is invalid.
+* The handle is invalid.
+    * 西班牙文： Controlador no válido.
+* This function is not supported on this system.
+* 这个系统不支持该功能。
+* 无法创建目录或文件。
+* Right operand of the 'in' operator is not an object.
+* 参数是必选项
+* 土耳其文：Belirleyici gerekli
+* SyntaxError: missing : after property id
+
+| Language | Message                                          |
+|----------|--------------------------------------------------|
+| 法文     | Un composant ActiveX ne peut pas créer un objet |
 
 ## DOM 相关异常
 

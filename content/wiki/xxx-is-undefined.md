@@ -3,21 +3,29 @@
 
 ----
 
-| Language | Message                                     | Browser                   | Number      |
-|----------|---------------------------------------------|---------------------------|-------------|
-| 简体中文 | 'XXX' 未定义                                | IE                        | -2146823279 |
-| 繁体中文 | 'XXX' 未被定義                              |                           |             |
-|          | 'XXX' 未經定義                              | IE9                       |             |
-| 英文     | 'XXX' is undefined                          |                           |             |
-|          | XXX is undefined                            | Chrome                    |             |
-|          | XXX is not defined                          | Windows Firefox 6         |             |
-|          | Uncaught ReferenceError: XXX is not defined | Windows Chrome 12         |             |
-|          | ReferenceError: Can't find variable: XXX    | Mac OSX, Windows Safari 5 |             |
-|          | Unexpected token XXX                        |                           |             |
-|          | Undefined variable: XXX                     | Opera 11.50               |             |
-| 韩语     | 'XXX'이(가) 정의되지 않았습니다.            |                           |             |
-| 日文     | 'XXX' は宣言されていません。                |                           |             |
-|          | 'XXX' は定義されていません。                |                           |             |
+| Language       | Message                                               | Browser                   | Number      |
+|----------------|-------------------------------------------------------|---------------------------|-------------|
+| 简体中文       | 'XXX' 未定义                                          | IE                        | -2146823279 |
+| 繁体中文       | 'XXX' 未被定義                                        |                           |             |
+|                | 'XXX' 未經定義                                        | IE9                       |             |
+| 英文           | 'XXX' is undefined                                    |                           |             |
+|                | XXX is undefined                                      | Chrome                    |             |
+|                | XXX is not defined                                    | Windows Firefox 6         |             |
+|                | Uncaught ReferenceError: XXX is not defined           | Windows Chrome 12         |             |
+|                | ReferenceError: Can't find variable: XXX              | Mac OSX, Windows Safari 5 |             |
+|                | Unexpected token XXX                                  |                           |             |
+|                | Undefined variable: XXX                               | Opera 11.50               |             |
+| 韩语           | 'XXX'이(가) 정의되지 않았습니다.                      |                           |             |
+| 日文           | 'XXX' は宣言されていません。                          |                           |             |
+|                | 'XXX' は定義されていません。                          |                           |             |
+| 西班牙文       | 'XXX' no está definido                               |                           |             |
+| 土耳其文       | 'XXX' tanımsız                                      |                           |             |
+| 葡萄牙文       | 'XXX' não está definido                              |                           |             |
+|                | 'XXX' no está definido                               |                           |             |
+| 俄文           | 'XXX' - определение отсутствует |                           |             |
+| 法文           | « XXX » est indéfini                                 |                           |             |
+| 意大利文       | 'XXX' non è definito                                 |                           |             |
+| 南非共用荷兰文 | XXX is niet gedefinieerd                              |                           |             |
 
 
 多见于脚本未正常装载时发生，也有可能是定义出先错误，导致对象为定义。

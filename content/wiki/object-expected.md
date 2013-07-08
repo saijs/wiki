@@ -12,6 +12,10 @@
 |          | Object required                  |         |             |
 | 韩文     | 개체가 필요합니다.               |         |             |
 | 日文     | オブジェクトを指定してください。 |         |             |
+| 土耳其文 | Nesne bekleniyor                 |         |             |
+| 西班牙文 | Se esperaba un objeto            |         |             |
+| 西班牙文 | Objeto esperado                  |         |             |
+| 法文     | Objet attendu                    |         |             |
 
 ## 案例
 

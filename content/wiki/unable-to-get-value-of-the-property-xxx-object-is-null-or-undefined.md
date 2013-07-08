@@ -17,6 +17,8 @@
 | 俄文     | Не удалось получить значение свойства "XXX": значением объекта является NULL или он не определен |
 | 韩文     | 'XXX' 속성 값을 가져올 수 없습니다. 개체가 null이거나 정의되지 않았습니다.                                                                                                |
 | 瑞典文   | Det går inte att hämta värdet för egenskapen XXX: objektet är null eller odefinierat                                                                                      |
+| 葡萄牙文 | Não é possível obter valor da propriedade 'XXX': o objeto é nulo ou não definido                                                                                       |
+| 法文     | Impossible d’obtenir la propriété « XXX » d’une référence null ou non définie                                                                                      |
 
 
 一般由引用的对象不存在造成，比如元素 ID 不一致、运行时返回 null 等。

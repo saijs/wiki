@@ -3,13 +3,20 @@
 
 ----
 
-| Language | Message                                                                              | Browser | Number       |
-|----------|--------------------------------------------------------------------------------------|---------|--------------|
+| Language | Message                                                                              | Browser | Number      |
+|----------|--------------------------------------------------------------------------------------|---------|-------------|
 | 简体中文 | 对象不支持此属性或方法                                                               | IE      | -2146827850 |
-| 繁体中文 | 物件不支援此屬性或方法                                                               |         |              |
-| 日文     | オブジェクトでサポートされていないプロパティまたはメソッドです。                     |         |              |
-| 英文     | Object doesn't support this property or method                                       |         |              |
-| 俄文     | Объект не поддерживает это свойство или метод |         |              |
+| 繁体中文 | 物件不支援此屬性或方法                                                               |         |             |
+| 日文     | オブジェクトでサポートされていないプロパティまたはメソッドです。                     |         |             |
+| 英文     | Object doesn't support this property or method                                       |         |             |
+| 俄文     | Объект не поддерживает это свойство или метод |         |             |
+| 韩文     | 개체가 이 속성 또는 메서드를 지원하지 않습니다.                                      |         |             |
+| 西班牙文 | El objeto no acepta esta propiedad o método                                         |         |             |
+| 波兰文   | O objeto não dá suporte para a propriedade ou método                               |         |             |
+| 土耳其文 | Nesne bu özellik veya yöntemi desteklemiyor                                          |         |             |
+| 德文     | Das Objekt unterstützt diese Eigenschaft oder Methode nicht.                        |         |             |
+| 法文     | Cet objet ne gère pas cette propriété ou cette méthode                           |         |             |
+| 荷兰文   | Deze eigenschap of methode wordt niet ondersteund door dit object                    |         |             |
 
 一般是将一个非 函数/方法 当作 函数/方法 调用时造成。
 检查代码中是否有函数名与元素属性/属性同名的情况。
