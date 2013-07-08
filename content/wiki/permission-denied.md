@@ -3,12 +3,20 @@
 
 ----
 
-| Language | Message               |
-|----------|-----------------------|
-| 简体中文 | 没有权限              |
-| 繁体中文 | 沒有使用權限          |
-| 英文     | Permission denied     |
-| 韩文     | 사용 권한이 없습니다. |
+| Language         | Message                                 |
+|------------------|-----------------------------------------|
+| 简体中文         | 没有权限                                |
+| 繁体中文         | 沒有使用權限                            |
+| 英文             | Permission denied                       |
+| 韩文             | 사용 권한이 없습니다.                   |
+| 希伯来文(Hebrew) | ההרשאה נדחתה                            |
+| 土耳其文         | Erişim engellendi                       |
+| 饿文             | Разрешение отклонено |
+| 西班牙文         | Permiso denegado                        |
+| 葡萄牙文         | Permissão negada                        |
+| 法文             | Permission refusée                     |
+| 捷克文           | Oprávnění byla odepřena.             |
+| 希腊文           | Άρνηση άδειας                  |
 
 * 跨域访问资源，常见的是访问不同域的框架页 (frame,iframe)。
 * AJAX 跨域访问。

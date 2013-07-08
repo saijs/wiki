@@ -3,10 +3,13 @@
 
 ----
 
-| Language | Message            |
-|----------|--------------------|
-| 简体中文 | 未指明的错误。     |
-| 英文     | Unspecified error. |
+| Language | Message                 |
+|----------|-------------------------|
+| 简体中文 | 未指明的错误。          |
+| 英文     | Unspecified error.      |
+| 葡萄牙文 | Error no especificado.  |
+| 法文     | Erreur non spécifiée. |
+| 意大利文 | Errore non specificato. |
 
 目前少量发现的在监控脚本中，已知是 IE 读取 outerHTML 造成，属于特殊客户端情况造成的异常。
 

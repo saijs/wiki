@@ -3,9 +3,10 @@
 
 ----
 
-| Language | Message      |
-|----------|--------------|
-| 简体中文 | 库没有注册。 |
+| Language | Message                 |
+|----------|-------------------------|
+| 简体中文 | 库没有注册。            |
+| 英文     | Library not registered. |
 
 客户端修复方案：Windows -> Run
 
