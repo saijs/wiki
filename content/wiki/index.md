@@ -139,6 +139,7 @@
 * [Component returned failure code: 0x80570016](component-returned-failure-code-0x80570016.md)
 * [const 'XXX' has already been declared](const-xxx-has-already-been-declared.md)
 * [error -NNN](error-nnn.md)
+* [object Event](object-event.md)
 
 ## DOM 相关异常
 
