@@ -86,6 +86,7 @@
 * [执行读取操作时发生磁盘错误。](disk-error-occurred-when-performing-a-read-operation.md)
 * [动态链接库(DLL)初始化例程失败。](the-dynamic-link-library-dll-initialization-routine-failed.md)
 * [对象不支持此操作](object-doesnot-support-this-action.md)
+* ['XXX' is not an object](xxx-is-not-an-object.md)
 
 
 ## 权限
@@ -149,6 +150,7 @@
 * 无法创建目录或文件。
 * Right operand of the 'in' operator is not an object.
 * 参数是必选项
+* [语法错误：形参前缺少 XXX](syntaxerror-missing-xxx-before-formal-parameters)
 * 土耳其文：Belirleyici gerekli
 * SyntaxError: missing : after property id
 

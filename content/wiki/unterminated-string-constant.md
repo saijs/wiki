@@ -11,6 +11,8 @@
 |          | unterminated string literal        | Firefox |
 |          | Unexpected token ILLEGAL           | Chrome  |
 | 日文     | 終了していない文字列型の定数です。 | IE      |
+| 西班牙   | Constante de cadena sin terminar   |         |
+| 未知     | Constante chaîne non terminée     |         |
 
 一般由后端传的变量中带有换行符/引号造成，也有可能是编码造成的特殊字符异常。
 

@@ -3,9 +3,10 @@
 
 ----
 
-| Language | Message      |
-|----------|--------------|
-| 简体中文 | 操作已超时。 |
+| Language | Message                                |
+|----------|----------------------------------------|
+| 简体中文 | 操作已超时。                           |
+| 英文     | JavaScript execution exceeded timeout. |
 
 ## 案例
 

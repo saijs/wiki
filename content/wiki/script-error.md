@@ -5,9 +5,10 @@
 
 ----
 
-| Language | Message       | Browser                         | 备注 |
-|----------|---------------|---------------------------------|------|
-| 英文     | Script error. | Firefox, Chrome, Safari, Opera. |      |
+| Language | Message                  | Browser                         | 备注 |
+|----------|--------------------------|---------------------------------|------|
+| 英文     | Script error.            | Firefox, Chrome, Safari, Opera. |      |
+|          | Script Error: 0x80072ee4 |                                 |      |
 
 ## 分析
 
