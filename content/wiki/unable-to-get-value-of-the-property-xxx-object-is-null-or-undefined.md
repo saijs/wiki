@@ -19,6 +19,7 @@
 | 瑞典文   | Det går inte att hämta värdet för egenskapen XXX: objektet är null eller odefinierat                                                                                      |
 | 葡萄牙文 | Não é possível obter valor da propriedade 'XXX': o objeto é nulo ou não definido                                                                                       |
 | 法文     | Impossible d’obtenir la propriété « XXX » d’une référence null ou non définie                                                                                      |
+| 土耳其文 | 'XXX' özelliğinin değeri alınamıyor: nesne boş veya tanımsız                                                                                                          |
 
 
 一般由引用的对象不存在造成，比如元素 ID 不一致、运行时返回 null 等。

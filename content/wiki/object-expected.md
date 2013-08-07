@@ -3,19 +3,20 @@
 
 ----
 
-| Language | Message                          | Browser | Number      |
-|----------|----------------------------------|---------|-------------|
-| 简体中文 | 缺少对象                         | IE      | -2146823281 |
-| 繁体中文 | 必須要有物件                     |         |             |
-|          | 此處需要物件                     |         |             |
-| 英文     | Object expected                  |         |             |
-|          | Object required                  |         |             |
-| 韩文     | 개체가 필요합니다.               |         |             |
-| 日文     | オブジェクトを指定してください。 |         |             |
-| 土耳其文 | Nesne bekleniyor                 |         |             |
-| 西班牙文 | Se esperaba un objeto            |         |             |
-| 西班牙文 | Objeto esperado                  |         |             |
-| 法文     | Objet attendu                    |         |             |
+| Language | Message                                                    | Browser | Number      |
+|----------|------------------------------------------------------------|---------|-------------|
+| 简体中文 | 缺少对象                                                   | IE      | -2146823281 |
+| 繁体中文 | 必須要有物件                                               |         |             |
+|          | 此處需要物件                                               |         |             |
+| 英文     | Object expected                                            |         |             |
+|          | Object required                                            |         |             |
+| 韩文     | 개체가 필요합니다.                                         |         |             |
+| 日文     | オブジェクトを指定してください。                           |         |             |
+| 土耳其文 | Nesne bekleniyor                                           |         |             |
+| 西班牙文 | Se esperaba un objeto                                      |         |             |
+| 西班牙文 | Objeto esperado                                            |         |             |
+| 法文     | Objet attendu                                              |         |             |
+| 俄文     | Предполагается наличие объекта |         |             |
 
 ## 案例
 

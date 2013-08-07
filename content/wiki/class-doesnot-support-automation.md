@@ -16,6 +16,7 @@
 | 简体中文 | Automation 服务器不能创建对象                           |
 | 瑞典文   | Automation-server kan inte skapa objekt.                |
 | 西班牙文 | El servidor de Automatización no puede crear el objeto |
+| 土耳其文 | Otomasyon sunucusu, nesne oluşturamıyor                |
 
 出没于 Windows IE 浏览器之中，客户端问题。客户端重新注册以下文件即可：Windows -> Run:
 

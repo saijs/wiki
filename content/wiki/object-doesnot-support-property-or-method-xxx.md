@@ -3,23 +3,24 @@
 
 ----
 
-| Language | Message                                                                     |
-|----------|-----------------------------------------------------------------------------|
-| 简体中文 | 对象不支持“XXX”属性或方法                                                 |
-|          | 对象不支持“XXX”属性或方法                                                 |
-| 繁体中文 | 物件沒有支援這個屬性或方法 'XXX'                                            |
-| 英文     | Object doesn't support property or method 'XXX'                             |
-|          | Uncaught TypeError: Cannote read property 'XXX' of null                     |
-| 韩文     | 개체가 'XXX' 속성이나 메서드를 지원하지 않습니다.                           |
-| 日文     | オブジェクトは 'XXX' プロパティまたはメソッドをサポートしていません。       |
-| 匈牙利文 | Az objektum nem támogatja a következő tulajdonságot vagy metódust: 'XXX' |
-| 西班牙文 | El objeto no acepta la propiedad o el método 'XXX'                         |
-| 法文     | L’objet ne gère pas la propriété ou la méthode « XXX »                 |
-| 意大利文 | L'oggetto non supporta la proprietà o il metodo 'XXX'                      |
-| 土耳其文 | Nesne, 'XXX' özelliğini veya yöntemini desteklemez                          |
-| 波兰文   | O objeto não oferece suporte à propriedade ou método 'XXX'                |
-| 德文     | Das Objekt unterstützt die Eigenschaft oder Methode "XXX" nicht            |
-| 荷兰文   | De eigenschap of methode XXX wordt niet ondersteund door dit object         |
+| Language | Message                                                                             |
+|----------|-------------------------------------------------------------------------------------|
+| 简体中文 | 对象不支持“XXX”属性或方法                                                         |
+|          | 对象不支持“XXX”属性或方法                                                         |
+| 繁体中文 | 物件沒有支援這個屬性或方法 'XXX'                                                    |
+| 英文     | Object doesn't support property or method 'XXX'                                     |
+|          | Uncaught TypeError: Cannote read property 'XXX' of null                             |
+| 韩文     | 개체가 'XXX' 속성이나 메서드를 지원하지 않습니다.                                   |
+| 日文     | オブジェクトは 'XXX' プロパティまたはメソッドをサポートしていません。               |
+| 匈牙利文 | Az objektum nem támogatja a következő tulajdonságot vagy metódust: 'XXX'         |
+| 西班牙文 | El objeto no acepta la propiedad o el método 'XXX'                                 |
+| 法文     | L’objet ne gère pas la propriété ou la méthode « XXX »                         |
+| 意大利文 | L'oggetto non supporta la proprietà o il metodo 'XXX'                              |
+| 土耳其文 | Nesne, 'XXX' özelliğini veya yöntemini desteklemez                                  |
+| 波兰文   | O objeto não oferece suporte à propriedade ou método 'XXX'                        |
+| 德文     | Das Objekt unterstützt die Eigenschaft oder Methode "XXX" nicht                    |
+| 荷兰文   | De eigenschap of methode XXX wordt niet ondersteund door dit object                 |
+| 俄文     | Объект не поддерживает свойство или метод "XXX" |
 
 
 ## 案例

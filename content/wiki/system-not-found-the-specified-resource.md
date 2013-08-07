@@ -8,6 +8,7 @@
 | 简体中文 | 系统未找到指定的资源。                                                     |
 | 西班牙文 | El sistema no puede encontrar la ruta especificada.                        |
 | 俄文     | Системе не удается найти указанный путь. |
+| 荷兰文   | Het systeem kan het opgegeven pad niet vinden.                             |
 
 多由 AJAX 请求造成。
 在回调函数中建议使用 `xhr.readyState==4 && xhr.status==200` 双重判断。

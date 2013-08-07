@@ -26,6 +26,7 @@
 | 法文           | « XXX » est indéfini                                 |                           |             |
 | 意大利文       | 'XXX' non è definito                                 |                           |             |
 | 南非共用荷兰文 | XXX is niet gedefinieerd                              |                           |             |
+| 阿拉伯文       | 'XXX' هو غير معرّف                                     |                           |             |
 
 
 多见于脚本未正常装载时发生，也有可能是定义出先错误，导致对象为定义。

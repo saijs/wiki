@@ -5,17 +5,18 @@
 
 | Language | Message                                                             | Browser | Number      |
 |----------|---------------------------------------------------------------------|---------|-------------|
-| 简体中文 | 'xx' 为空或不是对象                                                 | IE      | -2146823281 |
-| 繁体中文 | 'xx' 是 null 或不是一個物件                                         |         |             |
-| 日文     | 'tagName' は Null またはオブジェクトではありません。                |         |             |
-| 韩文     | 'this.item'은(는) null 이거나 개체가 아닙니다.                      |         |             |
-| 英文     | 'undefined' is null or not an object                                | Safari  |             |
-|          | xx is null                                                          |         |             |
-|          | Cannot read property 'b' of undefined                               | Chrome  |             |
-|          | xx is undefined                                                     | Firefox |             |
-|          | Cannot convert 'a' to object                                        | Opera   |             |
+| 简体中文 | 'XXX' 为空或不是对象                                                | IE      | -2146823281 |
+| 繁体中文 | 'XXX' 是 null 或不是一個物件                                        |         |             |
+| 日文     | 'XXX' は Null またはオブジェクトではありません。                    |         |             |
+| 韩文     | 'XXX'은(는) null 이거나 개체가 아닙니다.                            |         |             |
+| 英文     | 'XXX' is null or not an object                                      | Safari  |             |
+|          | XXX is null                                                         |         |             |
+|          | Cannot read property 'XXX' of undefined                             | Chrome  |             |
+|          | XXX is undefined                                                    | Firefox |             |
+|          | Cannot convert 'XXX' to object                                      | Opera   |             |
 | 俄文     | 'XXX' - есть null или не является объектом |         |             |
 | 土耳其文 | 'XXX', null veya bir nesne değil                                    |         |             |
+| 意大利文 | 'XXX' è nullo o non è un oggetto                                  |         |             |
 
 
 ##  案例

@@ -15,6 +15,10 @@
 
 ## 案例
 
+同时引用两次对同一个原生方法进行重写的脚本导致无限循环调用。
+
+参考： [未知异常: Maximum call stack size exceeded](http://www.zizhujy.com/blog/post/2012/03/18/Uncaught-RangeError-Maximum-call-stack-size-exceeded.aspx)
+[2](http://blog.csdn.net/vean_system/article/details/7799232)
 
 ## 相关异常
 
