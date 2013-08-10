@@ -34,7 +34,28 @@ var checkcodeExtend_={init:function(){this.form=$("login")&&$("login").node;this
 a.codeCnt_&&"block"==a.codeCnt_.style.display?a.failCallback.call(a):(E.connect(a.logonId,"onblur",function(){a.isLogonIdFocus&&a.send(!0)}),setTimeout(function(){try{(a.isLogonIdFocus=!0)&&a.logonId.node.focus()}catch(b){a.failCallback.call(a)}},300),E.connect(a.logonId,"onkeyup",a,function(){a.send()}))},request:function(a){if(json_ua&&json_ua.length>=this.uaMaxLength)this.failCallback(),this.jsonUaExceed();else if(!json_ua||!(json_ua.length<this.uaMinLength)||a){this.sendCode=1;var b=this;Loader.use("arale.http",
 ```
 
+----
+
+调用未定义的函数会抛出这个异常。
+
+```html
+window.onload = function(){
+  notExistsFunction();
+};
+
+// 这个不会抛出异常，因为 notExistsFunction 不是函数。
+window.onload = notExistsFunction;
+```
+
+至于为什么明明已经定义的函数却没有生效，有有很多种原因了。
+比如 [这个案例](http://book.77169.org/ask35/how153976.htm)
+里把 `JavaScript` 打成 `JavaSript`
+
 ## 相关异常
 
 
 ## 参考
+
+* [后台调用前台javascript方法报错：“缺少对象”的解决方法](http://www.cnblogs.com/heekui/archive/2007/02/08/644963.html)
+  这篇中我并没有重现异常，根据后面的信息，猜测也是 language="javascript"
+  写错了，但是文中的代码是后面修改正确的。
