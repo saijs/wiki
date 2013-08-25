@@ -51,6 +51,19 @@ window.onload = notExistsFunction;
 比如 [这个案例](http://book.77169.org/ask35/how153976.htm)
 里把 `JavaScript` 打成 `JavaSript`
 
+----
+
+有部分场景是客户端动态链接库(DLL)丢失造成的，需要重新注册，或重新安装。
+
+开始 -&gt; 运行：
+
+```
+> regsvr32 jscript.dll
+> regsvr32 vbscript.dll
+```
+
+[参考](http://blog.iobit.com/object-expected-problems-javascript_311.html)
+
 ## 相关异常
 
 
