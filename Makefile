@@ -1,4 +1,4 @@
-sitefolder = ~/Sites/errors.hotoo.me/
+sitefolder = ~/Sites/errors.totorojs.org/
 
 build:
 	@nico build
