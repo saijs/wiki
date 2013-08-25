@@ -19,6 +19,25 @@
 
 ## 案例
 
+有些 AJAX 会导致这个错误。参考：
+
+```js
+xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+url += "?suggest=" + data;
+xmlHttp.open("POST", url, false);
+xmlHttp.send("suggest=" + data);
+```
+
+将 setRequestHeader 放在 open 之后可以解决。
+
+```js
+xmlHttp.open("POST", url, false);
+xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlHttp.send("suggest=" + data);
+```
+
+* http://fangta.bokee.com/6521032.html
+* http://bbs.csdn.net/topics/310169825
 
 ## 相关异常
 
