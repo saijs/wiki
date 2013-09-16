@@ -10,6 +10,7 @@
 | 繁体中文 | 發生錯誤，無法完成操作 800a03e8。                                           |
 | 韩文     | c00ce56e 오류가 발생하여 작업을 완료할 수 없습니다.                         |
 | 法文     | Impossible d'effectuer l'opération à cause de l'erreur suivante 80020101. |
+| 英文     | Could not complete the operation due to error c00c023f.                     |
 
 主要发生在页面 load 过程中，操作 DOM 不当引起。
 
