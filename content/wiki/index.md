@@ -149,8 +149,8 @@
 * 这个系统不支持该功能。
 * 无法创建目录或文件。
 * Right operand of the 'in' operator is not an object.
-* 参数是必选项
-* [语法错误：形参前缺少 XXX](syntaxerror-missing-xxx-before-formal-parameters)
+* [参数是必选项](argument-not-optional.md)
+* [语法错误：形参前缺少 XXX](syntaxerror-missing-xxx-before-formal-parameters.md)
 * 土耳其文：Belirleyici gerekli
 * SyntaxError: missing : after property id
 
