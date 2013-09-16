@@ -23,3 +23,5 @@
 
 
 ## 参考
+
+* [fckeditor出现调用的对象无效JS错误](http://blog.csdn.net/uianqian/article/details/8770132)
