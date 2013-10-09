@@ -1,10 +1,8 @@
-sitefolder = ~/Sites/errors.totorojs.org/
 
-build:
-	@nico build
 watch:
 	@nico server --watch
+build:
+	@nico build
 publish: build
-	@cd ${sitefolder}; git add .
-	@cd ${sitefolder}; git ci -m "U: update javascript exceptions archives."
-	@cd ${sitefolder}; git push origin gh-pages
+	@ghp-import _site
+	@git push origin gh-pages

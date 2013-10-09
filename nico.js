@@ -1,6 +1,7 @@
 exports = module.exports = {
   "source": "content",
-  "output": "/Users/hotoo/Sites/errors.totorojs.org",
+  //"output": "/Users/hotoo/Sites/errors.totorojs.org",
+  "output": "_site",
   "theme": "_theme",
   "permalink": "{{directory}}/{{filename}}",
   "navigation":[
