@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.4">
+    <meta name="generator" content="nico 0.4.7">
     <meta name="theme" content="markwiki 0.1">
     <title>未指明的错误。</title>
 <script type="text/javascript">
@@ -61,7 +61,23 @@
 <li>客户端安装 “Internet Explorer 增强的安全配置” 可能会导致这个异常。</li>
 <li>内部脚本需要修改 DOM 的场景，建议在 DOMReady, onload 之后执行，也可以考虑 setTimeout 执行。</li>
 </ol>
-<h2 id="案例">案例</h2><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
+<h2 id="案例">案例</h2>
+<p>有些 AJAX 会导致这个错误。参考：</p>
+<div class="highlight"><pre><code class="javascript">xmlHttp.setRequestHeader(<span class="string">"Content-type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);
+url += <span class="string">"?suggest="</span> + data;
+xmlHttp.open(<span class="string">"POST"</span>, url, <span class="literal">false</span>);
+xmlHttp.send(<span class="string">"suggest="</span> + data);
+</code></pre></div>
+<p>将 setRequestHeader 放在 open 之后可以解决。</p>
+<div class="highlight"><pre><code class="javascript">xmlHttp.open(<span class="string">"POST"</span>, url, <span class="literal">false</span>);
+xmlHttp.setRequestHeader(<span class="string">"Content-type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);
+xmlHttp.send(<span class="string">"suggest="</span> + data);
+</code></pre></div>
+<ul>
+<li><a href="http://fangta.bokee.com/6521032.html">http://fangta.bokee.com/6521032.html</a></li>
+<li><a href="http://bbs.csdn.net/topics/310169825">http://bbs.csdn.net/topics/310169825</a></li>
+</ul>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
 <ul>
 <li><a href="http://blog.sina.com.cn/s/blog_49d3ec2f0100o4kj.html">Internet Explorer 错误：30 未指明的错误</a></li>
 <li><a href="http://www.cnblogs.com/wangxiang/articles/1653429.html">(二)未知的运行时错误(ie6的未指明的错误)</a></li>
@@ -95,7 +111,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.4</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

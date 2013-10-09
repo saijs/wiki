@@ -105,6 +105,7 @@ define({
     "an-internal-error-occurred-in-the-microsoft-internet-extensions",
   "Attempting to use a disconnected port object":"attempting-to-use-a-disconnected-port-object",
   "未知的运行时错误":"unknown-runtime-error",
+  "Can't find variable: XXX":"can-not-find-variable-xxx",
   "Component returned failure code: 0x80570016":"component-returned-failure-code-0x80570016",
   "const 'XXX' has already been declared":"const-xxx-has-already-been-declared",
   "error -NNN":"error-nnn"
