@@ -72,7 +72,32 @@
     }, <span class="number">1000</span>);
   }
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre></div><h2 id="案例">案例</h2><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
+</code></pre></div><h2 id="案例">案例</h2>
+<p>jQuery 的 attr 方法，设置属性部分特定属性时，IE 兼容模式下会抛出这个异常。</p>
+<div class="highlight"><pre><code class="javascript">$(<span class="string">"form"</span>).attr(<span class="string">"novalidate"</span>, <span class="string">"novalidate"</span>);
+$(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</span>, <span class="string">"text"</span>);
+</code></pre></div>
+<p>jQuery 设置属性的方法如下：</p>
+<div class="highlight"><pre><code class="javascript">set : <span class="keyword">function</span>( elem, value, name ) {
+    <span class="comment">// Set the existing or create a new attribute node</span>
+    <span class="keyword">var</span> ret = elem.getAttributeNode( name );
+    <span class="keyword">if</span> ( !ret ) {
+        ret = document.createAttribute( name );
+        elem.setAttributeNode( ret );
+    }
+    <span class="keyword">return</span> ( ret.nodeValue = value + <span class="string">""</span> );
+}
+</code></pre></div>
+<p>其中运行到第 8 行，给 <code>ret.nodeValue</code> 设置值时抛出这个异常。
+而实际调试可以看到，ret 是有 <code>nodeValue</code> 属性的，值为 <code>null</code>。
+另外还有 <code>ie8_nodeValue</code> 和 <code>ie9_nodeValue</code> 属性。</p>
+
+<p><img src="../images/nodeValue.png" alt="nodeValue"/></p>
+
+<p><img src="../images/ie8_nodeValue.png" alt="ie8_nodeValue"/></p>
+
+<p><img src="../images/ie9_nodeValue.png" alt="ie9_nodeValue"/></p>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
 <ul>
 <li><a href="http://bbs.51js.com/thread-57551-1-1.html">【已解决】ZMM 斑主　为什么提示找不到成员呢？</a></li>
 <li><a href="http://topic.csdn.net/u/20110117/11/8921bdc1-21a1-4c33-8d0e-b2ff578edb61.html">setTimeout函数中event.type出错,提示找不到成员?</a></li>
