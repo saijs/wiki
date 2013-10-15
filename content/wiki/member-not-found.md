@@ -58,6 +58,8 @@ set : function( elem, value, name ) {
 }
 ```
 
+![找不到成员。](../images/member-not-found.png)
+
 其中运行到第 8 行，给 `ret.nodeValue` 设置值时抛出这个异常。
 而实际调试可以看到，ret 是有 `nodeValue` 属性的，值为 `null`。
 另外还有 `ie8_nodeValue` 和 `ie9_nodeValue` 属性。
