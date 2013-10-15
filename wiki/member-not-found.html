@@ -88,6 +88,8 @@ $(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</
     <span class="keyword">return</span> ( ret.nodeValue = value + <span class="string">""</span> );
 }
 </code></pre></div>
+<p><img src="../images/member-not-found.png" alt="找不到成员。"/></p>
+
 <p>其中运行到第 8 行，给 <code>ret.nodeValue</code> 设置值时抛出这个异常。
 而实际调试可以看到，ret 是有 <code>nodeValue</code> 属性的，值为 <code>null</code>。
 另外还有 <code>ie8_nodeValue</code> 和 <code>ie9_nodeValue</code> 属性。</p>
