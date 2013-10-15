@@ -37,6 +37,36 @@ Firefox, Chrome 等浏览器无此问题。
 
 ## 案例
 
+jQuery 的 attr 方法，设置属性部分特定属性时，IE 兼容模式下会抛出这个异常。
+
+```js
+$("form").attr("novalidate", "novalidate");
+$("input").attr("placeholder", "text");
+```
+
+jQuery 设置属性的方法如下：
+
+```js
+set : function( elem, value, name ) {
+    // Set the existing or create a new attribute node
+    var ret = elem.getAttributeNode( name );
+    if ( !ret ) {
+        ret = document.createAttribute( name );
+        elem.setAttributeNode( ret );
+    }
+    return ( ret.nodeValue = value + "" );
+}
+```
+
+其中运行到第 8 行，给 `ret.nodeValue` 设置值时抛出这个异常。
+而实际调试可以看到，ret 是有 `nodeValue` 属性的，值为 `null`。
+另外还有 `ie8_nodeValue` 和 `ie9_nodeValue` 属性。
+
+![nodeValue](../images/nodeValue.png)
+
+![ie8_nodeValue](../images/ie8_nodeValue.png)
+
+![ie9_nodeValue](../images/ie9_nodeValue.png)
 
 ## 相关异常
 
