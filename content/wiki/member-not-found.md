@@ -68,6 +68,13 @@ set : function( elem, value, name ) {
 
 ![ie9_nodeValue](../images/ie9_nodeValue.png)
 
+
+### 解决方案：
+
+使用 `setAttribute` 方法。
+不清楚 jQuery 为什么一定要用看起来貌似标准，但比较复杂的方案。
+
+
 ## 相关异常
 
 
