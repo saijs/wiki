@@ -1,18 +1,33 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="generator" content="gvim" />
-<meta name="author" content="闲耘™ (hotoo.cn[AT]gmail.com)" />
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<title>Test</title>
-</head>
-<body>
-
-<div style="display:none">
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="nico 0.4.7">
+    <meta name="theme" content="markwiki 0.1">
+    <title>jQuery attr setting</title>
+<script type="text/javascript">
+</script>
+    <link rel="stylesheet" href="../static/one.css" />
+    <link rel="stylesheet" href="../static/codes.css" />
+    <link rel="stylesheet" href="../static/syntax.css" />
+  </head>
+  <body>
+    <div class="navigation" role="navigation">
+      <div class="container">
+        <!--<a class="home" href="../"></a>-->
+        <div class="menu">
+          <ul>
+            <li><a href="../../../../../">首页</a></li>
+            <li><a href="../../../../../wiki">异常列表</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="document">
+<div class="hentry">
+  <h1 class="entry-title">jQuery attr setting</h1>
+  <div class="entry-content"><div style="display:none">
 
 <form id="idform">
   <fieldset id="idfieldset">
@@ -32,13 +47,15 @@
 
 </div>
 
-jQuery.attr() set:
-<div id="output-jqset"></div>
+<p>jQuery.attr() set:
+<div id="output-jqset"></div></p>
 
-JavaScript setAttribute():
-<div id="output-jsset"></div>
+<hr/>
 
-<script type="text/javascript">/*<![CDATA[*/
+<p>JavaScript setAttribute():
+<div id="output-jsset"></div></p>
+
+<script type="text/javascript">
 var jsset = function( elem, value, name ) {
     return elem.setAttribute(name, value);
 }
@@ -117,8 +134,8 @@ var attrs = [
 var output_jq = document.getElementById("output-jqset");
 var output_js = document.getElementById("output-jsset");
 
-for(var i=0,l=tags.length; i<l; i++){
-    for(var j=0,m=attrs.length; j<m; j++){
+for(var j=0,m=attrs.length; j<m; j++){
+    for(var i=0,l=tags.length; i<l; i++){
         try{
             jsset(document.getElementById("id"+tags[i]), "", attrs[j]);
         }catch(exjs){
@@ -132,7 +149,18 @@ for(var i=0,l=tags.length; i<l; i++){
     }
 }
 
-/*]]>*/</script>
+</script>
+</div>
+</div>
+</div>
+    <div class="footer">
+      <p class="copyright">JavaScript 异常档案</p>
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+    </div>
+    <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
+    <script src="../static/codes.js"></script>
 
-</body>
+  <div class="github"><a class="github-link" href="https://github.com/totorojs/javascript-exception-archives">Fork me on GitHub</a></div>
+
+  </body>
 </html>
