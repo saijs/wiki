@@ -43,15 +43,15 @@ jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼�
 这些属性包括：
 
 * form[novalidate]
-* input[placeholder]
-* input[autofocus]
+* input,textarea[placeholder]
+* input,select,textarea,button,fieldset[autofocus]
 * input[list]
-* input[required]
-* input[formaction]
-* input[formenctype]
-* input[formmethod]
-* input[formnovalidate]
-* input[formtarget]
+* input,select,textarea,button,fieldset[required]
+* input,button[formaction]
+* input,button[formenctype]
+* input,button[formmethod]
+* input,button[formnovalidate]
+* input,button[formtarget]
 * input[pattern]
 * *[aria-autocomplete]
 * *[aria-atomic]
@@ -68,6 +68,7 @@ jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼�
 
 * [aria-attributes](http://rawgithub.com/w3c/aria-in-html/master/index.html#definitions-of-states-and-properties-all-aria--attributes)
 * [HTML5 Form Attributes](http://www.w3schools.com/html/html5_form_attributes.asp)
+* [demo](../example/member-not-found-setAttribute.html)
 
 ```js
 $("form").attr("novalidate", "novalidate");
