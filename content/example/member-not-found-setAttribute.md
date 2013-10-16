@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="generator" content="gvim" />
-<meta name="author" content="闲耘™ (hotoo.cn[AT]gmail.com)" />
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<title>Test</title>
-</head>
-<body>
+
+# jQuery attr setting
+
+- template: index.html
+
+----
 
 <div style="display:none">
 
@@ -35,10 +28,12 @@
 jQuery.attr() set:
 <div id="output-jqset"></div>
 
+----
+
 JavaScript setAttribute():
 <div id="output-jsset"></div>
 
-<script type="text/javascript">/*<![CDATA[*/
+<script type="text/javascript">
 var jsset = function( elem, value, name ) {
     return elem.setAttribute(name, value);
 }
@@ -117,8 +112,8 @@ var attrs = [
 var output_jq = document.getElementById("output-jqset");
 var output_js = document.getElementById("output-jsset");
 
-for(var i=0,l=tags.length; i<l; i++){
-    for(var j=0,m=attrs.length; j<m; j++){
+for(var j=0,m=attrs.length; j<m; j++){
+    for(var i=0,l=tags.length; i<l; i++){
         try{
             jsset(document.getElementById("id"+tags[i]), "", attrs[j]);
         }catch(exjs){
@@ -132,7 +127,4 @@ for(var i=0,l=tags.length; i<l; i++){
     }
 }
 
-/*]]>*/</script>
-
-</body>
-</html>
+</script>
