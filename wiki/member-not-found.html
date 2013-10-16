@@ -83,15 +83,15 @@
 
 <ul>
 <li>form[novalidate]</li>
-<li>input[placeholder]</li>
-<li>input[autofocus]</li>
+<li>input,textarea[placeholder]</li>
+<li>input,select,textarea,button,fieldset[autofocus]</li>
 <li>input[list]</li>
-<li>input[required]</li>
-<li>input[formaction]</li>
-<li>input[formenctype]</li>
-<li>input[formmethod]</li>
-<li>input[formnovalidate]</li>
-<li>input[formtarget]</li>
+<li>input,select,textarea,button,fieldset[required]</li>
+<li>input,button[formaction]</li>
+<li>input,button[formenctype]</li>
+<li>input,button[formmethod]</li>
+<li>input,button[formnovalidate]</li>
+<li>input,button[formtarget]</li>
 <li>input[pattern]</li>
 <li>*[aria-autocomplete]</li>
 <li>*[aria-atomic]</li>
@@ -110,6 +110,7 @@
 <ul>
 <li><a href="http://rawgithub.com/w3c/aria-in-html/master/index.html#definitions-of-states-and-properties-all-aria--attributes">aria-attributes</a></li>
 <li><a href="http://www.w3schools.com/html/html5_form_attributes.asp">HTML5 Form Attributes</a></li>
+<li><a href="../example/member-not-found-setAttribute.html">demo</a></li>
 </ul>
 <div class="highlight"><pre><code class="javascript">$(<span class="string">"form"</span>).attr(<span class="string">"novalidate"</span>, <span class="string">"novalidate"</span>);
 $(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</span>, <span class="string">"text"</span>);
