@@ -37,7 +37,36 @@ Firefox, Chrome 等浏览器无此问题。
 
 ## 案例
 
-jQuery 的 attr 方法，设置属性部分特定属性时，IE 兼容模式下会抛出这个异常。
+jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼容模式下会抛出这个异常。
+
+这些属性包括：
+
+* form[novalidate]
+* input[placeholder]
+* input[autofocus]
+* input[list]
+* input[required]
+* input[formaction]
+* input[formenctype]
+* input[formmethod]
+* input[formnovalidate]
+* input[formtarget]
+* input[pattern]
+* *[aria-autocomplete]
+* *[aria-atomic]
+* *[aria-dropeffect]
+* *[aria-grabbed]
+* *[aria-haspopup]
+* *[aria-label]
+* *[aria-multiline]
+* *[aria-orientation]
+* *[aria-sort]
+* *[aria-valuetext]
+
+参考
+
+* [aria-attributes](http://rawgithub.com/w3c/aria-in-html/master/index.html#definitions-of-states-and-properties-all-aria--attributes)
+* [HTML5 Form Attributes](http://www.w3schools.com/html/html5_form_attributes.asp)
 
 ```js
 $("form").attr("novalidate", "novalidate");
@@ -58,23 +87,28 @@ set : function( elem, value, name ) {
 }
 ```
 
+其中运行到第 8 行，给 `ret.nodeValue` 设置值时抛出这个异常。
+
 ![找不到成员。](../images/member-not-found.png)
 
-其中运行到第 8 行，给 `ret.nodeValue` 设置值时抛出这个异常。
 而实际调试可以看到，ret 是有 `nodeValue` 属性的，值为 `null`。
-另外还有 `ie8_nodeValue` 和 `ie9_nodeValue` 属性。
 
 ![nodeValue](../images/nodeValue.png)
+
+另外还有 `ie8_nodeValue` 和 `ie9_nodeValue` 属性。
 
 ![ie8_nodeValue](../images/ie8_nodeValue.png)
 
 ![ie9_nodeValue](../images/ie9_nodeValue.png)
 
+另外这个 [issues](http://bugs.jquery.com/ticket/12577) 中提到设置 `input[aria-nocomplete]`
+属性也会抛出这个异常，但是我在 IE8,9,10 及其兼容模式都没能重现。
 
 ### 解决方案：
 
 使用 `setAttribute` 方法。
-不清楚 jQuery 为什么一定要用看起来貌似标准，但比较复杂的方案。
+
+jQuery 说部分 IE6,7 中有部分属性无法使用 setAttribute 方法，待整理这部分属性。
 
 
 ## 相关异常
