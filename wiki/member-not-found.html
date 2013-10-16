@@ -144,7 +144,21 @@ $(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</
 <h3 id="解决方案：">解决方案：</h3>
 <p>使用 <code>setAttribute</code> 方法。</p>
 
-<p>jQuery 说部分 IE6,7 中有部分属性无法使用 setAttribute 方法，待整理这部分属性。</p>
+<p>jQuery 说部分 IE6,7 中有部分属性无法使用 setAttribute 方法，目前已知表单项设置
+<code>form</code> 属性时抛出 <code>发生意外。</code> 异常。</p>
+
+<ul>
+<li>input[form]</li>
+<li>select[form]</li>
+<li>label[form]</li>
+<li>textarea[form]</li>
+<li>button[form]</li>
+<li>option[form]</li>
+<li>optgroup[form]</li>
+<li>fieldset[form]</li>
+</ul>
+
+<p>几乎不会有人会设置这个属性，本身是非法的。</p>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
 <ul>
 <li><a href="http://bbs.51js.com/thread-57551-1-1.html">【已解决】ZMM 斑主　为什么提示找不到成员呢？</a></li>
