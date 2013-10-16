@@ -109,7 +109,19 @@ set : function( elem, value, name ) {
 
 使用 `setAttribute` 方法。
 
-jQuery 说部分 IE6,7 中有部分属性无法使用 setAttribute 方法，待整理这部分属性。
+jQuery 说部分 IE6,7 中有部分属性无法使用 setAttribute 方法，目前已知表单项设置
+`form` 属性时抛出 `发生意外。` 异常。
+
+* input[form]
+* select[form]
+* label[form]
+* textarea[form]
+* button[form]
+* option[form]
+* optgroup[form]
+* fieldset[form]
+
+几乎不会有人会设置这个属性，本身是非法的。
 
 
 ## 相关异常
