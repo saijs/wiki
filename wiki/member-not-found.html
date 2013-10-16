@@ -73,7 +73,40 @@
   }
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 </code></pre></div><h2 id="案例">案例</h2>
-<p>jQuery 的 attr 方法，设置属性部分特定属性时，IE 兼容模式下会抛出这个异常。</p>
+<p>jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼容模式下会抛出这个异常。</p>
+
+<p>这些属性包括：</p>
+
+<ul>
+<li>form[novalidate]</li>
+<li>input[placeholder]</li>
+<li>input[autofocus]</li>
+<li>input[list]</li>
+<li>input[required]</li>
+<li>input[formaction]</li>
+<li>input[formenctype]</li>
+<li>input[formmethod]</li>
+<li>input[formnovalidate]</li>
+<li>input[formtarget]</li>
+<li>input[pattern]</li>
+<li>*[aria-autocomplete]</li>
+<li>*[aria-atomic]</li>
+<li>*[aria-dropeffect]</li>
+<li>*[aria-grabbed]</li>
+<li>*[aria-haspopup]</li>
+<li>*[aria-label]</li>
+<li>*[aria-multiline]</li>
+<li>*[aria-orientation]</li>
+<li>*[aria-sort]</li>
+<li>*[aria-valuetext]</li>
+</ul>
+
+<p>参考</p>
+
+<ul>
+<li><a href="http://rawgithub.com/w3c/aria-in-html/master/index.html#definitions-of-states-and-properties-all-aria--attributes">aria-attributes</a></li>
+<li><a href="http://www.w3schools.com/html/html5_form_attributes.asp">HTML5 Form Attributes</a></li>
+</ul>
 <div class="highlight"><pre><code class="javascript">$(<span class="string">"form"</span>).attr(<span class="string">"novalidate"</span>, <span class="string">"novalidate"</span>);
 $(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</span>, <span class="string">"text"</span>);
 </code></pre></div>
@@ -88,20 +121,26 @@ $(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</
     <span class="keyword">return</span> ( ret.nodeValue = value + <span class="string">""</span> );
 }
 </code></pre></div>
+<p>其中运行到第 8 行，给 <code>ret.nodeValue</code> 设置值时抛出这个异常。</p>
+
 <p><img src="../images/member-not-found.png" alt="找不到成员。"/></p>
 
-<p>其中运行到第 8 行，给 <code>ret.nodeValue</code> 设置值时抛出这个异常。
-而实际调试可以看到，ret 是有 <code>nodeValue</code> 属性的，值为 <code>null</code>。
-另外还有 <code>ie8_nodeValue</code> 和 <code>ie9_nodeValue</code> 属性。</p>
+<p>而实际调试可以看到，ret 是有 <code>nodeValue</code> 属性的，值为 <code>null</code>。</p>
 
 <p><img src="../images/nodeValue.png" alt="nodeValue"/></p>
+
+<p>另外还有 <code>ie8_nodeValue</code> 和 <code>ie9_nodeValue</code> 属性。</p>
 
 <p><img src="../images/ie8_nodeValue.png" alt="ie8_nodeValue"/></p>
 
 <p><img src="../images/ie9_nodeValue.png" alt="ie9_nodeValue"/></p>
+
+<p>另外这个 <a href="http://bugs.jquery.com/ticket/12577">issues</a> 中提到设置 <code>input[aria-nocomplete]</code>
+属性也会抛出这个异常，但是我在 IE8,9,10 及其兼容模式都没能重现。</p>
 <h3 id="解决方案：">解决方案：</h3>
-<p>使用 <code>setAttribute</code> 方法。
-不清楚 jQuery 为什么一定要用看起来貌似标准，但比较复杂的方案。</p>
+<p>使用 <code>setAttribute</code> 方法。</p>
+
+<p>jQuery 说部分 IE6,7 中有部分属性无法使用 setAttribute 方法，待整理这部分属性。</p>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
 <ul>
 <li><a href="http://bbs.51js.com/thread-57551-1-1.html">【已解决】ZMM 斑主　为什么提示找不到成员呢？</a></li>
