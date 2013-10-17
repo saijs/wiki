@@ -56,3 +56,5 @@ JavaScript 异常，沉淀 JavaScript 异常知识，供异常分析 & 处理参
 * [处理 JS 异常的一个想法 - sofish](http://sofish.de/2144)
 * [浏览器错误捕捉总结](https://gist.github.com/neekey/4371159)
 * [.NET中异常处理最佳实践](http://developer.51cto.com/art/200611/34741.htm)
+* [IE Error Languages](https://github.com/errorception/ie-error-languages)
+* [Enable CORS](http://enable-cors.org/)
