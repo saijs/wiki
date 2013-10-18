@@ -87,6 +87,20 @@ xmlHttp.send(<span class="string">"suggest="</span> + data);
 <ul>
 <li><a href="http://xiyang.09.blog.163.com/blog/static/59827615201321893813871/">参考</a></li>
 </ul>
+
+<hr/>
+
+<p>猎豹浏览器中，支付宝新版密码控件在 <code>&lt;form&gt;</code> 中就会抛出这个异常。
+异常文件是所在页面，异常行号是 58。</p>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">form</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"test"</span> &gt;</span>
+  <span class="tag">&lt;<span class="title">object</span> <span class="attribute">width</span>=<span class="value">"180"</span> <span class="attribute">height</span>=<span class="value">"24"</span> <span class="attribute">classid</span>=<span class="value">"clsid:8EB7C6CB-2DA6-4ABE-B2EA-EAC5A372E757"</span>&gt;</span><span class="tag">&lt;/<span class="title">object</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+</code></pre></div>
+<p><img src="../images/lb-unspecified-error.png" alt="未指明的错误。"/></p>
+
+<p>这个异常本身不影响密码控件的使用，不影响业务。</p>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
 <ul>
 <li><a href="http://blog.sina.com.cn/s/blog_49d3ec2f0100o4kj.html">Internet Explorer 错误：30 未指明的错误</a></li>
