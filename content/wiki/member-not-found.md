@@ -8,7 +8,7 @@
 | 简体中文 | 找不到成员。                    |
 | 繁体中文 | 找不到成員。                    |
 | 英文     | Member not found.               |
-| 日文     | オブジェクトがありません。      |
+| 日文     | メンバーが見つかりません。      |
 | 西班牙文 | No se ha encontrado el miembro. |
 
 在 IE 浏览器中，有些对象并不总是存在的，使用定时器延时执行时可能 this 已经改变。
@@ -68,7 +68,7 @@ jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼�
 
 * [aria-attributes](http://rawgithub.com/w3c/aria-in-html/master/index.html#definitions-of-states-and-properties-all-aria--attributes)
 * [HTML5 Form Attributes](http://www.w3schools.com/html/html5_form_attributes.asp)
-* [demo](../example/member-not-found-setAttribute.html)
+* [demo](../example/member-not-found-setAttribute.md)
 
 ```js
 $("form").attr("novalidate", "novalidate");

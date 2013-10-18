@@ -3,7 +3,7 @@
 
 ----
 
-| Language | Message                 |
+ | Language | Message                 |
 |----------|-------------------------|
 | 简体中文 | 未指明的错误。          |
 | 英文     | Unspecified error.      |
@@ -38,6 +38,14 @@ xmlHttp.send("suggest=" + data);
 
 * http://fangta.bokee.com/6521032.html
 * http://bbs.csdn.net/topics/310169825
+
+----
+
+使用 `window.open` 时，有时页面抛出“未指明的错误”异常，此问题一般是由于，
+页面中包含多个同名的 `name` 参数造成的(如：都命名为 `_self`)，
+解决方案即使用不同名的 `name` 参数，或者不使用 `name` 参数。
+
+* [参考](http://xiyang.09.blog.163.com/blog/static/59827615201321893813871/)
 
 ## 相关异常
 
