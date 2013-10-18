@@ -3,7 +3,7 @@
 
 ----
 
- | Language | Message                 |
+| Language | Message                 |
 |----------|-------------------------|
 | 简体中文 | 未指明的错误。          |
 | 英文     | Unspecified error.      |

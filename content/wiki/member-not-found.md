@@ -68,7 +68,7 @@ jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼�
 
 * [aria-attributes](http://rawgithub.com/w3c/aria-in-html/master/index.html#definitions-of-states-and-properties-all-aria--attributes)
 * [HTML5 Form Attributes](http://www.w3schools.com/html/html5_form_attributes.asp)
-* [demo](../example/member-not-found-setAttribute.md)
+* [demo](../example/member-not-found-setattribute.md)
 
 ```js
 $("form").attr("novalidate", "novalidate");
