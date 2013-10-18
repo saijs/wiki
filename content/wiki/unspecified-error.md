@@ -47,6 +47,23 @@ xmlHttp.send("suggest=" + data);
 
 * [参考](http://xiyang.09.blog.163.com/blog/static/59827615201321893813871/)
 
+----
+
+猎豹浏览器中，支付宝新版密码控件在 `<form>` 中就会抛出这个异常。
+异常文件是所在页面，异常行号是 58。
+
+```html
+<form>
+ <span id="test" >
+  <object width="180" height="24" classid="clsid:8EB7C6CB-2DA6-4ABE-B2EA-EAC5A372E757"></object>
+ </span>
+</form>
+```
+
+![未指明的错误。](../images/lb-unspecified-error.png)
+
+这个异常本身不影响密码控件的使用，不影响业务。
+
 ## 相关异常
 
 
