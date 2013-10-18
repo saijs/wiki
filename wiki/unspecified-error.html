@@ -27,33 +27,13 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">未指明的错误。</h1>
-  <div class="entry-content"><table><thead>
-<tr>
-<th width="100">Language</th>
-<th>Message</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>简体中文</td>
-<td>未指明的错误。</td>
-</tr>
-<tr>
-<td>英文</td>
-<td>Unspecified error.</td>
-</tr>
-<tr>
-<td>葡萄牙文</td>
-<td>Error no especificado.</td>
-</tr>
-<tr>
-<td>法文</td>
-<td>Erreur non spécifiée.</td>
-</tr>
-<tr>
-<td>意大利文</td>
-<td>Errore non specificato.</td>
-</tr>
-</tbody></table>
+  <div class="entry-content"><p>| Language | Message                 |
+|----------|-------------------------|
+| 简体中文 | 未指明的错误。          |
+| 英文     | Unspecified error.      |
+| 葡萄牙文 | Error no especificado.  |
+| 法文     | Erreur non spécifiée. |
+| 意大利文 | Errore non specificato. |</p>
 
 <p>目前少量发现的在监控脚本中，已知是 IE 读取 outerHTML 造成，属于特殊客户端情况造成的异常。</p>
 
@@ -76,6 +56,16 @@ xmlHttp.send(<span class="string">"suggest="</span> + data);
 <ul>
 <li><a href="http://fangta.bokee.com/6521032.html">http://fangta.bokee.com/6521032.html</a></li>
 <li><a href="http://bbs.csdn.net/topics/310169825">http://bbs.csdn.net/topics/310169825</a></li>
+</ul>
+
+<hr/>
+
+<p>使用 <code>window.open</code> 时，有时页面抛出“未指明的错误”异常，此问题一般是由于，
+页面中包含多个同名的 <code>name</code> 参数造成的(如：都命名为 <code>_self</code>)，
+解决方案即使用不同名的 <code>name</code> 参数，或者不使用 <code>name</code> 参数。</p>
+
+<ul>
+<li><a href="http://xiyang.09.blog.163.com/blog/static/59827615201321893813871/">参考</a></li>
 </ul>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
 <ul>
