@@ -40,6 +40,10 @@
 | File     | https://static.alipay.com/build/js/um/um.js |
 | Line     | 1                                           |
 
+* 访问剪贴板被拒绝。
+* form.submit(); file.click();
+* iframe
+
 ## 相关异常
 
 * [没有权限](permission-denied.md)
