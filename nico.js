@@ -13,6 +13,11 @@ exports = module.exports = {
       "title":"异常列表"
     }
   ],
+  "google": {
+    "id": "UA-39646187-1",
+    "domain": "errors.totorojs.org"
+  },
+  "github": "https://github.com/totorojs/javascript-exception-archives",
   "writers": [
     "nico.PageWriter",
     "nico.PostWriter",
