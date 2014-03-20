@@ -38,6 +38,7 @@
 * [被编码的 URI 中包含非法字符](the-uri-to-be-encoded-contains-an-invalid-character.md)
 * [不能执行已释放 Script 的代码](cannot-to-execute-freed-script-code.md)
 * [不支持此接口](does-not-support-this-interface.md)
+* [变量使用了一个 JScript 中不支持的 Automation 类型](variable-uses-an-automation-type-not-supported-in-javascript.md)
 * [参数无效。](invalid-argument.md)
 * [操作已超时。](the-operation-has-timed-out.md)
 * [传递给系统调用的数据区域太小。](passed-to-a-system-call-data-area-is-too-small.md)
