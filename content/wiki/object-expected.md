@@ -63,13 +63,14 @@ window.onload = notExistsFunction;
 > regsvr32 vbscript.dll
 ```
 
-[参考](http://blog.iobit.com/object-expected-problems-javascript_311.html)
 
 ## 相关异常
 
+* [属性“XXX”的值为 null、未定义或不是 Function 对象](the-value-of-the-attribute-xxx-is-null-undefined-or-not-a-function-object.md)
 
 ## 参考
 
 * [后台调用前台javascript方法报错：“缺少对象”的解决方法](http://www.cnblogs.com/heekui/archive/2007/02/08/644963.html)
   这篇中我并没有重现异常，根据后面的信息，猜测也是 language="javascript"
   写错了，但是文中的代码是后面修改正确的。
+[参考](http://blog.iobit.com/object-expected-problems-javascript_311.html)
