@@ -8,6 +8,7 @@
 | 简体中文 | 无法设置属性“XXX”的值: 对象为 null 或未定义                                 |
 | 繁体中文 | 無法設定屬性 'XXX' 的值: 物件為 null 或未經定義                               |
 | 日文     | プロパティ 'XXX' の値を設定できません: オブジェクトは Null または未定義です。 |
+| 日文     | 未定義または NULL 参照のプロパティ 'setText' は設定できません                 |
 | 韩文     | 'XXX' 속성 값을 설정할 수 없습니다. 개체가 null이거나 정의되지 않았습니다.    |
 | 英文     | Unable to set value of the property 'XXX': object is null or undefined        |
 

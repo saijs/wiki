@@ -154,6 +154,8 @@
 * [语法错误：形参前缺少 XXX](syntaxerror-missing-xxx-before-formal-parameters.md)
 * 土耳其文：Belirleyici gerekli
 * SyntaxError: missing : after property id
+* 引數的個數錯誤或指定了不正確的屬性
+* 資料不正確。<CR>
 
 | Language | Message                                          |
 |----------|--------------------------------------------------|
