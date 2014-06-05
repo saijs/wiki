@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917)</title>
 <script type="text/javascript">
@@ -27,48 +27,40 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917)</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>英文</td>
 <td>HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917)</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>常见于 IE8 浏览器，不当的 DOM 操作，会导致这种异常。</p>
-
 <p>解决方法（以下之一）：</p>
-
 <ul>
 <li>将需要需要 DOM 操作的部分放到 dom ready 之后执行。</li>
 <li>确保被操作的 DOM 已经渲染完成。</li>
-<li>为浏览器安装 <a href="http://www.microsoft.com/zh-cn/download/search.aspx?q=KB2416400&amp;p=2&amp;r=10&amp;t=28&amp;s=Relevancy%7EDescending">KB2416400</a> 补丁。</li>
+<li>为浏览器安装 <a href="http://www.microsoft.com/zh-cn/download/search.aspx?q=KB2416400&amp;p=2&amp;r=10&amp;t=28&amp;s=Relevancy~Descending">KB2416400</a> 补丁。</li>
 </ul>
-<h2 id="案例">案例</h2><h3 id="现象：">现象：</h3><h3 id="异常描述：">异常描述：</h3>
-<p>当用户访问带有应用侧边栏的页面时，就有几率报 Unable to modify the parent
+<h2 id="案例">案例</h2><h3 id="现象：">现象：</h3><h3 id="异常描述：">异常描述：</h3><p>当用户访问带有应用侧边栏的页面时，就有几率报 Unable to modify the parent
 container element before the child element is closed 的错误，并导致页面渲染失败。</p>
-<h3 id="原因分析：">原因分析：</h3>
-<p>其一，3月28日上线的新代码中为了尽早执行侧边栏的相关代码，
+<h3 id="原因分析：">原因分析：</h3><p>其一，3月28日上线的新代码中为了尽早执行侧边栏的相关代码，
 没有把代码放在 domReady 之后运行。即代码的执行时机可能是页面正在渲染的时候。</p>
-
 <p>其二，侧边栏代码执行时，如果页面元素的标签尚未正确闭合（即正在渲染的一个中间状态），
 此时如果对未闭合的元素的父元素进行了操作（插入，删除，移动），就会报上述的错误。</p>
-
 <p>经过排查，侧边栏的代码中，对应用中分页切换操作（switchable组件）过程中，
 有一个预期之外的操作，这个操作往 body 里插入了一个 div 元素，最终导致了报错。</p>
-
 <p><a href="http://arale.alipay.im/alipay/appaside/examples/ie8-parse-error.html">演示</a></p>
-<h3 id="解决方法：">解决方法：</h3>
-<p>指定 switchable 的 element 参数（已闭合），避免被默认插入到 body 中
+<h3 id="解决方法：">解决方法：</h3><p>指定 switchable 的 element 参数（已闭合），避免被默认插入到 body 中
 （body 未渲染完成的可能性比较大）。</p>
-
 <p>详细故障可以参考 <a href="http://itil.alipay.net/bug/bug_manage.htm?bugNo=BUG20130418482103&amp;incidentNo=INC20130415175808597&amp;action=view">支付宝故障单</a>。</p>
-<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2>
-<ul>
+<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
 <li><a href="http://support.microsoft.com/KB/927917">Internet Explorer 无法打开 Internet 站点 XXX 操作已中止。(KB927917)</a></li>
 <li><a href="http://www.longtailvideo.com/support/forums/jw-player/setup-issues-and-embedding/10476/js-error-in-ie8-html-parsing-error">JS error in IE8 (HTML Parsing Error)</a></li>
 <li><a href="http://stackoverflow.com/questions/301484/problem-with-html-parser-in-ie">Problem with HTML Parser in IE</a></li>
@@ -102,7 +94,7 @@ container element before the child element is closed 的错误，并导致页面
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

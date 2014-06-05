@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>类不能支持 Automation 操作</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">类不能支持 Automation 操作</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>类不能支持 Automation 操作</td>
@@ -49,31 +51,28 @@
 <td>英文</td>
 <td>Class doesn&#39;t support Automation</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
+</tbody>
+</table>
+<hr>
 <p>|----------|---------------------------------------------------------|
 | 简体中文 | Automation 服务器不能创建对象                           |
 | 瑞典文   | Automation-server kan inte skapa objekt.                |
 | 西班牙文 | El servidor de Automatización no puede crear el objeto |
 | 土耳其文 | Otomasyon sunucusu, nesne oluşturamıyor                |</p>
-
 <p>出没于 Windows IE 浏览器之中，客户端问题。客户端重新注册以下文件即可：Windows -&gt; Run:</p>
 <pre>regsvr32 msscript.ocx
 regsvr32 dispex.dll
 regsvr32 vbscript.dll
 regsvr32 scrrun.dll
-regsvr32 urlmon.dll
-</pre>
-<p>注册完后清理一下浏览器缓存</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+regsvr32 urlmon.dll</pre><p>注册完后清理一下浏览器缓存</p>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>該物件類別不支援 Automation</td>
@@ -90,20 +89,16 @@ regsvr32 urlmon.dll
 <td>Line</td>
 <td>600</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=599; -->
+</tbody>
+</table>
+<p><!-- start-line=599; --></p>
 <div class="highlight"><pre><code class="javascript">}<span class="keyword">else</span>{setTimeout(arguments.callee,<span class="number">10</span>)}})()}<span class="keyword">else</span>{X.parentNode.removeChild(X)}}}<span class="function"><span class="keyword">function</span> <span class="title">b</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> Y=c(Z);
 <span class="keyword">if</span>(Y){<span class="keyword">for</span>(<span class="keyword">var</span> X <span class="keyword">in</span> Y){<span class="keyword">if</span>(<span class="keyword">typeof</span> Y[X]==<span class="string">"function"</span>){Y[X]=<span class="literal">null</span>}}Y.parentNode.removeChild(Y)
-}}<span class="function"><span class="keyword">function</span> <span class="title">c</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> X=<span class="literal">null</span>;<span class="keyword">try</span>{X=j.getElementById(Z)}<span class="keyword">catch</span>(Y){}<span class="keyword">return</span> X}<span class="function"><span class="keyword">function</span> <span class="title">C</span><span class="params">(X)</span>{</span><span class="keyword">return</span> j.createElement(X)
-</code></pre></div>
-<p>创建 ActiveXObject 对象相关的问题，详细情况待分析。</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> ActiveXObject(); <span class="comment">//! Automation 服务器不能创建对象</span>
-</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
-<li><a href="http://msdn.microsoft.com/en-us/library/aa264512(v=vs.60).aspx">Class doesn&#39;t support Automation (Error 430)</a></li>
+}}<span class="function"><span class="keyword">function</span> <span class="title">c</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> X=<span class="literal">null</span>;<span class="keyword">try</span>{X=j.getElementById(Z)}<span class="keyword">catch</span>(Y){}<span class="keyword">return</span> X}<span class="function"><span class="keyword">function</span> <span class="title">C</span><span class="params">(X)</span>{</span><span class="keyword">return</span> j.createElement(X)</code></pre></div><p>创建 ActiveXObject 对象相关的问题，详细情况待分析。</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> ActiveXObject(); <span class="comment">//! Automation 服务器不能创建对象</span></code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/aa264512(v=vs.60\">Class doesn&#39;t support Automation (Error 430)</a>.aspx)</li>
 <li><a href="http://w3help.org/zh-cn/causes/BT9021">BT9021: IE 中可以使用 ActiveXObject 创建 Automation 对象，同时该对象的方法及属性名称大小写不敏感</a></li>
-<li><a href="http://docwiki.cisco.com/wiki/Error_in_IE_(Class_doesn&#x27;t_support_Automation)">Error in IE (Class doesn&#39;t support Automation)</a></li>
+<li><a href="http://docwiki.cisco.com/wiki/Error_in_IE_(Class_doesn&#39;t_support_Automation\">Error in IE (Class doesn&#39;t support Automation)</a>)</li>
 <li><a href="http://www.cnblogs.com/super119/archive/2011/03/20/1989362.html">IE7上出现Class doesn&#39;t support Automation的错误和解决办法</a></li>
 <li><a href="https://getsatisfaction.com/resqtech/topics/class_doesnt_support_automation">Class Doesn&#39;t Support Automation</a></li>
 <li><a href="http://blog.mundy.co/Internet-Explorer/class-doesnt-support-automation-error-in-internet-explorer">Class Doesn&#39;t Support Automation error in Internet Explorer</a></li>
@@ -132,7 +127,7 @@ regsvr32 urlmon.dll
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

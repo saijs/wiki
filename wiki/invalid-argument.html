@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>参数无效。</title>
 <script type="text/javascript">
@@ -27,13 +27,15 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">参数无效。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>参数无效。</td>
@@ -55,6 +57,11 @@
 <td></td>
 </tr>
 <tr>
+<td></td>
+<td>引數的個數錯誤或指定了不正確的屬性</td>
+<td></td>
+</tr>
+<tr>
 <td>英文</td>
 <td>Invalid argument.</td>
 <td></td>
@@ -67,47 +74,45 @@
 <tr>
 <td>日文</td>
 <td>引数が無効です。</td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="分析">分析</h2>
-<p>已知的可能情况有：</p>
-
+</tbody>
+</table>
+<h2 id="分析">分析</h2><p>已知的可能情况有：</p>
 <ol>
 <li><p>设置样式的值不合法，如：缺少单位、负值，需要数值时提供了 NaN 或空字符串等。</p>
 <div class="highlight"><pre><code class="javascript">elem.style.width = <span class="literal">undefined</span> + <span class="string">"px"</span>; <span class="comment">// 参数无效</span>
 elem.style.width = <span class="literal">NaN</span> + <span class="string">"px"</span>; <span class="comment">// 参数无效</span>
 elem.style.width = -<span class="number">1</span> + <span class="string">"px"</span>; <span class="comment">// 参数无效</span>
 
-elem.style.width = <span class="string">"1px"</span>; <span class="comment">// 正确</span>
-</code></pre></div></li>
+elem.style.width = <span class="string">"1px"</span>; <span class="comment">// 正确</span></code></pre></div></li>
 <li><p>IE8 及其以下，都不支持 display:inherit</p>
-<div class="highlight"><pre><code class="javascript">elem.style.display = <span class="string">"inherit"</span>; <span class="comment">// 无法得到 display 属性。 参数无效。</span>
-</code></pre></div></li>
+<div class="highlight"><pre><code class="javascript">elem.style.display = <span class="string">"inherit"</span>; <span class="comment">// 无法得到 display 属性。 参数无效。</span></code></pre></div></li>
 </ol>
-
-<table><thead>
+<table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Invalid argument.</td>
@@ -118,28 +123,25 @@ elem.style.width = <span class="string">"1px"</span>; <span class="comment">// �
 </tr>
 <tr>
 <td>File</td>
-<td><a href="https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.1.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.5.js,static/ar/alipay.security.alieditcontrol-1.3.js">https://a.alipayobjects.com/??...,static/ar/arale.dom-1.1.js,...</a></td>
+<td><a href="https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.1.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.5.js,static/ar/alipay.security.alieditcontrol-1.3.js"><a href="https://a.alipayobjects.com/??...,static/ar/arale.dom-1.1.js">https://a.alipayobjects.com/??...,static/ar/arale.dom-1.1.js</a>,...</a></td>
 </tr>
 <tr>
 <td>Line</td>
 <td>348</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=345; -->
-<div class="highlight"><pre><code class="javascript">},setStyle:<span class="keyword">function</span>(styles){<span class="keyword">var</span> match;<span class="keyword">if</span>(arale.isString(styles)&amp;&amp;arguments.length==<span class="number">2</span>){<span class="keyword">var</span> tmp={};
+</tbody>
+</table>
+<p><!-- start-line=345; --></p>
+<div class="highlight"><pre><code class="javascript">},setStyle:<span class="function"><span class="keyword">function</span><span class="params">(styles)</span>{</span><span class="keyword">var</span> match;<span class="keyword">if</span>(arale.isString(styles)&amp;&amp;arguments.length==<span class="number">2</span>){<span class="keyword">var</span> tmp={};
 tmp[arguments[<span class="number">0</span>]]=arguments[<span class="number">1</span>];styles=tmp}<span class="keyword">for</span>(<span class="keyword">var</span> property <span class="keyword">in</span> styles){<span class="keyword">if</span>(property==<span class="string">"opacity"</span>){<span class="keyword">this</span>.setOpacity(styles[property])
 }<span class="keyword">else</span>{<span class="keyword">if</span>(property==<span class="string">"class"</span>||property==<span class="string">"className"</span>){<span class="keyword">this</span>.className=<span class="keyword">new</span> String(property)
 }<span class="keyword">else</span>{<span class="keyword">this</span>.node.style[(property==<span class="string">"float"</span>||property==<span class="string">"cssFloat"</span>)?(arale.isUndefined(<span class="keyword">this</span>.node.style.styleFloat)?<span class="string">"cssFloat"</span>:<span class="string">"styleFloat"</span>):property]=styles[property]
-}}}<span class="keyword">return</span> <span class="keyword">this</span>},setOpacity:<span class="keyword">function</span>(value){<span class="keyword">if</span>(value&gt;<span class="number">1</span>||value&lt;<span class="number">0</span>){<span class="keyword">return</span> <span class="keyword">this</span>}<span class="keyword">if</span>(arale.isIE()&amp;&amp;Number(arale.browser.ver())&lt;<span class="number">9</span>){<span class="keyword">this</span>.node.style.filter=<span class="string">"alpha(opacity="</span>+value*<span class="number">100</span>+<span class="string">")"</span>
-}<span class="keyword">this</span>.node.style.opacity=(value&lt;<span class="number">0.00001</span>)?<span class="number">0</span>:value;<span class="keyword">return</span> <span class="keyword">this</span>},getViewportSize:<span class="keyword">function</span>(){<span class="keyword">return</span>{width:$D.getViewportWidth(<span class="keyword">this</span>.node),height:$D.getViewportHeight(<span class="keyword">this</span>.node)}
-},getDocumentSize:<span class="keyword">function</span>(){<span class="keyword">return</span>{width:$D.getDocumentWidth(<span class="keyword">this</span>.node),height:$D.getDocumentHeight(<span class="keyword">this</span>.node)}
-</code></pre></div><h2 id="相关异常">相关异常</h2>
-<ul>
+}}}<span class="keyword">return</span> <span class="keyword">this</span>},setOpacity:<span class="function"><span class="keyword">function</span><span class="params">(value)</span>{</span><span class="keyword">if</span>(value&gt;<span class="number">1</span>||value&lt;<span class="number">0</span>){<span class="keyword">return</span> <span class="keyword">this</span>}<span class="keyword">if</span>(arale.isIE()&amp;&amp;Number(arale.browser.ver())&lt;<span class="number">9</span>){<span class="keyword">this</span>.node.style.filter=<span class="string">"alpha(opacity="</span>+value*<span class="number">100</span>+<span class="string">")"</span>
+}<span class="keyword">this</span>.node.style.opacity=(value&lt;<span class="number">0.00001</span>)?<span class="number">0</span>:value;<span class="keyword">return</span> <span class="keyword">this</span>},getViewportSize:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span>{width:$D.getViewportWidth(<span class="keyword">this</span>.node),height:$D.getViewportHeight(<span class="keyword">this</span>.node)}
+},getDocumentSize:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span>{width:$D.getDocumentWidth(<span class="keyword">this</span>.node),height:$D.getDocumentHeight(<span class="keyword">this</span>.node)}</code></pre></div><h2 id="相关异常">相关异常</h2><ul>
 <li><a href="type-mismatch">类型不匹配</a></li>
 </ul>
-<h2 id="参考">参考</h2>
-<ul>
+<h2 id="参考">参考</h2><ul>
 <li><a href="http://zhidao.baidu.com/question/95863139">javascript中调用参数无效的问题</a> - 百度知道</li>
 <li><a href="http://social.msdn.microsoft.com/Forums/zh-CN/295/thread/882a7815-7e48-4d51-94f7-e2daeb662a68/">js报参数无效（FF正常）</a> - MSDN 论坛</li>
 <li><a href="http://topic.csdn.net/u/20100427/19/d6b26d77-e804-42fb-9522-04e77509adc1.html">无法得到display属性，参数无效</a> - CSND</li>
@@ -168,7 +170,7 @@ tmp[arguments[<span class="number">0</span>]]=arguments[<span class="number">1</
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

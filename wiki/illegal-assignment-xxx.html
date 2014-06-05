@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>非法赋值: &#39;XXX&#39;</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">非法赋值: &#39;XXX&#39;</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>非法赋值: &#39;MsgBox&#39;</td>
@@ -41,25 +43,23 @@
 <td>英文</td>
 <td>Illegal assignment: &#39;MsgBox&#39;</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>这个异常多发在 IE6,IE7 中。</p>
-
 <p>页内或外联脚本都没有 MsgBox 相关代码，网络搜索也没有 JavaScript 相关的解释。
 目前已知是 VBScript 可能会抛出这个异常，MsgBox 是 VBScript 的一个方法，
 可以被调用，但不可被赋值。</p>
-
 <p><del>猜测是客户端有自己安装的其他插件造成的脚本异常。</del></p>
-
 <p>爆发次数很多，异常率也很高，这些异常都爆发在有密码控件的页面，怀疑密码控件有关。
 但是密码控件相关的开发同学说没有使用 MsgBox 相关的方法。</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>非法赋值: &#39;MsgBox&#39;</td>
@@ -76,16 +76,17 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>非法赋值: &#39;MsgBox&#39;</td>
@@ -102,23 +103,20 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://www.microsoft.com/china/vbscript/vbstutor/vbstutor.htm">VBScript 教程</a></li>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/17a8353d(v=vs.90).aspx">JS5008：非法赋值</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/17a8353d(v=vs.90\">JS5008：非法赋值</a>.aspx)</li>
 <li><p><a href="http://doc.51windows.net/vbscript/?url=/vbscript/html/vserrillegalassignment.htm">非法赋值</a> - Visual Basic Scripting Edition Document.
 <a href="http://codecoke.com/tech/VBscript/vserrillegalassignment.htm">2</a></p>
-
 <blockquote>
 <p><strong>非法赋值</strong></p>
-
 <p>在一个赋值操作的左边试图使用一个只读标识符。不能对一个只读标识符赋值。</p>
-
 <p>要纠正该错误</p>
-
 <p>只在一个赋值操作的右边使用只读标识符。</p>
-</blockquote></li>
+</blockquote>
+</li>
 </ul>
 </div>
   <div class="comments">
@@ -144,7 +142,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

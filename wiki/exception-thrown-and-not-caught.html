@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>例外被抛出且未被接住</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">例外被抛出且未被接住</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>例外被抛出且未被接住</td>
@@ -49,8 +51,8 @@
 <td>英文</td>
 <td>Exception thrown and not caught</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>IE 浏览器中 throw 出非 Error 对象，异常消息均是这个。</p>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">throw</span> <span class="string">"err"</span>;
 <span class="keyword">throw</span> <span class="number">1</span>;
@@ -59,17 +61,15 @@
 <span class="keyword">throw</span> <span class="keyword">new</span> ReferenceError(<span class="string">"ref err"</span>);
 <span class="keyword">throw</span> <span class="keyword">new</span> SyntaxError(<span class="string">"syntax error"</span>);
 
-<span class="comment">// ...</span>
-</code></pre></div>
-<p>抛出异常建议使用：</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"err message."</span>);
-</code></pre></div><h2 id="案例">案例</h2>
-<table><thead>
+<span class="comment">// ...</span></code></pre></div><p>抛出异常建议使用：</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"err message."</span>);</code></pre></div><h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Exception thrown and not caught</td>
@@ -86,16 +86,17 @@
 <td>Line</td>
 <td>590</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>例外被抛出且未被接住</td>
@@ -116,24 +117,22 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://blog.hotoo.me/javascript-exceptions.html">JavaScript 异常</a></li>
 <li><p><a href="http://www.aspxhome.com/chm/JScript8/xk40eh20.htm">JS5022：异常被引发且未被捕获</a></p>
-
 <blockquote>
 <p>代码包含一个未包含在 try 块内的 throw 语句，或者代码不包含用于捕获错误的关联
 catch 块。使用 throw 语句从 try 块中引发的异常将在 try 块外由 catch 语句捕获。</p>
-
 <p>更正此错误</p>
-
 <ol>
 <li>将可以引发异常的代码放在 try 块中，并确保存在相应的 catch 块。</li>
 <li>确保 catch 语句接受格式正确的异常。</li>
 <li>如果重新引发异常，则确保存在另一个相应的 catch 语句。</li>
 </ol>
-</blockquote></li>
+</blockquote>
+</li>
 </ul>
 </div>
   <div class="comments">
@@ -159,7 +158,7 @@ catch 块。使用 throw 语句从 try 块中引发的异常将在 try 块外由
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

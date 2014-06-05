@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>对象不支持“XXX”属性或方法</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">对象不支持“XXX”属性或方法</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>对象不支持“XXX”属性或方法</td>
@@ -97,14 +99,16 @@
 <td>俄文</td>
 <td>Объект не поддерживает свойство или метод &quot;XXX&quot;</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>プロパティ &#39;noded&#39; の値を取得できません: オブジェクトは Null または未定義です。</td>
@@ -115,29 +119,27 @@
 </tr>
 <tr>
 <td>File</td>
-<td><a href="https://assets.alipay.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/alipay.http-1.1.js,static/ar/arale.tmpl-1.0.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/aralex.base-1.1.js,static/ar/aralex.validator-1.1.js,static/ar/aralex.classicvalidator-1.1.js,static/ar/alipay.placeholder-1.0.js,static/ar/alipay.localstorage-1.0.js,authcenter/authcenter.main-1.7.js">https://assets.alipay.com/??...,static/ar/arale.dom-1.1.js,...</a></td>
+<td><a href="https://assets.alipay.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/alipay.http-1.1.js,static/ar/arale.tmpl-1.0.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/aralex.base-1.1.js,static/ar/aralex.validator-1.1.js,static/ar/aralex.classicvalidator-1.1.js,static/ar/alipay.placeholder-1.0.js,static/ar/alipay.localstorage-1.0.js,authcenter/authcenter.main-1.7.js"><a href="https://assets.alipay.com/??...,static/ar/arale.dom-1.1.js">https://assets.alipay.com/??...,static/ar/arale.dom-1.1.js</a>,...</a></td>
 </tr>
 <tr>
 <td>Line</td>
 <td>747</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>相关代码</p>
-
-<!-- start-line=746; -->
-<div class="highlight"><pre><code class="javascript"><span class="keyword">this</span>._shandlers[<span class="keyword">this</span>._shandlers.length]=h},getParentItem:<span class="keyword">function</span>(ele){<span class="keyword">return</span> $($(ele).parent(<span class="string">"."</span>+<span class="keyword">this</span>.itemClass))
-},getExplain:<span class="keyword">function</span>(ele){<span class="keyword">var</span> parent=<span class="keyword">this</span>.getParentItem(ele);<span class="keyword">return</span> $$(<span class="string">"."</span>+<span class="keyword">this</span>.notifyClass,parent)[<span class="number">0</span>]||$($D.toDom(<span class="string">'&lt;div class="'</span>+<span class="keyword">this</span>.notifyClass+<span class="string">'"&gt;&lt;/div&gt;'</span>)).inject(parent,<span class="string">"bottom"</span>)
-},_supportPlaceholder:<span class="keyword">function</span>(){<span class="keyword">var</span> i=document.createElement(<span class="string">"input"</span>);<span class="keyword">return</span><span class="string">"placeholder"</span> <span class="keyword">in</span> i
-</code></pre></div>
-<hr/>
-
-<table><thead>
+<p><!-- start-line=746; --></p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">this</span>._shandlers[<span class="keyword">this</span>._shandlers.length]=h},getParentItem:<span class="function"><span class="keyword">function</span><span class="params">(ele)</span>{</span><span class="keyword">return</span> $($(ele).parent(<span class="string">"."</span>+<span class="keyword">this</span>.itemClass))
+},getExplain:<span class="function"><span class="keyword">function</span><span class="params">(ele)</span>{</span><span class="keyword">var</span> parent=<span class="keyword">this</span>.getParentItem(ele);<span class="keyword">return</span> $$(<span class="string">"."</span>+<span class="keyword">this</span>.notifyClass,parent)[<span class="number">0</span>]||$($D.toDom(<span class="string">'&lt;div class="'</span>+<span class="keyword">this</span>.notifyClass+<span class="string">'"&gt;&lt;/div&gt;'</span>)).inject(parent,<span class="string">"bottom"</span>)
+},_supportPlaceholder:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">var</span> i=document.createElement(<span class="string">"input"</span>);<span class="keyword">return</span><span class="string">"placeholder"</span> <span class="keyword">in</span> i</code></pre></div><hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>物件沒有支援這個屬性或方法 &#39;msSiteModeCreateJumplist&#39;</td>
@@ -154,11 +156,10 @@
 <td>Line</td>
 <td>8</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>相关代码：</p>
-<div class="highlight"><pre><code class="javascript">window.external.msSiteModeCreateJumplist(<span class="string">"担保交易"</span>);
-</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2></div>
+<div class="highlight"><pre><code class="javascript">window.external.msSiteModeCreateJumplist(<span class="string">"担保交易"</span>);</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
@@ -182,7 +183,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

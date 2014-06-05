@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>尚未实现</title>
 <script type="text/javascript">
@@ -27,13 +27,15 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">尚未实现</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>尚未实现</td>
@@ -42,20 +44,17 @@
 <tr>
 <td>日文</td>
 <td>実装されていません</td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="分析">分析</h2>
-<p>绑定事件时，事件处理函数带括号被立即执行，而这个处理函数本身又不是返回函数类型的，
+</tbody>
+</table>
+<h2 id="分析">分析</h2><p>绑定事件时，事件处理函数带括号被立即执行，而这个处理函数本身又不是返回函数类型的，
 就会报这个错误。</p>
 <h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">handler</span><span class="params">()</span>{</span>}
 
 <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest(); <span class="comment">// IE8 支持 XMLHttpRequest 对象。</span>
 xhr.onreadystatechange = handler(); <span class="comment">// 但是回调函数类型不是函数时，抛出『尚未实现』的异常。</span>
 
-elem.onclick = handler(); <span class="comment">// 尚未实现</span>
-</code></pre></div><h2 id="参考">参考</h2>
-<ul>
+elem.onclick = handler(); <span class="comment">// 尚未实现</span></code></pre></div><h2 id="参考">参考</h2><ul>
 <li><a href="http://www.cnblogs.com/trance/archive/2011/07/29/2120681.html">JS报 “尚未实现”  错误</a></li>
 <li><a href="http://blog.csdn.net/xiaohutushen/article/details/1772980">javascript 尚未实现错误解决办法</a></li>
 </ul>
@@ -83,7 +82,7 @@ elem.onclick = handler(); <span class="comment">// 尚未实现</span>
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

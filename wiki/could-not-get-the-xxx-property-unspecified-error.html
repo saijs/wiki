@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>无法得到 XXX 属性。 未指明的错误。</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">无法得到 XXX 属性。 未指明的错误。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>无法得到 XXX 属性。 未指明的错误。</td>
@@ -45,49 +47,53 @@
 <td>英文</td>
 <td>Could not get the XXX property. Unspecified error.</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>无法得到 outerHTML 属性。 未指明的错误。</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>無法取得未定義或 Null 參考的屬性 &#39;innerHTML&#39;</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Could not get the outerHTML property. Unspecified error.</td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://samueli.iteye.com/blog/237461">IE7:未指明的错误，解决办法</a> - 安装了Internet Explorer 增强的安全配置的原因，
 在添加或删除程序里的添加删除WINDOWS组件里把这个Internet Explorer 增强的安全配置删除掉</li>
 <li><a href="http://hi.baidu.com/jghc/blog/item/5e28c4d7faeb9f2106088b2c.html">无法设置selected属性。未指明的错误</a> - IE6 select.options[x].selected = true, +setTimeout()</li>
@@ -101,14 +107,10 @@ regsvr32 mshtml.dll
 regsvr32 browseui.dll
 regsvr32 jscript.dll
 regsvr32 vbscript.dll
-regsvr32 oleaut32.dll
-</pre>
-<p>如何仍然未解决，需要注册核心 Internet Explorer DLL 文件：
+regsvr32 oleaut32.dll</pre><p>如何仍然未解决，需要注册核心 Internet Explorer DLL 文件：
 注：需要在系统安装了 Microsoft Windows XP Service Pack 2 (SP2)</p>
-
 <p>开始-运行：</p>
-<pre>&quot;%ProgramFiles%Internet Exploreriexplore.exe&quot; &#47;rereg
-</pre></li>
+<pre>&quot;%ProgramFiles%Internet Exploreriexplore.exe&quot; /rereg</pre></li>
 </ul>
 </div>
   <div class="comments">
@@ -134,7 +136,7 @@ regsvr32 oleaut32.dll
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

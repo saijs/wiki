@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>Invalid range in character set</title>
 <script type="text/javascript">
@@ -27,28 +27,30 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">Invalid range in character set</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>英文</td>
 <td>Invalid range in character set</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>通常是正则表达式有范围表达式使用了错误的范围，例如：</p>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> good = <span class="regexp">/[a-z]/</span>;
-<span class="keyword">var</span> bad = <span class="regexp">/[z-a]/</span>;
-</code></pre></div><h2 id="案例">案例</h2>
-<table><thead>
+<span class="keyword">var</span> bad = <span class="regexp">/[z-a]/</span>;</code></pre></div><h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>URL</td>
 <td><a href="https://securitycenter.alipay.com/cert/installByEmailSend.htm">https://securitycenter.alipay.com/cert/installByEmailSend.htm</a></td>
@@ -65,11 +67,11 @@
 <td>UA</td>
 <td>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; GTB7.1; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729)</td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2>
-<ul>
-<li>[[<a href="http://msdn.microsoft.com/en-us/site/29xff710%7CInvalid">http://msdn.microsoft.com/en-us/site/29xff710|Invalid</a> range in character set (JavaScript)]]</li>
-<li>[[<a href="http://msdn.microsoft.com/en-us/site/85f00xy2%7CInvalid">http://msdn.microsoft.com/en-us/site/85f00xy2|Invalid</a> range in character set (VBScript)]]</li>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
+<li>[[<a href="http://msdn.microsoft.com/en-us/site/29xff710|Invalid">http://msdn.microsoft.com/en-us/site/29xff710|Invalid</a> range in character set (JavaScript)]]</li>
+<li>[[<a href="http://msdn.microsoft.com/en-us/site/85f00xy2|Invalid">http://msdn.microsoft.com/en-us/site/85f00xy2|Invalid</a> range in character set (VBScript)]]</li>
 </ul>
 </div>
   <div class="comments">
@@ -95,7 +97,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>搜索</title>
 <script type="text/javascript">
@@ -31,41 +31,37 @@
 
 <div id='cse' style='width: 100%;'>正在加载...</div>
 
-<script src='//www.google.com/jsapi' type='text/javascript'></script>
-
-<script type='text/javascript'>
+<p><script src='//www.google.com/jsapi' type='text/javascript'></script></p>
+<p><script type='text/javascript'>
 function getQueryString(query, key){
-  var q = query.replace(/^\?/, "");
-  var list = q.split("&");
-  var k = key + "=";
-
-  for(var i=0,l=list.length; i<l; i++){
+  var q = query.replace(/^\?/, &quot;&quot;);
+  var list = q.split(&quot;&amp;&quot;);
+  var k = key + &quot;=&quot;;</p>
+<p>  for(var i=0,l=list.length; i&lt;l; i++){
     if(list[i].indexOf(k) === 0){
-      return list[i].replace(k, "");
+      return list[i].replace(k, &quot;&quot;);
     }
   }
   return null;
 }
-google.load('search', '1', {language: 'zh-Hans', style: google.loader.themes.V2_DEFAULT});
+google.load(&#39;search&#39;, &#39;1&#39;, {language: &#39;zh-Hans&#39;, style: google.loader.themes.V2_DEFAULT});
 google.setOnLoadCallback(function() {
   var customSearchOptions = {};
   var orderByOptions = {};
-  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-  customSearchOptions['enableOrderBy'] = true;
-  customSearchOptions['orderByOptions'] = orderByOptions;
-  var customSearchControl =   new google.search.CustomSearchControl('010739172100154220412:vnb-hg9epu0', customSearchOptions);
+  orderByOptions[&#39;keys&#39;] = [{label: &#39;Relevance&#39;, key: &#39;&#39;} , {label: &#39;Date&#39;, key: &#39;date&#39;}];
+  customSearchOptions[&#39;enableOrderBy&#39;] = true;
+  customSearchOptions[&#39;orderByOptions&#39;] = orderByOptions;
+  var customSearchControl =   new google.search.CustomSearchControl(&#39;010739172100154220412:vnb-hg9epu0&#39;, customSearchOptions);
   customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
   var options = new google.search.DrawOptions();
   options.setAutoComplete(true);
-  customSearchControl.draw('cse', options);
-
-  var key = getQueryString(location.search, "key");
+  customSearchControl.draw(&#39;cse&#39;, options);</p>
+<p>  var key = getQueryString(location.search, &quot;key&quot;);
   if(key){
     customSearchControl.execute(decodeURIComponent(key));
   }
 }, true);
-</script>
-
+</script></p>
 <style type='text/css'>
   .gsc-control-cse {
     font-family: Arial, sans-serif;
@@ -191,7 +187,7 @@ google.setOnLoadCallback(function() {
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="./static/one.js"></script>
     <script src="../static/codes.js"></script>

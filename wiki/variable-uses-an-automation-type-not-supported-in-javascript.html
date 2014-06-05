@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
-    <title>条件编译已关闭</title>
+    <title>Variable uses an Automation type not supported in JavaScript</title>
 <script type="text/javascript">
 </script>
     <link rel="stylesheet" href="../static/one.css" />
@@ -26,7 +26,7 @@
     </div>
     <div class="document">
 <div class="hentry">
-  <h1 class="entry-title">条件编译已关闭</h1>
+  <h1 class="entry-title">Variable uses an Automation type not supported in JavaScript</h1>
   <div class="entry-content"><table>
 <thead>
 <tr>
@@ -37,36 +37,35 @@
 <tbody>
 <tr>
 <td>简体中文</td>
-<td>条件编译已关闭</td>
+<td>变量使用了一个 JavaScript 中不支持的 Automation 类型</td>
+</tr>
+<tr>
+<td>简体中文</td>
+<td>变量使用了一个 JScript 中不支持的 Automation 类型</td>
+</tr>
+<tr>
+<td>英文</td>
+<td>Variable uses an Automation type not supported in JavaScript</td>
+</tr>
+<tr>
+<td>英文</td>
+<td>Variable uses an Automation type not supported in JScript</td>
+</tr>
+<tr>
+<td>繁体中文</td>
+<td>此變數使用了 JScript 不支援的 Automation 型態</td>
 </tr>
 </tbody>
 </table>
-<h2 id="案例">案例</h2><table>
-<thead>
-<tr>
-<th width="100">异常字段</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL</td>
-<td><a href="https://cashier.alipay.com/standard/payment/saveTradeInfoToPhone.htm">https://cashier.alipay.com/standard/payment/saveTradeInfoToPhone.htm</a></td>
-</tr>
-<tr>
-<td>File</td>
-<td><a href="https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.1.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.5.js,cashier/cashier.ProvinceSelect-1.0.js,static/ar/alipay.http-1.1.js">https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.1.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.5.js,cashier/cashier.ProvinceSelect-1.0.js,static/ar/alipay.http-1.1.js</a></td>
-</tr>
-<tr>
-<td>Line</td>
-<td>37</td>
-</tr>
-</tbody>
-</table>
-<p>相关代码：</p>
-<div class="highlight"><pre><code class="javascript"><span class="number">36.</span> }}<span class="keyword">return</span> length},has:<span class="function"><span class="keyword">function</span><span class="params">(key)</span>{</span><span class="keyword">return</span> <span class="keyword">this</span>.obj.hasOwnProperty(key)},keyOf:<span class="function"><span class="keyword">function</span><span class="params">(value)</span>{</span><span class="keyword">var</span> keys=[];
-<span class="number">37.</span> <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> <span class="keyword">this</span>.obj){<span class="keyword">if</span>(<span class="keyword">this</span>.obj.hasOwnProperty(key)&amp;&amp;<span class="keyword">this</span>.obj[key]==value){keys.push(key)
-<span class="number">38.</span> }}<span class="keyword">return</span> keys.length?keys:<span class="literal">null</span>},hasValue:<span class="function"><span class="keyword">function</span><span class="params">(value)</span>{</span><span class="keyword">return</span>(<span class="keyword">this</span>.keyOf(value)!==<span class="literal">null</span>)</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
+<p>已知 <code>eval()</code> 方法及 <code>ActiveXObject()</code> 在 IE9 中可能会抛出这个异常。</p>
+<h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript">eval(<span class="string">"_TMP_FOR_EVAL_ = function (event){ showContinueContextMenu(event)}"</span>)</code></pre></div><p>上面这个在 IE8 中工作正常，但是在 IE9 中抛出异常。
+可以使用下面的替代方案：</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">this</span>.ownerDocument.defaultView.eval(<span class="string">"_TMP_FOR_EVAL_ = function (event){ showContinueContextMenu(event)}"</span>)</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
+<li><a href="http://support.microsoft.com/kb/314209">无法从子窗口中访问父窗口的位置对象</a></li>
+<li><a href="http://answers.microsoft.com/en-us/ie/forum/ie9-windows_7/ie9-rc-giving-errors-variable-uses-an-automation/7e34fca5-aa31-4a25-b136-8c58b2fd9dfb">IE9 RC giving errors - Variable uses an automation type not supported in Javascript</a></li>
+<li><a href="http://stackoverflow.com/questions/6551198/variable-uses-an-automation-type-not-supported-in-jscript">Variable uses an Automation type not supported in JScript</a></li>
+</ul>
+</div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>

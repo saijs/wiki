@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>类型不匹配</title>
 <script type="text/javascript">
@@ -27,13 +27,15 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">类型不匹配</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>类型不匹配</td>
@@ -52,19 +54,19 @@
 <tr>
 <td>英文</td>
 <td>Type mismatch</td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="分析">分析</h2><div class="highlight"><pre><code class="javascript">elem.appendChild(<span class="string">"I am not HTMLElemnt."</span>);
-</code></pre></div>
-<table><thead>
+</tbody>
+</table>
+<h2 id="分析">分析</h2><div class="highlight"><pre><code class="javascript">elem.appendChild(<span class="string">"I am not HTMLElemnt."</span>);</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
@@ -93,20 +95,20 @@
 <td>Opera</td>
 <td>英文</td>
 <td>WRONG_ARGUMENTS_ERR</td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> ActiveXObject(); <span class="comment">// 『类型不匹配』</span>
 
 <span class="keyword">var</span> xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP"</span>);
-xhr.onreadystatechange = handler(); <span class="comment">// 『类型不匹配』，注意最后的括号。</span>
-</code></pre></div><h2 id="案例">案例</h2>
-<table><thead>
+xhr.onreadystatechange = handler(); <span class="comment">// 『类型不匹配』，注意最后的括号。</span></code></pre></div><h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>类型不匹配</td>
@@ -123,19 +125,14 @@ xhr.onreadystatechange = handler(); <span class="comment">// 『类型不匹配�
 <td>Line</td>
 <td>19</td>
 </tr>
-</tbody></table>
-
-<hr/>
-<div class="highlight"><pre><code class="javascript">xmlHttp.onreadystatechange = updatePage(t_id);
-</code></pre></div>
-<hr/>
-<div class="highlight"><pre><code class="javascript">elem.appendChild(txt);
-</code></pre></div><h2 id="相关异常">相关异常</h2>
-<ul>
+</tbody>
+</table>
+<hr>
+<div class="highlight"><pre><code class="javascript">xmlHttp.onreadystatechange = updatePage(t_id);</code></pre></div><hr>
+<div class="highlight"><pre><code class="javascript">elem.appendChild(txt);</code></pre></div><h2 id="相关异常">相关异常</h2><ul>
 <li><a href="invalid-argument">参数无效。</a></li>
 </ul>
-<h2 id="参考">参考</h2>
-<ul>
+<h2 id="参考">参考</h2><ul>
 <li><a href="http://msdn.microsoft.com/zh-cn/library/3etdkytt(v=vs.80">类型不匹配 (Visual Basic)</a>.aspx)</li>
 <li><a href="http://www.hudong.com/wiki/%E7%B1%BB%E5%9E%8B%E4%B8%8D%E5%8C%B9%E9%85%8D">类型不匹配</a></li>
 </ul>
@@ -163,7 +160,7 @@ xhr.onreadystatechange = handler(); <span class="comment">// 『类型不匹配�
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>書き込みできません。</title>
 <script type="text/javascript">
@@ -27,26 +27,29 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">書き込みできません。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>日文</td>
 <td>書き込みできません。</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>翻译：Can not write(不可写)</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>URL</td>
 <td><a href="https://cashier.alipay.com/standard/gateway/ebankPay.htm">https://cashier.alipay.com/standard/gateway/ebankPay.htm</a></td>
@@ -59,14 +62,12 @@
 <td>Line</td>
 <td>155</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=154; -->
-<div class="highlight"><pre><code class="javascript">})}},_fixAliedit:<span class="keyword">function</span>(){<span class="keyword">var</span> o=$A($$(<span class="string">"#xbox-mock .alieditContainer"</span>));o.each(<span class="keyword">function</span>(n){n.setStyle({visibility:<span class="string">"visible"</span>,opacity:<span class="string">"1"</span>,filter:<span class="string">"alpha(opacity = 1)"</span>})
-})},_getOptWidth:<span class="keyword">function</span>(){<span class="keyword">var</span> w;<span class="keyword">if</span>(parent&amp;&amp;parent.$(<span class="string">"xbox-iframe"</span>)&amp;&amp;(parent.$(<span class="string">"xbox-iframe"</span>).attr(<span class="string">"auto-width"</span>)&gt;<span class="number">0</span>)){w=parent.$(<span class="string">"xbox-iframe"</span>).attr(<span class="string">"auto-width"</span>)
-}<span class="keyword">else</span>{w=parseInt(<span class="keyword">this</span>.width,<span class="number">10</span>)}<span class="keyword">this</span>.width=w;<span class="keyword">return</span> w},_getOptHeight:<span class="keyword">function</span>(){<span class="keyword">return</span> parseInt(<span class="keyword">this</span>.height,<span class="number">10</span>)
-</code></pre></div>
-<p>这里最大的疑点是 <code>parent.$</code> 的调用，可能会出现无权限场景。</p>
+</tbody>
+</table>
+<p><!-- start-line=154; --></p>
+<div class="highlight"><pre><code class="javascript">})}},_fixAliedit:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">var</span> o=$A($$(<span class="string">"#xbox-mock .alieditContainer"</span>));o.each(<span class="function"><span class="keyword">function</span><span class="params">(n)</span>{</span>n.setStyle({visibility:<span class="string">"visible"</span>,opacity:<span class="string">"1"</span>,filter:<span class="string">"alpha(opacity = 1)"</span>})
+})},_getOptWidth:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">var</span> w;<span class="keyword">if</span>(parent&amp;&amp;parent.$(<span class="string">"xbox-iframe"</span>)&amp;&amp;(parent.$(<span class="string">"xbox-iframe"</span>).attr(<span class="string">"auto-width"</span>)&gt;<span class="number">0</span>)){w=parent.$(<span class="string">"xbox-iframe"</span>).attr(<span class="string">"auto-width"</span>)
+}<span class="keyword">else</span>{w=parseInt(<span class="keyword">this</span>.width,<span class="number">10</span>)}<span class="keyword">this</span>.width=w;<span class="keyword">return</span> w},_getOptHeight:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span> parseInt(<span class="keyword">this</span>.height,<span class="number">10</span>)</code></pre></div><p>这里最大的疑点是 <code>parent.$</code> 的调用，可能会出现无权限场景。</p>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
@@ -91,7 +92,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

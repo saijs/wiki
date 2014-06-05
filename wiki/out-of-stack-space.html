@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>堆栈溢出</title>
 <script type="text/javascript">
@@ -27,14 +27,16 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">堆栈溢出</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th></th>
 <th>Error Type</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>堆栈溢出</td>
@@ -71,20 +73,17 @@
 <td>Opera 11</td>
 <td>Error</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<p>同时引用两次对同一个原生方法进行重写的脚本导致无限循环调用。</p>
-
+</tbody>
+</table>
+<h2 id="案例">案例</h2><p>同时引用两次对同一个原生方法进行重写的脚本导致无限循环调用。</p>
 <p>参考：
-* <a href="http://www.zizhujy.com/blog/post/2012/03/18/Uncaught-RangeError-Maximum-call-stack-size-exceeded.aspx">未知异常: Maximum call stack size exceeded</a>
+<em> <a href="http://www.zizhujy.com/blog/post/2012/03/18/Uncaught-RangeError-Maximum-call-stack-size-exceeded.aspx">未知异常: Maximum call stack size exceeded</a>
     <a href="http://blog.csdn.net/vean_system/article/details/7799232">2</a>
-* <a href="http://zizhujy.com/blog/post/2012/02/21/%E5%AF%B9JavaScript%E7%9A%84Mathpow()%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E4%BF%AE%E6%AD%A3.aspx">对JavaScript的Math.pow()函数的一个修正</a></p>
-<h2 id="相关异常">相关异常</h2>
-<ul>
+</em> <a href="http://zizhujy.com/blog/post/2012/02/21/%E5%AF%B9JavaScript%E7%9A%84Mathpow(\">对JavaScript的Math.pow()函数的一个修正</a>%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E4%BF%AE%E6%AD%A3.aspx)</p>
+<h2 id="相关异常">相关异常</h2><ul>
 <li><a href="out-of-memory">内存不够</a></li>
 </ul>
-<h2 id="参考">参考</h2>
-<ul>
+<h2 id="参考">参考</h2><ul>
 <li><a href="http://stackoverflow.com/questions/6095530/maximum-call-stack-size-exceeded-error">Maximum call stack size exceeded error</a></li>
 <li><a href="http://stackoverflow.com/questions/1814337/jspec-rangeerror-maximum-call-stack-size-exceeded">JSpec - RangeError: Maximum call stack size exceeded</a></li>
 <li><a href="http://blog.csdn.net/gengshenghong/article/details/7583821">V8中的堆栈溢出错误</a></li>
@@ -116,7 +115,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

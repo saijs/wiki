@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>未指明的错误。</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">未指明的错误。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>未指明的错误。</td>
@@ -53,56 +55,41 @@
 <td>意大利文</td>
 <td>Errore non specificato.</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>目前少量发现的在监控脚本中，已知是 IE 读取 outerHTML 造成，属于特殊客户端情况造成的异常。</p>
-
 <ol>
 <li>客户端安装 “Internet Explorer 增强的安全配置” 可能会导致这个异常。</li>
 <li>内部脚本需要修改 DOM 的场景，建议在 DOMReady, onload 之后执行，也可以考虑 setTimeout 执行。</li>
 </ol>
-<h2 id="案例">案例</h2>
-<p>有些 AJAX 会导致这个错误。参考：</p>
+<h2 id="案例">案例</h2><p>有些 AJAX 会导致这个错误。参考：</p>
 <div class="highlight"><pre><code class="javascript">xmlHttp.setRequestHeader(<span class="string">"Content-type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);
 url += <span class="string">"?suggest="</span> + data;
 xmlHttp.open(<span class="string">"POST"</span>, url, <span class="literal">false</span>);
-xmlHttp.send(<span class="string">"suggest="</span> + data);
-</code></pre></div>
-<p>将 setRequestHeader 放在 open 之后可以解决。</p>
+xmlHttp.send(<span class="string">"suggest="</span> + data);</code></pre></div><p>将 setRequestHeader 放在 open 之后可以解决。</p>
 <div class="highlight"><pre><code class="javascript">xmlHttp.open(<span class="string">"POST"</span>, url, <span class="literal">false</span>);
 xmlHttp.setRequestHeader(<span class="string">"Content-type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);
-xmlHttp.send(<span class="string">"suggest="</span> + data);
-</code></pre></div>
-<ul>
+xmlHttp.send(<span class="string">"suggest="</span> + data);</code></pre></div><ul>
 <li><a href="http://fangta.bokee.com/6521032.html">http://fangta.bokee.com/6521032.html</a></li>
 <li><a href="http://bbs.csdn.net/topics/310169825">http://bbs.csdn.net/topics/310169825</a></li>
 </ul>
-
-<hr/>
-
+<hr>
 <p>使用 <code>window.open</code> 时，有时页面抛出“未指明的错误”异常，此问题一般是由于，
 页面中包含多个同名的 <code>name</code> 参数造成的(如：都命名为 <code>_self</code>)，
 解决方案即使用不同名的 <code>name</code> 参数，或者不使用 <code>name</code> 参数。</p>
-
 <ul>
 <li><a href="http://xiyang.09.blog.163.com/blog/static/59827615201321893813871/">参考</a></li>
 </ul>
-
-<hr/>
-
+<hr>
 <p>Windows XP 系统，猎豹浏览器 IE8 模式下，支付宝新版密码控件(v3.3.0.0)
 在 <code>&lt;form&gt;</code> 中就会抛出这个异常。异常文件是所在页面，异常行号是 58。</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">form</span>&gt;</span>
  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"test"</span> &gt;</span>
   <span class="tag">&lt;<span class="title">object</span> <span class="attribute">width</span>=<span class="value">"180"</span> <span class="attribute">height</span>=<span class="value">"24"</span> <span class="attribute">classid</span>=<span class="value">"clsid:8EB7C6CB-2DA6-4ABE-B2EA-EAC5A372E757"</span>&gt;</span><span class="tag">&lt;/<span class="title">object</span>&gt;</span>
  <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
-</code></pre></div>
-<p><img src="../images/lb-unspecified-error.png" alt="未指明的错误。"/></p>
-
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre></div><p><img src="../images/lb-unspecified-error.png" alt="未指明的错误。"></p>
 <p>这个异常本身不影响密码控件的使用，不影响业务。</p>
-<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://blog.sina.com.cn/s/blog_49d3ec2f0100o4kj.html">Internet Explorer 错误：30 未指明的错误</a></li>
 <li><a href="http://www.cnblogs.com/wangxiang/articles/1653429.html">(二)未知的运行时错误(ie6的未指明的错误)</a></li>
 <li><a href="http://www.iteye.com/topic/90106">关于脚本异常出现的“未指明的错误”</a></li>
@@ -135,7 +122,7 @@ xmlHttp.send(<span class="string">"suggest="</span> + data);
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

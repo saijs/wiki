@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>未结束的字符串常量</title>
 <script type="text/javascript">
@@ -27,13 +27,15 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">未结束的字符串常量</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>未结束的字符串常量</td>
@@ -72,32 +74,27 @@
 <tr>
 <td>未知</td>
 <td>Constante chaîne non terminée</td>
-<td></td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>一般由后端传的变量中带有换行符/引号造成，也有可能是编码造成的特殊字符异常。</p>
 <h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">show</span><span class="params">(value)</span> {</span>
     alert(value);
 }
 <span class="keyword">var</span> script = <span class="string">'&lt;script&gt;show("test\n\r");&lt;\/script&gt;'</span>;
-document.write(script);
-</code></pre></div>
-<p>JavaScript 编码时把 <code>\n\r</code> 转换为换行，最后输出在页面的 JavaScript 变成</p>
+document.write(script);</code></pre></div><p>JavaScript 编码时把 <code>\n\r</code> 转换为换行，最后输出在页面的 JavaScript 变成</p>
 <div class="highlight"><pre><code class="javascript">show("test
-);
-</code></pre></div>
-<p>所以造成 JavaScript 语法错误。</p>
-
+);</code></pre></div><p>所以造成 JavaScript 语法错误。</p>
 <p>使用 jsonp 获取后台输出的 html 页面容易出现此问题，需要在服务器端过滤 <code>\r\n</code> 等特殊符号。</p>
-
-<table><thead>
+<table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE 6,7,8</td>
 <td>未结束的字符串常量</td>
@@ -111,11 +108,10 @@ document.write(script);
 <tr>
 <td>Firefox 21</td>
 <td>unterminated string literal</td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
 <li><a href="http://www.emool.cn/archives/y2008/140.html">javascript 未结束的字符串常量</a></li>
 </ul>
 </div>
@@ -142,7 +138,7 @@ document.write(script);
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

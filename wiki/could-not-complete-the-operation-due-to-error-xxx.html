@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>由于出现错误 XXX 而导致此项操作无法完成。</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">由于出现错误 XXX 而导致此项操作无法完成。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>由于出现错误 800a03e8 而导致此项操作无法完成。</td>
@@ -57,16 +59,17 @@
 <td>英文</td>
 <td>Could not complete the operation due to error c00c023f.</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>主要发生在页面 load 过程中，操作 DOM 不当引起。</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>發生錯誤，無法完成操作 800a03e8。</td>
@@ -87,16 +90,17 @@
 <td>UA</td>
 <td>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>由于出现错误 c0000096 而导致此项操作无法完成。</td>
@@ -107,57 +111,34 @@
 </tr>
 <tr>
 <td>File</td>
-<td><a href="https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.3.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.8.js,static/ar/alipay.security.alieditcontrol-1.3.js,static/ar/alipay.http-1.1.js,static/ar/aralex.validator-1.1.js,static/ar/aralex.classicvalidator-1.1.js">https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,...,static/ar/aralex.classicvalidator-1.1.js</a></td>
+<td><a href="https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,static/ar/arale.hash-1.0.js,static/ar/arale.string-1.0.js,static/ar/arale.dom-1.1.js,static/ar/arale.event-1.1.js,static/ar/arale.uri-1.0.js,static/ar/arale.http-1.1.js,static/ar/arale.aspect-1.0.js,static/ar/arale.class-1.0.js,static/ar/arale.tmpl-1.0.js,static/ar/aralex.base-1.1.js,cashier/cashier.Widget-1.0.js,cashier/cashier.AsyncHtml-1.2.js,cashier/cashier.Tab-1.3.js,cashier/cashier.AlieditAmount-1.0.js,cashier/cashier.module-1.8.js,static/ar/alipay.security.alieditcontrol-1.3.js,static/ar/alipay.http-1.1.js,static/ar/aralex.validator-1.1.js,static/ar/aralex.classicvalidator-1.1.js"><a href="https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,...,static/ar/aralex.classicvalidator-1.1.js">https://a.alipayobjects.com/??static/ar/arale.array-1.1.js,...,static/ar/aralex.classicvalidator-1.1.js</a></a></td>
 </tr>
 <tr>
 <td>Line</td>
 <td>510</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>相关代码：</p>
-
-<!-- start-line=508; -->
-<div class="highlight"><pre><code class="javascript"><span class="keyword">this</span>._xhr.open(<span class="keyword">this</span>._options.method.toUpperCase(),url,<span class="keyword">this</span>._options.async);$H(<span class="keyword">this</span>._options.headers).each(<span class="keyword">function</span>(key,value){<span class="keyword">try</span>{<span class="keyword">this</span>._xhr.setRequestHeader(key,value)
+<p><!-- start-line=508; --></p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">this</span>._xhr.open(<span class="keyword">this</span>._options.method.toUpperCase(),url,<span class="keyword">this</span>._options.async);$H(<span class="keyword">this</span>._options.headers).each(<span class="function"><span class="keyword">function</span><span class="params">(key,value)</span>{</span><span class="keyword">try</span>{<span class="keyword">this</span>._xhr.setRequestHeader(key,value)
 }<span class="keyword">catch</span>(e){}},<span class="keyword">this</span>);<span class="keyword">this</span>._xhr.onreadystatechange=arale.hitch(<span class="keyword">this</span>,<span class="keyword">this</span>.onStateChange);
-<span class="keyword">this</span>._xhr.send(data);<span class="keyword">if</span>(!<span class="keyword">this</span>._options.async){<span class="keyword">this</span>.onStateChange()}<span class="keyword">return</span> <span class="keyword">this</span>},cancel:<span class="keyword">function</span>(){<span class="keyword">if</span>(!<span class="keyword">this</span>._running){<span class="keyword">return</span> <span class="keyword">this</span>
-}<span class="keyword">this</span>._running=<span class="literal">false</span>;<span class="keyword">this</span>._xhr.onreadystatechange=<span class="keyword">function</span>(){};<span class="keyword">this</span>._xhr.abort();
-<span class="keyword">this</span>._xhr=arale.browser.Request();<span class="keyword">return</span> <span class="keyword">this</span>},onStateChange:<span class="keyword">function</span>(){<span class="keyword">var</span> that=<span class="keyword">this</span>,options=<span class="keyword">this</span>._options;
-</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<span class="keyword">this</span>._xhr.send(data);<span class="keyword">if</span>(!<span class="keyword">this</span>._options.async){<span class="keyword">this</span>.onStateChange()}<span class="keyword">return</span> <span class="keyword">this</span>},cancel:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">if</span>(!<span class="keyword">this</span>._running){<span class="keyword">return</span> <span class="keyword">this</span>
+}<span class="keyword">this</span>._running=<span class="literal">false</span>;<span class="keyword">this</span>._xhr.onreadystatechange=<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>};<span class="keyword">this</span>._xhr.abort();
+<span class="keyword">this</span>._xhr=arale.browser.Request();<span class="keyword">return</span> <span class="keyword">this</span>},onStateChange:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">var</span> that=<span class="keyword">this</span>,options=<span class="keyword">this</span>._options;</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://iloves.org/2011/01/dom-%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%AE%8C%E5%85%A8-appendchild-%E6%93%8D%E4%BD%9C%E5%9C%A8ie6%E4%B8%8Eie8%E4%B8%8B%E7%9A%84bug/">Dom 未加载完全 appendChild 操作在IE6与IE8下的bug.</a></li>
 <li><p><a href="http://www.google.com/support/forum/p/adsense/thread?tid=3a2018d98dfcafad&amp;hl=zh-CN">google adsense广告代码在IE7 IE8内核浏览器上有严重问题，IE6正常</a></p>
-
 <p>故障现象：无法打开internet站点，已中止操作。</p>
-
-<table><thead>
-<tr>
-<th width="100">异常字段</th>
-<th>值</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Line</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Char</td>
-<td>244</td>
-</tr>
-<tr>
-<td>Code</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Error</td>
-<td>由于出现错误 800a03e8 而导致此项操作无法完成。</td>
-</tr>
-<tr>
-<td>网址</td>
-<td><a href="http://pagead2.googlesyndication.com/pagead/render_ads.js">http://pagead2.googlesyndication.com/pagead/render_ads.js</a></td>
-</tr>
-</tbody></table></li>
-<li><p><a href="http://topic.csdn.net/u/20081021/22/c8f3129c-cc73-429e-aa7e-b723cec3620d.html">Internet Explorer 无法打开 Internet 站点 XXX.YYY.ZZZ。已中止操作</a></p></li>
+<p>| 异常字段 | 值                                                        |
+|----------|-----------------------------------------------------------|
+| Line     | 1                                                         |
+| Char     | 244                                                       |
+| Code     | 0                                                         |
+| Error    | 由于出现错误 800a03e8 而导致此项操作无法完成。            |
+| 网址     | <a href="http://pagead2.googlesyndication.com/pagead/render_ads.js">http://pagead2.googlesyndication.com/pagead/render_ads.js</a> |</p>
+</li>
+<li><p><a href="http://topic.csdn.net/u/20081021/22/c8f3129c-cc73-429e-aa7e-b723cec3620d.html">Internet Explorer 无法打开 Internet 站点 XXX.YYY.ZZZ。已中止操作</a></p>
+</li>
 </ul>
 </div>
   <div class="comments">
@@ -183,7 +164,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

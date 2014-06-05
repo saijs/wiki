@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>Script error.</title>
 <script type="text/javascript">
@@ -27,14 +27,16 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">Script error.</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 <th>备注</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>英文</td>
 <td>Script error.</td>
@@ -45,18 +47,18 @@
 <td></td>
 <td>Script Error: 0x80072ee4</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="分析">分析</h2>
-<p>异常信息通常如下：</p>
-
-<table><thead>
+</tbody>
+</table>
+<h2 id="分析">分析</h2><p>异常信息通常如下：</p>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Script error.</td>
@@ -69,8 +71,8 @@
 <td>Line</td>
 <td>0</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <ol>
 <li>在某些版本的 Firefox 中，地址栏执行脚本 <code>javascript:notExistFunction()</code>
 代码，Firebug 可以提示正确的 <code>&quot;notExistFunction&quot; is undefined</code>，
@@ -80,21 +82,18 @@
 页面引用的非同域的外部脚本中抛出了异常，本页面无权限获得这个异常详情，
 所以就成了 <code>Script error.</code>。静态脚本使用独立域名未必就一定是件好事啊。</li>
 </ol>
-<h2 id="案例">案例</h2>
-<p>a.com/a.html</p>
+<h2 id="案例">案例</h2><p>a.com/a.html</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
-    window.onerror = <span class="keyword">function</span>(m,f,l){
+    window.onerror = <span class="function"><span class="keyword">function</span><span class="params">(m,f,l)</span>{</span>
         <span class="keyword">var</span> s = <span class="string">"message:"</span>+m+<span class="string">", file:"</span>+f+<span class="string">", line:"</span>+l;
         console.log(s);
         window.status = s;
     };
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"b.com/b.html"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre></div>
-<p>这里 a.com/a.html 页面引用了 b.com/b.html 脚本『注意：b.html 是一个页面』，
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"b.com/b.html"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><p>这里 a.com/a.html 页面引用了 b.com/b.html 脚本『注意：b.html 是一个页面』，
 这时会抛出异常：</p>
-
-<table><thead>
+<table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th>type</th>
@@ -102,7 +101,8 @@
 <th>File</th>
 <th>Line</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>console</td>
@@ -173,26 +173,22 @@
 <td></td>
 <td>0</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>引入外部脚本，该外部脚本会抛出异常：</p>
-
 <p>a.com/a.html</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
-    window.onerror = <span class="keyword">function</span>(m,f,l){
+    window.onerror = <span class="function"><span class="keyword">function</span><span class="params">(m,f,l)</span>{</span>
         <span class="keyword">var</span> s = <span class="string">"message:"</span>+m+<span class="string">", file:"</span>+f+<span class="string">", line:"</span>+l;
         console.log(s);
         window.status = s;
     };
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"b.com/b.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre></div>
-<p>b.com/b.js</p>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"b.com/b.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><p>b.com/b.js</p>
 <div class="highlight"><pre><code class="javascript"><span class="comment">// some comments</span>
 <span class="comment">// for lines.</span>
-<span class="keyword">var</span> a = ;
-</code></pre></div>
-<table><thead>
+<span class="keyword">var</span> a = ;</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th>type</th>
@@ -200,7 +196,8 @@
 <th>File</th>
 <th>Line</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>console</td>
@@ -271,16 +268,14 @@
 <td></td>
 <td>0</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>特殊的，如果是脚本中主动掷出的异常，Safari 会稍有不同。</p>
-
 <p>b.com/b.js</p>
 <div class="highlight"><pre><code class="javascript"><span class="comment">// some comments</span>
 <span class="comment">// for lines.</span>
-<span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"test error on b."</span>);
-</code></pre></div>
-<table><thead>
+<span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"test error on b."</span>);</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th>type</th>
@@ -288,7 +283,8 @@
 <th>File</th>
 <th>Line</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>console</td>
@@ -359,9 +355,9 @@
 <td></td>
 <td>0</td>
 </tr>
-</tbody></table>
-<h2 id="参考">参考</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="参考">参考</h2><ul>
 <li><a href="http://stackoverflow.com/questions/5913978/cryptic-script-error-reported-in-javascript-in-chrome-and-firefox">Cryptic “Script Error.” reported in Javascript in Chrome and Firefox</a></li>
 <li><a href="http://trac.webkit.org/browser/branches/chromium/648/Source/WebCore/dom/ScriptExecutionContext.cpp?rev=77122#L301">WebKit source that checks origin</a></li>
 <li><a href="http://mxr.mozilla.org/mozilla-beta/source/dom/base/nsJSEnvironment.cpp#316">Firefox source that checks</a></li>
@@ -391,7 +387,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

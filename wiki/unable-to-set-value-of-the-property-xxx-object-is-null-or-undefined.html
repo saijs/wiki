@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>无法设置属性“XXX”的值: 对象为 null 或未定义</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">无法设置属性“XXX”的值: 对象为 null 或未定义</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>无法设置属性“XXX”的值: 对象为 null 或未定义</td>
@@ -46,6 +48,10 @@
 <td>プロパティ &#39;XXX&#39; の値を設定できません: オブジェクトは Null または未定義です。</td>
 </tr>
 <tr>
+<td>日文</td>
+<td>未定義または NULL 参照のプロパティ &#39;setText&#39; は設定できません</td>
+</tr>
+<tr>
 <td>韩文</td>
 <td>&#39;XXX&#39; 속성 값을 설정할 수 없습니다. 개체가 null이거나 정의되지 않았습니다.</td>
 </tr>
@@ -53,14 +59,16 @@
 <td>英文</td>
 <td>Unable to set value of the property &#39;XXX&#39;: object is null or undefined</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>無法設定屬性 &#39;Validator&#39; 的值: 物件為 null 或未經定義</td>
@@ -77,32 +85,28 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>整个代码被压缩成一行，但是 Validator 相关的代码有 2处，查看源码，相关部分如下：</p>
-<div class="highlight"><pre><code class="javascript">AP.widget.Validator = <span class="keyword">function</span>(){
+<div class="highlight"><pre><code class="javascript">AP.widget.Validator = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
   <span class="comment">//...</span>
 };
 AP.widget.Validator.prototype = {
   <span class="comment">//...</span>
-};
-</code></pre></div>
-<p>根据异常消息可以判定为这里展示的第 1行抛出的异常，无法设置 AP.widget 的
+};</code></pre></div><p>根据异常消息可以判定为这里展示的第 1行抛出的异常，无法设置 AP.widget 的
 Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
-
 <p><code>AP</code> 及 <code>AP.widget</code> 在老版 Arale v1 中是全局的常驻对象，理论上是可以信任的
 依赖对象。但是不排除网络原因这个依赖模块没有正常装载到页面上。</p>
-
 <p>TODO: 关于依赖模块未正常装载部分，可以参考这篇。</p>
-
-<hr/>
-
-<table><thead>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>&#39;DetaReset&#39; 속성 값을 설정할 수 없습니다. 개체가 null이거나 정의되지않았습니다.</td>
@@ -119,21 +123,20 @@ Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
 <td>Line</td>
 <td>600</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=599; -->
+</tbody>
+</table>
+<p><!-- start-line=599; --></p>
 <div class="highlight"><pre><code class="javascript">}<span class="keyword">else</span>{setTimeout(arguments.callee,<span class="number">10</span>)}})()}<span class="keyword">else</span>{X.parentNode.removeChild(X)}}}<span class="function"><span class="keyword">function</span> <span class="title">b</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> Y=c(Z);
 <span class="keyword">if</span>(Y){<span class="keyword">for</span>(<span class="keyword">var</span> X <span class="keyword">in</span> Y){<span class="keyword">if</span>(<span class="keyword">typeof</span> Y[X]==<span class="string">"function"</span>){Y[X]=<span class="literal">null</span>}}Y.parentNode.removeChild(Y)
-}}<span class="function"><span class="keyword">function</span> <span class="title">c</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> X=<span class="literal">null</span>;<span class="keyword">try</span>{X=j.getElementById(Z)}<span class="keyword">catch</span>(Y){}<span class="keyword">return</span> X}<span class="function"><span class="keyword">function</span> <span class="title">C</span><span class="params">(X)</span>{</span><span class="keyword">return</span> j.createElement(X)
-</code></pre></div>
-<hr/>
-
-<table><thead>
+}}<span class="function"><span class="keyword">function</span> <span class="title">c</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> X=<span class="literal">null</span>;<span class="keyword">try</span>{X=j.getElementById(Z)}<span class="keyword">catch</span>(Y){}<span class="keyword">return</span> X}<span class="function"><span class="keyword">function</span> <span class="title">C</span><span class="params">(X)</span>{</span><span class="keyword">return</span> j.createElement(X)</code></pre></div><hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>プロパティ &#39;innerHTML&#39; の値を設定できません: オブジェクトは Null または未定義です。</td>
@@ -150,26 +153,26 @@ Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
 <td>Line</td>
 <td>14</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=13; -->
-<div class="highlight"><pre><code class="javascript">}ele.appendChild(aEle);<span class="keyword">return</span> <span class="literal">true</span>}<span class="keyword">catch</span>(e){}}<span class="keyword">return</span> <span class="literal">false</span>},HTML:<span class="keyword">function</span>(data,ele){<span class="keyword">if</span>(!data.htmlCode){ele.style.display=<span class="string">"none"</span>
-}<span class="keyword">else</span>{ele.innerHTML=data.htmlCode;<span class="keyword">return</span> <span class="literal">true</span>}<span class="keyword">return</span> <span class="literal">false</span>},MEDIA:<span class="keyword">function</span>(data,ele){<span class="keyword">if</span>(!data.mediaURL||data.mediaURL==<span class="string">"null"</span>){ele.style.display=<span class="string">"none"</span>
-}<span class="keyword">else</span>{<span class="keyword">if</span>(data.mediaType==<span class="string">"SWF"</span>){<span class="keyword">try</span>{<span class="keyword">var</span> width=ele.style.width||<span class="number">200</span>,height=ele.style.height||<span class="number">100</span>;
-</code></pre></div>
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<p><!-- start-line=13; --></p>
+<div class="highlight"><pre><code class="javascript">}ele.appendChild(aEle);<span class="keyword">return</span> <span class="literal">true</span>}<span class="keyword">catch</span>(e){}}<span class="keyword">return</span> <span class="literal">false</span>},HTML:<span class="function"><span class="keyword">function</span><span class="params">(data,ele)</span>{</span><span class="keyword">if</span>(!data.htmlCode){ele.style.display=<span class="string">"none"</span>
+}<span class="keyword">else</span>{ele.innerHTML=data.htmlCode;<span class="keyword">return</span> <span class="literal">true</span>}<span class="keyword">return</span> <span class="literal">false</span>},MEDIA:<span class="function"><span class="keyword">function</span><span class="params">(data,ele)</span>{</span><span class="keyword">if</span>(!data.mediaURL||data.mediaURL==<span class="string">"null"</span>){ele.style.display=<span class="string">"none"</span>
+}<span class="keyword">else</span>{<span class="keyword">if</span>(data.mediaType==<span class="string">"SWF"</span>){<span class="keyword">try</span>{<span class="keyword">var</span> width=ele.style.width||<span class="number">200</span>,height=ele.style.height||<span class="number">100</span>;</code></pre></div><hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Unable to set value of the property &#39;disabled&#39;: object is null or undefined</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
@@ -194,7 +197,7 @@ Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

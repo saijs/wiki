@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>对象不支持此属性或方法</title>
 <script type="text/javascript">
@@ -27,14 +27,16 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">对象不支持此属性或方法</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>对象不支持此属性或方法</td>
@@ -105,23 +107,21 @@
 <td>荷兰文</td>
 <td>Deze eigenschap of methode wordt niet ondersteund door dit object</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>一般是将一个非 函数/方法 当作 函数/方法 调用时造成。
 检查代码中是否有函数名与元素属性/属性同名的情况。</p>
-
 <p>貌似 IE 专有异常，同样的代码其他浏览器的异常信息与此不同。</p>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> a = {};
-a.a();
-</code></pre></div>
-<table><thead>
+a.a();</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>对象不支持此属性或方法</td>
@@ -142,21 +142,17 @@ a.a();
 <td>Chrome</td>
 <td>Object #<Object> has no method &#39;a&#39;</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<p>商家帮助中心在接入点击热图时，发现IE8中搜索结果超出一页时（此时有翻页），
+</tbody>
+</table>
+<h2 id="案例">案例</h2><p>商家帮助中心在接入点击热图时，发现IE8中搜索结果超出一页时（此时有翻页），
 点击热点脚本计算 md5 部分的代码会报错『对象不支持此属性或方法』。</p>
-
 <p>md5 算法本身的相关代码都是函数式编程，并无使用面向对象的部分，只有简单的 <code>add()</code>
 函数调用，及数值位运算。运行时异常的参数部分也都无异常数据。</p>
 <div class="highlight"><pre><code class="javascript"><span class="comment">/* MD5 rounds functions */</span>
 <span class="function"><span class="keyword">function</span> <span class="title">R1</span><span class="params">(A, B, C, D, X, S, T)</span> {</span>
     q = add(add(A, (B &amp; C) | (~B &amp; D)), add(X, T));
-    <span class="keyword">return</span> add((q &lt;<span class="xml"><span class="tag">&lt; <span class="attribute">S</span>) | ((<span class="attribute">q</span> &gt;</span>&gt; (32 - S)) &amp; (Math.pow(2, S) - 1)), B);
-}
-</span></code></pre></div>
-<p>最初以为是翻页部分的 HTML 标签不匹配，没有 <code>&lt;form&gt;</code> 起始标签，加上 <code>&lt;form&gt;</code> 标签果然没有异常了。</p>
-
+    <span class="keyword">return</span> add((q &lt;&lt; S) | ((q &gt;&gt; (<span class="number">32</span> - S)) &amp; (Math.pow(<span class="number">2</span>, S) - <span class="number">1</span>)), B);
+}</code></pre></div><p>最初以为是翻页部分的 HTML 标签不匹配，没有 <code>&lt;form&gt;</code> 起始标签，加上 <code>&lt;form&gt;</code> 标签果然没有异常了。</p>
 <p>相关代码：</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"PageChanger"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://help.p36.alipay.net/images/pre_page_simple.gif"</span> <span class="attribute">alt</span>=<span class="value">"上一页"</span> /&gt;</span>
@@ -172,31 +168,24 @@ a.a();
     <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"hidden"</span> <span class="attribute">name</span>=<span class="value">"s"</span> <span class="attribute">value</span>=<span class="value">"0"</span> /&gt;</span>
     <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"hidden"</span> <span class="attribute">name</span>=<span class="value">"n"</span> <span class="attribute">value</span>=<span class="value">"10"</span> /&gt;</span>
 <span class="tag">&lt;/<span class="title">form</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre></div>
-<p>但是另一个发现是，如果删除匹配的 <code>&lt;form&gt;</code> 起始&amp;结束标签，保留这些 hidden 字段，
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><p>但是另一个发现是，如果删除匹配的 <code>&lt;form&gt;</code> 起始&amp;结束标签，保留这些 hidden 字段，
 尤其是保留 <code>name=q</code> 的元素，仍然抛出异常。</p>
-
 <p>再次检查 JavaScript 代码，发现函数中 q 未定义，成为全局变量，
 在 IE8 中直接引用 <code>input[name=q]</code> 的元素，为其赋值时，抛出异常。</p>
-
 <p>最小重现代码，属性名为 name 或 id 均抛异常：</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"a"</span> /&gt;</span>
 <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
     a = <span class="number">1</span>;
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre></div><h2 id="相关异常">相关异常</h2>
-<ul>
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="相关异常">相关异常</h2><ul>
 <li><a href="xxx-is-not-a-function">缺少函数</a></li>
 </ul>
-<h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://support.microsoft.com/kb/257997/zh-cn">PRB： 错误&quot;对象不支持此属性或方法&quot;通过远程脚本</a></li>
 <li><a href="http://support.microsoft.com/kb/963264/zh-cn">对象不支持此属性或方法</a></li>
 <li><a href="http://hi.baidu.com/imouse728/blog/item/5c4cde9b344191bdc9eaf498.html">js 对象不支持此属性或方法</a></li>
 <li><a href="http://nneverwei.iteye.com/blog/733765">Extjs IE8 对象不支持此属性或方法的bug</a>,
 <a href="http://www.iteye.com/topic/733765">2</a></li>
-<li><a href="http://technet.microsoft.com/zh-cn/library/ff955640(WS.10).aspx">解决迁移到 Internet Explorer 8 时的应用程序兼容性问题</a></li>
+<li><a href="http://technet.microsoft.com/zh-cn/library/ff955640(WS.10\">解决迁移到 Internet Explorer 8 时的应用程序兼容性问题</a>.aspx)</li>
 </ul>
 </div>
   <div class="comments">
@@ -222,7 +211,7 @@ a.a();
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

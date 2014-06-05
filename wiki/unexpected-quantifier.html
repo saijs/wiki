@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>错误的数量词</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">错误的数量词</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>错误的数量词</td>
@@ -57,24 +59,23 @@
 <td>英文</td>
 <td>Unexpected quantifier</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>正则表达式的量词（ +, *, {m,n} ）不合法，大都是在 new RegExp(str_reg) 时，
 str_reg 未作安全处理时抛出。
 安全的将字符串 new RegExp 应先将字符串转义处理，需转义的字符包括以下列出的部分：</p>
-<div class="highlight"><pre><code class="javascript">RegExp.escape = <span class="keyword">function</span>(source){
+<div class="highlight"><pre><code class="javascript">RegExp.escape = <span class="function"><span class="keyword">function</span><span class="params">(source)</span>{</span>
   <span class="keyword">return</span> String(source).replace(<span class="regexp">/([\!\\\/\.\$\*\^\(\)\[\]\{\}\?\+\-\|])/g</span>, <span class="string">"\\$1"</span>);
-};
-</code></pre></div><h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">"+"</span>);
-</code></pre></div>
-<table><thead>
+};</code></pre></div><h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">"+"</span>);</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
@@ -103,18 +104,18 @@ str_reg 未作安全处理时抛出。
 <td>Safari</td>
 <td></td>
 <td>Invalid regular expression: nothing to repeat</td>
-<td></td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>错误的数量词</td>
@@ -125,24 +126,23 @@ str_reg 未作安全处理时抛出。
 </tr>
 <tr>
 <td>File</td>
-<td><a href="https://static.alipay.com/min/?b=ar&amp;f=arale.aspect-1.0.js,arale.class-1.0.js,arale.tmpl-1.0.js,aralex.base-1.1.js,alipay.common.PwdStrengthAnalyser-1.0.js,arale.uri-1.0.js,arale.http-1.1.js,alipay.http-1.1.js,aralex.validator-1.1.js,aralex.validator.PopValidator-1.0.js,aralex.apop-1.1.js&amp;date=1320832734109&amp;debug=1">https://static.alipay.com/min/?b=ar&amp;f=...,alipay.common.PwdStrengthAnalyser-1.0.js,...&amp;date=1320832734109&amp;debug=1</a></td>
+<td><a href="https://static.alipay.com/min/?b=ar&amp;f=arale.aspect-1.0.js,arale.class-1.0.js,arale.tmpl-1.0.js,aralex.base-1.1.js,alipay.common.PwdStrengthAnalyser-1.0.js,arale.uri-1.0.js,arale.http-1.1.js,alipay.http-1.1.js,aralex.validator-1.1.js,aralex.validator.PopValidator-1.0.js,aralex.apop-1.1.js&amp;date=1320832734109&amp;debug=1"><a href="https://static.alipay.com/min/?b=ar&amp;f=...,alipay.common.PwdStrengthAnalyser-1.0.js,...&amp;date=1320832734109&amp;debug=1">https://static.alipay.com/min/?b=ar&amp;f=...,alipay.common.PwdStrengthAnalyser-1.0.js,...&amp;date=1320832734109&amp;debug=1</a></a></td>
 </tr>
 <tr>
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>密码强度算法中，使用了动态创建正则表达式来进行匹配的方法，但是这个表达式是来自用户的输入，
 在用户输入某些不匹配的特殊字符时，会抛出正则表达式类异常。</p>
-
 <p>线上异常相关代码：</p>
 <div class="highlight"><pre><code class="javascript"><span class="comment">/**
  * 获取密码对应的评分
  * @param {string=} opt_strPassword 要检测的密码字符串，若不传入此参数，则默认取得绑定的表单元素的value值
  * @return {number} 密码强度评分
  */</span>
-getScore : <span class="keyword">function</span>(opt_strPassword){
+getScore : <span class="function"><span class="keyword">function</span><span class="params">(opt_strPassword)</span>{</span>
     <span class="keyword">var</span> strPassword = arale.isUndefined(opt_strPassword) ?
         (<span class="keyword">this</span>.needTrim ? S(<span class="keyword">this</span>.domNode.node.value) : <span class="keyword">this</span>.domNode.node.value) :
         opt_strPassword;
@@ -156,25 +156,20 @@ getScore : <span class="keyword">function</span>(opt_strPassword){
     }
 
     <span class="keyword">return</span> nScore;
-},
-</code></pre></div>
-<p>这些正则表达式特殊字符，应该经过正确的转义处理。</p>
-<h2 id="相关异常">相关异常</h2>
-<ol>
+},</code></pre></div><p>这些正则表达式特殊字符，应该经过正确的转义处理。</p>
+<h2 id="相关异常">相关异常</h2><ol>
 <li><a href="regular-expression-syntax-error">正则表达式语法错误</a></li>
 <li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
 </ol>
-
-<!-- 抛出相关异常 -->
-
+<p><!-- 抛出相关异常 --></p>
 <script type="text/javascript">
 try{new RegExp(")");}catch(ex){monitor.error(ex);}
 try{new RegExp("+");}catch(ex){monitor.error(ex);}
 </script>
-<h2 id="参考">参考</h2>
-<ul>
-<li><a href="http://msdn.microsoft.com/zh-tw/library/ie/k0e76ayf(v=vs.94).aspx">非預期的數量詞</a></li>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/k0e76ayf(v=vs.94).aspx">意外的限定符</a></li>
+
+<h2 id="参考">参考</h2><ul>
+<li><a href="http://msdn.microsoft.com/zh-tw/library/ie/k0e76ayf(v=vs.94\">非預期的數量詞</a>.aspx)</li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/k0e76ayf(v=vs.94\">意外的限定符</a>.aspx)</li>
 </ul>
 </div>
   <div class="comments">
@@ -200,7 +195,7 @@ try{new RegExp("+");}catch(ex){monitor.error(ex);}
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

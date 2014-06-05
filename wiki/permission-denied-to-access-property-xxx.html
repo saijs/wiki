@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>Permission denied to access property &#39;XXX&#39;</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">Permission denied to access property &#39;XXX&#39;</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>英文</td>
 <td>Permission denied to access property &#39;XXX&#39;</td>
@@ -49,18 +51,18 @@
 <td></td>
 <td>&lt;XXX.YYY.ZZZ&gt; *¾n document.domain à³CP &lt;XXX.YYY.ZZZ&gt; (ýp Location.toStringdocument.domain=&lt;XXX.YYY.ZZZ&gt;</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>跨域访问资源，常见的是访问不同域的框架页 (frame,iframe)。</p>
-
 <p>同主域的系统，可以通过设置为同一主域达到同源：document.domain = &quot;alipay.com&quot;;</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Permission denied to call method Location.toString</td>
@@ -77,23 +79,20 @@
 <td>Line</td>
 <td>0</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
+</tbody>
+</table>
+<hr>
 <ul>
 <li>Permission denied to access property &#39;toString&#39;</li>
 <li>Permission denied to call method Location.toString</li>
-<li>Permission denied for &lt;<a href="https://authcenter.sit.alipay.net">https://authcenter.sit.alipay.net</a>&gt; to call method Location.toString</li>
-<li>&lt;<a href="http://authcenter.sit.alipay.net">http://authcenter.sit.alipay.net</a>&gt; *¾n document.domain à³CP &lt;<a href="http://accorderexprod.sit.alipay.net">http://accorderexprod.sit.alipay.net</a>&gt; (ýp Location.toStringdocument.domain=&lt;<a href="http://alipay.net">http://alipay.net</a>&gt;</li>
+<li>Permission denied for &lt;<a href="https://authcenter.sit.alipay.net&amp;gt">https://authcenter.sit.alipay.net&amp;gt</a>; to call method Location.toString</li>
+<li>&lt;<a href="http://authcenter.sit.alipay.net&amp;gt">http://authcenter.sit.alipay.net&amp;gt</a>; *¾n document.domain à³CP &lt;<a href="http://accorderexprod.sit.alipay.net&amp;gt">http://accorderexprod.sit.alipay.net&amp;gt</a>; (ýp Location.toStringdocument.domain=&lt;<a href="http://alipay.net&amp;gt">http://alipay.net&amp;gt</a>;</li>
 </ul>
-<h2 id="相关异常">相关异常</h2>
-<ul>
+<h2 id="相关异常">相关异常</h2><ul>
 <li><a href="access-is-denied">拒绝访问。</a></li>
 <li><a href="permission-denied">没有权限</a></li>
 </ul>
-<h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://bugs.adobe.com/jira/browse/FP-561">&quot;Location.toString&quot; uncaught (security) exception caused by improper Flash plugin behavior</a></li>
 <li><a href="http://code.google.com/p/swfobject/issues/detail?id=318">cross-domain? Firefox reports Permission denied to call method Location.toString</a></li>
 <li><a href="http://willperone.net/Code/as3error.php">Uncaught Exception: Permission denied to call method to Location.toString</a></li>
@@ -125,7 +124,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>&#39;XXX&#39; 未定义</title>
 <script type="text/javascript">
@@ -27,14 +27,16 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">&#39;XXX&#39; 未定义</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>&#39;XXX&#39; 未定义</td>
@@ -165,18 +167,18 @@
 <td>阿拉伯文</td>
 <td>&#39;XXX&#39; هو غير معرّف</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>多见于脚本未正常装载时发生，也有可能是定义出先错误，导致对象为定义。</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>&#39;_gat&#39; 未定义</td>
@@ -193,28 +195,25 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>初步判断是客户端环境安装了瑞星卡卡，或其他第三方工具，损坏了系统文件导致。
 _gat 是 Google 统计的新版代码：</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
     <span class="keyword">var</span> pageTracker = _gat._getTracker(<span class="string">"UA-3169713-7"</span>);
     pageTracker._initData();
     pageTracker._trackPageview();
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre></div>
-<p>客户端解决方案是，开始 -&gt; 运行：</p>
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><p>客户端解决方案是，开始 -&gt; 运行：</p>
 <pre>regsvr32 jscript.dll
-regsvr32 vbscript.dll
-</pre>
-<hr/>
-
-<table><thead>
+regsvr32 vbscript.dll</pre><hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Uncaught SyntaxError: Unexpected token a</td>
@@ -231,19 +230,18 @@ regsvr32 vbscript.dll
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-<pre>Uncaught SyntaxError: Unexpected token ILLEGAL
-</pre>
-<hr/>
-
+</tbody>
+</table>
+<pre>Uncaught SyntaxError: Unexpected token ILLEGAL</pre><hr>
 <p>特殊的：</p>
-
-<table><thead>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>“window”未定义</td>
@@ -260,19 +258,16 @@ regsvr32 vbscript.dll
 <td>Line</td>
 <td>1435</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>非常奇怪的异常，居然 window 未定义，File 居然是其他的一个页面，难道是
 <code>script[src=https://tradeexprod.alipay.com/fastpay/certCheck.htm]</code> ？不应该的。</p>
-
 <ul>
 <li><a href="http://bbs.phpchina.com/thread-111405-1-1.html">http://bbs.phpchina.com/thread-111405-1-1.html</a></li>
 <li><a href="http://www.ilovejs.net/archives/1079">http://www.ilovejs.net/archives/1079</a></li>
 <li><a href="http://www.cnblogs.com/klvk/archive/2012/02/12/2347951.html">http://www.cnblogs.com/klvk/archive/2012/02/12/2347951.html</a></li>
 </ul>
-
-<hr/>
-
+<hr>
 <ul>
 <li>&#39;Loader&#39; 未定义</li>
 <li>&#39;aralex&#39; 未經定義</li>
@@ -286,8 +281,10 @@ regsvr32 vbscript.dll
 <li>&#39;seajs&#39; は定義されていません。</li>
 <li>E is not defined</li>
 </ul>
-<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2>
-<ul>
+<h2 id="相关异常">相关异常</h2><ul>
+<li><a href="the-value-of-the-attribute-xxx-is-null-undefined-or-not-a-function-object">属性“XXX”的值为 null、未定义或不是 Function 对象</a></li>
+</ul>
+<h2 id="参考">参考</h2><ul>
 <li><a href="http://www.baibudu.com/the-new-google-analytics-tracking-code-at-the-next-ie-prompts-_gat-undefined/">http://www.baibudu.com/the-new-google-analytics-tracking-code-at-the-next-ie-prompts-_gat-undefined/</a></li>
 <li><a href="http://www.iiich.com/bbs/viewtopic.php?id=84">http://www.iiich.com/bbs/viewtopic.php?id=84</a></li>
 <li><a href="http://vpxcc.wordpress.com/2008/06/06/howto-solve-_gat-is-not-defined-a-google-analytics-workaround/">http://vpxcc.wordpress.com/2008/06/06/howto-solve-_gat-is-not-defined-a-google-analytics-workaround/</a></li>
@@ -321,7 +318,7 @@ regsvr32 vbscript.dll
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

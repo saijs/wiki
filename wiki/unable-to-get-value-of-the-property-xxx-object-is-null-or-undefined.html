@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>无法获取属性“XXX”的值: 对象为 null 或未定义</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">无法获取属性“XXX”的值: 对象为 null 或未定义</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>无法获取属性“XXX”的值: 对象为 null 或未定义</td>
@@ -93,16 +95,17 @@
 <td>土耳其文</td>
 <td>&#39;XXX&#39; özelliğinin değeri alınamıyor: nesne boş veya tanımsız</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>一般由引用的对象不存在造成，比如元素 ID 不一致、运行时返回 null 等。</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Object doesn&#39;t support this property or method</td>
@@ -119,16 +122,17 @@
 <td>Line</td>
 <td>280</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>プロパティ &#39;noded&#39; の値を取得できません: オブジェクトは Null または未定義です。</td>
@@ -145,17 +149,13 @@
 <td>Line</td>
 <td>10</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>相关代码</p>
-
-<!-- start-line=9; -->
-<div class="highlight"><pre><code class="javascript">$random:<span class="keyword">function</span>(b,d){<span class="keyword">return</span> Math.floor(Math.random()*(d-b+<span class="number">1</span>)+b)},error:<span class="keyword">function</span>(b){arale.log(<span class="string">"error:"</span>+b)},exec:<span class="keyword">function</span>(b){<span class="keyword">if</span>(!b)<span class="keyword">return</span> b;<span class="keyword">if</span>(window.execScript)window.execScript(b);<span class="keyword">else</span>{<span class="keyword">var</span> d=document.createElement(<span class="string">"script"</span>);d.setAttribute(<span class="string">"type"</span>,<span class="string">"text/javascript"</span>);d[arale.browser.Engine.webkit&amp;&amp;<span class="number">420</span>&gt;arale.browser.Engine.ver?<span class="string">"innerText"</span>:<span class="string">"text"</span>]=b;document.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(d);document.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].removeChild(d)}<span class="keyword">return</span> b},hitch:<span class="keyword">function</span>(b,d){d||(d=b,b=<span class="literal">null</span>);
-<span class="keyword">if</span>(arale.isString(d)){b=b||window;<span class="keyword">if</span>(!b[d])<span class="keyword">throw</span>[<span class="string">'arlea.hitch: scope["'</span>,d,<span class="string">'"] is null (scope="'</span>,b,<span class="string">'")'</span>].join(<span class="string">""</span>);<span class="keyword">return</span> <span class="keyword">function</span>(){<span class="keyword">return</span> b[d].apply(b,arguments||[])}}<span class="keyword">return</span>!b?d:<span class="keyword">function</span>(){<span class="keyword">return</span> d.apply(b,arguments||[])}},now:<span class="keyword">function</span>(){<span class="keyword">return</span>(<span class="keyword">new</span> Date).getTime()},logError:<span class="keyword">function</span>(b,d){(<span class="keyword">new</span> Image).src=<span class="string">"sev="</span>+encodeURIComponent(b)+<span class="string">"&amp;msg="</span>+encodeURIComponent(d)},log:<span class="keyword">function</span>(){araleConfig.debug&amp;&amp;<span class="string">"console"</span><span class="keyword">in</span> window&amp;&amp;console.log.apply(console,arguments)},getUniqueId:<span class="keyword">function</span>(b){<span class="keyword">var</span> d=arale.getUniqueId._id||
-<span class="number">1</span>;arale.getUniqueId._id=++d;<span class="keyword">return</span> b?b+d:d},getModulePath:<span class="keyword">function</span>(b){<span class="keyword">return</span> araleConfig.module_path+<span class="string">"/"</span>+b},each:<span class="keyword">function</span>(b,d,c){<span class="keyword">var</span> e;<span class="keyword">if</span>(<span class="string">"object"</span>===arale.typeOf(b))<span class="keyword">for</span>(e <span class="keyword">in</span> b)<span class="keyword">this</span>.obj.hasOwnProperty(e)&amp;&amp;d.call(c,e,b[e]);<span class="keyword">else</span>{<span class="keyword">if</span>(Array.prototype.forEach)<span class="keyword">return</span>[].forEach.call(b,d,c);e=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">var</span> g=b.length;e&lt;g;e++)d.call(c,b[e],e,b)}},checkVersion:<span class="keyword">function</span>(){}};
-</code></pre></div>
-<hr/>
-
+<p><!-- start-line=9; --></p>
+<div class="highlight"><pre><code class="javascript">$random:<span class="function"><span class="keyword">function</span><span class="params">(b,d)</span>{</span><span class="keyword">return</span> Math.floor(Math.random()*(d-b+<span class="number">1</span>)+b)},error:<span class="function"><span class="keyword">function</span><span class="params">(b)</span>{</span>arale.log(<span class="string">"error:"</span>+b)},exec:<span class="function"><span class="keyword">function</span><span class="params">(b)</span>{</span><span class="keyword">if</span>(!b)<span class="keyword">return</span> b;<span class="keyword">if</span>(window.execScript)window.execScript(b);<span class="keyword">else</span>{<span class="keyword">var</span> d=document.createElement(<span class="string">"script"</span>);d.setAttribute(<span class="string">"type"</span>,<span class="string">"text/javascript"</span>);d[arale.browser.Engine.webkit&amp;&amp;<span class="number">420</span>&gt;arale.browser.Engine.ver?<span class="string">"innerText"</span>:<span class="string">"text"</span>]=b;document.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(d);document.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].removeChild(d)}<span class="keyword">return</span> b},hitch:<span class="function"><span class="keyword">function</span><span class="params">(b,d)</span>{</span>d||(d=b,b=<span class="literal">null</span>);
+<span class="keyword">if</span>(arale.isString(d)){b=b||window;<span class="keyword">if</span>(!b[d])<span class="keyword">throw</span>[<span class="string">'arlea.hitch: scope["'</span>,d,<span class="string">'"] is null (scope="'</span>,b,<span class="string">'")'</span>].join(<span class="string">""</span>);<span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span> b[d].apply(b,arguments||[])}}<span class="keyword">return</span>!b?d:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span> d.apply(b,arguments||[])}},now:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span>(<span class="keyword">new</span> Date).getTime()},logError:<span class="function"><span class="keyword">function</span><span class="params">(b,d)</span>{</span>(<span class="keyword">new</span> Image).src=<span class="string">"sev="</span>+encodeURIComponent(b)+<span class="string">"&amp;msg="</span>+encodeURIComponent(d)},log:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>araleConfig.debug&amp;&amp;<span class="string">"console"</span><span class="keyword">in</span> window&amp;&amp;console.log.apply(console,arguments)},getUniqueId:<span class="function"><span class="keyword">function</span><span class="params">(b)</span>{</span><span class="keyword">var</span> d=arale.getUniqueId._id||
+<span class="number">1</span>;arale.getUniqueId._id=++d;<span class="keyword">return</span> b?b+d:d},getModulePath:<span class="function"><span class="keyword">function</span><span class="params">(b)</span>{</span><span class="keyword">return</span> araleConfig.module_path+<span class="string">"/"</span>+b},each:<span class="function"><span class="keyword">function</span><span class="params">(b,d,c)</span>{</span><span class="keyword">var</span> e;<span class="keyword">if</span>(<span class="string">"object"</span>===arale.typeOf(b))<span class="keyword">for</span>(e <span class="keyword">in</span> b)<span class="keyword">this</span>.obj.hasOwnProperty(e)&amp;&amp;d.call(c,e,b[e]);<span class="keyword">else</span>{<span class="keyword">if</span>(Array.prototype.forEach)<span class="keyword">return</span>[].forEach.call(b,d,c);e=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">var</span> g=b.length;e&lt;g;e++)d.call(c,b[e],e,b)}},checkVersion:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>}};</code></pre></div><hr>
 <ul>
 <li>无法获取属性“TextData”的值: 对象为 null 或未定义</li>
 <li>无法获取属性“TextData”的值: 对象为 null 或未定义</li>
@@ -177,12 +177,10 @@
 <li>&#39;L&#39; 속성 값을 가져올 수 없습니다. 개체가 null이거나 정의되지 않았습니다.                                                                                                          |</li>
 <li>Не удалось получить значение свойства &quot;toLowerCase&quot;: значением объекта является NULL или он не определен |</li>
 </ul>
-<h2 id="相关异常">相关异常</h2>
-<ul>
+<h2 id="相关异常">相关异常</h2><ul>
 <li><a href="accidentally-call-a-method-or-property-access">意外地调用了方法或属性访问。</a></li>
 </ul>
-<h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://blog.csdn.net/ldl22847/article/details/6331128">Google Maps API一例错误处理 SCRIPT5007: 无法获取属性“firstChild”的值: 对象为 null 或未定义 main.js</a></li>
 <li><a href="http://s.yanghao.org/program/viewdetail.php?i=101743">无法获取属性“style”的值: 对象为 null 或未定义</a></li>
 </ul>
@@ -210,7 +208,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

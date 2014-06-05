@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>找不到元素。</title>
 <script type="text/javascript">
@@ -27,28 +27,27 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">找不到元素。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>找不到元素。</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>由客户端安装、卸载不同版本、类型的浏览器造成。类似问题应该 try/catch 并尝试提醒用户。</p>
-
 <p>客户端解决办法：</p>
-
 <ul>
 <li>打开注册表 <code>HKEY_CLASSES_ROOT/TypeLib/{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}/1.1/0/win32</code></li>
 <li>将 (默认)/(Default) 项的值 <code>C:/WINDOWS/system32/shdocvw.dll</code> 改成 <code>C:/WINDOWS/system32/ieframe.dll</code></li>
 </ul>
-<h2 id="案例">案例</h2><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="案例">案例</h2><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://blog.csdn.net/zjl5231123/article/details/4027422">IE7报错，找不到元素</a></li>
 <li><a href="http://hi.baidu.com/rrliushui/blog/item/f5438ecb82fec0f452664fac.html/cmtid/e78f6222557456ab4623e883">网页上有错误 找不到元素 解决办法</a></li>
 <li><a href="http://answers.microsoft.com/zh-hans/ie/forum/ie8-windows_xp/ie8%E6%96%B0%E5%BB%BA%E9%80%89%E9%A1%B9%E5%8D%A1%E7%BD%91%E9%A1%B5%E6%9C%89%E9%94%99%E8%AF%AF%E6%89%BE%E4%B8%8D%E5%88%B0%E5%85%83%E7%B4%A0/d5e3e2c3-60e4-4aac-be46-41d63a3bb0f7">IE8新建选项卡“网页有错误，找不到元素”</a></li>
@@ -79,7 +78,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

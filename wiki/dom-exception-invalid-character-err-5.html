@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>DOM Exception: INVALID_CHARACTER_ERR (5)</title>
 <script type="text/javascript">
@@ -27,36 +27,34 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">DOM Exception: INVALID_CHARACTER_ERR (5)</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>英文</td>
 <td>DOM Exception: INVALID_CHARACTER_ERR (5)</td>
 <td>IE9</td>
 </tr>
-</tbody></table>
-<h2 id="分析">分析</h2>
-<p>IE9 创建元素(createElement) 开始严格遵循标准实现，不支持传入完整的 HTML 代码方式。</p>
-<div class="highlight"><pre><code class="javascript">document.createElement(<span class="string">'&lt;input type="text" name="user" /&gt;'</span>);
-</code></pre></div>
-<p>应该使用标准方式：</p>
+</tbody>
+</table>
+<h2 id="分析">分析</h2><p>IE9 创建元素(createElement) 开始严格遵循标准实现，不支持传入完整的 HTML 代码方式。</p>
+<div class="highlight"><pre><code class="javascript">document.createElement(<span class="string">'&lt;input type="text" name="user" /&gt;'</span>);</code></pre></div><p>应该使用标准方式：</p>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> input = document.createElement(<span class="string">"input"</span>);
 input.setAttribute(<span class="string">"name"</span>, <span class="string">"user"</span>);
-input.setAttribute(<span class="string">"type"</span>, <span class="string">"text"</span>);
-</code></pre></div><h2 id="案例">案例</h2><h2 id="相关参考">相关参考</h2><h2 id="参考">参考</h2>
-<ul>
+input.setAttribute(<span class="string">"type"</span>, <span class="string">"text"</span>);</code></pre></div><h2 id="案例">案例</h2><h2 id="相关参考">相关参考</h2><h2 id="参考">参考</h2><ul>
 <li><a href="http://stackoverflow.com/questions/5990917/dom-exception-invalid-character-err-5">DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
 <li><a href="http://stackoverflow.com/questions/5344029/invalid-character-dom-exception-in-ie9">Invalid Character DOM Exception in IE9</a></li>
 <li><a href="http://stackoverflow.com/questions/6169901/javascript-dom-exception-invalid-character-err-5">Javascript: DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
 <li><a href="http://blog.csdn.net/a497785609/article/details/6317502">IE9 : DOM Exception: INVALID_CHARACTER_ERR (5)</a>
 <a href="http://www.cnblogs.com/zhangqs008/archive/2011/04/12/2341141.html">2</a></li>
 <li><a href="https://github.com/brandonaaron/bgiframe/issues/6">IE9 - DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
-<li><a href="http://msdn.microsoft.com/en-us/library/ie/gg592979(v=vs.85).aspx">DOM Exception Error Codes</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/ie/gg592979(v=vs.85\">DOM Exception Error Codes</a>.aspx)</li>
 <li><a href="http://www.ajaxbbs.net/post/IE9-DOMException-INVALID_CHARACTER_ERR.html">http://www.ajaxbbs.net/post/IE9-DOMException-INVALID_CHARACTER_ERR.html</a></li>
 </ul>
 </div>
@@ -83,7 +81,7 @@ input.setAttribute(<span class="string">"type"</span>, <span class="string">"tex
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

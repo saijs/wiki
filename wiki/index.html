@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>JavaScript 异常档案</title>
 <script type="text/javascript">
@@ -27,8 +27,7 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">JavaScript 异常档案</h1>
-  <div class="entry-content"><h2 id="运行时异常">运行时异常</h2>
-<ul>
+  <div class="entry-content"><h2 id="运行时异常">运行时异常</h2><ul>
 <li><a href="unexpected-quantifier">错误的数量词</a></li>
 <li><a href="regular-expression-syntax-error">正则表达式语法错误</a></li>
 <li><a href="expected-xxx-in-regular-expression">正则表达式中缺少 &#39;XXX&#39;</a></li>
@@ -62,6 +61,7 @@
 <li><a href="the-uri-to-be-encoded-contains-an-invalid-character">被编码的 URI 中包含非法字符</a></li>
 <li><a href="cannot-to-execute-freed-script-code">不能执行已释放 Script 的代码</a></li>
 <li><a href="does-not-support-this-interface">不支持此接口</a></li>
+<li><a href="variable-uses-an-automation-type-not-supported-in-javascript">变量使用了一个 JScript 中不支持的 Automation 类型</a></li>
 <li><a href="invalid-argument">参数无效。</a></li>
 <li><a href="the-operation-has-timed-out">操作已超时。</a></li>
 <li><a href="passed-to-a-system-call-data-area-is-too-small">传递给系统调用的数据区域太小。</a></li>
@@ -112,40 +112,36 @@
 <li><a href="object-doesnot-support-this-action">对象不支持此操作</a></li>
 <li><a href="xxx-is-not-an-object">&#39;XXX&#39; is not an object</a></li>
 </ul>
-<h2 id="权限">权限</h2>
-<ul>
+<h2 id="权限">权限</h2><ul>
 <li><a href="access-is-denied">拒绝访问。</a></li>
 <li><a href="permission-denied">没有权限</a></li>
 <li><a href="permission-denied-to-access-property-xxx">Permission denied to access property &#39;XXX&#39;</a></li>
 <li><a href="can-not-write">書き込みできません。</a></li>
 </ul>
-<h2 id="语法错误">语法错误</h2>
-<ul>
+<h2 id="语法错误">语法错误</h2><ul>
 <li><a href="return-statement-outside-of-function">&#39;return&#39; 语句在函数之外</a></li>
 </ul>
-<h2 id="加载异常">加载异常</h2>
-<ul>
+<h2 id="加载异常">加载异常</h2><ul>
 <li><a href="error-loading-script">Error loading script</a></li>
 <li><a href="the-remote-procedure-call-failed">远程过程调用失败。</a></li>
 <li><a href="network_err-xmlhttprequest-exception-101--a-network-error-occured-in-synchronous-requests">NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.</a></li>
 </ul>
-<h2 id="客户端特性缺失类异常">客户端特性缺失类异常</h2>
-<ul>
+<h2 id="客户端特性缺失类异常">客户端特性缺失类异常</h2><ul>
 <li><a href="the-lack-of-storage-space-to-complete-this-operation">存储空间不足，无法完成此操作。</a></li>
 <li><a href="version-of-ole-on-the-client-and-server-do-not-match">客户端和服务器的OLE版本不匹配。</a></li>
 </ul>
-<h2 id="客户端插件异常">客户端插件异常</h2>
-<ul>
+<h2 id="客户端插件异常">客户端插件异常</h2><ul>
 <li><a href="an-internal-error-occurred-in-the-microsoft-internet-extensions">An internal error occurred in the Microsoft Internet extensions</a></li>
 <li><a href="attempting-to-use-a-disconnected-port-object">Attempting to use a disconnected port object</a></li>
 </ul>
-
-<table><thead>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannel.responseStatus]</td>
@@ -162,16 +158,17 @@
 <td>Line</td>
 <td>75</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Uncaught Error: Error connecting to extension gclcmokkcfnjpghegbnebiokigholeli</td>
@@ -188,9 +185,9 @@
 <td>Line</td>
 <td>187</td>
 </tr>
-</tbody></table>
-<h2 id="未知的异常">未知的异常</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="未知的异常">未知的异常</h2><ul>
 <li><a href="unknown-runtime-error">未知的运行时错误</a></li>
 <li><a href="component-returned-failure-code-0x80570016">Component returned failure code: 0x80570016</a></li>
 <li><a href="const-xxx-has-already-been-declared">const &#39;XXX&#39; has already been declared</a></li>
@@ -198,11 +195,10 @@
 <li><a href="object-event">object Event</a></li>
 <li>无法创建 ActiveX 对象</li>
 <li>The data is invalid.</li>
-<li>The handle is invalid.
-
-<ul>
+<li>The handle is invalid.<ul>
 <li>西班牙文： Controlador no válido.</li>
-</ul></li>
+</ul>
+</li>
 <li>This function is not supported on this system.</li>
 <li>这个系统不支持该功能。</li>
 <li>无法创建目录或文件。</li>
@@ -211,34 +207,35 @@
 <li><a href="syntaxerror-missing-xxx-before-formal-parameters">语法错误：形参前缺少 XXX</a></li>
 <li>土耳其文：Belirleyici gerekli</li>
 <li>SyntaxError: missing : after property id</li>
+<li>引數的個數錯誤或指定了不正確的屬性</li>
+<li>資料不正確。<CR></li>
 </ul>
-
-<table><thead>
+<table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>法文</td>
 <td>Un composant ActiveX ne peut pas créer un objet</td>
 </tr>
-</tbody></table>
-<h2 id="dom-相关异常">DOM 相关异常</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="dom-相关异常">DOM 相关异常</h2><ul>
 <li><a href="http://www.cnblogs.com/wangxiang/articles/1651577.html">(一)为li节点设定自定义属性value时，发生未处理的 win32 异常(wx-1)</a></li>
 <li><a href="http://www.cnblogs.com/wangxiang/articles/1653429.html">(二)未知的运行时错误(ie6的未指明的错误)</a></li>
 </ul>
-
 <!-- [Demos](demos) -->
-
 <!-- * [Template](template) -->
 </div>
 </div>
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

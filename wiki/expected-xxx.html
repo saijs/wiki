@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>缺少 &#39;XXX&#39;</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">缺少 &#39;XXX&#39;</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>缺少 &#39;XXX&#39;</td>
@@ -57,60 +59,59 @@
 <td>德文</td>
 <td>&#39;}&#39; erwartet</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><ul>
 <li>缺少 &#39;]&#39;</li>
 <li>必須要有 &#39;]&#39;</li>
 <li>缺少 &#39;}&#39;</li>
 <li>缺少 &#39;:&#39;</li>
 </ul>
-
 <p>多见于数组或对象的语法错误，提示缺少括号，但也有可能是有逗号造成。</p>
-
-<hr/>
-
-<table><thead>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>缺少 &#39;catch&#39;</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>try/catch 语法错误。</p>
-
-<hr/>
-
-<table><thead>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>缺少 &#39;}&#39;</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">if</span>(<span class="literal">false</span>){
   <span class="comment">// do something.</span>
-<span class="comment">// } // missing '}'</span>
-</code></pre></div>
-<hr/>
-
-<table><thead>
+<span class="comment">// } // missing '}'</span></code></pre></div><hr>
+<table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
@@ -139,25 +140,24 @@
 <td>Opera</td>
 <td>英文</td>
 <td>Syntax error at line 4 while loading:<br/>//}<br/>^<br/>expected expression, got &lt;end of file&gt; &nbsp; &nbsp; &nbsp; &nbsp; // } <br/> &nbsp; &nbsp; &nbsp; &nbsp; ^ <br/> expected expression, got <end of file></td>
-<td></td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>同样的异常脚本，放在不同的场景中，会抛出不同的异常信息。例如：</p>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">try</span>{
   <span class="keyword">if</span>(<span class="literal">false</span>){
     <span class="comment">// do something.</span>
   <span class="comment">//}</span>
-}<span class="keyword">catch</span>(ex){}
-</code></pre></div>
-<table><thead>
+}<span class="keyword">catch</span>(ex){}</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
@@ -186,33 +186,34 @@
 <td>Opera</td>
 <td>英文</td>
 <td>Syntax error at line 6 while loading: <br/> &nbsp; &nbsp; &nbsp; &nbsp; }catch(ex){}&nbsp; <br/> &nbsp; &nbsp; &nbsp; &nbsp; _^ <br/> expected expression, got keyword &#39;catch&#39;</td>
-<td></td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>缺少 &#39;]&#39;</td>
 </tr>
-</tbody></table>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>;
-</code></pre></div>
-<table><thead>
+</tbody>
+</table>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>;</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
@@ -241,33 +242,34 @@
 <td>Opera</td>
 <td>英文</td>
 <td>Syntax error at line 2 while loading: <br/> &nbsp; &nbsp; &nbsp; &nbsp; var a = [1,2; <br/> &nbsp; &nbsp; &nbsp; &nbsp; ----------------^ <br/> syntax error</td>
-<td></td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>缺少 &#39;)&#39;</td>
 </tr>
-</tbody></table>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">if</span>(<span class="literal">false</span>{}
-</code></pre></div>
-<table><thead>
+</tbody>
+</table>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">if</span>(<span class="literal">false</span>{}</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
@@ -296,33 +298,34 @@
 <td>Opera</td>
 <td>英文</td>
 <td>Syntax error at line 2 while loading: <br/> &nbsp; &nbsp; &nbsp; &nbsp; if(false{} <br/> &nbsp; &nbsp; &nbsp; &nbsp; ------------^ <br/> expected &#39;)&#39;, got &#39;{&#39;</td>
-<td></td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>缺少 &#39;:&#39;</td>
 </tr>
-</tbody></table>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> o = {a};
-</code></pre></div>
-<table><thead>
+</tbody>
+</table>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> o = {a};</code></pre></div><table>
+<thead>
 <tr>
 <th width="100">Browser</th>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>IE</td>
 <td>简体中文</td>
@@ -351,15 +354,13 @@
 <td>Opera</td>
 <td>英文</td>
 <td>Syntax error at line 2 while loading: <br/> &nbsp; &nbsp; &nbsp; &nbsp; var o = { a }; <br/> &nbsp; &nbsp; &nbsp; &nbsp; ----------^ <br/> syntax error</td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><ul>
 <li><a href="syntax-error">语法错误</a></li>
 </ul>
-<h2 id="参考">参考</h2>
-<ul>
+<h2 id="参考">参考</h2><ul>
 <li><a href="http://www.0djx.com/article/20100307/5259.html">JScript 缺少 &#39;:&#39;</a></li>
 </ul>
 </div>
@@ -386,7 +387,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

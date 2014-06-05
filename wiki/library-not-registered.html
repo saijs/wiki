@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>库没有注册。</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">库没有注册。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>库没有注册。</td>
@@ -41,28 +43,18 @@
 <td>英文</td>
 <td>Library not registered.</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>客户端修复方案：Windows -&gt; Run</p>
-<pre>regsvr32 vbscript.dll
-</pre><h2 id="案例">案例</h2>
-<p>PPS 和 QQ 也会遇到类似的情况，</p>
-
-<p><img src="../images/pps-not-reg.png" alt=""/></p>
-
-<p><img src="../images/qq-not-reg.png" alt=""/></p>
-
+<pre>regsvr32 vbscript.dll</pre><h2 id="案例">案例</h2><p>PPS 和 QQ 也会遇到类似的情况，</p>
+<p><img src="../images/pps-not-reg.png" alt=""></p>
+<p><img src="../images/qq-not-reg.png" alt=""></p>
 <p>Windows -&gt; Run:</p>
-<pre>regsvr32 %systemroot%\system32\Macromed\Flash\Flash10b.ocx
-</pre>
-<p>通常是因为您的计算机系统有重要DLL文件注册丢失，需要重新注册。通常注册一下动态链接库就可以了：</p>
+<pre>regsvr32 %systemroot%\system32\Macromed\Flash\Flash10b.ocx</pre><p>通常是因为您的计算机系统有重要DLL文件注册丢失，需要重新注册。通常注册一下动态链接库就可以了：</p>
 <pre>regsvr32 scrrun.dll
 regsvr32 jscript.dll
-regsvr32 vbscript.dll
-</pre>
-<p>如果仍然不行，不知道是哪个动态链接库问题有问题，可以在命令行下执行：</p>
-<pre>for %1 in (%windir%\system32\*.dll) do regsvr32.exe &#47;s %1
-</pre><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
+regsvr32 vbscript.dll</pre><p>如果仍然不行，不知道是哪个动态链接库问题有问题，可以在命令行下执行：</p>
+<pre>for %1 in (%windir%\system32\*.dll) do regsvr32.exe /s %1</pre><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
@@ -86,7 +78,7 @@ regsvr32 vbscript.dll
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

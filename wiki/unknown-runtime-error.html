@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>未知的运行时错误</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">未知的运行时错误</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>未知的运行时错误</td>
@@ -45,51 +47,40 @@
 <td>日文</td>
 <td>未知の実行時エラーです。</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>一般是 IE 中由于 innerHTML 设置了不合适的值造成，比如 table, tr, li, p, form 之类的非法嵌套。</p>
-<h2 id="案例">案例</h2>
-<p>今天遇到“未知的运行时错误”，调试代码都是正常的，效果展示也是正常的，调试了一下。</p>
-
+<h2 id="案例">案例</h2><p>今天遇到“未知的运行时错误”，调试代码都是正常的，效果展示也是正常的，调试了一下。</p>
 <p>原因：这个表单中有两个需要将金额转化成中文大写金额，每个都对应一个span标签，
 分别两个不同id，但是我js代码写了同一个ID，这样导致了这个错误。</p>
-
 <p>实例如下：</p>
-
-<p><img src="../images/unknown-runtime-error-1.jpg" alt=""/></p>
-
+<p><img src="../images/unknown-runtime-error-1.jpg" alt=""></p>
 <p>导致问题代码：</p>
 <div class="highlight"><pre><code class="javascript"><span class="comment">// 付款账户留存金额rmbconvert</span>
-E.on(<span class="string">"J_amountMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+E.on(<span class="string">"J_amountMoney"</span>, <span class="string">"keyup"</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span>{</span>
     D.get(<span class="string">"J_startEndMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_amountMoney"</span>).value);
 });
 
 <span class="comment">//起结金额rmbconvert</span>
-E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span>{</span>
     D.get(<span class="string">"J_startEndMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_startEndMoney"</span>).value);
-});
-</code></pre></div>
-<p>正确的代码：</p>
+});</code></pre></div><p>正确的代码：</p>
 <div class="highlight"><pre><code class="javascript"><span class="comment">// 付款账户留存金额rmbconvert</span>
-E.on(<span class="string">"J_amountMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+E.on(<span class="string">"J_amountMoney"</span>, <span class="string">"keyup"</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span>{</span>
     D.get(<span class="string">"J_amountMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_amountMoney"</span>).value);
 });
 
 <span class="comment">//起结金额rmbconvert</span>
-E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"</span>, <span class="keyword">function</span>(e){
+E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span>{</span>
     D.get(<span class="string">"J_startEndMoneyCn"</span>).innerHTML = AP.widget.RMBConvert(D.get(<span class="string">"J_startEndMoney"</span>).value);
-});
-</code></pre></div>
-<p>冒顿点评：</p>
-
+});</code></pre></div><p>冒顿点评：</p>
 <p>这里提供的相关代码只是入口代码，修复后确实可以避免触发异常，但是实际抛出异常的
 代码应该是在 <code>AP.widget.RMBConvert</code> 中。</p>
-<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://www.leakon.com/archives/41">设置 innerHTML 属性 导致 未知的运行时错误 IE bug</a></li>
 <li><a href="http://www.cnblogs.com/it563/articles/1178067.html">innerHTML 属性 导致 未知的运行时错误 IE bug</a></li>
 <li><a href="http://wenqingluomo.blog.163.com/blog/static/7917174020106531238488/">htmlfile: 未知的运行时错误</a></li>
-<li><a href="http://msdn.microsoft.com/zh-cn/library/1dk3k160(v=vs.94).aspx">JavaScript 运行时错误</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/1dk3k160(v=vs.94\">JavaScript 运行时错误</a>.aspx)</li>
 </ul>
 </div>
   <div class="comments">
@@ -115,7 +106,7 @@ E.on(<span class="string">"J_startEndMoney"</span>, <span class="string">"keyup"
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

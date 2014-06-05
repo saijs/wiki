@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>存储空间不足，无法完成此操作。</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">存储空间不足，无法完成此操作。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>存储空间不足，无法处理此命令。</td>
@@ -49,17 +51,18 @@
 <td>英文</td>
 <td>There is not enough space on the disk.</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>网络上多有酷狗(Kugoo)或魔兽争霸里抛出这个异常的案例。
 清除浏览器缓存，或者设置虚拟内存可以修复。</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>存储空间不足，无法完成此操作。</td>
@@ -76,21 +79,20 @@
 <td>Line</td>
 <td>605</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=604; -->
-<div class="highlight"><pre><code class="javascript">});<span class="keyword">this</span>._xhr.onreadystatechange=<span class="keyword">function</span>(){};<span class="keyword">if</span>(options.timeoutTimer){clearTimeout(options.timeoutTimer);
+</tbody>
+</table>
+<p><!-- start-line=604; --></p>
+<div class="highlight"><pre><code class="javascript">});<span class="keyword">this</span>._xhr.onreadystatechange=<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>};<span class="keyword">if</span>(options.timeoutTimer){clearTimeout(options.timeoutTimer);
 options.timeoutTimer=<span class="literal">null</span>}<span class="keyword">this</span>._response.status=<span class="keyword">this</span>._xhr.status;<span class="keyword">if</span>(<span class="keyword">this</span>._xhr.status==<span class="number">200</span>){<span class="keyword">this</span>._response.text=<span class="keyword">this</span>._xhr.responseText;
-<span class="keyword">this</span>._response.xml=<span class="keyword">this</span>._xhr.responseXML;<span class="keyword">if</span>(<span class="keyword">this</span>._options.dataType==<span class="string">"json"</span>){<span class="keyword">try</span>{<span class="keyword">this</span>._response.json=parseJSON(<span class="keyword">this</span>._xhr.responseText)
-</code></pre></div>
-<hr/>
-
-<table><thead>
+<span class="keyword">this</span>._response.xml=<span class="keyword">this</span>._xhr.responseXML;<span class="keyword">if</span>(<span class="keyword">this</span>._options.dataType==<span class="string">"json"</span>){<span class="keyword">try</span>{<span class="keyword">this</span>._response.json=parseJSON(<span class="keyword">this</span>._xhr.responseText)</code></pre></div><hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>URL</td>
 <td><a href="https://securitycenter.alipay.com/cert/updateCert.htm">https://securitycenter.alipay.com/cert/updateCert.htm</a></td>
@@ -111,35 +113,24 @@ options.timeoutTimer=<span class="literal">null</span>}<span class="keyword">thi
 <td>Date</td>
 <td>2011-09-25</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>所有代码都压缩到一行，无法判断这个案例对应的代码信息。</p>
-
-<hr/>
-
+<hr>
 <p>故障现象一：本公司这边所有电脑都是用域来管理了，上周开始慢慢有电脑出现域用户无法正常登录？
 连本地的管理员帐户也无法正常登录，系统弹出一个对话窗：</p>
-
 <p>windows不能加载用户的配置文件。但是用系统的默认配置文件让您登陆。
 详细信息 - 系统资源不足，无法完成请求的服务。</p>
-
 <p>unerinit.exe报错。</p>
-
-<hr/>
-
+<hr>
 <p>故障现象二：开机正常，但电脑桌面只显640 x 480、4位色，显卡驱动正常，无法调整。
 但删除显卡驱动后，显示又可以恢复正常。</p>
-
 <p>用安全模式和带网络连接的安全模式可以都登录系统，查看系统日志，有如下信息：</p>
-
 <p>事件：Windows不能加载注册表。这通常是由于内存或安全权限不足造成的。
 详细信息：系统资源不足，无法完成请求的服务。</p>
-
 <p><em>解决方法如下：</em></p>
-
 <p>要解决此问题，请修改注册表以增大 PoolUsageMaximum 值和 PagedPoolSize 值。
 为此，请按照下列步骤操作：</p>
-
 <ul>
 <li>依次单击“开始”、“运行”，键入 regedit，然后单击“确定”。</li>
 <li>找到并单击下面的注册表子项：
@@ -149,17 +140,15 @@ options.timeoutTimer=<span class="literal">null</span>}<span class="keyword">thi
 <li>右键单击“PoolUsageMaximum”，然后单击“修改”。</li>
 <li>在“数值数据”框中，键入 60，再单击“十进制”，然后单击“确定”。</li>
 <li>如果 PagedPoolSize 注册表项存在，请转到步骤 8。
-如果 PagedPoolSize 注册表项不存在，请创建它。为此，请按照下列步骤操作：
-
-<ul>
+如果 PagedPoolSize 注册表项不存在，请创建它。为此，请按照下列步骤操作：<ul>
 <li>在“编辑”菜单上，指向“新建”，然后单击“DWORD 值”。</li>
 <li>在“新值 #1”框中，键入 PagedPoolSize，然后按 Enter。</li>
-</ul></li>
+</ul>
+</li>
 <li>右键单击“PagedPoolSize”，然后单击“修改”。</li>
 <li>在“数值数据”框中键入 ffffffff，然后单击“确定”。</li>
 <li>退出注册表编辑器，然后重新启动计算机</li>
 </ul>
-
 <p>另类解决方法二：停用显卡。即可正常！（不推荐）</p>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
   <div class="comments">
@@ -185,7 +174,7 @@ options.timeoutTimer=<span class="literal">null</span>}<span class="keyword">thi
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

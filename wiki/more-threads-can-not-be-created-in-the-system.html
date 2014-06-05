@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>无法在系统中创建更多的线程。</title>
 <script type="text/javascript">
@@ -27,24 +27,28 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">无法在系统中创建更多的线程。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>无法在系统中创建更多的线程。</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>无法在系统中创建更多的线程。</td>
@@ -61,16 +65,17 @@
 <td>Line</td>
 <td>321</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>无法在系统中创建更多的线程。</td>
@@ -87,16 +92,13 @@
 <td>Line</td>
 <td>508</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>相关代码：</p>
-
-<!-- start-line=507; -->
+<p><!-- start-line=507; --></p>
 <div class="highlight"><pre><code class="javascript">}<span class="keyword">else</span>{url=url+<span class="string">"?"</span>+data}data=<span class="literal">null</span>}<span class="keyword">var</span> url_old=url;url=$Ajax.decorateUrl(url);url=url?url:url_old;
-<span class="keyword">this</span>._xhr.open(<span class="keyword">this</span>._options.method.toUpperCase(),url,<span class="keyword">this</span>._options.async);$H(<span class="keyword">this</span>._options.headers).each(<span class="keyword">function</span>(key,value){<span class="keyword">try</span>{<span class="keyword">this</span>._xhr.setRequestHeader(key,value)
-}<span class="keyword">catch</span>(e){}},<span class="keyword">this</span>);<span class="keyword">this</span>._xhr.onreadystatechange=arale.hitch(<span class="keyword">this</span>,<span class="keyword">this</span>.onStateChange);
-</code></pre></div>
-<p>跟 AJAX 线程有关。建议框架层提供 AJAX 对象管理机制，有效重用闲置的 XHR 对象。</p>
+<span class="keyword">this</span>._xhr.open(<span class="keyword">this</span>._options.method.toUpperCase(),url,<span class="keyword">this</span>._options.async);$H(<span class="keyword">this</span>._options.headers).each(<span class="function"><span class="keyword">function</span><span class="params">(key,value)</span>{</span><span class="keyword">try</span>{<span class="keyword">this</span>._xhr.setRequestHeader(key,value)
+}<span class="keyword">catch</span>(e){}},<span class="keyword">this</span>);<span class="keyword">this</span>._xhr.onreadystatechange=arale.hitch(<span class="keyword">this</span>,<span class="keyword">this</span>.onStateChange);</code></pre></div><p>跟 AJAX 线程有关。建议框架层提供 AJAX 对象管理机制，有效重用闲置的 XHR 对象。</p>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
@@ -121,7 +123,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

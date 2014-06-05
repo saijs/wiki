@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>ReferenceError: Can&#39;t find variable: BdPlayer</title>
 <script type="text/javascript">
@@ -27,29 +27,31 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">ReferenceError: Can&#39;t find variable: BdPlayer</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>英文</td>
 <td>Can&#39;t find variable: XXX</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p><code>iPad (iPad; CPU OS 7_0 like Mac OS X) BaiduHD</code> 浏览器，<code>onerror</code> 事件可能有问题，
 如果监测 <code>window.onerror</code> 事件，会不停抛出异常。</p>
-
 <p>建议：在浏览器修复这个问题前用 UA 判断 <code>BaiduHD</code> 并做相应处理。</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>URL</td>
 <td><a href="http://v.pptv.com/show/M7kcmwNp2Rd6ibAQ.html">http://v.pptv.com/show/M7kcmwNp2Rd6ibAQ.html</a></td>
@@ -66,19 +68,17 @@
 <td>UA</td>
 <td>Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A406 Safari/8536.25</td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><ul>
 <li>ReferenceError: Can&#39;t find variable: BdPlayer</li>
 <li>TypeError: &#39;undefined&#39; is not an object (evaluating &#39;window.frames[xxx].Player[&#39;url&#39;]&#39;)</li>
 <li>ReferenceError: Can&#39;t find variable: Player</li>
 </ul>
-
 <p>相关代码</p>
-<div class="highlight"><pre><code class="javascript">window.onerror = <span class="keyword">function</span>(message, url, line){
+<div class="highlight"><pre><code class="javascript">window.onerror = <span class="function"><span class="keyword">function</span><span class="params">(message, url, line)</span>{</span>
   alert(message); <span class="comment">//注意：会死循环</span>
-}
-</code></pre></div><h2 id="延伸阅读">延伸阅读</h2></div>
+}</code></pre></div><h2 id="延伸阅读">延伸阅读</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
@@ -102,7 +102,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

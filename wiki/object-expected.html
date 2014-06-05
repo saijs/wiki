@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>缺少对象</title>
 <script type="text/javascript">
@@ -27,14 +27,16 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">缺少对象</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>缺少对象</td>
@@ -111,16 +113,17 @@
 <td>俄文</td>
 <td>Предполагается наличие объекта</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Object expected</td>
@@ -137,41 +140,33 @@
 <td>Line</td>
 <td>9</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=8; -->
+</tbody>
+</table>
+<p><!-- start-line=8; --></p>
 <div class="highlight"><pre><code class="javascript">[])})```)(Loader);
-<span class="keyword">var</span> checkcodeExtend_={init:<span class="keyword">function</span>(){<span class="keyword">this</span>.form=$(<span class="string">"login"</span>)&amp;&amp;$(<span class="string">"login"</span>).node;<span class="keyword">this</span>.logonId=$(<span class="string">"logonId"</span>);<span class="keyword">this</span>.authcode=$$(<span class="string">".sl-checkcode input[name=checkCode]"</span>);<span class="keyword">this</span>.codeCnt_=$$(<span class="string">".sl-checkcode"</span>)[<span class="number">0</span>].node;<span class="keyword">this</span>.formToken=$$(<span class="string">"input[name=rds_form_token]"</span>,$(<span class="keyword">this</span>.form))[<span class="number">0</span>]},bind:<span class="keyword">function</span>(){<span class="keyword">var</span> a=<span class="keyword">this</span>;<span class="keyword">this</span>.submitAspect();a.form&amp;&amp;E.connect($(a.form),<span class="string">"onclick"</span>,a,<span class="keyword">function</span>(b){b=b.target;<span class="string">"safeSignCheck"</span>==b.id&amp;&amp;(b.checked?a.isPerson&amp;&amp;a.hideCheckCode():a.failCallback.call(a))});!a.logonId||!a.logonId.node.id||!a.codeCnt_||
-a.codeCnt_&amp;&amp;<span class="string">"block"</span>==a.codeCnt_.style.display?a.failCallback.call(a):(E.connect(a.logonId,<span class="string">"onblur"</span>,<span class="keyword">function</span>(){a.isLogonIdFocus&amp;&amp;a.send(!<span class="number">0</span>)}),setTimeout(<span class="keyword">function</span>(){<span class="keyword">try</span>{(a.isLogonIdFocus=!<span class="number">0</span>)&amp;&amp;a.logonId.node.focus()}<span class="keyword">catch</span>(b){a.failCallback.call(a)}},<span class="number">300</span>),E.connect(a.logonId,<span class="string">"onkeyup"</span>,a,<span class="keyword">function</span>(){a.send()}))},request:<span class="keyword">function</span>(a){<span class="keyword">if</span>(json_ua&amp;&amp;json_ua.length&gt;=<span class="keyword">this</span>.uaMaxLength)<span class="keyword">this</span>.failCallback(),<span class="keyword">this</span>.jsonUaExceed();<span class="keyword">else</span> <span class="keyword">if</span>(!json_ua||!(json_ua.length&lt;<span class="keyword">this</span>.uaMinLength)||a){<span class="keyword">this</span>.sendCode=<span class="number">1</span>;<span class="keyword">var</span> b=<span class="keyword">this</span>;Loader.use(<span class="string">"arale.http"</span>,
-</code></pre></div>
-<hr/>
-
+<span class="keyword">var</span> checkcodeExtend_={init:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">this</span>.form=$(<span class="string">"login"</span>)&amp;&amp;$(<span class="string">"login"</span>).node;<span class="keyword">this</span>.logonId=$(<span class="string">"logonId"</span>);<span class="keyword">this</span>.authcode=$$(<span class="string">".sl-checkcode input[name=checkCode]"</span>);<span class="keyword">this</span>.codeCnt_=$$(<span class="string">".sl-checkcode"</span>)[<span class="number">0</span>].node;<span class="keyword">this</span>.formToken=$$(<span class="string">"input[name=rds_form_token]"</span>,$(<span class="keyword">this</span>.form))[<span class="number">0</span>]},bind:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">var</span> a=<span class="keyword">this</span>;<span class="keyword">this</span>.submitAspect();a.form&amp;&amp;E.connect($(a.form),<span class="string">"onclick"</span>,a,<span class="function"><span class="keyword">function</span><span class="params">(b)</span>{</span>b=b.target;<span class="string">"safeSignCheck"</span>==b.id&amp;&amp;(b.checked?a.isPerson&amp;&amp;a.hideCheckCode():a.failCallback.call(a))});!a.logonId||!a.logonId.node.id||!a.codeCnt_||
+a.codeCnt_&amp;&amp;<span class="string">"block"</span>==a.codeCnt_.style.display?a.failCallback.call(a):(E.connect(a.logonId,<span class="string">"onblur"</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>a.isLogonIdFocus&amp;&amp;a.send(!<span class="number">0</span>)}),setTimeout(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">try</span>{(a.isLogonIdFocus=!<span class="number">0</span>)&amp;&amp;a.logonId.node.focus()}<span class="keyword">catch</span>(b){a.failCallback.call(a)}},<span class="number">300</span>),E.connect(a.logonId,<span class="string">"onkeyup"</span>,a,<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>a.send()}))},request:<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span><span class="keyword">if</span>(json_ua&amp;&amp;json_ua.length&gt;=<span class="keyword">this</span>.uaMaxLength)<span class="keyword">this</span>.failCallback(),<span class="keyword">this</span>.jsonUaExceed();<span class="keyword">else</span> <span class="keyword">if</span>(!json_ua||!(json_ua.length&lt;<span class="keyword">this</span>.uaMinLength)||a){<span class="keyword">this</span>.sendCode=<span class="number">1</span>;<span class="keyword">var</span> b=<span class="keyword">this</span>;Loader.use(<span class="string">"arale.http"</span>,</code></pre></div><hr>
 <p>调用未定义的函数会抛出这个异常。</p>
 <div class="highlight"><pre><code class="xml">window.onload = function(){
   notExistsFunction();
 };
 
 // 这个不会抛出异常，因为 notExistsFunction 不是函数。
-window.onload = notExistsFunction;
-</code></pre></div>
-<p>至于为什么明明已经定义的函数却没有生效，有有很多种原因了。
+window.onload = notExistsFunction;</code></pre></div><p>至于为什么明明已经定义的函数却没有生效，有有很多种原因了。
 比如 <a href="http://book.77169.org/ask35/how153976.htm">这个案例</a>
 里把 <code>JavaScript</code> 打成 <code>JavaSript</code></p>
-
-<hr/>
-
+<hr>
 <p>有部分场景是客户端动态链接库(DLL)丢失造成的，需要重新注册，或重新安装。</p>
-
 <p>开始 -&gt; 运行：</p>
 <pre>&gt; regsvr32 jscript.dll
-&gt; regsvr32 vbscript.dll
-</pre>
-<p><a href="http://blog.iobit.com/object-expected-problems-javascript_311.html">参考</a></p>
-<h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2>
-<ul>
+&gt; regsvr32 vbscript.dll</pre><h2 id="相关异常">相关异常</h2><ul>
+<li><a href="the-value-of-the-attribute-xxx-is-null-undefined-or-not-a-function-object">属性“XXX”的值为 null、未定义或不是 Function 对象</a></li>
+</ul>
+<h2 id="参考">参考</h2><ul>
 <li><a href="http://www.cnblogs.com/heekui/archive/2007/02/08/644963.html">后台调用前台javascript方法报错：“缺少对象”的解决方法</a>
 这篇中我并没有重现异常，根据后面的信息，猜测也是 language=&quot;javascript&quot;
-写错了，但是文中的代码是后面修改正确的。</li>
+写错了，但是文中的代码是后面修改正确的。
+<a href="http://blog.iobit.com/object-expected-problems-javascript_311.html">参考</a></li>
 </ul>
 </div>
   <div class="comments">
@@ -197,7 +192,7 @@ window.onload = notExistsFunction;
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

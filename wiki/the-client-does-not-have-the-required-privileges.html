@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>客户端没有所需的特权。</title>
 <script type="text/javascript">
@@ -27,24 +27,28 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">客户端没有所需的特权。</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>客户端没有所需的特权。</td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>URL</td>
 <td><a href="https://cashier.alipay.com/standard/payment/cashier.htm">https://cashier.alipay.com/standard/payment/cashier.htm</a></td>
@@ -61,14 +65,12 @@
 <td>Line</td>
 <td>20</td>
 </tr>
-</tbody></table>
-
-<!-- start-line=19; -->
-<div class="highlight"><pre><code class="javascript">(<span class="keyword">function</span>(a,b){<span class="keyword">var</span> d=a.document,g=a.navigator,k=!<span class="number">1</span>,e=<span class="keyword">function</span>(){k||(b.write(<span class="string">'&lt;input type="hidden" id="__ud" style="behavior:url("#default#userData")"/&gt;'</span>),k=!<span class="number">0</span>);<span class="keyword">return</span> b.get(<span class="string">"__ud"</span>)},c={cookie:<span class="literal">null</span>,defaultStorage:a.localStorage,set:<span class="keyword">function</span>(a,f){<span class="keyword">if</span>(c.cookie&amp;&amp;g.cookieEnabled){<span class="keyword">var</span> j=a+<span class="string">"="</span>+encodeURIComponent(f);<span class="keyword">if</span>(c.cookie.days)<span class="keyword">var</span> k=<span class="keyword">new</span> Date((<span class="keyword">new</span> Date).getTime()+<span class="number">864E5</span>*c.cookie.days),j=j+(<span class="string">"; expires="</span>+k.toGMTString());c.cookie.domain&amp;&amp;(j+=<span class="string">"; domain="</span>+c.cookie.domain);j+=<span class="string">"; path="</span>+(c.cookie.path||b.urlParts[<span class="number">4</span>]||
-<span class="string">"/"</span>);d.cookie=j}<span class="keyword">if</span>(i)c.defaultStorage.setItem(a,f);<span class="keyword">else</span> <span class="keyword">if</span>(j=e()){j.setAttribute(a,f);<span class="keyword">try</span>{j.save(<span class="string">"__ud"</span>)}<span class="keyword">catch</span>(h){}}},get:<span class="keyword">function</span>(a){<span class="keyword">if</span>(c.cookie){<span class="keyword">if</span>(g.cookieEnabled){<span class="keyword">var</span> f=d.cookie,j=f.indexOf(a+<span class="string">"="</span>);<span class="keyword">return</span>-<span class="number">1</span>!=j?(j+=a.length+<span class="number">1</span>,a=f.indexOf(<span class="string">";"</span>,j),-<span class="number">1</span>==a&amp;&amp;(a=f.length),b.decode(f.substring(j,a)||<span class="string">""</span>)):<span class="literal">null</span>}<span class="keyword">return</span><span class="string">""</span>}<span class="keyword">if</span>(i)f=c.defaultStorage.getItem(a);<span class="keyword">else</span> <span class="keyword">if</span>(j=e()){<span class="keyword">try</span>{j.load(<span class="string">"__ud"</span>)}<span class="keyword">catch</span>(k){}f=j.getAttribute(a)}<span class="keyword">return</span> f||<span class="string">""</span>}},i=!!c.defaultStorage;b.module(<span class="string">"client/storage"</span>,c)})(window,light);light.extend({get:<span class="keyword">function</span>(a){<span class="keyword">return</span>!a?<span class="literal">null</span>:<span class="string">"string"</span>===<span class="keyword">typeof</span> a?!light.node||<span class="regexp">/^[\w-]+$/</span>.test(a)?document.getElementById(a):light.node(a)[<span class="number">0</span>]:a.getConfig?a[<span class="number">0</span>]||<span class="literal">null</span>:a},write:<span class="keyword">function</span>(a){<span class="keyword">if</span>(<span class="string">"complete"</span>===document.readyState){<span class="keyword">var</span> f=document.createElement(<span class="string">"span"</span>);f.innerHTML=a;document.body.appendChild(f)}<span class="keyword">else</span> document.write(a)},isHTMLElement:<span class="keyword">function</span>(a){<span class="keyword">return</span> a&amp;&amp;(<span class="number">1</span>===a.nodeType||<span class="number">9</span>===a.nodeType)},hasClass:<span class="keyword">function</span>(a,f){<span class="keyword">return</span> a?RegExp(<span class="string">"(\\s|^)"</span>+f+<span class="string">"(\\s|$)"</span>).test(a.className):!<span class="number">1</span>},setStyle:<span class="keyword">function</span>(a,f){<span class="keyword">if</span>(<span class="string">"string"</span>===
-light.type(f)&amp;&amp;<span class="number">2</span>==arguments.length){<span class="keyword">var</span> e={};e[arguments[<span class="number">0</span>]]=arguments[<span class="number">1</span>];f=e}<span class="keyword">for</span>(<span class="keyword">var</span> b <span class="keyword">in</span> f)e=f[b],<span class="string">"number"</span>===<span class="keyword">typeof</span> e&amp;&amp;(e+=<span class="string">"px"</span>),<span class="string">"opacity"</span>==b?<span class="number">1</span>&gt;e&amp;&amp;<span class="number">0</span>&lt;e&amp;&amp;(isIE&amp;&amp;<span class="number">9</span>&gt;light.client.info.browser.version[<span class="number">0</span>]?a.style.filter=<span class="string">"alpha(opacity="</span>+<span class="number">100</span>*e+<span class="string">")"</span>:a.style.opacity=<span class="number">1.0E-5</span>&gt;e?<span class="number">0</span>:e):a.style[<span class="string">"float"</span>==b||<span class="string">"cssFloat"</span>==b?<span class="keyword">void</span> <span class="number">0</span>===<span class="keyword">typeof</span> a.style.styleFloat?<span class="string">"cssFloat"</span>:<span class="string">"styleFloat"</span>:b]=e;<span class="keyword">return</span> <span class="keyword">this</span>},getStyle:<span class="keyword">function</span>(a,f){<span class="keyword">var</span> e=a.currentStyle?a.currentStyle[f]:document.defaultView.getComputedStyle(a,<span class="literal">null</span>)[f];<span class="string">"string"</span>===
-</code></pre></div>
-<p>可能与 Storage 有关。</p>
+</tbody>
+</table>
+<p><!-- start-line=19; --></p>
+<div class="highlight"><pre><code class="javascript">(<span class="function"><span class="keyword">function</span><span class="params">(a,b)</span>{</span><span class="keyword">var</span> d=a.document,g=a.navigator,k=!<span class="number">1</span>,e=<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>k||(b.write(<span class="string">'&lt;input type="hidden" id="__ud" style="behavior:url("#default#userData")"/&gt;'</span>),k=!<span class="number">0</span>);<span class="keyword">return</span> b.get(<span class="string">"__ud"</span>)},c={cookie:<span class="literal">null</span>,defaultStorage:a.localStorage,set:<span class="function"><span class="keyword">function</span><span class="params">(a,f)</span>{</span><span class="keyword">if</span>(c.cookie&amp;&amp;g.cookieEnabled){<span class="keyword">var</span> j=a+<span class="string">"="</span>+encodeURIComponent(f);<span class="keyword">if</span>(c.cookie.days)<span class="keyword">var</span> k=<span class="keyword">new</span> Date((<span class="keyword">new</span> Date).getTime()+<span class="number">864E5</span>*c.cookie.days),j=j+(<span class="string">"; expires="</span>+k.toGMTString());c.cookie.domain&amp;&amp;(j+=<span class="string">"; domain="</span>+c.cookie.domain);j+=<span class="string">"; path="</span>+(c.cookie.path||b.urlParts[<span class="number">4</span>]||
+<span class="string">"/"</span>);d.cookie=j}<span class="keyword">if</span>(i)c.defaultStorage.setItem(a,f);<span class="keyword">else</span> <span class="keyword">if</span>(j=e()){j.setAttribute(a,f);<span class="keyword">try</span>{j.save(<span class="string">"__ud"</span>)}<span class="keyword">catch</span>(h){}}},get:<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span><span class="keyword">if</span>(c.cookie){<span class="keyword">if</span>(g.cookieEnabled){<span class="keyword">var</span> f=d.cookie,j=f.indexOf(a+<span class="string">"="</span>);<span class="keyword">return</span>-<span class="number">1</span>!=j?(j+=a.length+<span class="number">1</span>,a=f.indexOf(<span class="string">";"</span>,j),-<span class="number">1</span>==a&amp;&amp;(a=f.length),b.decode(f.substring(j,a)||<span class="string">""</span>)):<span class="literal">null</span>}<span class="keyword">return</span><span class="string">""</span>}<span class="keyword">if</span>(i)f=c.defaultStorage.getItem(a);<span class="keyword">else</span> <span class="keyword">if</span>(j=e()){<span class="keyword">try</span>{j.load(<span class="string">"__ud"</span>)}<span class="keyword">catch</span>(k){}f=j.getAttribute(a)}<span class="keyword">return</span> f||<span class="string">""</span>}},i=!!c.defaultStorage;b.module(<span class="string">"client/storage"</span>,c)})(window,light);light.extend({get:<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span><span class="keyword">return</span>!a?<span class="literal">null</span>:<span class="string">"string"</span>===<span class="keyword">typeof</span> a?!light.node||<span class="regexp">/^[\w-]+$/</span>.test(a)?document.getElementById(a):light.node(a)[<span class="number">0</span>]:a.getConfig?a[<span class="number">0</span>]||<span class="literal">null</span>:a},write:<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span><span class="keyword">if</span>(<span class="string">"complete"</span>===document.readyState){<span class="keyword">var</span> f=document.createElement(<span class="string">"span"</span>);f.innerHTML=a;document.body.appendChild(f)}<span class="keyword">else</span> document.write(a)},isHTMLElement:<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span><span class="keyword">return</span> a&amp;&amp;(<span class="number">1</span>===a.nodeType||<span class="number">9</span>===a.nodeType)},hasClass:<span class="function"><span class="keyword">function</span><span class="params">(a,f)</span>{</span><span class="keyword">return</span> a?RegExp(<span class="string">"(\\s|^)"</span>+f+<span class="string">"(\\s|$)"</span>).test(a.className):!<span class="number">1</span>},setStyle:<span class="function"><span class="keyword">function</span><span class="params">(a,f)</span>{</span><span class="keyword">if</span>(<span class="string">"string"</span>===
+light.type(f)&amp;&amp;<span class="number">2</span>==arguments.length){<span class="keyword">var</span> e={};e[arguments[<span class="number">0</span>]]=arguments[<span class="number">1</span>];f=e}<span class="keyword">for</span>(<span class="keyword">var</span> b <span class="keyword">in</span> f)e=f[b],<span class="string">"number"</span>===<span class="keyword">typeof</span> e&amp;&amp;(e+=<span class="string">"px"</span>),<span class="string">"opacity"</span>==b?<span class="number">1</span>&gt;e&amp;&amp;<span class="number">0</span>&lt;e&amp;&amp;(isIE&amp;&amp;<span class="number">9</span>&gt;light.client.info.browser.version[<span class="number">0</span>]?a.style.filter=<span class="string">"alpha(opacity="</span>+<span class="number">100</span>*e+<span class="string">")"</span>:a.style.opacity=<span class="number">1.0E-5</span>&gt;e?<span class="number">0</span>:e):a.style[<span class="string">"float"</span>==b||<span class="string">"cssFloat"</span>==b?<span class="keyword">void</span> <span class="number">0</span>===<span class="keyword">typeof</span> a.style.styleFloat?<span class="string">"cssFloat"</span>:<span class="string">"styleFloat"</span>:b]=e;<span class="keyword">return</span> <span class="keyword">this</span>},getStyle:<span class="function"><span class="keyword">function</span><span class="params">(a,f)</span>{</span><span class="keyword">var</span> e=a.currentStyle?a.currentStyle[f]:document.defaultView.getComputedStyle(a,<span class="literal">null</span>)[f];<span class="string">"string"</span>===</code></pre></div><p>可能与 Storage 有关。</p>
 <h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2></div>
   <div class="comments">
     <h2 id="discuss">讨论
@@ -93,7 +95,7 @@ light.type(f)&amp;&amp;<span class="number">2</span>==arguments.length){<span cl
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

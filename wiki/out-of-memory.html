@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>内存不够</title>
 <script type="text/javascript">
@@ -27,14 +27,16 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">内存不够</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 <th></th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>内存不够</td>
@@ -81,20 +83,19 @@
 <td>韩文</td>
 <td>메모리 부족</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>一般是由于递归太深，或出现巨大、甚至是无限循环，造成堆、栈溢出。</p>
-
 <p>也有可能真的就是内存不够造成的。</p>
-<h2 id="案例">案例</h2>
-<table><thead>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>메모리 부족</td>
@@ -115,16 +116,17 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>内存不够</td>
@@ -141,22 +143,18 @@
 <td>Line</td>
 <td>729</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>相关代码</p>
-
-<!-- start-line=727; -->
-<div class="highlight"><pre><code class="javascript">b=a.getOffsets(),d=c.getOffsets();<span class="keyword">return</span>{left:d.left-b.left,top:d.top-b.top}},staticTips:[],showStaticTip:<span class="keyword">function</span>(c,a,b){<span class="keyword">var</span> d=c.attr(<span class="string">"id"</span>),e=<span class="keyword">this</span>.staticTips[d]||c,b=b||{};<span class="keyword">if</span>(e){<span class="keyword">this</span>.staticTips[d]||(<span class="keyword">this</span>.staticTips[d]=e);<span class="keyword">this</span>.hideAllStaticTips();<span class="keyword">var</span> d=<span class="keyword">this</span>.getOffsets(a,b.parent),f=a.region(),g=f.bottom-f.top,f=f.right-f.left;<span class="string">"right"</span>===b.position?e.setStyle({left:d.left+f+(b.offsetLeft||<span class="number">0</span>)+<span class="string">"px"</span>,top:d.top+parseInt(g/<span class="number">2</span>,<span class="number">10</span>)+(b.offsetTop||<span class="number">0</span>)+<span class="string">"px"</span>}):<span class="string">"bottom"</span>===b.position?e.setStyle({left:d.left+parseInt(f/
-<span class="number">2</span>,<span class="number">10</span>)+(b.offsetLeft||<span class="number">0</span>)+<span class="string">"px"</span>,top:d.top+g+b.offsetTop+(b.offsetTop||<span class="number">0</span>)+<span class="string">"px"</span>}):e.setStyle({left:d.left+<span class="string">"px"</span>,top:d.top+<span class="string">"px"</span>});e.attr(<span class="string">"isbindevent"</span>)||(d=e.query(<span class="string">".j-apop-close"</span>),d.length&amp;&amp;(E.on(d[<span class="number">0</span>],<span class="string">"click"</span>,<span class="keyword">function</span>(a){a.stopEvent();e.addClass(<span class="string">"fn-hide"</span>)}),e.attr(<span class="string">"isbindevent"</span>,!<span class="number">0</span>)));e.removeClass(<span class="string">"fn-hide"</span>);<span class="keyword">this</span>.hasTipShow=!<span class="number">0</span>;E.publish(<span class="string">"cashier/common/showStaticTip"</span>,[c,a,b])}},hasTipShow:!<span class="number">1</span>,staticTips:{},hideAllStaticTips:<span class="keyword">function</span>(){<span class="keyword">for</span>(<span class="keyword">var</span> c <span class="keyword">in</span> <span class="keyword">this</span>.staticTips)<span class="keyword">this</span>.staticTips[c]&amp;&amp;(<span class="keyword">this</span>.staticTips[c].addClass(<span class="string">"fn-hide"</span>),
-E.publish(<span class="string">"cashier/common/hideStaticTip"</span>,[<span class="keyword">this</span>.staticTips[c]]));Cashier.Module.hasTipShow=!<span class="number">1</span>},clickHideTip:<span class="keyword">function</span>(c){E.subscribe(<span class="string">"common/click/body"</span>,window,<span class="keyword">function</span>(a){<span class="keyword">if</span>(Cashier.Module.hasTipShow){<span class="keyword">for</span>(<span class="keyword">var</span> b=$(a.target),d=d||<span class="number">20</span>,a=!<span class="number">1</span>;d--&amp;&amp;b;){<span class="keyword">for</span>(<span class="keyword">var</span> e=b.attr(<span class="string">"className"</span>),f=<span class="number">0</span>,g;g=c[f];f++)<span class="keyword">if</span>(~e.indexOf(g)){a=!<span class="number">0</span>;<span class="keyword">break</span>}<span class="keyword">if</span>(a)<span class="keyword">break</span>;b=b.parent()}a||(Cashier.Module.hideAllStaticTips(),$E.publish(<span class="string">"common/hideAllTip"</span>,[]))}})},init:<span class="keyword">function</span>()}}(window);
-Cashier.Module.Cookie={set:<span class="keyword">function</span>(c,a,b){c=<span class="keyword">this</span>._createCookieString(c,a,!<span class="number">0</span>,b);<span class="keyword">return</span> document.cookie=c},get:<span class="keyword">function</span>(c){<span class="keyword">var</span> a=<span class="keyword">this</span>._parseCookieString(document.cookie);<span class="keyword">try</span>{<span class="keyword">return</span> a[c]}<span class="keyword">catch</span>(b){<span class="keyword">return</span> <span class="literal">null</span>}},_parseCookieString:<span class="keyword">function</span>(c,a){<span class="keyword">var</span> b={};<span class="keyword">if</span>(arale.isString(c)&amp;&amp;<span class="number">0</span>&lt;c.length){<span class="keyword">var</span> d=!<span class="number">1</span>===a?<span class="keyword">function</span>(a){<span class="keyword">return</span> a}:decodeURIComponent;<span class="keyword">if</span>(<span class="regexp">/[^=]+=[^=;]?(?:; [^=]+=[^=]?)?/</span>.test(c))<span class="keyword">for</span>(<span class="keyword">var</span> e=c.split(<span class="regexp">/;\s/g</span>),f=<span class="literal">null</span>,g=<span class="literal">null</span>,h=<span class="literal">null</span>,i=<span class="number">0</span>,j=e.length;i&lt;j;i++){h=e[i].match(<span class="regexp">/([^=]+)=/i</span>);<span class="keyword">if</span>(h <span class="keyword">instanceof</span> Array)<span class="keyword">try</span>{f=
-decodeURIComponent(h[<span class="number">1</span>]),g=d(e[i].substring(h[<span class="number">1</span>].length+<span class="number">1</span>))}<span class="keyword">catch</span>(k){}<span class="keyword">else</span> g=f=decodeURIComponent(e[i]);b[f]=g}}<span class="keyword">return</span> b},_createCookieString:<span class="keyword">function</span>(c,a,b,d){c=encodeURIComponent(c)+<span class="string">"="</span>+(b?encodeURIComponent(a):a);arale.isObject(d)&amp;&amp;(d.expires <span class="keyword">instanceof</span> Date&amp;&amp;(c+=<span class="string">"; expires="</span>+d.expires.toGMTString()),arale.isString(d.path)&amp;&amp;<span class="string">""</span>!==d.path&amp;&amp;(c+=<span class="string">"; path="</span>+d.path),arale.isString(d.domain)&amp;&amp;<span class="string">""</span>!==d.domain&amp;&amp;(c+=<span class="string">"; domain="</span>+d.domain),!<span class="number">0</span>===d.secure&amp;&amp;(c+=<span class="string">"; secure"</span>));<span class="keyword">return</span> c}};
-</code></pre></div><h2 id="相关异常">相关异常</h2>
-<ul>
+<p><!-- start-line=727; --></p>
+<div class="highlight"><pre><code class="javascript">b=a.getOffsets(),d=c.getOffsets();<span class="keyword">return</span>{left:d.left-b.left,top:d.top-b.top}},staticTips:[],showStaticTip:<span class="function"><span class="keyword">function</span><span class="params">(c,a,b)</span>{</span><span class="keyword">var</span> d=c.attr(<span class="string">"id"</span>),e=<span class="keyword">this</span>.staticTips[d]||c,b=b||{};<span class="keyword">if</span>(e){<span class="keyword">this</span>.staticTips[d]||(<span class="keyword">this</span>.staticTips[d]=e);<span class="keyword">this</span>.hideAllStaticTips();<span class="keyword">var</span> d=<span class="keyword">this</span>.getOffsets(a,b.parent),f=a.region(),g=f.bottom-f.top,f=f.right-f.left;<span class="string">"right"</span>===b.position?e.setStyle({left:d.left+f+(b.offsetLeft||<span class="number">0</span>)+<span class="string">"px"</span>,top:d.top+parseInt(g/<span class="number">2</span>,<span class="number">10</span>)+(b.offsetTop||<span class="number">0</span>)+<span class="string">"px"</span>}):<span class="string">"bottom"</span>===b.position?e.setStyle({left:d.left+parseInt(f/
+<span class="number">2</span>,<span class="number">10</span>)+(b.offsetLeft||<span class="number">0</span>)+<span class="string">"px"</span>,top:d.top+g+b.offsetTop+(b.offsetTop||<span class="number">0</span>)+<span class="string">"px"</span>}):e.setStyle({left:d.left+<span class="string">"px"</span>,top:d.top+<span class="string">"px"</span>});e.attr(<span class="string">"isbindevent"</span>)||(d=e.query(<span class="string">".j-apop-close"</span>),d.length&amp;&amp;(E.on(d[<span class="number">0</span>],<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span>a.stopEvent();e.addClass(<span class="string">"fn-hide"</span>)}),e.attr(<span class="string">"isbindevent"</span>,!<span class="number">0</span>)));e.removeClass(<span class="string">"fn-hide"</span>);<span class="keyword">this</span>.hasTipShow=!<span class="number">0</span>;E.publish(<span class="string">"cashier/common/showStaticTip"</span>,[c,a,b])}},hasTipShow:!<span class="number">1</span>,staticTips:{},hideAllStaticTips:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">for</span>(<span class="keyword">var</span> c <span class="keyword">in</span> <span class="keyword">this</span>.staticTips)<span class="keyword">this</span>.staticTips[c]&amp;&amp;(<span class="keyword">this</span>.staticTips[c].addClass(<span class="string">"fn-hide"</span>),
+E.publish(<span class="string">"cashier/common/hideStaticTip"</span>,[<span class="keyword">this</span>.staticTips[c]]));Cashier.Module.hasTipShow=!<span class="number">1</span>},clickHideTip:<span class="function"><span class="keyword">function</span><span class="params">(c)</span>{</span>E.subscribe(<span class="string">"common/click/body"</span>,window,<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span><span class="keyword">if</span>(Cashier.Module.hasTipShow){<span class="keyword">for</span>(<span class="keyword">var</span> b=$(a.target),d=d||<span class="number">20</span>,a=!<span class="number">1</span>;d--&amp;&amp;b;){<span class="keyword">for</span>(<span class="keyword">var</span> e=b.attr(<span class="string">"className"</span>),f=<span class="number">0</span>,g;g=c[f];f++)<span class="keyword">if</span>(~e.indexOf(g)){a=!<span class="number">0</span>;<span class="keyword">break</span>}<span class="keyword">if</span>(a)<span class="keyword">break</span>;b=b.parent()}a||(Cashier.Module.hideAllStaticTips(),$E.publish(<span class="string">"common/hideAllTip"</span>,[]))}})},init:<span class="function"><span class="keyword">function</span><span class="params">()</span>}}<span class="params">(window)</span>;
+<span class="title">Cashier</span>.<span class="title">Module</span>.<span class="title">Cookie</span>={</span>set:<span class="function"><span class="keyword">function</span><span class="params">(c,a,b)</span>{</span>c=<span class="keyword">this</span>._createCookieString(c,a,!<span class="number">0</span>,b);<span class="keyword">return</span> document.cookie=c},get:<span class="function"><span class="keyword">function</span><span class="params">(c)</span>{</span><span class="keyword">var</span> a=<span class="keyword">this</span>._parseCookieString(document.cookie);<span class="keyword">try</span>{<span class="keyword">return</span> a[c]}<span class="keyword">catch</span>(b){<span class="keyword">return</span> <span class="literal">null</span>}},_parseCookieString:<span class="function"><span class="keyword">function</span><span class="params">(c,a)</span>{</span><span class="keyword">var</span> b={};<span class="keyword">if</span>(arale.isString(c)&amp;&amp;<span class="number">0</span>&lt;c.length){<span class="keyword">var</span> d=!<span class="number">1</span>===a?<span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span><span class="keyword">return</span> a}:decodeURIComponent;<span class="keyword">if</span>(<span class="regexp">/[^=]+=[^=;]?(?:; [^=]+=[^=]?)?/</span>.test(c))<span class="keyword">for</span>(<span class="keyword">var</span> e=c.split(<span class="regexp">/;\s/g</span>),f=<span class="literal">null</span>,g=<span class="literal">null</span>,h=<span class="literal">null</span>,i=<span class="number">0</span>,j=e.length;i&lt;j;i++){h=e[i].match(<span class="regexp">/([^=]+)=/i</span>);<span class="keyword">if</span>(h <span class="keyword">instanceof</span> Array)<span class="keyword">try</span>{f=
+decodeURIComponent(h[<span class="number">1</span>]),g=d(e[i].substring(h[<span class="number">1</span>].length+<span class="number">1</span>))}<span class="keyword">catch</span>(k){}<span class="keyword">else</span> g=f=decodeURIComponent(e[i]);b[f]=g}}<span class="keyword">return</span> b},_createCookieString:<span class="function"><span class="keyword">function</span><span class="params">(c,a,b,d)</span>{</span>c=encodeURIComponent(c)+<span class="string">"="</span>+(b?encodeURIComponent(a):a);arale.isObject(d)&amp;&amp;(d.expires <span class="keyword">instanceof</span> Date&amp;&amp;(c+=<span class="string">"; expires="</span>+d.expires.toGMTString()),arale.isString(d.path)&amp;&amp;<span class="string">""</span>!==d.path&amp;&amp;(c+=<span class="string">"; path="</span>+d.path),arale.isString(d.domain)&amp;&amp;<span class="string">""</span>!==d.domain&amp;&amp;(c+=<span class="string">"; domain="</span>+d.domain),!<span class="number">0</span>===d.secure&amp;&amp;(c+=<span class="string">"; secure"</span>));<span class="keyword">return</span> c}};</code></pre></div><h2 id="相关异常">相关异常</h2><ul>
 <li><a href="out-of-stack-space">堆栈溢出</a></li>
 </ul>
-<h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://www.javascriptkit.com/javatutors/closuresleak/index.shtml">JavaScript and memory leaks</a></li>
 <li><a href="http://stackoverflow.com/questions/3910044/ie6-7-8-out-of-memory">IE6/7/8 Out of Memory?</a></li>
 <li><a href="http://www.bokeyy.com/post/javascript-out-of-memery-and-stack.html">JavaScript 中的堆栈溢出和内存不足</a> ，
@@ -190,7 +188,7 @@ decodeURIComponent(h[<span class="number">1</span>]),g=d(e[i].substring(h[<span 
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

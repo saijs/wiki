@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>&#39;XXX&#39; 为空或不是对象</title>
 <script type="text/javascript">
@@ -27,14 +27,16 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">&#39;XXX&#39; 为空或不是对象</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 <th width="100">Browser</th>
 <th width="100">Number</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>&#39;XXX&#39; 为空或不是对象</td>
@@ -105,16 +107,17 @@
 <td>意大利文</td>
 <td>&#39;XXX&#39; è nullo o non è un oggetto</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="案例">案例</h2>
-<table><thead>
+</tbody>
+</table>
+<h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>accountDetail is null</td>
@@ -135,10 +138,9 @@
 <td>Owner</td>
 <td>浩初</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>伯约：</p>
-
 <ol>
 <li>确切的说这个报错会出现在：“中间账户”和“非淘宝的Q用户”这2种状态下，
 因为这2种状态下只能使用网银类渠道（账户类渠道如余额，卡通等等是不能使用的）。
@@ -161,31 +163,28 @@
                 || <span class="string">"2088401889651185"</span>.equalsIgnoreCase(userId)
                 || <span class="string">"2088401889661151"</span>.equalsIgnoreCase(userId)
                 || <span class="string">"2088502970098073"</span>.equalsIgnoreCase(userId)
-                ...
-</code></pre></div></li>
-<li><p>这个问题主要还是因为通过CMS去修复线上问题时分析不足引发的病变，
+                ...</code></pre></div></li>
+<li>这个问题主要还是因为通过CMS去修复线上问题时分析不足引发的病变，
 我们正在推进的CMS快速修复线上BUG的流程，如何保障快速修复的情况下，
-不出问题是需要带回去思考的：</p>
-
-<ol>
+不出问题是需要带回去思考的：<ol>
 <li>CMS修复问题时自己所写代码受众场景的分析要求需要提高，这对收银台来说是个不小的挑战，
 (浩初)蔡伦要加强小组中业务代码的走读和分享，让大家都做到心里有谱。</li>
 <li>对于收银台这种业务高聚合的产品来说，目前缺陷快速修复仅通过判断URL、
 业务标识的方式有些简单粗暴了，后面可以考虑为对应业务Module里的方法提供修复接口，
 这样修复问题时更保险、更快捷。</li>
-</ol></li>
 </ol>
-
+</li>
+</ol>
 <p>更多详情请浩初、乐仪补充。</p>
-
-<hr/>
-
-<table><thead>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>&#39;undefined&#39; 为空或不是对象</td>
@@ -202,11 +201,11 @@
 <td>Line</td>
 <td>252</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>异常原因：在快速付款2期中，由于相关交互需求，在tile chooseConsumerCard.vm
 对应js文件chooseConsumerCard.js中添加了如下代码：</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> removeSelected = <span class="keyword">function</span>(){
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> removeSelected = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
     <span class="keyword">var</span> bussinessManager,cashierChannel;
     bussinessManager=parent.window.bussinessManager;
     bussinessManager&amp;&amp;(cashierChannel=bussinessManager.getCurrentChannel());
@@ -215,23 +214,19 @@
     bussinessManager.setCurrentChannel(<span class="literal">null</span>);
 }
 
-removeSelected();
-</code></pre></div>
-<p>其中bussinessManager是快速付款独有的业务组件，但标准收银台也会调用该tile，
+removeSelected();</code></pre></div><p>其中bussinessManager是快速付款独有的业务组件，但标准收银台也会调用该tile，
 所以在标准收银台执行该段代码时bussinessManager 为undefined，高亮的两句代码就会有问题</p>
-
 <p>处理：后续考虑将该段代码放在快速付款模块中，以免多处执行，具体修复由初尘在23号升级包内完成</p>
-
 <p>乐仪</p>
-
-<hr/>
-
-<table><thead>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>&#39;TextData&#39; 为空或不是对象</td>
@@ -256,15 +251,12 @@ removeSelected();
 <td>Date</td>
 <td>2011-07-08</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>取密码控件的值。从看到的几个相关代码上看，应该不会报这样的错误的。
 错误信息太少，压缩的代码又难以定位错误。</p>
-
 <p>天蓬</p>
-
-<hr/>
-
+<hr>
 <ol>
 <li>&#39;current_select_item.id&#39; 为空或不是对象</li>
 <li>&#39;null&#39; 为空或不是对象</li>
@@ -277,13 +269,10 @@ removeSelected();
 <li>&#39;0.node&#39; is null or not an object</li>
 <li>&#39;2&#39; 是 null 或不是一個物件</li>
 </ol>
-
 <p>对象值为 null。运行时错误，看看逻辑，或者调用和定义之间的顺序。</p>
-
 <p>类似 str.equals(&quot;str&quot;) 这种语法，一般建议使用 &quot;str&quot;.equals(str) ，
 未知的变量作为参数，避免其为 null 时 equals 方法不存在造成的错误，
 当然事先判定也是一种不错的方案。</p>
-
 <p>检查 ID 是否书写正确，拷贝或使用自动补全相对靠谱点。也有可能是调用的时机不宜。</p>
 <h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2></div>
   <div class="comments">
@@ -309,7 +298,7 @@ removeSelected();
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

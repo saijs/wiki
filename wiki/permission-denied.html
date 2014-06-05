@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.4.7">
+    <meta name="generator" content="nico 0.5.0">
     <meta name="theme" content="markwiki 0.1">
     <title>没有权限</title>
 <script type="text/javascript">
@@ -27,12 +27,14 @@
     <div class="document">
 <div class="hentry">
   <h1 class="entry-title">没有权限</h1>
-  <div class="entry-content"><table><thead>
+  <div class="entry-content"><table>
+<thead>
 <tr>
 <th width="100">Language</th>
 <th>Message</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>简体中文</td>
 <td>没有权限</td>
@@ -81,22 +83,21 @@
 <td>希腊文</td>
 <td>Άρνηση άδειας</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <ul>
 <li>跨域访问资源，常见的是访问不同域的框架页 (frame,iframe)。</li>
 <li>AJAX 跨域访问。</li>
 </ul>
-
 <p>同主域的系统，可以通过设置为同一主域达到同源：</p>
-<div class="highlight"><pre><code class="javascript">document.domain = <span class="string">"alipay.com"</span>;
-</code></pre></div><h2 id="案例">案例</h2>
-<table><thead>
+<div class="highlight"><pre><code class="javascript">document.domain = <span class="string">"alipay.com"</span>;</code></pre></div><h2 id="案例">案例</h2><table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>Permission denied</td>
@@ -113,16 +114,17 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-
-<hr/>
-
-<table><thead>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>沒有使用權限</td>
@@ -139,18 +141,17 @@
 <td>Line</td>
 <td>289</td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>相关代码</p>
-
-<!-- start-line=278; -->
+<p><!-- start-line=278; --></p>
 <div class="highlight"><pre><code class="javascript"><span class="comment">//设置定时控制外层高度变化自适应</span>
-<span class="keyword">var</span> adjust_ = <span class="keyword">function</span>(){
+<span class="keyword">var</span> adjust_ = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
     <span class="keyword">var</span> adjust_ = parent_.adjust;
     <span class="keyword">if</span>(adjust_){
         adjust_.showLogin();
         system.auth.adjustheight(ISCENTER);
-        setTimeout(<span class="keyword">function</span>(){
+        setTimeout(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
             $(<span class="string">'J_safeSignCheck'</span>).setStyle(<span class="string">'zoom'</span>,<span class="string">'1'</span>) &amp;&amp; $(<span class="string">'btn-submit'</span>).parent().setStyle(<span class="string">'zoom'</span>,<span class="string">'1'</span>);
             adjust_.heightAdjust(<span class="number">22</span>);
         },<span class="number">500</span>);
@@ -158,16 +159,15 @@
      }<span class="keyword">else</span>{
         timeId = setTimeout(arguments.callee,<span class="number">500</span>);
     }
-};
-</code></pre></div>
-<hr/>
-
-<table><thead>
+};</code></pre></div><hr>
+<table>
+<thead>
 <tr>
 <th width="100">异常字段</th>
 <th>值</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>Message</td>
 <td>사용 권한이 없습니다.</td>
@@ -188,13 +188,12 @@
 <td>Line</td>
 <td>1</td>
 </tr>
-</tbody></table>
-<h2 id="相关异常">相关异常</h2>
-<ul>
+</tbody>
+</table>
+<h2 id="相关异常">相关异常</h2><ul>
 <li><a href="access-is-denied">拒绝访问。</a></li>
 </ul>
-<h2 id="延伸阅读">延伸阅读</h2>
-<ul>
+<h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://kinglyhum.iteye.com/blog/565230">js提示“没有权限”的问题</a></li>
 <li><a href="http://topic.csdn.net/u/20081224/09/26aff992-d0ba-4f6f-a023-e0e96ecbe1fc.html">看看baidu是如何AJAX跨域的</a></li>
 <li><a href="http://www.zhujun.org/web/google-analytics-javascript-permission-denied/">Google Analytics统计代码出现JavaScript没有权限错误</a></li>
@@ -224,7 +223,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.4.7</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.0</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>
