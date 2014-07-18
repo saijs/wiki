@@ -54,7 +54,7 @@
 </tbody>
 </table>
 <p>跨域访问资源，常见的是访问不同域的框架页 (frame,iframe)。</p>
-<p>同主域的系统，可以通过设置为同一主域达到同源：document.domain = &quot;alipay.com&quot;;</p>
+<p>同主域的系统，可以通过设置为同一主域达到同源：document.domain = &quot;example.com&quot;;</p>
 <h2 id="案例">案例</h2><table>
 <thead>
 <tr>
@@ -69,7 +69,7 @@
 </tr>
 <tr>
 <td>URL</td>
-<td><a href="https://authcenter.sit.alipay.net/login/option.htm">https://authcenter.sit.alipay.net/login/option.htm</a></td>
+<td><a href="https://www.example.com/index.htm">https://www.example.com/index.htm</a></td>
 </tr>
 <tr>
 <td>File</td>
@@ -85,8 +85,8 @@
 <ul>
 <li>Permission denied to access property &#39;toString&#39;</li>
 <li>Permission denied to call method Location.toString</li>
-<li>Permission denied for &lt;<a href="https://authcenter.sit.alipay.net&amp;gt">https://authcenter.sit.alipay.net&amp;gt</a>; to call method Location.toString</li>
-<li>&lt;<a href="http://authcenter.sit.alipay.net&amp;gt">http://authcenter.sit.alipay.net&amp;gt</a>; *¾n document.domain à³CP &lt;<a href="http://accorderexprod.sit.alipay.net&amp;gt">http://accorderexprod.sit.alipay.net&amp;gt</a>; (ýp Location.toStringdocument.domain=&lt;<a href="http://alipay.net&amp;gt">http://alipay.net&amp;gt</a>;</li>
+<li>Permission denied for &lt;<a href="https://www.example.com&amp;gt">https://www.example.com&amp;gt</a>; to call method Location.toString</li>
+<li>&lt;<a href="http://www.example.com&amp;gt">http://www.example.com&amp;gt</a>; *¾n document.domain à³CP &lt;<a href="http://www.example.com&amp;gt">http://www.example.com&amp;gt</a>; (ýp Location.toStringdocument.domain=&lt;<a href="http://www.example.com&amp;gt">http://www.example.com&amp;gt</a>;</li>
 </ul>
 <h2 id="相关异常">相关异常</h2><ul>
 <li><a href="access-is-denied">拒绝访问。</a></li>

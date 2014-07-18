@@ -56,7 +56,7 @@ container element before the child element is closed 的错误，并导致页面
 此时如果对未闭合的元素的父元素进行了操作（插入，删除，移动），就会报上述的错误。</p>
 <p>经过排查，侧边栏的代码中，对应用中分页切换操作（switchable组件）过程中，
 有一个预期之外的操作，这个操作往 body 里插入了一个 div 元素，最终导致了报错。</p>
-<p><a href="http://arale.alipay.im/alipay/appaside/examples/ie8-parse-error.html">演示</a></p>
+<p><a href="TODO:">演示</a></p>
 <h3 id="解决方法：">解决方法：</h3><p>指定 switchable 的 element 参数（已闭合），避免被默认插入到 body 中
 （body 未渲染完成的可能性比较大）。</p>
 <p>详细故障可以参考 <a href="http://itil.alipay.net/bug/bug_manage.htm?bugNo=BUG20130418482103&amp;incidentNo=INC20130415175808597&amp;action=view">支付宝故障单</a>。</p>
