@@ -8,6 +8,7 @@
   <blockquote class="entry-description">{{post.description}}</blockquote>
   {%- endif %}
   <div class="entry-content">{{post.html|fixlink}}</div>
+  <div class="entry-footer">{{post.lastModify|date('Y-m-d')}}</div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
