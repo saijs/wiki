@@ -5,7 +5,7 @@ exports = module.exports = {
   "permalink": "{{directory}}/{{filename}}",
   "navigation":[
     {
-      "link":"/index.html",
+      "link":"/",
       "title":"首页"
     },
     {
