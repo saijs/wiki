@@ -1,9 +1,9 @@
 
 watch:
 	@nico server --watch
-build:
+build: clear
 	@nico build
-publish: clear build
+publish: build
 	@ghp-import _site
 	@git push origin gh-pages
 clear:
