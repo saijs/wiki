@@ -17,7 +17,7 @@ exports = module.exports = {
     "id": "UA-39646187-1",
     "domain": "errors.totorojs.org"
   },
-  "github": "https://github.com/totorojs/javascript-exception-archives",
+  "github": "https://github.com/saijs/wiki",
   "writers": [
     "nico.PageWriter",
     "nico.PostWriter",
