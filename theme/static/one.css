@@ -345,3 +345,13 @@ a.title-permalink:hover {
     padding-bottom: 10px;
   }
 }
+
+.entry-footer {
+  margin: 10px -30px;
+  padding: 5px 10px;
+  text-align: right;
+  font-size:0.9em;
+  color: #aaa;
+  background: #eee;
+  -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
+}
