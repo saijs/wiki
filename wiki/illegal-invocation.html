@@ -43,9 +43,22 @@
 <td>繁体中文</td>
 <td>呼叫物件無效</td>
 </tr>
+<tr>
+<td>英文</td>
+<td>Illegal invocation</td>
+</tr>
 </tbody>
 </table>
-<h2 id="案例">案例</h2><table>
+<h2 id="案例">案例</h2><p>早期 IE6,7,8 浏览器中，有时开发者为了减少代码，使用变量指针来缓存方法：</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> $ = document.getElementById;
+$(<span class="string">"id"</span>).innerHTML = <span class="string">""</span>;</code></pre></div><p>但是在 IE9 及其他浏览器中，这是非法的，会抛出 <code>Illegal invocation</code> 这个异常。
+因为调用 getElementById 方法需要是 document 对象，但是 <code>$</code> 默认是 <code>window</code>。
+可以使用 <code>call</code> 显式指定调用对象：</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> $ = document.getElementById;
+$.call(document, <span class="string">"id"</span>).innerHTML = <span class="string">""</span>;</code></pre></div><p>或者使用 <code>bind</code> 隐式将对象和方法关联：</p>
+<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> $ = document.getElementById.bind(document);
+$(<span class="string">"id"</span>).innerHTML = <span class="string">""</span>;</code></pre></div><hr>
+<table>
 <thead>
 <tr>
 <th width="100">异常字段</th>
@@ -72,10 +85,15 @@
 </tbody>
 </table>
 <h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/gg622930(v=VS.85\">Function pointer method calls</a>.aspx)<ul>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/gg622930(v=VS.85\">函数指针方法调用</a>.aspx)</li>
+</ul>
+</li>
+<li><a href="http://www.cnblogs.com/meteoric_cry/archive/2011/04/24/2026582.html">JavaScript的类型错误：Illegal invocation</a></li>
 <li><a href="http://blog.csdn.net/uianqian/article/details/8770132">fckeditor出现调用的对象无效JS错误</a></li>
 </ul>
 </div>
-  <div class="entry-footer">Last Modify: 2014-08-05</div>
+  <div class="entry-footer">Last Modify: 2014-08-16</div>
   <div class="comments">
     <h2 id="discuss">讨论
       <a class="title-permalink" title="Permalink to this title" href="#discuss">¶</a>
