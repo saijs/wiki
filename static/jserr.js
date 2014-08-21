@@ -39,7 +39,7 @@ define({
   "参数无效。":"invalid-argument",
   "操作已超时。":"the-operation-has-timed-out",
   "传递给系统调用的数据区域太小。":"passed-to-a-system-call-data-area-is-too-small",
-  "调用的对象无效":"calling-object-is-invalid",
+  "调用的对象无效":"illegal-invocation",
   "堆栈溢出":"out-of-stack-space",
   "对象不支持“XXX”属性或方法":"object-doesnot-support-property-or-method-xxx",
   "对象不支持此属性或方法":"object-doesnot-support-this-property-or-method",
