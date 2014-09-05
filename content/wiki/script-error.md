@@ -26,7 +26,18 @@
 1. 用户脚本(userscript) 异常导致。
 1. 因为同源策略，Firefox, Chrome, Safari 等浏览器，
     页面引用的非同域的外部脚本中抛出了异常，本页面无权限获得这个异常详情，
-    所以就成了 `Script error.`。静态脚本使用独立域名未必就一定是件好事啊。
+    所以就成了 `Script error.`。
+
+通常大型网站会将静态资源使用独立域名进行管理，这样可以有以下优点：
+
+* 使用 CDN 加速。
+* 避免 Cookie 等头信息传输的影响。
+* 避免浏览器并发量限制的影响。
+
+但是这样就会带来异常捕获与分析的麻烦。解决办法有：
+
+* 静态文件服务器设置 `Access-Control-Allow-Origin` 头信息。
+* `script` 标签添加 `crossorigin` 属性。
 
 
 ## 案例
@@ -128,3 +139,7 @@ throw new Error("test error on b.");
 * [WebKit source that checks origin](http://trac.webkit.org/browser/branches/chromium/648/Source/WebCore/dom/ScriptExecutionContext.cpp?rev=77122#L301)
 * [Firefox source that checks](http://mxr.mozilla.org/mozilla-beta/source/dom/base/nsJSEnvironment.cpp#316)
 * [Same origin policy](http://en.wikipedia.org/wiki/Same_origin_policy)
+* ["Script Error" on line 0](http://blog.errorception.com/2012/04/script-error-on-line-0.html)
+* [Catching Cross-Domain JS Errors](http://blog.errorception.com/2012/12/catching-cross-domain-js-errors.html)
+* [window.error “Script error”问题跟进](http://www.webryan.net/2012/12/something-about-window-onerror-script-error/)
+* [How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox)](http://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/)
