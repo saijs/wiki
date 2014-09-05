@@ -80,8 +80,19 @@
 <li>用户脚本(userscript) 异常导致。</li>
 <li>因为同源策略，Firefox, Chrome, Safari 等浏览器，
 页面引用的非同域的外部脚本中抛出了异常，本页面无权限获得这个异常详情，
-所以就成了 <code>Script error.</code>。静态脚本使用独立域名未必就一定是件好事啊。</li>
+所以就成了 <code>Script error.</code>。</li>
 </ol>
+<p>通常大型网站会将静态资源使用独立域名进行管理，这样可以有以下优点：</p>
+<ul>
+<li>使用 CDN 加速。</li>
+<li>避免 Cookie 等头信息传输的影响。</li>
+<li>避免浏览器并发量限制的影响。</li>
+</ul>
+<p>但是这样就会带来异常捕获与分析的麻烦。解决办法有：</p>
+<ul>
+<li>静态文件服务器设置 <code>Access-Control-Allow-Origin</code> 头信息。</li>
+<li><code>script</code> 标签添加 <code>crossorigin</code> 属性。</li>
+</ul>
 <h2 id="案例">案例</h2><p>a.com/a.html</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
     window.onerror = <span class="function"><span class="keyword">function</span><span class="params">(m,f,l)</span>{</span>
@@ -362,6 +373,10 @@
 <li><a href="http://trac.webkit.org/browser/branches/chromium/648/Source/WebCore/dom/ScriptExecutionContext.cpp?rev=77122#L301">WebKit source that checks origin</a></li>
 <li><a href="http://mxr.mozilla.org/mozilla-beta/source/dom/base/nsJSEnvironment.cpp#316">Firefox source that checks</a></li>
 <li><a href="http://en.wikipedia.org/wiki/Same_origin_policy">Same origin policy</a></li>
+<li><a href="http://blog.errorception.com/2012/04/script-error-on-line-0.html">&quot;Script Error&quot; on line 0</a></li>
+<li><a href="http://blog.errorception.com/2012/12/catching-cross-domain-js-errors.html">Catching Cross-Domain JS Errors</a></li>
+<li><a href="http://www.webryan.net/2012/12/something-about-window-onerror-script-error/">window.error “Script error”问题跟进</a></li>
+<li><a href="http://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/">How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox)</a></li>
 </ul>
 </div>
   <div class="entry-footer">Last Modify: NaN-NaN-NaN</div>
