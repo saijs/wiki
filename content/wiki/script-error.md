@@ -135,6 +135,7 @@ throw new Error("test error on b.");
 
 ## 参考
 
+* [I want to add CORS support to my server](http://enable-cors.org/server.html)
 * [Cryptic “Script Error.” reported in Javascript in Chrome and Firefox](http://stackoverflow.com/questions/5913978/cryptic-script-error-reported-in-javascript-in-chrome-and-firefox)
 * [WebKit source that checks origin](http://trac.webkit.org/browser/branches/chromium/648/Source/WebCore/dom/ScriptExecutionContext.cpp?rev=77122#L301)
 * [Firefox source that checks](http://mxr.mozilla.org/mozilla-beta/source/dom/base/nsJSEnvironment.cpp#316)
