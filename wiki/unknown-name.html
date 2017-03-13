@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>未知名称。</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -68,31 +68,31 @@
 </tbody>
 </table>
 <p><!-- start-line=210; --></p>
-<div class="highlight"><pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">callLuckyDrawParams</span><span class="params">()</span> {</span>
-    Loader.use([<span class="string">'arale.http'</span>], <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-        Ajax.jsonp(apiURL + <span class="string">"campaign/campaign.json?campInfo="</span> + $(<span class="string">"campInfo"</span>).node.value, {
-            success : <span class="function"><span class="keyword">function</span><span class="params">(obj)</span> {</span>
-                <span class="keyword">switch</span> (obj.stat) {
-                    <span class="comment">//...</span>
-                    <span class="keyword">case</span> <span class="string">'ok'</span>:
-                    <span class="keyword">var</span> resultCode = obj.resultCode;
-                    <span class="keyword">if</span>(resultCode &lt;= <span class="number">0</span>) {
+<div class="highlight"><pre><code class="javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callLuckyDrawParams</span>(<span class="hljs-params"></span>) </span>{
+    Loader.use([<span class="hljs-string">'arale.http'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        Ajax.jsonp(apiURL + <span class="hljs-string">"campaign/campaign.json?campInfo="</span> + $(<span class="hljs-string">"campInfo"</span>).node.value, {
+            success : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
+                <span class="hljs-keyword">switch</span> (obj.stat) {
+                    <span class="hljs-comment">//...</span>
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">'ok'</span>:
+                    <span class="hljs-keyword">var</span> resultCode = obj.resultCode;
+                    <span class="hljs-keyword">if</span>(resultCode &lt;= <span class="hljs-number">0</span>) {
                         showErrorMsg(resultCode);
-                    } <span class="keyword">else</span> <span class="keyword">if</span>(resultCode &gt; <span class="number">0</span>) {
-                        <span class="keyword">if</span>(obj.prizeType == <span class="number">5</span>) {
+                    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(resultCode &gt; <span class="hljs-number">0</span>) {
+                        <span class="hljs-keyword">if</span>(obj.prizeType == <span class="hljs-number">5</span>) {
                             prizeSendId = obj.prizeSendId;
-                            prodCode = obj.mktPrizeParamList[<span class="number">0</span>].paramName;
-                            $(<span class="string">"J-flash"</span>).node.showBox(prodCode);
-                        } <span class="keyword">else</span> {
-                            <span class="comment">//...</span>
+                            prodCode = obj.mktPrizeParamList[<span class="hljs-number">0</span>].paramName;
+                            $(<span class="hljs-string">"J-flash"</span>).node.showBox(prodCode);
+                        } <span class="hljs-keyword">else</span> {
+                            <span class="hljs-comment">//...</span>
                         }
                     }
-                    <span class="keyword">break</span>;
-                    <span class="comment">// ...</span>
+                    <span class="hljs-keyword">break</span>;
+                    <span class="hljs-comment">// ...</span>
                 }
             },
-            failure : <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-                <span class="comment">//...</span>
+            failure : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                <span class="hljs-comment">//...</span>
             }
         })
     });
@@ -124,7 +124,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>对象不支持此属性或方法</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -113,7 +113,7 @@
 <p>一般是将一个非 函数/方法 当作 函数/方法 调用时造成。
 检查代码中是否有函数名与元素属性/属性同名的情况。</p>
 <p>貌似 IE 专有异常，同样的代码其他浏览器的异常信息与此不同。</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> a = {};
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> a = {};
 a.a();</code></pre></div><table>
 <thead>
 <tr>
@@ -148,35 +148,35 @@ a.a();</code></pre></div><table>
 点击热点脚本计算 md5 部分的代码会报错『对象不支持此属性或方法』。</p>
 <p>md5 算法本身的相关代码都是函数式编程，并无使用面向对象的部分，只有简单的 <code>add()</code>
 函数调用，及数值位运算。运行时异常的参数部分也都无异常数据。</p>
-<div class="highlight"><pre><code class="javascript"><span class="comment">/* MD5 rounds functions */</span>
-<span class="function"><span class="keyword">function</span> <span class="title">R1</span><span class="params">(A, B, C, D, X, S, T)</span> {</span>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-comment">/* MD5 rounds functions */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">R1</span>(<span class="hljs-params">A, B, C, D, X, S, T</span>) </span>{
     q = add(add(A, (B &amp; C) | (~B &amp; D)), add(X, T));
-    <span class="keyword">return</span> add((q &lt;&lt; S) | ((q &gt;&gt; (<span class="number">32</span> - S)) &amp; (Math.pow(<span class="number">2</span>, S) - <span class="number">1</span>)), B);
+    <span class="hljs-keyword">return</span> add((q &lt;&lt; S) | ((q &gt;&gt; (<span class="hljs-number">32</span> - S)) &amp; (<span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">2</span>, S) - <span class="hljs-number">1</span>)), B);
 }</code></pre></div><p>最初以为是翻页部分的 HTML 标签不匹配，没有 <code>&lt;form&gt;</code> 起始标签，加上 <code>&lt;form&gt;</code> 标签果然没有异常了。</p>
 <p>相关代码：</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"PageChanger"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://www.example.com/images/pre_page_simple.gif"</span> <span class="attribute">alt</span>=<span class="value">"上一页"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">strong</span>&gt;</span>1<span class="tag">&lt;/<span class="title">strong</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"searchNewResult.htm?searchScope=BUSINESS&amp;word=注册&amp;page=2"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"searchNewResult.htm?searchScope=BUSINESS&amp;word=注册&amp;page=2"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://www.example.com/images/next_page_act.gif"</span> <span class="attribute">alt</span>=<span class="value">"下一页"</span> <span class="attribute">title</span>=<span class="value">"翻到下一页"</span> /&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">language</span>=<span class="value">"javascript"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
-        <span class="comment">//...</span>
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"hidden"</span> <span class="attribute">name</span>=<span class="value">"q"</span> <span class="attribute">value</span>=<span class="value">"注册"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"hidden"</span> <span class="attribute">name</span>=<span class="value">"word"</span> <span class="attribute">value</span>=<span class="value">"注册"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"hidden"</span> <span class="attribute">name</span>=<span class="value">"s"</span> <span class="attribute">value</span>=<span class="value">"0"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"hidden"</span> <span class="attribute">name</span>=<span class="value">"n"</span> <span class="attribute">value</span>=<span class="value">"10"</span> /&gt;</span>
-<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><p>但是另一个发现是，如果删除匹配的 <code>&lt;form&gt;</code> 起始&amp;结束标签，保留这些 hidden 字段，
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"PageChanger"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.example.com/images/pre_page_simple.gif"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"上一页"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"searchNewResult.htm?searchScope=BUSINESS&amp;word=注册&amp;page=2"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"searchNewResult.htm?searchScope=BUSINESS&amp;word=注册&amp;page=2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.example.com/images/next_page_act.gif"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"下一页"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"翻到下一页"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">language</span>=<span class="hljs-string">"javascript"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="actionscript">
+        <span class="hljs-comment">//...</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"q"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"注册"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"word"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"注册"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"s"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"0"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"n"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div><p>但是另一个发现是，如果删除匹配的 <code>&lt;form&gt;</code> 起始&amp;结束标签，保留这些 hidden 字段，
 尤其是保留 <code>name=q</code> 的元素，仍然抛出异常。</p>
 <p>再次检查 JavaScript 代码，发现函数中 q 未定义，成为全局变量，
 在 IE8 中直接引用 <code>input[name=q]</code> 的元素，为其赋值时，抛出异常。</p>
 <p>最小重现代码，属性名为 name 或 id 均抛异常：</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"a"</span> /&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
-    a = <span class="number">1</span>;
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="相关异常">相关异常</h2><ul>
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"a"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="undefined">
+    a = 1;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h2 id="相关异常">相关异常</h2><ul>
 <li><a href="xxx-is-not-a-function">缺少函数</a></li>
 </ul>
 <h2 id="延伸阅读">延伸阅读</h2><ul>
@@ -212,7 +212,7 @@ a.a();</code></pre></div><table>
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

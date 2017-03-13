@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>无法设置属性“XXX”的值: 对象为 null 或未定义</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -88,11 +88,11 @@
 </tbody>
 </table>
 <p>整个代码被压缩成一行，但是 Validator 相关的代码有 2处，查看源码，相关部分如下：</p>
-<div class="highlight"><pre><code class="javascript">AP.widget.Validator = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-  <span class="comment">//...</span>
+<div class="highlight"><pre><code class="javascript">AP.widget.Validator = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-comment">//...</span>
 };
 AP.widget.Validator.prototype = {
-  <span class="comment">//...</span>
+  <span class="hljs-comment">//...</span>
 };</code></pre></div><p>根据异常消息可以判定为这里展示的第 1行抛出的异常，无法设置 AP.widget 的
 Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
 <p><code>AP</code> 及 <code>AP.widget</code> 在老版 Arale v1 中是全局的常驻对象，理论上是可以信任的
@@ -126,9 +126,9 @@ Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
 </tbody>
 </table>
 <p><!-- start-line=599; --></p>
-<div class="highlight"><pre><code class="javascript">}<span class="keyword">else</span>{setTimeout(arguments.callee,<span class="number">10</span>)}})()}<span class="keyword">else</span>{X.parentNode.removeChild(X)}}}<span class="function"><span class="keyword">function</span> <span class="title">b</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> Y=c(Z);
-<span class="keyword">if</span>(Y){<span class="keyword">for</span>(<span class="keyword">var</span> X <span class="keyword">in</span> Y){<span class="keyword">if</span>(<span class="keyword">typeof</span> Y[X]==<span class="string">"function"</span>){Y[X]=<span class="literal">null</span>}}Y.parentNode.removeChild(Y)
-}}<span class="function"><span class="keyword">function</span> <span class="title">c</span><span class="params">(Z)</span>{</span><span class="keyword">var</span> X=<span class="literal">null</span>;<span class="keyword">try</span>{X=j.getElementById(Z)}<span class="keyword">catch</span>(Y){}<span class="keyword">return</span> X}<span class="function"><span class="keyword">function</span> <span class="title">C</span><span class="params">(X)</span>{</span><span class="keyword">return</span> j.createElement(X)</code></pre></div><hr>
+<div class="highlight"><pre><code class="javascript">}<span class="hljs-keyword">else</span>{setTimeout(<span class="hljs-built_in">arguments</span>.callee,<span class="hljs-number">10</span>)}})()}<span class="hljs-keyword">else</span>{X.parentNode.removeChild(X)}}}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">b</span>(<span class="hljs-params">Z</span>)</span>{<span class="hljs-keyword">var</span> Y=c(Z);
+<span class="hljs-keyword">if</span>(Y){<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> X <span class="hljs-keyword">in</span> Y){<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> Y[X]==<span class="hljs-string">"function"</span>){Y[X]=<span class="hljs-literal">null</span>}}Y.parentNode.removeChild(Y)
+}}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">c</span>(<span class="hljs-params">Z</span>)</span>{<span class="hljs-keyword">var</span> X=<span class="hljs-literal">null</span>;<span class="hljs-keyword">try</span>{X=j.getElementById(Z)}<span class="hljs-keyword">catch</span>(Y){}<span class="hljs-keyword">return</span> X}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">C</span>(<span class="hljs-params">X</span>)</span>{<span class="hljs-keyword">return</span> j.createElement(X)</code></pre></div><hr>
 <table>
 <thead>
 <tr>
@@ -156,9 +156,9 @@ Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
 </tbody>
 </table>
 <p><!-- start-line=13; --></p>
-<div class="highlight"><pre><code class="javascript">}ele.appendChild(aEle);<span class="keyword">return</span> <span class="literal">true</span>}<span class="keyword">catch</span>(e){}}<span class="keyword">return</span> <span class="literal">false</span>},HTML:<span class="function"><span class="keyword">function</span><span class="params">(data,ele)</span>{</span><span class="keyword">if</span>(!data.htmlCode){ele.style.display=<span class="string">"none"</span>
-}<span class="keyword">else</span>{ele.innerHTML=data.htmlCode;<span class="keyword">return</span> <span class="literal">true</span>}<span class="keyword">return</span> <span class="literal">false</span>},MEDIA:<span class="function"><span class="keyword">function</span><span class="params">(data,ele)</span>{</span><span class="keyword">if</span>(!data.mediaURL||data.mediaURL==<span class="string">"null"</span>){ele.style.display=<span class="string">"none"</span>
-}<span class="keyword">else</span>{<span class="keyword">if</span>(data.mediaType==<span class="string">"SWF"</span>){<span class="keyword">try</span>{<span class="keyword">var</span> width=ele.style.width||<span class="number">200</span>,height=ele.style.height||<span class="number">100</span>;</code></pre></div><hr>
+<div class="highlight"><pre><code class="javascript">}ele.appendChild(aEle);<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>}<span class="hljs-keyword">catch</span>(e){}}<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>},HTML:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data,ele</span>)</span>{<span class="hljs-keyword">if</span>(!data.htmlCode){ele.style.display=<span class="hljs-string">"none"</span>
+}<span class="hljs-keyword">else</span>{ele.innerHTML=data.htmlCode;<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>}<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>},MEDIA:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data,ele</span>)</span>{<span class="hljs-keyword">if</span>(!data.mediaURL||data.mediaURL==<span class="hljs-string">"null"</span>){ele.style.display=<span class="hljs-string">"none"</span>
+}<span class="hljs-keyword">else</span>{<span class="hljs-keyword">if</span>(data.mediaType==<span class="hljs-string">"SWF"</span>){<span class="hljs-keyword">try</span>{<span class="hljs-keyword">var</span> width=ele.style.width||<span class="hljs-number">200</span>,height=ele.style.height||<span class="hljs-number">100</span>;</code></pre></div><hr>
 <table>
 <thead>
 <tr>
@@ -198,7 +198,7 @@ Validator 属性，原因是此时 AP.widget 为空或不是对象。</p>
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

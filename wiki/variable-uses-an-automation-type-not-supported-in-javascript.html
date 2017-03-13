@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>Variable uses an Automation type not supported in JavaScript</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -58,9 +58,9 @@
 </tbody>
 </table>
 <p>已知 <code>eval()</code> 方法及 <code>ActiveXObject()</code> 在 IE9 中可能会抛出这个异常。</p>
-<h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript">eval(<span class="string">"_TMP_FOR_EVAL_ = function (event){ showContinueContextMenu(event)}"</span>)</code></pre></div><p>上面这个在 IE8 中工作正常，但是在 IE9 中抛出异常。
+<h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript"><span class="hljs-built_in">eval</span>(<span class="hljs-string">"_TMP_FOR_EVAL_ = function (event){ showContinueContextMenu(event)}"</span>)</code></pre></div><p>上面这个在 IE8 中工作正常，但是在 IE9 中抛出异常。
 可以使用下面的替代方案：</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">this</span>.ownerDocument.defaultView.eval(<span class="string">"_TMP_FOR_EVAL_ = function (event){ showContinueContextMenu(event)}"</span>)</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">this</span>.ownerDocument.defaultView.eval(<span class="hljs-string">"_TMP_FOR_EVAL_ = function (event){ showContinueContextMenu(event)}"</span>)</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
 <li><a href="http://support.microsoft.com/kb/314209">无法从子窗口中访问父窗口的位置对象</a></li>
 <li><a href="http://answers.microsoft.com/en-us/ie/forum/ie9-windows_7/ie9-rc-giving-errors-variable-uses-an-automation/7e34fca5-aa31-4a25-b136-8c58b2fd9dfb">IE9 RC giving errors - Variable uses an automation type not supported in Javascript</a></li>
 <li><a href="http://stackoverflow.com/questions/6551198/variable-uses-an-automation-type-not-supported-in-jscript">Variable uses an Automation type not supported in JScript</a></li>
@@ -90,7 +90,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

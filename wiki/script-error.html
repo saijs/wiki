@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>Script error.</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -94,14 +94,14 @@
 <li><code>script</code> 标签添加 <code>crossorigin</code> 属性。</li>
 </ul>
 <h2 id="案例">案例</h2><p>a.com/a.html</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
-    window.onerror = <span class="function"><span class="keyword">function</span><span class="params">(m,f,l)</span>{</span>
-        <span class="keyword">var</span> s = <span class="string">"message:"</span>+m+<span class="string">", file:"</span>+f+<span class="string">", line:"</span>+l;
-        console.log(s);
-        window.status = s;
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">window</span>.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">m,f,l</span>)</span>{
+        <span class="hljs-keyword">var</span> s = <span class="hljs-string">"message:"</span>+m+<span class="hljs-string">", file:"</span>+f+<span class="hljs-string">", line:"</span>+l;
+        <span class="hljs-built_in">console</span>.log(s);
+        <span class="hljs-built_in">window</span>.status = s;
     };
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"b.com/b.html"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><p>这里 a.com/a.html 页面引用了 b.com/b.html 脚本『注意：b.html 是一个页面』，
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"b.com/b.html"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><p>这里 a.com/a.html 页面引用了 b.com/b.html 脚本『注意：b.html 是一个页面』，
 这时会抛出异常：</p>
 <table>
 <thead>
@@ -188,17 +188,17 @@
 </table>
 <p>引入外部脚本，该外部脚本会抛出异常：</p>
 <p>a.com/a.html</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
-    window.onerror = <span class="function"><span class="keyword">function</span><span class="params">(m,f,l)</span>{</span>
-        <span class="keyword">var</span> s = <span class="string">"message:"</span>+m+<span class="string">", file:"</span>+f+<span class="string">", line:"</span>+l;
-        console.log(s);
-        window.status = s;
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">window</span>.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">m,f,l</span>)</span>{
+        <span class="hljs-keyword">var</span> s = <span class="hljs-string">"message:"</span>+m+<span class="hljs-string">", file:"</span>+f+<span class="hljs-string">", line:"</span>+l;
+        <span class="hljs-built_in">console</span>.log(s);
+        <span class="hljs-built_in">window</span>.status = s;
     };
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"b.com/b.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><p>b.com/b.js</p>
-<div class="highlight"><pre><code class="javascript"><span class="comment">// some comments</span>
-<span class="comment">// for lines.</span>
-<span class="keyword">var</span> a = ;</code></pre></div><table>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"b.com/b.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><p>b.com/b.js</p>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-comment">// some comments</span>
+<span class="hljs-comment">// for lines.</span>
+<span class="hljs-keyword">var</span> a = ;</code></pre></div><table>
 <thead>
 <tr>
 <th width="100">Browser</th>
@@ -283,9 +283,9 @@
 </table>
 <p>特殊的，如果是脚本中主动掷出的异常，Safari 会稍有不同。</p>
 <p>b.com/b.js</p>
-<div class="highlight"><pre><code class="javascript"><span class="comment">// some comments</span>
-<span class="comment">// for lines.</span>
-<span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"test error on b."</span>);</code></pre></div><table>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-comment">// some comments</span>
+<span class="hljs-comment">// for lines.</span>
+<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"test error on b."</span>);</code></pre></div><table>
 <thead>
 <tr>
 <th width="100">Browser</th>
@@ -404,7 +404,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

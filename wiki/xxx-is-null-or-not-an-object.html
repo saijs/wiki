@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>&#39;XXX&#39; 为空或不是对象</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -150,19 +150,19 @@
 看下面方法的命名，顾名思义就是一个支付宝设置的公共账号，
 这个账号一般是给收银台前置业务中，未输入支付宝账号登陆进来的用户使用的，
 目前网关支付和伪网关支付用的其实都是使用中间账户付款的。</p>
-<div class="highlight"><pre><code class="java"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> isPublicUserBuyer(String userId) {
-        <span class="keyword">return</span> (<span class="string">"2088001868716317"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401415536904"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401415867718"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401415890574"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401415914931"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401416025443"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401416047580"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401416067423"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401889635132"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401889651185"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088401889661151"</span>.equalsIgnoreCase(userId)
-                || <span class="string">"2088502970098073"</span>.equalsIgnoreCase(userId)
+<div class="highlight"><pre><code class="java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isPublicUserBuyer</span><span class="hljs-params">(String userId)</span> </span>{
+        <span class="hljs-keyword">return</span> (<span class="hljs-string">"2088001868716317"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401415536904"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401415867718"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401415890574"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401415914931"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401416025443"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401416047580"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401416067423"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401889635132"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401889651185"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088401889661151"</span>.equalsIgnoreCase(userId)
+                || <span class="hljs-string">"2088502970098073"</span>.equalsIgnoreCase(userId)
                 ...</code></pre></div></li>
 <li>这个问题主要还是因为通过CMS去修复线上问题时分析不足引发的病变，
 我们正在推进的CMS快速修复线上BUG的流程，如何保障快速修复的情况下，
@@ -205,13 +205,13 @@
 </table>
 <p>异常原因：在快速付款2期中，由于相关交互需求，在tile chooseConsumerCard.vm
 对应js文件chooseConsumerCard.js中添加了如下代码：</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> removeSelected = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-    <span class="keyword">var</span> bussinessManager,cashierChannel;
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> removeSelected = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> bussinessManager,cashierChannel;
     bussinessManager=parent.window.bussinessManager;
     bussinessManager&amp;&amp;(cashierChannel=bussinessManager.getCurrentChannel());
     cashierChannel&amp;&amp;(cashierChannel.unselected());
-    bussinessManager.setPreChannel(<span class="literal">null</span>);
-    bussinessManager.setCurrentChannel(<span class="literal">null</span>);
+    bussinessManager.setPreChannel(<span class="hljs-literal">null</span>);
+    bussinessManager.setCurrentChannel(<span class="hljs-literal">null</span>);
 }
 
 removeSelected();</code></pre></div><p>其中bussinessManager是快速付款独有的业务组件，但标准收银台也会调用该tile，
@@ -299,7 +299,7 @@ removeSelected();</code></pre></div><p>其中bussinessManager是快速付款独�
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

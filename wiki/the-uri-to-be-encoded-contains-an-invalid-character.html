@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>被编码的 URI 中包含非法字符</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -85,9 +85,9 @@ encodeURIComponent，decodeURIComponent 4个转码函数将汉字视为 3 个字
 </tbody>
 </table>
 <p><!-- start-line=67; --></p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> stack=[];light.each(obj,<span class="function"><span class="keyword">function</span><span class="params">(property,value)</span>{</span><span class="keyword">if</span>(!property||!obj.hasOwnProperty(property)){<span class="keyword">return</span>
-}stack.push(light.encode(property)+splitter+light.encode(value))});<span class="keyword">return</span> stack.join(connector||<span class="string">"&amp;"</span>)
-},unparam:<span class="function"><span class="keyword">function</span><span class="params">(text,splitter,connector)</span>{</span><span class="keyword">var</span> obj={};<span class="keyword">if</span>(!text){<span class="keyword">return</span> obj}splitter=splitter||<span class="string">"="</span>;</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> stack=[];light.each(obj,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">property,value</span>)</span>{<span class="hljs-keyword">if</span>(!property||!obj.hasOwnProperty(property)){<span class="hljs-keyword">return</span>
+}stack.push(light.encode(property)+splitter+light.encode(value))});<span class="hljs-keyword">return</span> stack.join(connector||<span class="hljs-string">"&amp;"</span>)
+},unparam:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text,splitter,connector</span>)</span>{<span class="hljs-keyword">var</span> obj={};<span class="hljs-keyword">if</span>(!text){<span class="hljs-keyword">return</span> obj}splitter=splitter||<span class="hljs-string">"="</span>;</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="参考">参考</h2><ul>
 <li><a href="http://msdn.microsoft.com/zh-cn/library/061fh4cw(v=VS.90\">JS5024：要编码的 URI 包含无效字符</a>.aspx)</li>
 <li><a href="http://msdn.microsoft.com/zh-cn/library/3aztces0(v=vs.90\">JS5025：要解码的 URI 不是有效编码</a>.aspx)</li>
 <li><a href="http://blog.csdn.net/cuixiping/archive/2007/08/03/1723741.aspx">“被解码的 URI 不是合法的编码” 的问题解决</a></li>
@@ -118,7 +118,7 @@ encodeURIComponent，decodeURIComponent 4个转码函数将汉字视为 3 个字
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

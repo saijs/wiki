@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>错误的数量词</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -64,9 +64,9 @@
 <p>正则表达式的量词（ +, *, {m,n} ）不合法，大都是在 new RegExp(str_reg) 时，
 str_reg 未作安全处理时抛出。
 安全的将字符串 new RegExp 应先将字符串转义处理，需转义的字符包括以下列出的部分：</p>
-<div class="highlight"><pre><code class="javascript">RegExp.escape = <span class="function"><span class="keyword">function</span><span class="params">(source)</span>{</span>
-  <span class="keyword">return</span> String(source).replace(<span class="regexp">/([\!\\\/\.\$\*\^\(\)\[\]\{\}\?\+\-\|])/g</span>, <span class="string">"\\$1"</span>);
-};</code></pre></div><h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript"><span class="keyword">new</span> RegExp(<span class="string">"+"</span>);</code></pre></div><table>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-built_in">RegExp</span>.escape = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source</span>)</span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">String</span>(source).replace(<span class="hljs-regexp">/([\!\\\/\.\$\*\^\(\)\[\]\{\}\?\+\-\|])/g</span>, <span class="hljs-string">"\\$1"</span>);
+};</code></pre></div><h2 id="案例">案例</h2><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"+"</span>);</code></pre></div><table>
 <thead>
 <tr>
 <th width="100">Browser</th>
@@ -137,25 +137,25 @@ str_reg 未作安全处理时抛出。
 <p>密码强度算法中，使用了动态创建正则表达式来进行匹配的方法，但是这个表达式是来自用户的输入，
 在用户输入某些不匹配的特殊字符时，会抛出正则表达式类异常。</p>
 <p>线上异常相关代码：</p>
-<div class="highlight"><pre><code class="javascript"><span class="comment">/**
+<div class="highlight"><pre><code class="javascript"><span class="hljs-comment">/**
  * 获取密码对应的评分
  * @param {string=} opt_strPassword 要检测的密码字符串，若不传入此参数，则默认取得绑定的表单元素的value值
  * @return {number} 密码强度评分
  */</span>
-getScore : <span class="function"><span class="keyword">function</span><span class="params">(opt_strPassword)</span>{</span>
-    <span class="keyword">var</span> strPassword = arale.isUndefined(opt_strPassword) ?
-        (<span class="keyword">this</span>.needTrim ? S(<span class="keyword">this</span>.domNode.node.value) : <span class="keyword">this</span>.domNode.node.value) :
+getScore : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">opt_strPassword</span>)</span>{
+    <span class="hljs-keyword">var</span> strPassword = arale.isUndefined(opt_strPassword) ?
+        (<span class="hljs-keyword">this</span>.needTrim ? S(<span class="hljs-keyword">this</span>.domNode.node.value) : <span class="hljs-keyword">this</span>.domNode.node.value) :
         opt_strPassword;
-    <span class="comment">//...</span>
+    <span class="hljs-comment">//...</span>
 
-    <span class="comment">//附加支付宝规则：纯数字、连续大写英文、连续小写英文、单一英文</span>
-    <span class="keyword">if</span>(<span class="regexp">/^\d+$/</span>.test(strPassword) || <span class="keyword">this</span>.M_STR.UPPER.indexOf(strPassword)&gt; -<span class="number">1</span> ||
-        <span class="keyword">this</span>.M_STR.LOWER.indexOf(strPassword)&gt; -<span class="number">1</span> ||
-        strPassword.replace(<span class="keyword">new</span> RegExp(strPassword.substring(<span class="number">0</span>,<span class="number">1</span>),<span class="string">'g'</span>),<span class="string">''</span>).length === <span class="number">0</span> ){
-        nScore = <span class="number">1</span>;
+    <span class="hljs-comment">//附加支付宝规则：纯数字、连续大写英文、连续小写英文、单一英文</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-regexp">/^\d+$/</span>.test(strPassword) || <span class="hljs-keyword">this</span>.M_STR.UPPER.indexOf(strPassword)&gt; <span class="hljs-number">-1</span> ||
+        <span class="hljs-keyword">this</span>.M_STR.LOWER.indexOf(strPassword)&gt; <span class="hljs-number">-1</span> ||
+        strPassword.replace(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(strPassword.substring(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),<span class="hljs-string">'g'</span>),<span class="hljs-string">''</span>).length === <span class="hljs-number">0</span> ){
+        nScore = <span class="hljs-number">1</span>;
     }
 
-    <span class="keyword">return</span> nScore;
+    <span class="hljs-keyword">return</span> nScore;
 },</code></pre></div><p>这些正则表达式特殊字符，应该经过正确的转义处理。</p>
 <h2 id="相关异常">相关异常</h2><ol>
 <li><a href="regular-expression-syntax-error">正则表达式语法错误</a></li>
@@ -196,7 +196,7 @@ try{new RegExp("+");}catch(ex){monitor.error(ex);}
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>找不到成员。</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -59,24 +59,24 @@
 </table>
 <p>在 IE 浏览器中，有些对象并不总是存在的，使用定时器延时执行时可能 this 已经改变。</p>
 <p>Firefox, Chrome 等浏览器无此问题。</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">"btn"</span>&gt;</span>button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-  btn.onclick = <span class="function"><span class="keyword">function</span><span class="params">(evt)</span>{</span>
-    <span class="keyword">var</span> e = evt || window.event,
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn"</span>&gt;</span>button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  btn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>)</span>{
+    <span class="hljs-keyword">var</span> e = evt || <span class="hljs-built_in">window</span>.event,
       type = e.type;
 
-    alert(e);      <span class="comment">// [object]</span>
-    alert(e.type); <span class="comment">// "click"</span>
-    alert(e.asdf); <span class="comment">// undefined.</span>
+    alert(e);      <span class="hljs-comment">// [object]</span>
+    alert(e.type); <span class="hljs-comment">// "click"</span>
+    alert(e.asdf); <span class="hljs-comment">// undefined.</span>
 
-    window.setTimeout(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-      alert(e);      <span class="comment">// [object]</span>
-      alert(e.type); <span class="comment">// throw new Error("找不到成员。");</span>
-      alert(e.asdf); <span class="comment">// undefined.</span>
-      alert(type);   <span class="comment">// "click".</span>
-    }, <span class="number">1000</span>);
+    <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      alert(e);      <span class="hljs-comment">// [object]</span>
+      alert(e.type); <span class="hljs-comment">// throw new Error("找不到成员。");</span>
+      alert(e.asdf); <span class="hljs-comment">// undefined.</span>
+      alert(type);   <span class="hljs-comment">// "click".</span>
+    }, <span class="hljs-number">1000</span>);
   }
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="案例">案例</h2><p>jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼容模式下会抛出这个异常。</p>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h2 id="案例">案例</h2><p>jQuery 的 attr 方法，给表单元素设置 HTML5 属性部分时，IE10 兼容模式下会抛出这个异常。</p>
 <p>这些属性包括：</p>
 <ul>
 <li>form[novalidate]</li>
@@ -107,16 +107,16 @@
 <li><a href="http://www.w3schools.com/html/html5_form_attributes.asp">HTML5 Form Attributes</a></li>
 <li><a href="../example/member-not-found-setattribute">demo</a></li>
 </ul>
-<div class="highlight"><pre><code class="javascript">$(<span class="string">"form"</span>).attr(<span class="string">"novalidate"</span>, <span class="string">"novalidate"</span>);
-$(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</span>, <span class="string">"text"</span>);</code></pre></div><p>jQuery 设置属性的方法如下：</p>
-<div class="highlight"><pre><code class="javascript">set : <span class="function"><span class="keyword">function</span><span class="params">( elem, value, name )</span> {</span>
-    <span class="comment">// Set the existing or create a new attribute node</span>
-    <span class="keyword">var</span> ret = elem.getAttributeNode( name );
-    <span class="keyword">if</span> ( !ret ) {
-        ret = document.createAttribute( name );
+<div class="highlight"><pre><code class="javascript">$(<span class="hljs-string">"form"</span>).attr(<span class="hljs-string">"novalidate"</span>, <span class="hljs-string">"novalidate"</span>);
+$(<span class="hljs-string">"input"</span>).attr(<span class="hljs-string">"placeholder"</span>, <span class="hljs-string">"text"</span>);</code></pre></div><p>jQuery 设置属性的方法如下：</p>
+<div class="highlight"><pre><code class="javascript">set : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> elem, value, name </span>) </span>{
+    <span class="hljs-comment">// Set the existing or create a new attribute node</span>
+    <span class="hljs-keyword">var</span> ret = elem.getAttributeNode( name );
+    <span class="hljs-keyword">if</span> ( !ret ) {
+        ret = <span class="hljs-built_in">document</span>.createAttribute( name );
         elem.setAttributeNode( ret );
     }
-    <span class="keyword">return</span> ( ret.nodeValue = value + <span class="string">""</span> );
+    <span class="hljs-keyword">return</span> ( ret.nodeValue = value + <span class="hljs-string">""</span> );
 }</code></pre></div><p>其中运行到第 8 行，给 <code>ret.nodeValue</code> 设置值时抛出这个异常。</p>
 <p><img src="../images/member-not-found.png" alt="找不到成员。"></p>
 <p>而实际调试可以看到，ret 是有 <code>nodeValue</code> 属性的，值为 <code>null</code>。</p>
@@ -170,7 +170,7 @@ $(<span class="string">"input"</span>).attr(<span class="string">"placeholder"</
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

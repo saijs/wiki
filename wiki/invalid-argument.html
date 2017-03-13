@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>参数无效。</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -80,13 +80,13 @@
 <h2 id="分析">分析</h2><p>已知的可能情况有：</p>
 <ol>
 <li><p>设置样式的值不合法，如：缺少单位、负值，需要数值时提供了 NaN 或空字符串等。</p>
-<div class="highlight"><pre><code class="javascript">elem.style.width = <span class="literal">undefined</span> + <span class="string">"px"</span>; <span class="comment">// 参数无效</span>
-elem.style.width = <span class="literal">NaN</span> + <span class="string">"px"</span>; <span class="comment">// 参数无效</span>
-elem.style.width = -<span class="number">1</span> + <span class="string">"px"</span>; <span class="comment">// 参数无效</span>
+<div class="highlight"><pre><code class="javascript">elem.style.width = <span class="hljs-literal">undefined</span> + <span class="hljs-string">"px"</span>; <span class="hljs-comment">// 参数无效</span>
+elem.style.width = <span class="hljs-literal">NaN</span> + <span class="hljs-string">"px"</span>; <span class="hljs-comment">// 参数无效</span>
+elem.style.width = <span class="hljs-number">-1</span> + <span class="hljs-string">"px"</span>; <span class="hljs-comment">// 参数无效</span>
 
-elem.style.width = <span class="string">"1px"</span>; <span class="comment">// 正确</span></code></pre></div></li>
+elem.style.width = <span class="hljs-string">"1px"</span>; <span class="hljs-comment">// 正确</span></code></pre></div></li>
 <li><p>IE8 及其以下，都不支持 display:inherit</p>
-<div class="highlight"><pre><code class="javascript">elem.style.display = <span class="string">"inherit"</span>; <span class="comment">// 无法得到 display 属性。 参数无效。</span></code></pre></div></li>
+<div class="highlight"><pre><code class="javascript">elem.style.display = <span class="hljs-string">"inherit"</span>; <span class="hljs-comment">// 无法得到 display 属性。 参数无效。</span></code></pre></div></li>
 </ol>
 <table>
 <thead>
@@ -132,13 +132,13 @@ elem.style.width = <span class="string">"1px"</span>; <span class="comment">// �
 </tbody>
 </table>
 <p><!-- start-line=345; --></p>
-<div class="highlight"><pre><code class="javascript">},setStyle:<span class="function"><span class="keyword">function</span><span class="params">(styles)</span>{</span><span class="keyword">var</span> match;<span class="keyword">if</span>(arale.isString(styles)&amp;&amp;arguments.length==<span class="number">2</span>){<span class="keyword">var</span> tmp={};
-tmp[arguments[<span class="number">0</span>]]=arguments[<span class="number">1</span>];styles=tmp}<span class="keyword">for</span>(<span class="keyword">var</span> property <span class="keyword">in</span> styles){<span class="keyword">if</span>(property==<span class="string">"opacity"</span>){<span class="keyword">this</span>.setOpacity(styles[property])
-}<span class="keyword">else</span>{<span class="keyword">if</span>(property==<span class="string">"class"</span>||property==<span class="string">"className"</span>){<span class="keyword">this</span>.className=<span class="keyword">new</span> String(property)
-}<span class="keyword">else</span>{<span class="keyword">this</span>.node.style[(property==<span class="string">"float"</span>||property==<span class="string">"cssFloat"</span>)?(arale.isUndefined(<span class="keyword">this</span>.node.style.styleFloat)?<span class="string">"cssFloat"</span>:<span class="string">"styleFloat"</span>):property]=styles[property]
-}}}<span class="keyword">return</span> <span class="keyword">this</span>},setOpacity:<span class="function"><span class="keyword">function</span><span class="params">(value)</span>{</span><span class="keyword">if</span>(value&gt;<span class="number">1</span>||value&lt;<span class="number">0</span>){<span class="keyword">return</span> <span class="keyword">this</span>}<span class="keyword">if</span>(arale.isIE()&amp;&amp;Number(arale.browser.ver())&lt;<span class="number">9</span>){<span class="keyword">this</span>.node.style.filter=<span class="string">"alpha(opacity="</span>+value*<span class="number">100</span>+<span class="string">")"</span>
-}<span class="keyword">this</span>.node.style.opacity=(value&lt;<span class="number">0.00001</span>)?<span class="number">0</span>:value;<span class="keyword">return</span> <span class="keyword">this</span>},getViewportSize:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span>{width:$D.getViewportWidth(<span class="keyword">this</span>.node),height:$D.getViewportHeight(<span class="keyword">this</span>.node)}
-},getDocumentSize:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">return</span>{width:$D.getDocumentWidth(<span class="keyword">this</span>.node),height:$D.getDocumentHeight(<span class="keyword">this</span>.node)}</code></pre></div><h2 id="相关异常">相关异常</h2><ul>
+<div class="highlight"><pre><code class="javascript">},setStyle:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">styles</span>)</span>{<span class="hljs-keyword">var</span> match;<span class="hljs-keyword">if</span>(arale.isString(styles)&amp;&amp;<span class="hljs-built_in">arguments</span>.length==<span class="hljs-number">2</span>){<span class="hljs-keyword">var</span> tmp={};
+tmp[<span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>]]=<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>];styles=tmp}<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> property <span class="hljs-keyword">in</span> styles){<span class="hljs-keyword">if</span>(property==<span class="hljs-string">"opacity"</span>){<span class="hljs-keyword">this</span>.setOpacity(styles[property])
+}<span class="hljs-keyword">else</span>{<span class="hljs-keyword">if</span>(property==<span class="hljs-string">"class"</span>||property==<span class="hljs-string">"className"</span>){<span class="hljs-keyword">this</span>.className=<span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(property)
+}<span class="hljs-keyword">else</span>{<span class="hljs-keyword">this</span>.node.style[(property==<span class="hljs-string">"float"</span>||property==<span class="hljs-string">"cssFloat"</span>)?(arale.isUndefined(<span class="hljs-keyword">this</span>.node.style.styleFloat)?<span class="hljs-string">"cssFloat"</span>:<span class="hljs-string">"styleFloat"</span>):property]=styles[property]
+}}}<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>},setOpacity:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>)</span>{<span class="hljs-keyword">if</span>(value&gt;<span class="hljs-number">1</span>||value&lt;<span class="hljs-number">0</span>){<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>}<span class="hljs-keyword">if</span>(arale.isIE()&amp;&amp;<span class="hljs-built_in">Number</span>(arale.browser.ver())&lt;<span class="hljs-number">9</span>){<span class="hljs-keyword">this</span>.node.style.filter=<span class="hljs-string">"alpha(opacity="</span>+value*<span class="hljs-number">100</span>+<span class="hljs-string">")"</span>
+}<span class="hljs-keyword">this</span>.node.style.opacity=(value&lt;<span class="hljs-number">0.00001</span>)?<span class="hljs-number">0</span>:value;<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>},getViewportSize:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">return</span>{width:$D.getViewportWidth(<span class="hljs-keyword">this</span>.node),height:$D.getViewportHeight(<span class="hljs-keyword">this</span>.node)}
+},getDocumentSize:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">return</span>{width:$D.getDocumentWidth(<span class="hljs-keyword">this</span>.node),height:$D.getDocumentHeight(<span class="hljs-keyword">this</span>.node)}</code></pre></div><h2 id="相关异常">相关异常</h2><ul>
 <li><a href="type-mismatch">类型不匹配</a></li>
 </ul>
 <h2 id="参考">参考</h2><ul>
@@ -171,7 +171,7 @@ tmp[arguments[<span class="number">0</span>]]=arguments[<span class="number">1</
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

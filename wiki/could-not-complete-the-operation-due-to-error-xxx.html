@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>由于出现错误 XXX 而导致此项操作无法完成。</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -42,6 +42,38 @@
 <tr>
 <td></td>
 <td>由于出现错误 c0000096 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 80020006 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 80070005 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 80700005 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 80700016 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 887a0004 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 8e5e03f9 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 c0000022 而导致此项操作无法完成。</td>
+</tr>
+<tr>
+<td></td>
+<td>由于出现错误 c06d007f 而导致此项操作无法完成。</td>
 </tr>
 <tr>
 <td>繁体中文</td>
@@ -121,11 +153,11 @@
 </table>
 <p>相关代码：</p>
 <p><!-- start-line=508; --></p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">this</span>._xhr.open(<span class="keyword">this</span>._options.method.toUpperCase(),url,<span class="keyword">this</span>._options.async);$H(<span class="keyword">this</span>._options.headers).each(<span class="function"><span class="keyword">function</span><span class="params">(key,value)</span>{</span><span class="keyword">try</span>{<span class="keyword">this</span>._xhr.setRequestHeader(key,value)
-}<span class="keyword">catch</span>(e){}},<span class="keyword">this</span>);<span class="keyword">this</span>._xhr.onreadystatechange=arale.hitch(<span class="keyword">this</span>,<span class="keyword">this</span>.onStateChange);
-<span class="keyword">this</span>._xhr.send(data);<span class="keyword">if</span>(!<span class="keyword">this</span>._options.async){<span class="keyword">this</span>.onStateChange()}<span class="keyword">return</span> <span class="keyword">this</span>},cancel:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">if</span>(!<span class="keyword">this</span>._running){<span class="keyword">return</span> <span class="keyword">this</span>
-}<span class="keyword">this</span>._running=<span class="literal">false</span>;<span class="keyword">this</span>._xhr.onreadystatechange=<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>};<span class="keyword">this</span>._xhr.abort();
-<span class="keyword">this</span>._xhr=arale.browser.Request();<span class="keyword">return</span> <span class="keyword">this</span>},onStateChange:<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="keyword">var</span> that=<span class="keyword">this</span>,options=<span class="keyword">this</span>._options;</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">this</span>._xhr.open(<span class="hljs-keyword">this</span>._options.method.toUpperCase(),url,<span class="hljs-keyword">this</span>._options.async);$H(<span class="hljs-keyword">this</span>._options.headers).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">key,value</span>)</span>{<span class="hljs-keyword">try</span>{<span class="hljs-keyword">this</span>._xhr.setRequestHeader(key,value)
+}<span class="hljs-keyword">catch</span>(e){}},<span class="hljs-keyword">this</span>);<span class="hljs-keyword">this</span>._xhr.onreadystatechange=arale.hitch(<span class="hljs-keyword">this</span>,<span class="hljs-keyword">this</span>.onStateChange);
+<span class="hljs-keyword">this</span>._xhr.send(data);<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>._options.async){<span class="hljs-keyword">this</span>.onStateChange()}<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>},cancel:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>._running){<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+}<span class="hljs-keyword">this</span>._running=<span class="hljs-literal">false</span>;<span class="hljs-keyword">this</span>._xhr.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{};<span class="hljs-keyword">this</span>._xhr.abort();
+<span class="hljs-keyword">this</span>._xhr=arale.browser.Request();<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>},onStateChange:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">var</span> that=<span class="hljs-keyword">this</span>,options=<span class="hljs-keyword">this</span>._options;</code></pre></div><h2 id="相关异常">相关异常</h2><h2 id="延伸阅读">延伸阅读</h2><ul>
 <li><a href="http://iloves.org/2011/01/dom-%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%AE%8C%E5%85%A8-appendchild-%E6%93%8D%E4%BD%9C%E5%9C%A8ie6%E4%B8%8Eie8%E4%B8%8B%E7%9A%84bug/">Dom 未加载完全 appendChild 操作在IE6与IE8下的bug.</a></li>
 <li><p><a href="http://www.google.com/support/forum/p/adsense/thread?tid=3a2018d98dfcafad&amp;hl=zh-CN">google adsense广告代码在IE7 IE8内核浏览器上有严重问题，IE6正常</a></p>
 <p>故障现象：无法打开internet站点，已中止操作。</p>
@@ -165,7 +197,7 @@
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

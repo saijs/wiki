@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>意外地调用了方法或属性访问。</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -39,13 +39,17 @@
 <td>简体中文</td>
 <td>意外地调用了方法或属性访问。</td>
 </tr>
+<tr>
+<td>日文</td>
+<td>予期しないメソッドの呼び出し、またはプロパティ アクセスです。</td>
+</tr>
 </tbody>
 </table>
-<h2 id="案例">案例</h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">table</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">tbody</span> <span class="attribute">id</span>=<span class="value">"tbody"</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span></code></pre></div><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> row = document.createElement(<span class="string">"tr"</span>);
-document.getElementById(<span class="string">"tbody"</span>).appendChild(row);</code></pre></div><p>由错误的标签嵌套引起，IE会报此错误。</p>
+<h2 id="案例">案例</h2><div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tbody"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span></code></pre></div><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> row = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"tr"</span>);
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"tbody"</span>).appendChild(row);</code></pre></div><p>由错误的标签嵌套引起，IE会报此错误。</p>
 <table>
 <thead>
 <tr>
@@ -92,8 +96,8 @@ document.getElementById(<span class="string">"tbody"</span>).appendChild(row);</
 </tbody>
 </table>
 <hr>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> iframe = document.createElement(<span class="string">"iframe"</span>);
-<span class="keyword">var</span> form = document.createElement(<span class="string">"form"</span>);
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> iframe = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"iframe"</span>);
+<span class="hljs-keyword">var</span> form = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"form"</span>);
 iframe.appendChild(form);</code></pre></div><p>iframe还没有添加到document中时，向iframe中添加子节点，IE会报此错误。</p>
 <hr>
 <h2 id="相关异常">相关异常</h2><ul>
@@ -124,7 +128,7 @@ iframe.appendChild(form);</code></pre></div><p>iframe还没有添加到document�
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

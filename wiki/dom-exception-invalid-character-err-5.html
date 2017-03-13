@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>DOM Exception: INVALID_CHARACTER_ERR (5)</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -44,10 +44,10 @@
 </tbody>
 </table>
 <h2 id="分析">分析</h2><p>IE9 创建元素(createElement) 开始严格遵循标准实现，不支持传入完整的 HTML 代码方式。</p>
-<div class="highlight"><pre><code class="javascript">document.createElement(<span class="string">'&lt;input type="text" name="user" /&gt;'</span>);</code></pre></div><p>应该使用标准方式：</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> input = document.createElement(<span class="string">"input"</span>);
-input.setAttribute(<span class="string">"name"</span>, <span class="string">"user"</span>);
-input.setAttribute(<span class="string">"type"</span>, <span class="string">"text"</span>);</code></pre></div><h2 id="案例">案例</h2><h2 id="相关参考">相关参考</h2><h2 id="参考">参考</h2><ul>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'&lt;input type="text" name="user" /&gt;'</span>);</code></pre></div><p>应该使用标准方式：</p>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> input = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"input"</span>);
+input.setAttribute(<span class="hljs-string">"name"</span>, <span class="hljs-string">"user"</span>);
+input.setAttribute(<span class="hljs-string">"type"</span>, <span class="hljs-string">"text"</span>);</code></pre></div><h2 id="案例">案例</h2><h2 id="相关参考">相关参考</h2><h2 id="参考">参考</h2><ul>
 <li><a href="http://stackoverflow.com/questions/5990917/dom-exception-invalid-character-err-5">DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
 <li><a href="http://stackoverflow.com/questions/5344029/invalid-character-dom-exception-in-ie9">Invalid Character DOM Exception in IE9</a></li>
 <li><a href="http://stackoverflow.com/questions/6169901/javascript-dom-exception-invalid-character-err-5">Javascript: DOM Exception: INVALID_CHARACTER_ERR (5)</a></li>
@@ -82,7 +82,7 @@ input.setAttribute(<span class="string">"type"</span>, <span class="string">"tex
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>

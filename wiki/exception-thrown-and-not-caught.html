@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="nico 0.5.1">
+    <meta name="generator" content="nico 0.5.2">
     <meta name="theme" content="markwiki 0.1">
     <title>例外被抛出且未被接住</title>
 <script type="text/javascript">
@@ -18,8 +18,8 @@
         <!--<a class="home" href="../"></a>-->
         <div class="menu">
           <ul>
-            <li><a href="../../../../..">首页</a></li>
-            <li><a href="../../../../../wiki">异常列表</a></li>
+            <li><a href="../../../../../..">首页</a></li>
+            <li><a href="../../../../../../wiki">异常列表</a></li>
           </ul>
         </div>
       </div>
@@ -54,15 +54,15 @@
 </tbody>
 </table>
 <p>IE 浏览器中 throw 出非 Error 对象，异常消息均是这个。</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">throw</span> <span class="string">"err"</span>;
-<span class="keyword">throw</span> <span class="number">1</span>;
-<span class="keyword">throw</span> {};
-<span class="keyword">throw</span> <span class="keyword">new</span> TypeError(<span class="string">"type error"</span>);
-<span class="keyword">throw</span> <span class="keyword">new</span> ReferenceError(<span class="string">"ref err"</span>);
-<span class="keyword">throw</span> <span class="keyword">new</span> SyntaxError(<span class="string">"syntax error"</span>);
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">throw</span> <span class="hljs-string">"err"</span>;
+<span class="hljs-keyword">throw</span> <span class="hljs-number">1</span>;
+<span class="hljs-keyword">throw</span> {};
+<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"type error"</span>);
+<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">ReferenceError</span>(<span class="hljs-string">"ref err"</span>);
+<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">SyntaxError</span>(<span class="hljs-string">"syntax error"</span>);
 
-<span class="comment">// ...</span></code></pre></div><p>抛出异常建议使用：</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"err message."</span>);</code></pre></div><h2 id="案例">案例</h2><table>
+<span class="hljs-comment">// ...</span></code></pre></div><p>抛出异常建议使用：</p>
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"err message."</span>);</code></pre></div><h2 id="案例">案例</h2><table>
 <thead>
 <tr>
 <th width="100">异常字段</th>
@@ -159,7 +159,7 @@ catch 块。使用 throw 语句从 try 块中引发的异常将在 try 块外由
 </div>
     <div class="footer">
       <p class="copyright">JavaScript 异常档案</p>
-      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.1</p>-->
+      <!--<p class="copyright">powered by <a href="http://lab.lepture.com/nico/">nico</a> 0.5.2</p>-->
     </div>
     <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" data-main="../static/one.js"></script>
     <script src="../static/codes.js"></script>
