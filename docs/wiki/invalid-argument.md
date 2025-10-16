@@ -62,7 +62,7 @@ tmp[arguments[0]]=arguments[1];styles=tmp}for(var property in styles){if(propert
 
 ## 相关异常
 
-* [类型不匹配](type-mismatch.md)
+* [类型不匹配](./type-mismatch.md)
 
 ## 参考
 

@@ -26,7 +26,7 @@
 
 ##  相关异常
 
-* [缺少标识符、 字符串或数字](expected-identifier-string-or-number.md)
+* [缺少标识符、 字符串或数字](./expected-identifier-string-or-number.md)
 
 
 ## 参考

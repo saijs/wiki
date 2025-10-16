@@ -66,7 +66,7 @@ window.onload = notExistsFunction;
 
 ## 相关异常
 
-* [属性“XXX”的值为 null、未定义或不是 Function 对象](the-value-of-the-attribute-xxx-is-null-undefined-or-not-a-function-object.md)
+* [属性“XXX”的值为 null、未定义或不是 Function 对象](./the-value-of-the-attribute-xxx-is-null-undefined-or-not-a-function-object.md)
 
 ## 参考
 

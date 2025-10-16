@@ -24,7 +24,7 @@
 
 ## 相关异常
 
-* [内存不够](out-of-memory.md)
+* [内存不够](./out-of-memory.md)
 
 ## 参考
 

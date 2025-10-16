@@ -52,7 +52,7 @@ decodeURIComponent(h[1]),g=d(e[i].substring(h[1].length+1))}catch(k){}else g=f=d
 
 ## 相关异常
 
-* [堆栈溢出](out-of-stack-space.md)
+* [堆栈溢出](./out-of-stack-space.md)
 
 
 ## 延伸阅读

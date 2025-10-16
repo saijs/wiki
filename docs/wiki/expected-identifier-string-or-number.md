@@ -22,4 +22,4 @@ var obj = {
 
 ## 相关
 
-* [缺少标识符](expected-identifier.md)
+* [缺少标识符](./expected-identifier.md)

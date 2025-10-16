@@ -48,6 +48,6 @@ iframe还没有添加到document中时，向iframe中添加子节点，IE会报�
 
 ## 相关异常
 
-* [无法获取属性“XXX”的值：对象为 null 或未定义](unable-to-get-value-of-the-property-xxx-object-is-null-or-undefined.md)
+* [无法获取属性“XXX”的值：对象为 null 或未定义](./unable-to-get-value-of-the-property-xxx-object-is-null-or-undefined.md)
 
 ## 延伸阅读

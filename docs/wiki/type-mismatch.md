@@ -56,7 +56,7 @@ elem.appendChild(txt);
 
 ## 相关异常
 
-* [参数无效。](invalid-argument.md)
+* [参数无效。](./invalid-argument.md)
 
 ## 参考
 

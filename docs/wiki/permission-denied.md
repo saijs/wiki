@@ -80,7 +80,7 @@ var adjust_ = function(){
 
 ## 相关异常
 
-* [拒绝访问。](access-is-denied.md)
+* [拒绝访问。](./access-is-denied.md)
 
 ## 延伸阅读
 

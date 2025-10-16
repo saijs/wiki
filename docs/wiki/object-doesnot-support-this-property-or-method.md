@@ -91,7 +91,7 @@ function R1(A, B, C, D, X, S, T) {
 
 ## 相关异常
 
-* [缺少函数](xxx-is-not-a-function.md)
+* [缺少函数](./xxx-is-not-a-function.md)
 
 ## 延伸阅读
 

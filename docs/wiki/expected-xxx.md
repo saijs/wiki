@@ -130,7 +130,7 @@ var o = {a};
 
 ## 相关异常
 
-* [语法错误](syntax-error.md)
+* [语法错误](./syntax-error.md)
 
 ##  参考
 

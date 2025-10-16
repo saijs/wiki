@@ -30,4 +30,4 @@ this._xhr.open(this._options.method.toUpperCase(),url,this._options.async);$H(th
 
 ## 延伸阅读
 
-* [Windows事件代码ID及错误信息](windows-event-code-id-and-error-message.md)
+* [Windows事件代码ID及错误信息](./windows-event-code-id-and-error-message.md)

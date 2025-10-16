@@ -34,11 +34,11 @@ JavaScript 异常，沉淀 JavaScript 异常知识，供异常分析 & 处理参
 
 ## 常见异常
 
-* [错误的数量词](wiki/unexpected-quantifier.md)
-* [正则表达式语法错误](wiki/regular-expression-syntax-error.md)
-* [正则表达式中缺少 'XXX'](wiki/expected-xxx-in-regular-expression.md)
+* [错误的数量词](./wiki/unexpected-quantifier.md)
+* [正则表达式语法错误](./wiki/regular-expression-syntax-error.md)
+* [正则表达式中缺少 'XXX'](./wiki/expected-xxx-in-regular-expression.md)
 
-[查看更多](wiki/index.md)
+[查看更多](./wiki/index.md)
 
 ## 参考
 
@@ -53,7 +53,7 @@ JavaScript 异常，沉淀 JavaScript 异常知识，供异常分析 & 处理参
 * [Handling and Avoiding Web Page Errors Part 1: The Basics](http://msdn.microsoft.com/en-us/library/ms976140.aspx)
 * [Handling and Avoiding Web Page Errors Part 2: Run-Time Errors](http://msdn.microsoft.com/en-us/library/ms976144.aspx)
 * [Handling and Avoiding Web Page Errors Part 3: An Ounce of Prevention](http://msdn.microsoft.com/en-us/library/ms976146.aspx)
-* [Windows事件代码ID及错误信息](wiki/windows-event-code-id-and-error-message.md)
+* [Windows事件代码ID及错误信息](./wiki/windows-event-code-id-and-error-message.md)
 
 [1]: http://msdn.microsoft.com/zh-cn/library/3a3syxc5(v=vs.90).aspx
 

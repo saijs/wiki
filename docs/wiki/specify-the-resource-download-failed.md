@@ -11,6 +11,6 @@
 
 ## 相关异常
 
-* [不支持此接口](does-not-support-this-interface.md)
+* [不支持此接口](./does-not-support-this-interface.md)
 
 ## 延伸阅读
