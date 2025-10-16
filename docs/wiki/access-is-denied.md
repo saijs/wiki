@@ -46,6 +46,6 @@
 
 ## 相关异常
 
-* [没有权限](permission-denied.md)
+* [没有权限](./permission-denied.md)
 
 ## 延伸阅读

@@ -79,8 +79,8 @@ getScore : function(opt_strPassword){
 
 ## 相关异常
 
-1. [正则表达式语法错误](regular-expression-syntax-error.md)
-1. [正则表达式中缺少 'XXX'](expected-xxx-in-regular-expression.md)
+1. [正则表达式语法错误](./regular-expression-syntax-error.md)
+1. [正则表达式中缺少 'XXX'](./expected-xxx-in-regular-expression.md)
 
 <!-- 抛出相关异常 -->
 <script type="text/javascript">

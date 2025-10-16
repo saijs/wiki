@@ -30,15 +30,15 @@ seajs.use(["$"], function(jQ){
 
 这种情况下，在 IE6,7,8 浏览器中，对应的异常为：
 
-* [缺少对象](object-expected.md)
+* [缺少对象](./object-expected.md)
 
 在 Webkit 内核的浏览器中，对应的异常为：
 
-* [Uncaught ReferenceError: XXX is not defined](xxx-is-undefined.md)
+* [Uncaught ReferenceError: XXX is not defined](./xxx-is-undefined.md)
 
 ## 相关异常
 
-* [缺少对象](object-expected.md)
-* [Uncaught ReferenceError: XXX is not defined](xxx-is-undefined.md)
+* [缺少对象](./object-expected.md)
+* [Uncaught ReferenceError: XXX is not defined](./xxx-is-undefined.md)
 
 ## 延伸阅读

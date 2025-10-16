@@ -34,8 +34,8 @@
 
 ## 相关异常
 
-* [拒绝访问。](access-is-denied)
-* [没有权限](permission-denied)
+* [拒绝访问。](./access-is-denied)
+* [没有权限](./permission-denied)
 
 ## 延伸阅读
 

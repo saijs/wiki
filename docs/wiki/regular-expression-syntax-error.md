@@ -25,8 +25,8 @@ new RegExp(")");  // 正则表达式语法错误
 
 ## 相关异常
 
-1. [错误的数量词](unexpected-quantifier.md)
-1. [正则表达式中缺少 'XXX'](expected-xxx-in-regular-expression.md)
+1. [错误的数量词](./unexpected-quantifier.md)
+1. [正则表达式中缺少 'XXX'](./expected-xxx-in-regular-expression.md)
 
 ## 参考
 

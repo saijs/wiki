@@ -3,8 +3,8 @@
 
 这个项目用于收集、沉淀、分享、交流 JavaScript 异常的相关经验。
 
-这里是原始档案，你可以直接查看 [Home.md](docs/index.md) 或
-[index.md](docs/wiki/index.md) ，也可以查看生成好的站点页面
+这里是原始档案，你可以直接查看 [Home.md](./docs/index.md) 或
+[index.md](./docs/wiki/index.md) ，也可以查看生成好的站点页面
 [saijs.github.io](https://saijs.github.io/) 或索引页
 [saijs.github.io/wiki](https://saijs.github.io/wiki/)
 

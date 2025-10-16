@@ -53,8 +53,8 @@ a.b();
 
 ## 相关异常
 
-* [对象不支持此属性或方法](object-doesnot-support-this-property-or-method.md)
+* [对象不支持此属性或方法](./object-doesnot-support-this-property-or-method.md)
 
 ## 参考
 
-* [对象不支持此属性或方法](object-doesnot-support-this-property-or-method.md)
+* [对象不支持此属性或方法](./object-doesnot-support-this-property-or-method.md)

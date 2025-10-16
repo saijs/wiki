@@ -31,7 +31,7 @@
 
 ## 相关异常
 
-* [缺少 'XXX'](expected-xxx.md)
+* [缺少 'XXX'](./expected-xxx.md)
 
 
 ## 延伸阅读
