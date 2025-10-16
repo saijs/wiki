@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Rspress v1.45.6">
     <meta name="keyword"content="JavaScript, 异常, 错误, 处理, 代码, 开发"><title data-rh="true">HTML Parsing Error: Unable to modify the parent container element before the child element is closed (KB927917) - JavaScript 异常档案</title><meta data-rh="true" name="description" content="JavaScript 异常档案"/>
-  <script>{;const saved = localStorage.getItem('rspress-theme-appearance');const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark = !saved || saved === 'auto' ? preferDark : saved === 'dark';document.documentElement.classList.toggle('dark', isDark);document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';}</script><link rel="icon" href="/exception.jpg"><script defer src="/static/js/styles.d6bf07ad.js"></script><script defer src="/static/js/lib-react.96bd850f.js"></script><script defer src="/static/js/lib-router.66c75abc.js"></script><script defer src="/static/js/954.2d69faa8.js"></script><script defer src="/static/js/index.cda17328.js"></script><link href="/static/css/styles.b6f8176c.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-7DVVQN2WB7"></script><script>
+  <script>{;const saved = localStorage.getItem('rspress-theme-appearance');const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark = !saved || saved === 'auto' ? preferDark : saved === 'dark';document.documentElement.classList.toggle('dark', isDark);document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';}</script><link rel="icon" href="/exception.jpg"><script defer src="/static/js/styles.d6bf07ad.js"></script><script defer src="/static/js/lib-react.96bd850f.js"></script><script defer src="/static/js/lib-router.66c75abc.js"></script><script defer src="/static/js/954.7a15db23.js"></script><script defer src="/static/js/index.a3079a44.js"></script><link href="/static/css/styles.b6f8176c.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-7DVVQN2WB7"></script><script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -54,7 +54,6 @@ container element before the child element is closed 的错误，并导致页面
 此时如果对未闭合的元素的父元素进行了操作（插入，删除，移动），就会报上述的错误。</p>
 <p class="my-4 leading-7">经过排查，侧边栏的代码中，对应用中分页切换操作（switchable组件）过程中，
 有一个预期之外的操作，这个操作往 body 里插入了一个 div 元素，最终导致了报错。</p>
-<p class="my-4 leading-7"><a href="/TODO:.html" class="link_a7cea  link_a9ef4 inline-link_f855c">演示</a></p>
 <h3 id="解决方法" class="mt-10 mb-2 leading-7 text-xl title_fb7eb">解决方法：<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#解决方法">#</a></h3>
 <p class="my-4 leading-7">指定 switchable 的 element 参数（已闭合），避免被默认插入到 body 中
 （body 未渲染完成的可能性比较大）。</p>
