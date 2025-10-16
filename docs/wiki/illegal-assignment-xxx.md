@@ -44,7 +44,7 @@
 ## 延伸阅读
 
 * [VBScript 教程](http://www.microsoft.com/china/vbscript/vbstutor/vbstutor.htm)
-* [JS5008：非法赋值](http://msdn.microsoft.com/zh-cn/library/17a8353d(v=vs.90\).aspx)
+* [JS5008：非法赋值](http://msdn.microsoft.com/zh-cn/library/17a8353d%28v=vs.90%29.aspx)
 * [非法赋值](http://doc.51windows.net/vbscript/?url=/vbscript/html/vserrillegalassignment.htm) - Visual Basic Scripting Edition Document.
     [2](http://codecoke.com/tech/VBscript/vserrillegalassignment.htm)
 

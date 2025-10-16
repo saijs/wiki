@@ -57,8 +57,8 @@ new RegExp("[");  // 正则表达式中缺少 ']'
 
 ## 相关异常
 
-* [错误的数量词](unexpected-quantifier.md)
-* [正则表达式语法错误](regular-expression-syntax-error.md)
+* [错误的数量词](./unexpected-quantifier.md)
+* [正则表达式语法错误](./regular-expression-syntax-error.md)
 
 <!-- 抛出相关异常 -->
 <script type="text/javascript">
@@ -68,5 +68,5 @@ try{new RegExp("[");}catch(ex){monitor.error(ex);}
 
 ## 参考
 
-* [正则表达式中应有“)”](http://msdn.microsoft.com/zh-cn/library/5ay321c5(v=vs.94\).aspx)
-* [正则表达式中应有“\]”](http://msdn.microsoft.com/zh-cn/library/tad157ds(v=vs.94\).aspx)
+* [正则表达式中应有“)”](http://msdn.microsoft.com/zh-cn/library/5ay321c5%28v=vs.94%29.aspx)
+* [正则表达式中应有“\]”](http://msdn.microsoft.com/zh-cn/library/tad157ds%28v=vs.94%29.aspx)

@@ -34,7 +34,7 @@
 
 ## 延伸阅读
 
-* [无效字符(JavaScript)](http://msdn.microsoft.com/zh-cn/library/67wha3s7(v=vs.94\).aspx)
+* [无效字符(JavaScript)](http://msdn.microsoft.com/zh-cn/library/67wha3s7%28v=vs.94%29.aspx)
 * [无效字符 (VBScript)](http://doc.51windows.net/vbscript/?url=/vbscript/html/vserrinvalidcharacter.htm)
 * [IE下js报行:X 错误:无效字符 的问题](http://blog.csdn.net/zhimin8haomi/article/details/5267034)
   - 迁移代码文件后找不到被引用的脚本（然后就会引入 404 页面）所导致的异常。

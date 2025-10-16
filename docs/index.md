@@ -14,14 +14,14 @@ hero:
     alt: Logo
 
 features:
-  - title: 'MDX: 使用灵活语法编写内容'
-    details: MDX 是一种强大的内容编写方式，你可以在 Markdown 中使用 React 组件。
+  - title: 收集异常
+    details: 本站通过通过国内大型互联网企业网站收集 JavaScript 异常。
     icon: 📦
-  - title: '功能丰富: 一站式解决方案'
-    details: 对全文搜索、国际化等常见功能可以做到开箱即用。
+  - title: 分析异常
+    details: 本站对收集到的 JavaScript 异常进行整理、统计、分析，给出分析过程。
     icon: 🎨
-  - title: '扩展性强: 提供多种自定义能力'
-    details: 通过其扩展机制，你可以轻松的扩展主题 UI 和构建能力。
+  - title: 解决异常
+    details: 本站通过分析及调试异常，给出最佳解决方案。
     icon: 🚀
 ---
 
@@ -45,11 +45,11 @@ JavaScript 异常，沉淀 JavaScript 异常知识，供异常分析 & 处理参
 * [错误][1] ,
     [JavaScript 错误](http://msdn.microsoft.com/zh-cn/library/7th8s2xk%28v=vs.94%29.aspx), 
     [JavaScript Errors](http://msdn.microsoft.com/en-us/library/ie/7th8s2xk%28v=vs.94%29.aspx)
-* [JScript 运行时错误](http://msdn.microsoft.com/zh-cn/library/cekc4228(v=vs.90\).aspx) ,
-    [JavaScript 运行时错误](http://msdn.microsoft.com/zh-cn/library/1dk3k160(v=vs.94\).aspx)
-    [JavaScript Run-time Errors](http://msdn.microsoft.com/en-us/library/ie/1dk3k160(v=vs.94\).aspx)
-* [JScript 语法错误](http://msdn.microsoft.com/zh-cn/library/by0atdkw(v=vs.90\).aspx) ,
-    [JavaScript Syntax Errors](http://msdn.microsoft.com/en-us/library/ie/6bby3x2e(v=vs.94\).aspx)
+* [JScript 运行时错误](http://msdn.microsoft.com/zh-cn/library/cekc4228%28v=vs.90%29.aspx) ,
+    [JavaScript 运行时错误](http://msdn.microsoft.com/zh-cn/library/1dk3k160%28v=vs.94%29.aspx)
+    [JavaScript Run-time Errors](http://msdn.microsoft.com/en-us/library/ie/1dk3k160%28v=vs.94%29.aspx)
+* [JScript 语法错误](http://msdn.microsoft.com/zh-cn/library/by0atdkw%28v=vs.90%29.aspx) ,
+    [JavaScript Syntax Errors](http://msdn.microsoft.com/en-us/library/ie/6bby3x2e%28v=vs.94%29.aspx)
 * [Handling and Avoiding Web Page Errors Part 1: The Basics](http://msdn.microsoft.com/en-us/library/ms976140.aspx)
 * [Handling and Avoiding Web Page Errors Part 2: Run-Time Errors](http://msdn.microsoft.com/en-us/library/ms976144.aspx)
 * [Handling and Avoiding Web Page Errors Part 3: An Ounce of Prevention](http://msdn.microsoft.com/en-us/library/ms976146.aspx)

@@ -58,9 +58,9 @@ new ActiveXObject(); //! Automation 服务器不能创建对象
 
 ## 延伸阅读
 
-* [Class doesn't support Automation (Error 430)](http://msdn.microsoft.com/en-us/library/aa264512(v=vs.60\).aspx)
+* [Class doesn't support Automation (Error 430)](http://msdn.microsoft.com/en-us/library/aa264512%28v=vs.60%29.aspx)
 * [BT9021: IE 中可以使用 ActiveXObject 创建 Automation 对象，同时该对象的方法及属性名称大小写不敏感](http://w3help.org/zh-cn/causes/BT9021)
-* [Error in IE (Class doesn't support Automation)](http://docwiki.cisco.com/wiki/Error_in_IE_(Class_doesn't_support_Automation\))
+* [Error in IE (Class doesn't support Automation)](http://docwiki.cisco.com/wiki/Error_in_IE_%28Class_doesn't_support_Automation%29)
 * [IE7上出现Class doesn't support Automation的错误和解决办法](http://www.cnblogs.com/super119/archive/2011/03/20/1989362.html)
 * [Class Doesn't Support Automation](https://getsatisfaction.com/resqtech/topics/class_doesnt_support_automation)
 * [Class Doesn't Support Automation error in Internet Explorer](http://blog.mundy.co/Internet-Explorer/class-doesnt-support-automation-error-in-internet-explorer)

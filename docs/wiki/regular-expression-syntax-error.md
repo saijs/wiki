@@ -30,4 +30,4 @@ new RegExp(")");  // 正则表达式语法错误
 
 ## 参考
 
-* [正则表达式中有语法错误](http://msdn.microsoft.com/zh-cn/library/43z1w3ay(v=vs.80\).aspx)
+* [正则表达式中有语法错误](http://msdn.microsoft.com/zh-cn/library/43z1w3ay%28v=vs.80%29.aspx)

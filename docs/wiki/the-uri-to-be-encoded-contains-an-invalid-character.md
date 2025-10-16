@@ -41,7 +41,7 @@ var stack=[];light.each(obj,function(property,value){if(!property||!obj.hasOwnPr
 
 ## 参考
 
-* [JS5024：要编码的 URI 包含无效字符](http://msdn.microsoft.com/zh-cn/library/061fh4cw(v=VS.90\).aspx)
-* [JS5025：要解码的 URI 不是有效编码](http://msdn.microsoft.com/zh-cn/library/3aztces0(v=vs.90\).aspx)
+* [JS5024：要编码的 URI 包含无效字符](http://msdn.microsoft.com/zh-cn/library/061fh4cw%28v=VS.90%29.aspx)
+* [JS5025：要解码的 URI 不是有效编码](http://msdn.microsoft.com/zh-cn/library/3aztces0%28v=vs.90%29.aspx)
 * [“被解码的 URI 不是合法的编码” 的问题解决](http://blog.csdn.net/cuixiping/archive/2007/08/03/1723741.aspx)
 * [encodeURI之URL中文参数问题](http://www.cnblogs.com/walkingboy/archive/2007/01/26/encodeURIAndFormAction_Chinese.html)

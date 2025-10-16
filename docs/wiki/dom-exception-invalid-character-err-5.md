@@ -37,5 +37,5 @@ input.setAttribute("type", "text");
 * [IE9 : DOM Exception: INVALID_CHARACTER_ERR (5)](http://blog.csdn.net/a497785609/article/details/6317502)
     [2](http://www.cnblogs.com/zhangqs008/archive/2011/04/12/2341141.html)
 * [IE9 - DOM Exception: INVALID_CHARACTER_ERR (5)](https://github.com/brandonaaron/bgiframe/issues/6)
-* [DOM Exception Error Codes](http://msdn.microsoft.com/en-us/library/ie/gg592979(v=vs.85\).aspx)
+* [DOM Exception Error Codes](http://msdn.microsoft.com/en-us/library/ie/gg592979%28v=vs.85%29.aspx)
 * http://www.ajaxbbs.net/post/IE9-DOMException-INVALID_CHARACTER_ERR.html

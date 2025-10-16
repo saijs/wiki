@@ -51,7 +51,7 @@ $("id").innerHTML = "";
 
 ## 参考
 
-* [Function pointer method calls](http://msdn.microsoft.com/en-us/library/gg622930(v=VS.85\).aspx)
-  * [函数指针方法调用](http://msdn.microsoft.com/zh-cn/library/gg622930(v=VS.85\).aspx)
+* [Function pointer method calls](http://msdn.microsoft.com/en-us/library/gg622930%28v=VS.85%29.aspx)
+  * [函数指针方法调用](http://msdn.microsoft.com/zh-cn/library/gg622930%28v=VS.85%29.aspx)
 * [JavaScript的类型错误：Illegal invocation](http://www.cnblogs.com/meteoric_cry/archive/2011/04/24/2026582.html)
 * [fckeditor出现调用的对象无效JS错误](http://blog.csdn.net/uianqian/article/details/8770132)

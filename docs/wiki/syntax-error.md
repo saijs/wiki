@@ -36,5 +36,5 @@
 
 ## 延伸阅读
 
-* [JS1002：语法错误](http://msdn.microsoft.com/zh-cn/library/t6hhwz83(v=VS.80\).aspx)
-* [JavaScript 语法错误](http://msdn.microsoft.com/zh-cn/library/6bby3x2e(v=VS.94\).aspx)
+* [JS1002：语法错误](http://msdn.microsoft.com/zh-cn/library/t6hhwz83%28v=VS.80%29.aspx)
+* [JavaScript 语法错误](http://msdn.microsoft.com/zh-cn/library/6bby3x2e%28v=VS.94%29.aspx)

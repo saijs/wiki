@@ -60,5 +60,5 @@ elem.appendChild(txt);
 
 ## 参考
 
-* [类型不匹配 (Visual Basic)](http://msdn.microsoft.com/zh-cn/library/3etdkytt(v=vs.80).aspx)
+* [类型不匹配 (Visual Basic)](http://msdn.microsoft.com/zh-cn/library/3etdkytt%28v=vs.80%29.aspx)
 * [类型不匹配](http://www.hudong.com/wiki/%E7%B1%BB%E5%9E%8B%E4%B8%8D%E5%8C%B9%E9%85%8D)

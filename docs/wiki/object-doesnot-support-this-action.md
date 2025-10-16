@@ -15,5 +15,5 @@
 
 ## 延伸阅读
 
-* [对象不支持此操作 (Visual Basic)](http://msdn.microsoft.com/zh-cn/library/172eaxzy(v=VS.90\).aspx)
-* [Object doesn't support this action (Visual Basic)](http://msdn.microsoft.com/en-us//library/172eaxzy(v=VS.90\).aspx)
+* [对象不支持此操作 (Visual Basic)](http://msdn.microsoft.com/zh-cn/library/172eaxzy%28v=VS.90%29.aspx)
+* [Object doesn't support this action (Visual Basic)](http://msdn.microsoft.com/en-us//library/172eaxzy%28v=VS.90%29.aspx)

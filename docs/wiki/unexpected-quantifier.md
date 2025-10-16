@@ -90,5 +90,5 @@ try{new RegExp("+");}catch(ex){monitor.error(ex);}
 
 ## 参考
 
-* [非預期的數量詞](http://msdn.microsoft.com/zh-tw/library/ie/k0e76ayf(v=vs.94\).aspx)
-* [意外的限定符](http://msdn.microsoft.com/zh-cn/library/k0e76ayf(v=vs.94\).aspx)
+* [非預期的數量詞](http://msdn.microsoft.com/zh-tw/library/ie/k0e76ayf%28v=vs.94%29.aspx)
+* [意外的限定符](http://msdn.microsoft.com/zh-cn/library/k0e76ayf%28v=vs.94%29.aspx)
