@@ -2,3 +2,5 @@
 _site
 _index.md
 .cache/
+doc_build/
+node_modules/
